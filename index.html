@@ -11,482 +11,811 @@
   <header class="topbar" role="banner">
     <div class="topbar__inner">
       <div class="brand" aria-label="Crystal Haze Holding">
-        <span class="brand__text">Crystal Haze Holding</span>
+        <div class="brand__name">Crystal Haze Holding</div>
+        <div class="brand__tag">Official Platform</div>
       </div>
 
-      <nav class="nav" aria-label="Main">
-        <button class="nav__btn" data-go="home" aria-current="page">Home</button>
-        <button class="nav__btn" data-go="divisions">Divisions</button>
-        <button class="nav__btn" data-go="partners">Partners</button>
-        <button class="nav__btn" data-go="collaborations">Collaborations</button>
-        <button class="nav__btn" data-go="hbn">HBN</button>
-        <button class="nav__btn" data-go="assistant">Assistant</button>
-        <button class="nav__btn" data-go="contact">Contact</button>
+      <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__btn is-active" data-route="home" aria-current="page">Home</button>
+        <button class="nav__btn" data-route="intellectual">Intellectual</button>
+        <button class="nav__btn" data-route="startup">Startup</button>
+        <button class="nav__btn" data-route="sports">Sports</button>
+        <button class="nav__btn" data-route="business">Business</button>
+        <button class="nav__btn" data-route="hbn">HBN</button>
+        <button class="nav__btn" data-route="partners">Partners</button>
+        <button class="nav__btn" data-route="contact">Contact</button>
       </nav>
     </div>
   </header>
 
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Navigation">
+      <div class="drawer__head">
+        <div class="drawer__title">Crystal Haze Holding</div>
+        <button class="drawer__close" type="button" aria-label="Close">✕</button>
+      </div>
+
+      <div class="drawer__list">
+        <button class="drawer__item" data-route="home">Home</button>
+        <button class="drawer__item" data-route="intellectual">Intellectual</button>
+        <button class="drawer__item" data-route="startup">Startup</button>
+        <button class="drawer__item" data-route="sports">Sports</button>
+        <button class="drawer__item" data-route="business">Business</button>
+        <button class="drawer__item" data-route="hbn">HBN</button>
+        <button class="drawer__item" data-route="partners">Partners</button>
+        <button class="drawer__item" data-route="contact">Contact</button>
+      </div>
+    </div>
+  </div>
+
   <main class="app" role="main">
-    <div class="bg" aria-hidden="true">
-      <div class="bg__grid"></div>
-      <div class="bg__glow bg__glow--a"></div>
-      <div class="bg__glow bg__glow--b"></div>
-      <div class="bg__glow bg__glow--c"></div>
-      <div class="bg__noise"></div>
+    <div class="back" aria-hidden="true">
+      <div class="back__grid"></div>
+      <div class="back__glow back__glow--a"></div>
+      <div class="back__glow back__glow--b"></div>
+      <div class="back__glow back__glow--c"></div>
+      <div class="back__noise"></div>
     </div>
 
+    <div class="routeFx" aria-hidden="true"></div>
+
     <!-- HOME -->
-    <section class="view view--home is-active" data-route="home">
-      <div class="wrap">
+    <section class="view is-active" data-view="home">
+      <div class="wrap viewScroll">
         <div class="hero">
           <div class="hero__left">
-            <div class="logo-slot" aria-label="CHH Logo Slot">
-              <img src="assets/CHH logo.png" alt="Crystal Haze Holding" class="logo-slot__img" />
+            <div class="hero__logo">
+              <img class="hero__logoImg" src="assets/CHH logo.png" alt="Crystal Haze Holding" />
             </div>
 
-            <div class="hero__titleblock">
+            <div class="hero__text">
               <h1 class="h1">Crystal Haze Holding</h1>
-              <p class="lead">Official Platform</p>
+              <p class="lead">
+                Crystal Haze Holding rəsmi struktur, peşəkar idarəetmə və ölçülə bilən nəticə modeli ilə işləyən
+                çoxşaxəli holding sistemidir. Platforma bölmələr üzrə idarə olunur, tərəfdaşlıq şəbəkəsi qurur,
+                layihələri sistemli qaydada icra edir və uzunmüddətli inkişaf xətti ilə dünya bazarına çıxış
+                səviyyəsində mövqelənir.
+              </p>
+
+              <div class="hero__cta">
+                <button class="cta" data-jump="divisions">Divisions</button>
+                <button class="cta cta--ghost" data-jump="hbn">HBN</button>
+                <button class="cta cta--ghost" data-jump="contact">Contact</button>
+              </div>
+
+              <div class="pulseLine" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
             </div>
           </div>
 
           <div class="hero__right">
-            <div class="hero__card">
-              <div class="hero__cardTop">
-                <div class="pill">Official</div>
-                <div class="pill">Holding</div>
-                <div class="pill">AZ · EN</div>
+            <div class="kpiPanel" aria-label="Holding indicators">
+              <div class="kpiPanel__top">
+                <div class="chip">Official</div>
+                <div class="chip">Holding</div>
+                <div class="chip">AZ · EN</div>
               </div>
 
-              <div class="hero__numbers" aria-label="Key counts">
-                <div class="stat">
-                  <div class="stat__k">Divisions</div>
-                  <div class="stat__v">4</div>
+              <div class="kpis">
+                <div class="kpi">
+                  <div class="kpi__k">Divisions</div>
+                  <div class="kpi__v" data-counter="4">0</div>
+                  <div class="kpi__s">Structured operation</div>
                 </div>
-                <div class="stat">
-                  <div class="stat__k">Partners</div>
-                  <div class="stat__v">9</div>
+
+                <div class="kpi">
+                  <div class="kpi__k">Partners</div>
+                  <div class="kpi__v" data-counter="9">0</div>
+                  <div class="kpi__s">Network growth</div>
                 </div>
-                <div class="stat">
-                  <div class="stat__k">Collaborations</div>
-                  <div class="stat__v">2</div>
+
+                <div class="kpi">
+                  <div class="kpi__k">Collaborations</div>
+                  <div class="kpi__v" data-counter="2">0</div>
+                  <div class="kpi__s">Strategic cooperation</div>
                 </div>
               </div>
 
-              <div class="hero__strip" aria-hidden="true">
-                <div class="stripe"></div>
-                <div class="stripe"></div>
-                <div class="stripe"></div>
+              <div class="kpiPanel__seal">
+                <div class="seal">
+                  <div class="seal__t">CHH</div>
+                  <div class="seal__s">Official Platform</div>
+                </div>
+
+                <div class="sealNote">
+                  <div class="sealNote__k">Operating standard</div>
+                  <div class="sealNote__v">Corporate-level workflow & presentation</div>
+                </div>
               </div>
 
-              <div class="hero__footerline">
-                <span class="muted">© 2025 Crystal Haze Holding</span>
-              </div>
+              <div class="kpiPanel__foot">© 2025 Crystal Haze Holding</div>
             </div>
           </div>
         </div>
 
-        <div class="home-grid">
-          <div class="home-panel">
-            <div class="home-panel__head">
-              <div class="tag">Holding Core</div>
-              <div class="dot"></div>
+        <div class="homeGrid">
+          <article class="panel">
+            <div class="panel__head">
+              <div class="panel__title">Holding Definition</div>
+              <div class="panel__dot"></div>
             </div>
-            <div class="home-panel__body">
-              <div class="mini">
-                <div class="mini__k">Structure</div>
-                <div class="mini__v">Divisions</div>
-              </div>
-              <div class="mini">
-                <div class="mini__k">Network</div>
-                <div class="mini__v">Partners</div>
-              </div>
-              <div class="mini">
-                <div class="mini__k">Operations</div>
-                <div class="mini__v">Collaborations</div>
+            <div class="panel__body">
+              <p class="p">
+                CHH müxtəlif fəaliyyət istiqamətlərini bir “operating system” məntiqində birləşdirir: planlama, icra,
+                nəticə ölçümü, təqdimat və inkişaf mərhələləri vahid standartla idarə olunur. Hər bölmə ayrıca icra
+                mexanizminə malikdir və holding səviyyəsində koordinasiya edilir.
+              </p>
+              <div class="miniGrid">
+                <div class="mini">
+                  <div class="mini__k">Approach</div>
+                  <div class="mini__v">Result-driven</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Governance</div>
+                  <div class="mini__v">Structured</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Output</div>
+                  <div class="mini__v">Professional</div>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="home-panel">
-            <div class="home-panel__head">
-              <div class="tag">Identity</div>
-              <div class="dot"></div>
+          <article class="panel">
+            <div class="panel__head">
+              <div class="panel__title">Mission · Vision</div>
+              <div class="panel__dot"></div>
             </div>
-            <div class="home-panel__body">
-              <div class="mini">
-                <div class="mini__k">Name</div>
-                <div class="mini__v">Crystal Haze Holding</div>
-              </div>
-              <div class="mini">
-                <div class="mini__k">Platform</div>
-                <div class="mini__v">Official</div>
-              </div>
-              <div class="mini">
-                <div class="mini__k">Visual</div>
-                <div class="mini__v">CHH</div>
+            <div class="panel__body">
+              <p class="p">
+                Missiya: CHH brendi altında peşəkar fəaliyyət, etibarlı tərəfdaşlıq, güclü komanda mədəniyyəti və
+                davamlı inkişaf modeli qurmaq.
+              </p>
+              <p class="p">
+                Vizyon: bölmələr üzrə ixtisaslaşmış, tanınan və genişlənən holding sistemi kimi beynəlxalq səviyyədə
+                mövqelənmək.
+              </p>
+              <div class="barRow" aria-hidden="true">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="home-panel">
-            <div class="home-panel__head">
-              <div class="tag">Access</div>
-              <div class="dot"></div>
+          <article class="panel">
+            <div class="panel__head">
+              <div class="panel__title">Founders · Leadership</div>
+              <div class="panel__dot"></div>
             </div>
-            <div class="home-panel__body">
-              <div class="mini">
-                <div class="mini__k">Navigation</div>
-                <div class="mini__v">Top Menu</div>
-              </div>
-              <div class="mini">
-                <div class="mini__k">System</div>
-                <div class="mini__v">Full-Screen Pages</div>
-              </div>
-              <div class="mini">
-                <div class="mini__k">Motion</div>
-                <div class="mini__v">Animated UI</div>
+            <div class="panel__body">
+              <p class="p">
+                Holdingin rəsmi təqdimat və idarəetmə xətti liderlik modeli üzərində qurulur. Bölmələr liderlər
+                vasitəsilə idarə edilir, bütün fəaliyyət vahid korporativ standartla təqdim olunur.
+              </p>
+              <div class="leaders">
+                <div class="leaderCard">
+                  <div class="leaderCard__name">Nijat Umarli</div>
+                  <div class="leaderCard__role">Brand Owner / Founder (HBN)</div>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
+
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
       </div>
     </section>
 
-    <!-- DIVISIONS -->
-    <section class="view view--divisions" data-route="divisions">
-      <div class="wrap">
-        <div class="pagehead">
-          <h2 class="h2">Divisions</h2>
-          <div class="pagehead__line"></div>
+    <!-- INTELLECTUAL -->
+    <section class="view" data-view="intellectual">
+      <div class="wrap viewScroll">
+        <div class="pageHead">
+          <div class="pageHead__left">
+            <h2 class="h2">Intellectual Division</h2>
+            <div class="pageHead__sub">Analytical · Knowledge · Competitive Reasoning</div>
+          </div>
+          <div class="pageHead__right">
+            <div class="badge">CHH</div>
+          </div>
         </div>
 
-        <div class="div-grid">
-          <article class="div-card div-card--int">
-            <header class="div-card__head">
-              <div class="div-card__title">Intellectual Division</div>
-              <div class="chip">CHH</div>
-            </header>
-            <div class="div-card__body">
-              <p class="p">
-                Bilik əsaslı yarışlar, analitik hazırlıq və intellektual fəaliyyətlərin təşkili.
-              </p>
-              <div class="people">
-                <div class="person">
-                  <div class="person__name">Kenan Abdullayev</div>
-                  <div class="person__role">Core Member</div>
-                </div>
-                <div class="person">
-                  <div class="person__name">Shabnam Zeynalova</div>
-                  <div class="person__role">Core Member</div>
-                </div>
-              </div>
-            </div>
+        <div class="twoCol">
+          <article class="cardX">
+            <div class="cardX__title">Division Overview</div>
+            <p class="p">
+              Intellectual Division Crystal Haze Holding-in bilik və analitik düşüncə xəttini təmsil edir.
+              Bölmə məqsədli hazırlıq, intellektual yarış formatları, bilik əsaslı layihələr və strateji düşüncə
+              bacarıqlarının inkişafı istiqamətində sistemli fəaliyyət göstərir.
+            </p>
+            <p class="p">
+              Burada fəaliyyət təkcə iştirak deyil: planlama, mövzu xəritəsi, hazırlıq mərhələləri, daxili sınaqlar,
+              nəticə analizi və təqdimat standartları bir sistem kimi işləyir. Bölmə CHH-nin peşəkar imicini bilik
+              platformalarında düzgün təmsil etməyi hədəfləyir.
+            </p>
           </article>
 
-          <article class="div-card div-card--start">
-            <header class="div-card__head">
-              <div class="div-card__title">Startup Division</div>
-              <div class="chip">CHH</div>
-            </header>
-            <div class="div-card__body">
-              <p class="p">
-                Layihələndirmə, koordinasiya və innovasiya yönümlü komanda fəaliyyətlərinin qurulması.
-              </p>
-              <div class="people">
-                <div class="person">
-                  <div class="person__name">Narzin Guliyeva</div>
-                  <div class="person__role">Division Lead</div>
-                </div>
+          <article class="cardX">
+            <div class="cardX__title">Operating Workflow</div>
+            <div class="flow">
+              <div class="step">
+                <div class="step__k">Planning</div>
+                <div class="step__v">Scope, goals, schedule, responsibilities</div>
               </div>
-            </div>
-          </article>
-
-          <article class="div-card div-card--sport">
-            <header class="div-card__head">
-              <div class="div-card__title">Sports Division</div>
-              <div class="chip">CHH</div>
-            </header>
-            <div class="div-card__body">
-              <p class="p">
-                Təmsilçilik, komanda koordinasiyası və idman fəaliyyəti üzrə rəsmi təşkilatlanma.
-              </p>
-              <div class="people">
-                <div class="person">
-                  <div class="person__name">Ilham Fatullayev</div>
-                  <div class="person__role">Division Lead</div>
-                </div>
+              <div class="step">
+                <div class="step__k">Preparation</div>
+                <div class="step__v">Topic map, resources, practice sets</div>
               </div>
-            </div>
-          </article>
-
-          <article class="div-card div-card--biz">
-            <header class="div-card__head">
-              <div class="div-card__title">Business Division</div>
-              <div class="chip">CHH</div>
-            </header>
-            <div class="div-card__body">
-              <p class="p">
-                Rəsmi əməkdaşlıq, təqdimat, tərəfdaşlıq əlaqələri və iş əlaqələrinin idarəsi.
-              </p>
-              <div class="people">
-                <div class="person">
-                  <div class="person__name">Asmar Ibrahimzadeh</div>
-                  <div class="person__role">Division Lead</div>
-                </div>
+              <div class="step">
+                <div class="step__k">Simulation</div>
+                <div class="step__v">Internal runs, timing, tactics</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Performance</div>
+                <div class="step__v">Representation & results</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Review</div>
+                <div class="step__v">Metrics, improvement, next cycle</div>
               </div>
             </div>
           </article>
         </div>
 
-        <div class="bottomline">
-          <span class="muted">© 2025 Crystal Haze Holding</span>
+        <article class="widePanel">
+          <div class="widePanel__head">
+            <div class="widePanel__title">Leadership</div>
+            <div class="widePanel__line"></div>
+          </div>
+
+          <div class="peopleGrid">
+            <div class="person">
+              <div class="person__name">Kenan Abdullayev</div>
+              <div class="person__role">Core Member</div>
+              <div class="person__desc">
+                Division daxilində hazırlıq strukturu, analitik yanaşma və icra intizamının qorunması üzrə rol alır.
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="person__name">Shabnam Zeynalova</div>
+              <div class="person__role">Core Member</div>
+              <div class="person__desc">
+                Bilik istiqamətlərinin sistemləşdirilməsi, hazırlıq xəttinin davamlı saxlanması və komanda koordinasiyası.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
+      </div>
+    </section>
+
+    <!-- STARTUP -->
+    <section class="view" data-view="startup">
+      <div class="wrap viewScroll">
+        <div class="pageHead">
+          <div class="pageHead__left">
+            <h2 class="h2">Startup Division</h2>
+            <div class="pageHead__sub">Ideation · Build · Coordination · Launch Discipline</div>
+          </div>
+          <div class="pageHead__right">
+            <div class="badge">CHH</div>
+          </div>
         </div>
+
+        <div class="twoCol">
+          <article class="cardX">
+            <div class="cardX__title">Division Overview</div>
+            <p class="p">
+              Startup Division Crystal Haze Holding-in ideyadan sistemə keçid xəttini idarə edir.
+              Məqsəd: yeni təşəbbüsləri strukturlaşdırmaq, komanda işini formalaşdırmaq, icra mərhələlərini planlamaq,
+              ilkin təqdimat və inkişaf mexanizmlərini qurmaq.
+            </p>
+            <p class="p">
+              Bölmə layihə düşüncəsi, məsuliyyət bölgüsü, mərhələli inkişaf, prioritetləşdirmə və nəticə ölçümü
+              üzərində qurulur. CHH daxilində startup düşüncəsi “təcrübə” deyil, koordinasiyalı icra modelidir.
+            </p>
+          </article>
+
+          <article class="cardX">
+            <div class="cardX__title">Operating Workflow</div>
+            <div class="flow">
+              <div class="step">
+                <div class="step__k">Discovery</div>
+                <div class="step__v">Idea validation & positioning</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Design</div>
+                <div class="step__v">Structure, roles, timeline</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Build</div>
+                <div class="step__v">Execution & iterations</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Presentation</div>
+                <div class="step__v">Pitch-ready materials & demo flow</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Scale</div>
+                <div class="step__v">Growth plan & operational stability</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="widePanel">
+          <div class="widePanel__head">
+            <div class="widePanel__title">Leadership</div>
+            <div class="widePanel__line"></div>
+          </div>
+
+          <div class="peopleGrid">
+            <div class="person">
+              <div class="person__name">Narzin Guliyeva</div>
+              <div class="person__role">Division Lead</div>
+              <div class="person__desc">
+                Startup xəttində planlama, koordinasiya, icra intizamı və komanda yönləndirilməsi üzrə məsul liderlik.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
+      </div>
+    </section>
+
+    <!-- SPORTS -->
+    <section class="view" data-view="sports">
+      <div class="wrap viewScroll">
+        <div class="pageHead">
+          <div class="pageHead__left">
+            <h2 class="h2">Sports Division</h2>
+            <div class="pageHead__sub">Discipline · Representation · Team Performance</div>
+          </div>
+          <div class="pageHead__right">
+            <div class="badge">CHH</div>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <article class="cardX">
+            <div class="cardX__title">Division Overview</div>
+            <p class="p">
+              Sports Division Crystal Haze Holding-in idman platformalarında təmsilçiliyini və komanda performansını
+              sistemli şəkildə idarə edən bölmədir. Məqsəd: hazırlıq intizamı, komanda koordinasiyası, təşkilatlanmış
+              iştirak və peşəkar təqdimat standartını qorumaq.
+            </p>
+            <p class="p">
+              Bölmə fəaliyyətində planlı hazırlıq, komanda daxilində məsuliyyət bölgüsü, tədbir gününə hazırlıq,
+              icra intizamı və nəticə analizi əsas prinsipdir.
+            </p>
+          </article>
+
+          <article class="cardX">
+            <div class="cardX__title">Operating Workflow</div>
+            <div class="flow">
+              <div class="step">
+                <div class="step__k">Preparation</div>
+                <div class="step__v">Training plan & discipline</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Coordination</div>
+                <div class="step__v">Team roles & schedule</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Participation</div>
+                <div class="step__v">Official representation</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Performance</div>
+                <div class="step__v">Team execution</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Review</div>
+                <div class="step__v">Outcome analysis & next cycle</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="widePanel">
+          <div class="widePanel__head">
+            <div class="widePanel__title">Leadership</div>
+            <div class="widePanel__line"></div>
+          </div>
+
+          <div class="peopleGrid">
+            <div class="person">
+              <div class="person__name">Ilham Fatullayev</div>
+              <div class="person__role">Division Lead</div>
+              <div class="person__desc">
+                Komanda koordinasiyası, hazırlıq standartı və CHH-nin idman platformalarında peşəkar təmsilçiliyi.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
+      </div>
+    </section>
+
+    <!-- BUSINESS -->
+    <section class="view" data-view="business">
+      <div class="wrap viewScroll">
+        <div class="pageHead">
+          <div class="pageHead__left">
+            <h2 class="h2">Business Division</h2>
+            <div class="pageHead__sub">Partnership · Commercial Growth · Operations</div>
+          </div>
+          <div class="pageHead__right">
+            <div class="badge">CHH</div>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <article class="cardX">
+            <div class="cardX__title">Division Overview</div>
+            <p class="p">
+              Business Division Crystal Haze Holding-in rəsmi əməkdaşlıq xəttini, kommersiya inkişafını və
+              əməliyyat koordinasiyasını idarə edən bölmədir. Bölmə uzunmüddətli tərəfdaşlıq modeli, təqdimat
+              strategiyası, layihə əsaslı əməkdaşlıqlar və genişlənmə planları üzərində qurulur.
+            </p>
+            <p class="p">
+              Burada fəaliyyət sistemlidir: əlaqə qurma mərhələsi, təklif modeli, iş bölgüsü, icra planı, tərəfdaşlıq
+              standartı və nəticə təqdimatı ardıcıllığı ilə aparılır. Məqsəd: CHH-ni rəsmi, etibarlı və seçilən
+              əməkdaşlıq platforması kimi mövqeləndirmək.
+            </p>
+          </article>
+
+          <article class="cardX">
+            <div class="cardX__title">Operating Workflow</div>
+            <div class="flow">
+              <div class="step">
+                <div class="step__k">Discovery</div>
+                <div class="step__v">Partner fit & scope</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Proposal</div>
+                <div class="step__v">Offer structure & terms</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Execution</div>
+                <div class="step__v">Operations & delivery</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Visibility</div>
+                <div class="step__v">Brand presence & growth</div>
+              </div>
+              <div class="step">
+                <div class="step__k">Expansion</div>
+                <div class="step__v">Scaling & new initiatives</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="widePanel">
+          <div class="widePanel__head">
+            <div class="widePanel__title">Division Leadership</div>
+            <div class="widePanel__line"></div>
+          </div>
+
+          <div class="peopleGrid">
+            <div class="person">
+              <div class="person__name">Business Division</div>
+              <div class="person__role">Leadership</div>
+              <div class="person__desc">
+                Rəsmi əməkdaşlıq xətti, təqdimat və tərəfdaşlıq idarəetməsi üzrə holding standartına uyğun idarəetmə.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
+      </div>
+    </section>
+
+    <!-- HBN -->
+    <section class="view" data-view="hbn">
+      <div class="wrap viewScroll">
+        <div class="pageHead">
+          <div class="pageHead__left">
+            <h2 class="h2">Heyksans Business Network</h2>
+            <div class="pageHead__sub">Education · Publishing · Digital Systems</div>
+          </div>
+          <div class="pageHead__right">
+            <div class="badge">HBN</div>
+          </div>
+        </div>
+
+        <div class="hbnHero">
+          <div class="hbnHero__left">
+            <div class="hbnMark">
+              <div class="hbnMark__k">HBN</div>
+              <div class="hbnMark__s">Heyksans Business Network</div>
+            </div>
+
+            <div class="ownerCard">
+              <div class="ownerCard__k">Brand owner / founder</div>
+              <div class="ownerCard__v">Nijat Umarli</div>
+            </div>
+
+            <div class="hbnLinkRow">
+              <a class="linkBtn" href="https://hbnedu.az" target="_blank" rel="noreferrer">hbnedu.az</a>
+            </div>
+          </div>
+
+          <div class="hbnHero__right">
+            <article class="panel panel--solid">
+              <div class="panel__head">
+                <div class="panel__title">Official Concept</div>
+                <div class="panel__dot"></div>
+              </div>
+              <div class="panel__body">
+                <p class="p">
+                  HBN Crystal Haze Holding nəzdində fəaliyyət göstərən rəsmi brend xəttidir və ayrıca platforma kimi
+                  strukturlaşdırılır. HBN-in əsas fəaliyyəti tədris əsaslı kitablar, test materialları və bilik yönümlü
+                  nəşr xəttinin qurulmasıdır. Bu xətt yalnız məhsul təqdim etmir — sistemlər qurur.
+                </p>
+                <p class="p">
+                  Satış fəaliyyəti hbnedu.az üzərindən həyata keçirilir: ilkin mərhələdə onlayn satış, daha sonra isə
+                  mərhələli şəkildə fiziki satış kanallarının genişləndirilməsi planı ilə.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="hbnGrid">
+          <article class="cardX">
+            <div class="cardX__title">Publishing & Books</div>
+            <p class="p">
+              HBN elmi, fantastik və digər janrlarda kitabların hazırlanması və təqdimatı istiqamətində işləyir.
+              Məqsəd: keyfiyyətli məzmun, düzgün təqdimat və satış sisteminin vahid platforma üzərindən idarə olunması.
+            </p>
+            <p class="p">
+              Kitab xətti yalnız satış deyil: brend dəyəri, təqdimat dili, dizayn standartı və paylama modeli
+              mərhələli şəkildə qurulur.
+            </p>
+          </article>
+
+          <article class="cardX">
+            <div class="cardX__title">Education & Materials</div>
+            <p class="p">
+              Tədris əsaslı kitablar və test materialları HBN-in nüvəsidir. Burada məqsəd: tələbə və abituriyent
+              auditoriyası üçün ölçülə bilən fayda verən, sistemli və təqdimatı güclü materiallar hazırlamaqdır.
+            </p>
+            <p class="p">
+              HBN xətti təhsil prosesini “məzmun + sistem” kimi qurur: materiallar, platforma və gələcək rəqəmsal
+              funksionallar bir-birini tamamlayır.
+            </p>
+          </article>
+
+          <article class="cardX">
+            <div class="cardX__title">Digital Systems Roadmap</div>
+            <p class="p">
+              HBN-in uzunmüddətli inkişaf xətti yalnız məzmun istehsalı deyil. Gələcək mərhələdə rəqəmsal təhsil
+              sistemləri, tədris dəstəyi və platforma üzərindən istifadəçi təcrübəsi modelləri qurulur.
+            </p>
+            <p class="p">
+              Bu yol xəritəsinin tərkibində təhsil yönümlü intellektual sistemlər planlanır; TreeYBuz bu planların
+              gələcək mərhələdə formalaşacaq əsas istiqamətlərindən biri kimi nəzərdə tutulur.
+            </p>
+          </article>
+
+          <article class="cardX">
+            <div class="cardX__title">Sales Channels</div>
+            <p class="p">
+              HBN satış modeli hbnedu.az üzərindən rəsmi şəkildə qurulur. Onlayn mərhələdən sonra brendin fiziki satış
+              kanalları mərhələli şəkildə genişləndiriləcək: təqdimat, yerləşdirmə və paylama sistemi vahid standartla
+              idarə ediləcək.
+            </p>
+          </article>
+        </div>
+
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
       </div>
     </section>
 
     <!-- PARTNERS -->
-    <section class="view view--partners" data-route="partners">
-      <div class="wrap">
-        <div class="pagehead">
-          <h2 class="h2">Partners</h2>
-          <div class="pagehead__line"></div>
+    <section class="view" data-view="partners">
+      <div class="wrap viewScroll">
+        <div class="pageHead">
+          <div class="pageHead__left">
+            <h2 class="h2">Partners</h2>
+            <div class="pageHead__sub">Official partners & brand visibility</div>
+          </div>
+          <div class="pageHead__right">
+            <div class="badge">CHH</div>
+          </div>
         </div>
 
-        <div class="list-grid">
-          <div class="list-tile">davetiye__ressam.jn</div>
-          <div class="list-tile">artna_desinger</div>
-          <div class="list-tile">heyksans_official</div>
-          <div class="list-tile">dara__belle</div>
-          <div class="list-tile">arneva_weave</div>
-          <div class="list-tile">_inci_gifts</div>
-          <div class="list-tile">aurina.accessory</div>
-          <div class="list-tile">the.byraml</div>
-          <div class="list-tile">hollowpurple.art</div>
+        <div class="partnersGrid">
+          <div class="tile">davetiye__ressam.jn</div>
+          <div class="tile">artna_desinger</div>
+          <div class="tile">heyksans_official</div>
+          <div class="tile">dara__belle</div>
+          <div class="tile">arneva_weave</div>
+          <div class="tile">_inci_gifts</div>
+          <div class="tile">aurina.accessory</div>
+          <div class="tile">the.byraml</div>
+          <div class="tile">hollowpurple.art</div>
         </div>
 
-        <div class="logo-wall" aria-label="Partner logo area"></div>
+        <div class="logoWall"></div>
 
-        <div class="bottomline">
-          <span class="muted">© 2025 Crystal Haze Holding</span>
-        </div>
+        <div class="footerline">© 2025 Crystal Haze Holding</div>
       </div>
     </section>
 
-    <!-- COLLABORATIONS -->
-    <section class="view view--collabs" data-route="collaborations">
-      <div class="wrap">
-        <div class="pagehead">
-          <h2 class="h2">Collaborations</h2>
-          <div class="pagehead__line"></div>
-        </div>
+    <!-- CONTACT -->
+    <section class="view" data-view="contact">
+      <div class="contactShell">
+        <div class="contactLeft">
+          <div class="contactTitle">Contact</div>
+          <div class="contactSub">Crystal Haze Holding</div>
 
-        <div class="collab-grid">
-          <div class="collab-card">
-            <div class="collab-card__top">
-              <div class="badge">Collaboration</div>
-              <div class="spark" aria-hidden="true"></div>
+          <div class="contactCards">
+            <div class="contactCard">
+              <div class="contactK">Phone</div>
+              <div class="contactV">055-441-74-23</div>
             </div>
-            <div class="collab-card__name">ahadov_academy</div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-card__top">
-              <div class="badge">Collaboration</div>
-              <div class="spark" aria-hidden="true"></div>
+            <div class="contactCard">
+              <div class="contactK">Instagram</div>
+              <div class="contactV">crystalhaze2025</div>
             </div>
-            <div class="collab-card__name">ceterisparibusteam</div>
-          </div>
-        </div>
-
-        <div class="bottomline">
-          <span class="muted">© 2025 Crystal Haze Holding</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- HBN (FULL DIFFERENT SYSTEM) -->
-    <section class="view view--hbn" data-route="hbn">
-      <div class="hbn-shell">
-        <div class="hbn-top">
-          <div class="hbn-mark">
-            <div class="hbn-mark__k">HBN</div>
-            <div class="hbn-mark__s">Heyksans Business Network</div>
-          </div>
-          <div class="hbn-founder">
-            <div class="hbn-founder__k">Brand owner / founder</div>
-            <div class="hbn-founder__v">Nijat Umarli</div>
-          </div>
-        </div>
-
-        <div class="hbn-core">
-          <div class="hbn-block hbn-block--primary">
-            <div class="hbn-block__title">Official Platform</div>
-            <div class="hbn-block__line"></div>
-            <div class="hbn-block__text">
-              hbnedu.az
-            </div>
-            <a class="hbn-link" href="https://hbnedu.az" target="_blank" rel="noreferrer">hbnedu.az</a>
-          </div>
-
-          <div class="hbn-block hbn-block--wide">
-            <div class="hbn-block__title">Direction</div>
-            <div class="hbn-block__line"></div>
-            <div class="hbn-flow">
-              <div class="hbn-node">
-                <div class="hbn-node__k">Publishing</div>
-                <div class="hbn-node__v">Scientific · Fantasy · Literary</div>
-              </div>
-              <div class="hbn-node">
-                <div class="hbn-node__k">Education</div>
-                <div class="hbn-node__v">Test-based materials</div>
-              </div>
-              <div class="hbn-node">
-                <div class="hbn-node__k">AI</div>
-                <div class="hbn-node__v">TreeYBuz</div>
-              </div>
+            <div class="contactCard">
+              <div class="contactK">Email</div>
+              <div class="contactV">crystalhaze25.26@gmail.com</div>
             </div>
           </div>
 
-          <div class="hbn-block">
-            <div class="hbn-block__title">Sales</div>
-            <div class="hbn-block__line"></div>
-            <div class="hbn-block__text">
-              Online sales through hbnedu.az with expansion to physical channels over time.
-            </div>
-          </div>
+          <div class="formSlot"></div>
 
-          <div class="hbn-block">
-            <div class="hbn-block__title">Access</div>
-            <div class="hbn-block__line"></div>
-            <div class="hbn-block__text">
-              Separate official platform under CHH.
-            </div>
-          </div>
+          <div class="contactFoot">© 2025 Crystal Haze Holding</div>
         </div>
 
-        <div class="hbn-foot">
-          <span>© 2025 Crystal Haze Holding</span>
+        <div class="contactRight" aria-hidden="true">
+          <div class="contactOrb"></div>
+          <div class="contactGrid"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- ASSISTANT (NO MODEL NAMES) -->
-    <section class="view view--assistant" data-route="assistant">
-      <div class="wrap">
-        <div class="pagehead">
-          <h2 class="h2">Assistant</h2>
-          <div class="pagehead__line"></div>
-        </div>
-
-        <div class="assistant">
-          <div class="assistant__screen" id="assistantScreen" aria-label="Assistant messages"></div>
-
-          <form class="assistant__bar" id="assistantForm" autocomplete="off">
-            <input class="assistant__input" id="assistantInput" type="text" placeholder="Write..." aria-label="Write message" />
-            <button class="assistant__send" type="submit" aria-label="Send">Send</button>
-          </form>
-        </div>
-
-        <div class="bottomline">
-          <span class="muted">© 2025 Crystal Haze Holding</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT (FULL DIFFERENT SYSTEM) -->
-    <section class="view view--contact" data-route="contact">
-      <div class="contact-shell">
-        <div class="contact-left">
-          <div class="contact-title">Contact</div>
-          <div class="contact-sub">Crystal Haze Holding</div>
-
-          <div class="contact-lines">
-            <div class="contact-line">
-              <div class="contact-k">Phone</div>
-              <div class="contact-v">055-441-74-23</div>
-            </div>
-            <div class="contact-line">
-              <div class="contact-k">Instagram</div>
-              <div class="contact-v">crystalhaze2025</div>
-            </div>
-            <div class="contact-line">
-              <div class="contact-k">Email</div>
-              <div class="contact-v">crystalhaze25.26@gmail.com</div>
-            </div>
-          </div>
-
-          <div class="contact-slot" aria-label="Participation form area"></div>
-        </div>
-
-        <div class="contact-right" aria-hidden="true">
-          <div class="contact-orb"></div>
-          <div class="contact-grid"></div>
-        </div>
-
-        <div class="contact-foot">© 2025 Crystal Haze Holding</div>
       </div>
     </section>
   </main>
 
   <script>
     (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
       const views = Array.from(document.querySelectorAll(".view"));
       const navBtns = Array.from(document.querySelectorAll(".nav__btn"));
-      const app = document.querySelector(".app");
+      const routeFx = document.querySelector(".routeFx");
 
-      function setActive(route) {
+      const burger = document.querySelector(".burger");
+      const drawer = document.querySelector(".drawer");
+      const drawerPanel = document.querySelector(".drawer__panel");
+      const drawerClose = document.querySelector(".drawer__close");
+      const drawerItems = Array.from(document.querySelectorAll(".drawer__item"));
+
+      const jumpBtns = Array.from(document.querySelectorAll("[data-jump]"));
+
+      function normalizeRoute(r){
+        if(!r) return "home";
+        const s = String(r).toLowerCase().trim();
+        return s || "home";
+      }
+
+      function getRouteFromHash(){
+        return normalizeRoute((location.hash || "#home").slice(1));
+      }
+
+      function setHash(route){
+        const url = new URL(location.href);
+        url.hash = "#" + route;
+        history.replaceState(null, "", url);
+      }
+
+      function setActiveRoute(route){
+        route = normalizeRoute(route);
+
+        if (!prefersReduced) routeFx.classList.add("on");
+
         views.forEach(v => v.classList.remove("is-active"));
-        const target = views.find(v => v.dataset.route === route) || views[0];
+        const target = views.find(v => v.dataset.view === route) || views[0];
         target.classList.add("is-active");
 
         navBtns.forEach(b => {
-          const is = b.dataset.go === route;
+          const is = b.dataset.route === route;
           b.classList.toggle("is-active", is);
           b.setAttribute("aria-current", is ? "page" : "false");
         });
 
-        const url = new URL(window.location.href);
-        url.hash = "#" + route;
-        history.replaceState(null, "", url);
-        app.scrollTop = 0;
+        const sc = target.querySelector(".viewScroll");
+        if (sc) sc.scrollTop = 0;
+
+        if (route === "home") animateCounters();
+
+        setHash(route);
+
+        if (!prefersReduced) {
+          setTimeout(() => routeFx.classList.remove("on"), 260);
+        } else {
+          routeFx.classList.remove("on");
+        }
       }
 
-      function currentRouteFromHash() {
-        const h = (location.hash || "#home").replace("#", "").trim();
-        return h || "home";
+      function animateCounters(){
+        const els = Array.from(document.querySelectorAll("[data-counter]"));
+        els.forEach(el => {
+          const to = parseInt(el.getAttribute("data-counter"), 10) || 0;
+          const dur = prefersReduced ? 1 : 650;
+          const t0 = performance.now();
+          function tick(t){
+            const p = Math.min(1, (t - t0) / dur);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = String(Math.round(to * eased));
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          el.textContent = "0";
+          requestAnimationFrame(tick);
+        });
+      }
+
+      function lockScroll(lock){
+        document.documentElement.classList.toggle("lock", lock);
+        document.body.classList.toggle("lock", lock);
+      }
+
+      function openDrawer(){
+        drawer.classList.add("is-open");
+        drawer.setAttribute("aria-hidden", "false");
+        burger.setAttribute("aria-expanded", "true");
+        lockScroll(true);
+        setTimeout(() => {
+          if (drawerPanel && drawerPanel.focus) drawerPanel.focus();
+        }, 50);
+      }
+
+      function closeDrawer(){
+        drawer.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        burger.setAttribute("aria-expanded", "false");
+        lockScroll(false);
       }
 
       navBtns.forEach(btn => {
-        btn.addEventListener("click", () => setActive(btn.dataset.go));
+        btn.addEventListener("click", () => setActiveRoute(btn.dataset.route));
       });
 
-      window.addEventListener("hashchange", () => setActive(currentRouteFromHash()));
+      jumpBtns.forEach(btn => {
+        btn.addEventListener("click", () => setActiveRoute(btn.dataset.jump));
+      });
 
-      setActive(currentRouteFromHash());
+      window.addEventListener("hashchange", () => setActiveRoute(getRouteFromHash()));
 
-      // Assistant: local message flow (no names, no extra lines)
-      const form = document.getElementById("assistantForm");
-      const input = document.getElementById("assistantInput");
-      const screen = document.getElementById("assistantScreen");
+      burger.addEventListener("click", () => {
+        if (drawer.classList.contains("is-open")) closeDrawer();
+        else openDrawer();
+      });
 
-      function addMsg(text, mine) {
-        const m = document.createElement("div");
-        m.className = "msg " + (mine ? "msg--me" : "msg--sys");
-        m.textContent = text;
-        screen.appendChild(m);
-        screen.scrollTop = screen.scrollHeight;
-      }
+      drawerClose.addEventListener("click", closeDrawer);
+      drawer.addEventListener("click", (e) => { if (e.target === drawer) closeDrawer(); });
+      window.addEventListener("keydown", (e) => { if (e.key === "Escape" && drawer.classList.contains("is-open")) closeDrawer(); });
 
-      if (form) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          const t = (input.value || "").trim();
-          if (!t) return;
-          addMsg(t, true);
-          input.value = "";
+      drawerItems.forEach(it => {
+        it.addEventListener("click", () => {
+          closeDrawer();
+          setActiveRoute(it.dataset.route);
         });
-      }
+      });
+
+      setActiveRoute(getRouteFromHash());
     })();
   </script>
 </body>
