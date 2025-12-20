@@ -1,75 +1,338 @@
 <!doctype html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crystal Haze Holding</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crystal Haze Holding (CHH)</title>
+  <meta name="description" content="Crystal Haze Holding (CHH) — divisions-based holding ecosystem. Intellectual, Startup, Sports, Business. Collaborations, partners and contact." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="assets/CHH logo.png" alt="CHH Logo">
-        <span>Crystal Haze Holding</span>
-      </div>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="CHH Home">
+        <span class="brand__logo">
+          <img src="assets/chh-logo.png" alt="CHH Logo"
+               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';" />
+          <span id="logoFallback" class="logoFallback" style="display:none;">CHH</span>
+        </span>
+        <span class="brand__text">
+          <strong>Crystal Haze Holding</strong>
+          <em>Holding Ecosystem</em>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#divisions">Divisions</a>
+        <a class="nav__link" href="#collab">Collaborations</a>
+        <a class="nav__link" href="#partners">Partners</a>
+        <a class="nav__link nav__cta" href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h1>Crystal Haze Holding</h1>
-      <p>
-        Crystal Haze Holding bölmələr üzrə inkişaf edən daxili platformadır.
-        Məqsəd gənclərin intellektual, biznes, startap və idman sahələrində
-        təşkilatlanmış şəkildə inkişafını təmin etməkdir.
-      </p>
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="pill">
+            <span class="dot"></span>
+            <span>Structure • Growth • Representation</span>
+          </div>
+
+          <h1 class="hero__title">
+            Crystal Haze Holding
+            <span class="hero__sub">A unified ecosystem of divisions and partnerships.</span>
+          </h1>
+
+          <p class="hero__lead">
+            CHH is built to organize talent into focused divisions, develop discipline and teamwork,
+            and represent the brand professionally across events, collaborations and partner networks.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#divisions">Explore Divisions <span class="arrow">→</span></a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric__k">4</div>
+              <div class="metric__t">Core divisions</div>
+            </div>
+            <div class="metric">
+              <div class="metric__k">1</div>
+              <div class="metric__t">Unified structure</div>
+            </div>
+            <div class="metric">
+              <div class="metric__k">∞</div>
+              <div class="metric__t">Growth mindset</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__right">
+          <div class="panel panel--glass">
+            <div class="panel__head">
+              <h2>What makes CHH a holding?</h2>
+              <p>Clear framework, consistent output, and brand-level coordination.</p>
+            </div>
+
+            <div class="stack">
+              <div class="stackItem">
+                <div class="stackItem__icon">◎</div>
+                <div class="stackItem__body">
+                  <strong>Team & Roles</strong>
+                  <span>Leadership, responsibilities and coordination.</span>
+                </div>
+              </div>
+              <div class="stackItem">
+                <div class="stackItem__icon">◇</div>
+                <div class="stackItem__body">
+                  <strong>Preparation Systems</strong>
+                  <span>Practice, routines, and performance discipline.</span>
+                </div>
+              </div>
+              <div class="stackItem">
+                <div class="stackItem__icon">▣</div>
+                <div class="stackItem__body">
+                  <strong>Professional Representation</strong>
+                  <span>Presence in events, partners and public platforms.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel__foot">
+              <a class="link" href="#partners">See partner ecosystem →</a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Divisions</h2>
-
-      <div class="card">
-        <h3>Intellectual Division</h3>
-        <p><b>Kenan Abdullayev</b>, <b>Shabnam Zeynalova</b></p>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container section__head">
+        <h2>About CHH</h2>
+        <p>
+          Crystal Haze Holding is a division-based structure that brings multiple activity areas under one brand.
+          Each division has a focused mission and operational rhythm, while the holding layer provides direction,
+          standards and a unified identity.
+        </p>
       </div>
 
-      <div class="card">
-        <h3>Startup Division</h3>
-        <p><b>Narzin Guliyeva</b></p>
-      </div>
+      <div class="container twoCol">
+        <div class="panel panel--solid">
+          <h3>Standards</h3>
+          <div class="list">
+            <div class="list__item"><span class="list__dot"></span><div><strong>Accountability</strong><p class="muted">Clear ownership for tasks and outcomes.</p></div></div>
+            <div class="list__item"><span class="list__dot"></span><div><strong>Consistency</strong><p class="muted">Regular preparation and stable improvement.</p></div></div>
+            <div class="list__item"><span class="list__dot"></span><div><strong>Brand quality</strong><p class="muted">Professional visuals, communication and presence.</p></div></div>
+          </div>
+        </div>
 
-      <div class="card">
-        <h3>Sports Division</h3>
-        <p><b>Ilham Fatullayev</b></p>
-      </div>
-
-      <div class="card">
-        <h3>Business Division</h3>
-        <p><b>Asmar Ibrahimzadeh</b></p>
+        <div class="panel panel--glass">
+          <h3>Vision</h3>
+          <p class="muted">
+            Build a strong internal culture that scales: more teams, more partnerships, and stronger public representation —
+            while keeping the CHH identity consistent and premium.
+          </p>
+          <div class="hr"></div>
+          <div class="quick">
+            <a class="quick__item" href="#divisions">Divisions</a>
+            <a class="quick__item" href="#collab">Collaborations</a>
+            <a class="quick__item" href="#partners">Partners</a>
+            <a class="quick__item" href="#contact">Contact</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Heyksans Business Network (HBN)</h2>
-      <p>
-        HBN, Crystal Haze Holding altında fəaliyyət göstərən rəsmi brenddir.
-        Təhsil məzmunu, kitablar, test materialları və gələcəkdə
-        TreeYBuz adlı təhsil əsaslı süni intellekt sisteminin yaradılmasını hədəfləyir.
-      </p>
+    <!-- Divisions -->
+    <section id="divisions" class="section section--alt">
+      <div class="container section__head">
+        <h2>Divisions</h2>
+        <p>Four focused divisions — each responsible for its direction and results.</p>
+      </div>
+
+      <div class="container grid">
+        <article class="card">
+          <div class="card__top">
+            <span class="badge">Intellectual</span>
+            <span class="chip">Strategy</span>
+          </div>
+          <h3>Intellectual Division</h3>
+          <p class="muted">Knowledge-based competitions, analytical thinking, structured preparation.</p>
+          <div class="people">
+            <span class="pillName">Kenan Abdullayev</span>
+            <span class="pillName">Shabnam Zeynalova</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <span class="badge">Startup</span>
+            <span class="chip">Ideas</span>
+          </div>
+          <h3>Startup Division</h3>
+          <p class="muted">Early-stage initiatives, planning habits, teamwork and innovation routines.</p>
+          <div class="people">
+            <span class="pillName">Narzin Guliyeva</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <span class="badge">Sports</span>
+            <span class="chip">Discipline</span>
+          </div>
+          <h3>Sports Division</h3>
+          <p class="muted">Training culture, team spirit, physical development and competition readiness.</p>
+          <div class="people">
+            <span class="pillName">Ilham Fatullayev</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <span class="badge">Business</span>
+            <span class="chip">Growth</span>
+          </div>
+          <h3>Business Division</h3>
+          <p class="muted">Partnership initiatives, online & physical channels, sustainable expansion.</p>
+          <div class="people">
+            <span class="pillName">Asmar Ibrahimzadeh</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Contact</h2>
-      <p>📞 055-441-74-23</p>
-      <p>📧 crystalhaze25.26@gmail.com</p>
-      <p>📷 Instagram: crystalhaze2025 / crystalhaze25.26</p>
+    <!-- Collaborations -->
+    <section id="collab" class="section">
+      <div class="container section__head">
+        <h2>Collaborations</h2>
+        <p>Programs and teams we collaborate with. (You can expand this list anytime.)</p>
+      </div>
+
+      <div class="container grid grid--2">
+        <div class="panel panel--glass">
+          <h3>Active</h3>
+          <div class="chips">
+            <span class="chip2">ahadov_academy</span>
+            <span class="chip2">ceterisparibusteam</span>
+          </div>
+          <p class="muted" style="margin-top:10px;">
+            Later we can add collaboration logos into <b>assets/collabs/</b> and show them as a logo wall.
+          </p>
+        </div>
+
+        <div class="panel panel--solid">
+          <h3>Collaboration format</h3>
+          <p class="muted">
+            For partners: co-events, co-content, support packages, or joint initiatives — designed to fit both sides.
+          </p>
+          <div class="hr"></div>
+          <a class="btn btn--ghost" href="#contact">Request collaboration</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners" class="section section--alt">
+      <div class="container section__head">
+        <h2>Partners</h2>
+        <p>
+          This section is ready for your partner logos. Add images to <b>assets/partners/</b> later and we can
+          replace the placeholders with a real “logo wall”.
+        </p>
+      </div>
+
+      <div class="container logoGrid">
+        <div class="logoTile">Logo 1</div>
+        <div class="logoTile">Logo 2</div>
+        <div class="logoTile">Logo 3</div>
+        <div class="logoTile">Logo 4</div>
+        <div class="logoTile">Logo 5</div>
+        <div class="logoTile">Logo 6</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container section__head">
+        <h2>Contact</h2>
+        <p>Direct contact lines for CHH.</p>
+      </div>
+
+      <div class="container grid grid--2">
+        <div class="panel panel--glass">
+          <h3>Details</h3>
+          <div class="contactList">
+            <div class="contactRow">
+              <span class="label">Phone</span>
+              <span class="value">055-441-74-23</span>
+            </div>
+            <div class="contactRow">
+              <span class="label">Email</span>
+              <span class="value">crystalhaze25.26@gmail.com</span>
+            </div>
+            <div class="contactRow">
+              <span class="label">Instagram</span>
+              <span class="value">crystalhaze2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel--solid">
+          <h3>Next upgrade (optional)</h3>
+          <p class="muted">
+            If you want a real “contact form” on GitHub Pages, we can connect Formspree/Netlify Forms later.
+            This site is currently built as a clean holding landing page.
+          </p>
+          <div class="hr"></div>
+          <a class="link" href="#top">Back to top →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ctaBand">
+      <div class="container ctaBand__inner">
+        <div>
+          <h2>Ready to build with CHH?</h2>
+          <p class="muted">Partnerships, collaborations, and structured growth — let’s connect.</p>
+        </div>
+        <a class="btn btn--primary" href="#contact">Contact us →</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    © Crystal Haze Holding
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footerLogo">
+          <img src="assets/chh-logo.png" alt="CHH Logo"
+               onerror="this.style.display='none'; document.getElementById('footFallback').style.display='grid';" />
+          <span id="footFallback" class="logoFallback" style="display:none;">CHH</span>
+        </span>
+        <div>
+          <strong>Crystal Haze Holding</strong>
+          <span class="muted">Holding Ecosystem</span>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#about">About</a>
+        <a href="#divisions">Divisions</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer__copy muted">© 2025 Crystal Haze Holding</div>
+    </div>
   </footer>
 </body>
 </html>
