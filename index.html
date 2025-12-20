@@ -5,587 +5,393 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crystal Haze Holding</title>
-  <meta name="description" content="Crystal Haze Holding — official corporate website." />
+  <meta name="description" content="Crystal Haze Holding" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar" role="banner">
-    <div class="container topbar__inner">
-      <a class="brand" href="#home" aria-label="Crystal Haze Holding Home">
-        <span class="brand__mark">
-          <img class="brand__img" src="assets/chh-logo.png" alt="Crystal Haze Holding logo" />
+  <header class="hdr">
+    <div class="wrap hdr__in">
+      <a class="brand" href="#" data-view="home" aria-label="Crystal Haze Holding">
+        <span class="brand__logo">
+          <img src="assets/chh-logo.png" alt="Crystal Haze Holding" />
         </span>
-        <span class="brand__meta">
-          <span class="brand__name">Crystal Haze Holding</span>
-          <span class="brand__tag">Official corporate website</span>
-        </span>
+        <span class="brand__name">Crystal Haze Holding</span>
       </a>
 
-      <input class="navcheck" type="checkbox" id="navcheck" aria-label="Menu toggle" />
-      <label class="navtoggle" for="navcheck" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#home">Home</a>
-        <a class="nav__link" href="#divisions">Divisions</a>
-        <a class="nav__link" href="#collaborations">Collaborations</a>
-        <a class="nav__link" href="#partners">Partners</a>
-        <a class="nav__link nav__cta" href="#contact">Contact</a>
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__btn is-active" type="button" data-view="home">Home</button>
+        <button class="nav__btn" type="button" data-view="divisions">Divisions</button>
+        <button class="nav__btn" type="button" data-view="collaborations">Collaborations</button>
+        <button class="nav__btn" type="button" data-view="partners">Partners</button>
+        <button class="nav__btn" type="button" data-view="hbn">HBN</button>
+        <button class="nav__btn nav__btn--cta" type="button" data-view="contact">Contact</button>
       </nav>
+
+      <button class="mnav" type="button" id="mnavBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mnavpanel" id="mnavPanel" aria-label="Mobile navigation">
+      <button class="mnavlink is-active" type="button" data-view="home">Home</button>
+      <button class="mnavlink" type="button" data-view="divisions">Divisions</button>
+      <button class="mnavlink" type="button" data-view="collaborations">Collaborations</button>
+      <button class="mnavlink" type="button" data-view="partners">Partners</button>
+      <button class="mnavlink" type="button" data-view="hbn">HBN</button>
+      <button class="mnavlink mnavlink--cta" type="button" data-view="contact">Contact</button>
     </div>
   </header>
 
-  <main class="app" role="main" aria-live="polite">
+  <main class="main">
     <!-- HOME -->
-    <section class="view" id="home" tabindex="-1" aria-label="Home">
-      <div class="hero">
-        <div class="container hero__grid">
-          <div class="hero__left">
-            <div class="kicker">
-              <span class="kicker__dot" aria-hidden="true"></span>
-              <span class="kicker__text">Structure • Governance • Growth</span>
-            </div>
+    <section class="view is-show" id="view-home" aria-label="Home">
+      <div class="wrap hero">
+        <div class="hero__left">
+          <h1 class="hero__t">Crystal Haze Holding</h1>
+          <p class="hero__p">
+            Rəsmi, korporativ üslubda qurulmuş holding strukturu: bölmələr, əməkdaşlıqlar, partnyorlar və əlaqə.
+          </p>
 
-            <h1 class="hero__title">Crystal Haze Holding</h1>
-            <p class="hero__lead">
-              A division-based holding structure with professional presentation standards, clear navigation and a consistent identity.
-            </p>
-
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#divisions">Explore divisions <span class="btn__arr" aria-hidden="true">→</span></a>
-              <a class="btn btn--ghost" href="#contact">Contact</a>
-            </div>
-
-            <div class="stats" role="list" aria-label="Highlights">
-              <div class="stat" role="listitem">
-                <div class="stat__k">4</div>
-                <div class="stat__t">Divisions</div>
-              </div>
-              <div class="stat" role="listitem">
-                <div class="stat__k">CHH</div>
-                <div class="stat__t">Holding identity</div>
-              </div>
-              <div class="stat" role="listitem">
-                <div class="stat__k">Pro</div>
-                <div class="stat__t">Corporate standard</div>
-              </div>
-            </div>
+          <div class="hero__actions">
+            <button class="btn btn--pri" type="button" data-view="divisions">Divisions</button>
+            <button class="btn btn--ghost" type="button" data-view="contact">Contact</button>
           </div>
 
-          <aside class="hero__right">
-            <div class="panel panel--glass">
-              <div class="panel__head">
-                <h2 class="panel__title">Navigation</h2>
-                <p class="panel__sub">Open only the section you need.</p>
-              </div>
-
-              <div class="navcards" role="list" aria-label="Quick links">
-                <a class="navcard" href="#divisions" role="listitem">
-                  <span class="navcard__icon" aria-hidden="true">▣</span>
-                  <span class="navcard__txt">
-                    <span class="navcard__h">Divisions</span>
-                    <span class="navcard__p">Dedicated division pages</span>
-                  </span>
-                  <span class="navcard__arr" aria-hidden="true">→</span>
-                </a>
-
-                <a class="navcard" href="#collaborations" role="listitem">
-                  <span class="navcard__icon" aria-hidden="true">◇</span>
-                  <span class="navcard__txt">
-                    <span class="navcard__h">Collaborations</span>
-                    <span class="navcard__p">External relations</span>
-                  </span>
-                  <span class="navcard__arr" aria-hidden="true">→</span>
-                </a>
-
-                <a class="navcard" href="#partners" role="listitem">
-                  <span class="navcard__icon" aria-hidden="true">◎</span>
-                  <span class="navcard__txt">
-                    <span class="navcard__h">Partners</span>
-                    <span class="navcard__p">Partner presentation</span>
-                  </span>
-                  <span class="navcard__arr" aria-hidden="true">→</span>
-                </a>
-
-                <a class="navcard" href="#contact" role="listitem">
-                  <span class="navcard__icon" aria-hidden="true">✉</span>
-                  <span class="navcard__txt">
-                    <span class="navcard__h">Contact</span>
-                    <span class="navcard__p">Direct communication</span>
-                  </span>
-                  <span class="navcard__arr" aria-hidden="true">→</span>
-                </a>
-              </div>
+          <div class="kpis" role="list" aria-label="Highlights">
+            <div class="kpi" role="listitem">
+              <div class="kpi__k">4</div>
+              <div class="kpi__t">Divisions</div>
             </div>
-          </aside>
+            <div class="kpi" role="listitem">
+              <div class="kpi__k">2</div>
+              <div class="kpi__t">Collaborations</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpi__k">9</div>
+              <div class="kpi__t">Partners</div>
+            </div>
+          </div>
         </div>
+
+        <aside class="hero__right">
+          <div class="panel">
+            <div class="panel__h">Divisions</div>
+            <div class="panel__p muted">Intellectual • Startup • Sports • Business</div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__h">Collaborations</div>
+            <div class="panel__p muted">ahadov_academy • ceterisparibusteam</div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__h">Contact</div>
+            <div class="panel__p muted">055-441-74-23 • crystalhaze2025</div>
+          </div>
+        </aside>
       </div>
-
-      <section class="section section--alt" aria-label="Quick access">
-        <div class="container section__head">
-          <h2 class="section__title">Quick access</h2>
-          <p class="section__lead">Open a division page directly.</p>
-        </div>
-
-        <div class="container quickgrid" role="list">
-          <a class="quickitem" href="#division-intellectual" role="listitem">
-            <span class="quickitem__l">Intellectual</span>
-            <span class="quickitem__r" aria-hidden="true">→</span>
-          </a>
-          <a class="quickitem" href="#division-startup" role="listitem">
-            <span class="quickitem__l">Startup</span>
-            <span class="quickitem__r" aria-hidden="true">→</span>
-          </a>
-          <a class="quickitem" href="#division-sports" role="listitem">
-            <span class="quickitem__l">Sports</span>
-            <span class="quickitem__r" aria-hidden="true">→</span>
-          </a>
-          <a class="quickitem" href="#division-business" role="listitem">
-            <span class="quickitem__l">Business</span>
-            <span class="quickitem__r" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
     </section>
 
     <!-- DIVISIONS -->
-    <section class="view" id="divisions" tabindex="-1" aria-label="Divisions">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Divisions</span>
-        </div>
-        <h1 class="view__title">Divisions</h1>
-        <p class="view__lead">Select a division to open its dedicated page.</p>
+    <section class="view" id="view-divisions" aria-label="Divisions">
+      <div class="wrap head">
+        <h2 class="head__t">Divisions</h2>
+        <p class="head__p muted">Bölməyə klik et — yalnız həmin bölmə açılacaq.</p>
       </div>
 
-      <div class="container grid grid--4" role="list" aria-label="Division cards">
-        <a class="card" href="#division-intellectual" role="listitem" aria-label="Open Intellectual Division">
+      <div class="wrap split">
+        <aside class="side" aria-label="Divisions list">
+          <button class="side__item is-active" type="button" data-sub="intellectual">Intellectual Division</button>
+          <button class="side__item" type="button" data-sub="startup">Startup Division</button>
+          <button class="side__item" type="button" data-sub="sports">Sports Division</button>
+          <button class="side__item" type="button" data-sub="business">Business Division</button>
+        </aside>
+
+        <section class="content" aria-label="Division details">
+          <article class="subview is-show" id="sub-intellectual">
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Intellectual Division</h3>
+                <span class="tag">Team</span>
+              </div>
+              <div class="chips">
+                <span class="chip">Kenan Abdullayev</span>
+                <span class="chip">Shabnam Zeynalova</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Direction</h3>
+                <span class="tag">Standards</span>
+              </div>
+              <div class="bullets">
+                <div class="b"><span class="dot"></span><div><b>Analytical thinking</b><p class="muted">Bilik, məntiq, nəticəyə fokus.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Preparation routine</b><p class="muted">Planlı hazırlıq və sabit icra.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Representation</b><p class="muted">Rəsmi ünsiyyət və təqdimat intizamı.</p></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="subview" id="sub-startup">
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Startup Division</h3>
+                <span class="tag">Team</span>
+              </div>
+              <div class="chips">
+                <span class="chip">Narzin Guliyeva</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Direction</h3>
+                <span class="tag">Execution</span>
+              </div>
+              <div class="bullets">
+                <div class="b"><span class="dot"></span><div><b>Planning</b><p class="muted">Hədəf, yol xəritəsi, tapşırıq bölgüsü.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Delivery</b><p class="muted">Vaxtında icra və nəticə standartı.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Iteration</b><p class="muted">Rəy → təkmilləşdirmə → stabil inkişaf.</p></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="subview" id="sub-sports">
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Sports Division</h3>
+                <span class="tag">Team</span>
+              </div>
+              <div class="chips">
+                <span class="chip">Ilham Fatullayev</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Direction</h3>
+                <span class="tag">Discipline</span>
+              </div>
+              <div class="bullets">
+                <div class="b"><span class="dot"></span><div><b>Training</b><p class="muted">Planlı məşq və davamlılıq.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Team discipline</b><p class="muted">Qayda, məsuliyyət, komanda ruhu.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Performance readiness</b><p class="muted">Stabil nəticə üçün hazırlıq.</p></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="subview" id="sub-business">
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Business Division</h3>
+                <span class="tag">Team</span>
+              </div>
+              <div class="chips">
+                <span class="chip">Asmar Ibrahimzadeh</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__top">
+                <h3 class="card__t">Direction</h3>
+                <span class="tag">Growth</span>
+              </div>
+              <div class="bullets">
+                <div class="b"><span class="dot"></span><div><b>Partner relations</b><p class="muted">Əlaqə və iş modelinin qurulması.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Channels</b><p class="muted">Görünürlük və təqdimat xətti.</p></div></div>
+                <div class="b"><span class="dot"></span><div><b>Development</b><p class="muted">Planlı genişlənmə və ölçülən nəticə.</p></div></div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <!-- COLLABORATIONS -->
+    <section class="view" id="view-collaborations" aria-label="Collaborations">
+      <div class="wrap head">
+        <h2 class="head__t">Collaborations</h2>
+        <p class="head__p muted">Aktiv əməkdaşlıq profilləri.</p>
+      </div>
+
+      <div class="wrap grid2">
+        <div class="card">
           <div class="card__top">
-            <span class="badge">Intellectual</span>
-            <span class="chip">Strategy</span>
+            <h3 class="card__t">Active</h3>
+            <span class="tag">List</span>
           </div>
-          <h3 class="card__title">Intellectual Division</h3>
-          <p class="card__text">Knowledge performance, analytical thinking, structured preparation.</p>
-          <div class="card__cta">Open <span aria-hidden="true">→</span></div>
-        </a>
+          <div class="chips">
+            <span class="chip">ahadov_academy</span>
+            <span class="chip">ceterisparibusteam</span>
+          </div>
+        </div>
 
-        <a class="card" href="#division-startup" role="listitem" aria-label="Open Startup Division">
+        <div class="card">
           <div class="card__top">
-            <span class="badge">Startup</span>
-            <span class="chip">Ideas</span>
+            <h3 class="card__t">Communication</h3>
+            <span class="tag">Process</span>
           </div>
-          <h3 class="card__title">Startup Division</h3>
-          <p class="card__text">Planning systems, execution routines, teamwork and iteration.</p>
-          <div class="card__cta">Open <span aria-hidden="true">→</span></div>
-        </a>
+          <div class="bullets">
+            <div class="b"><span class="dot"></span><div><b>Request</b><p class="muted">Məqsəd və format.</p></div></div>
+            <div class="b"><span class="dot"></span><div><b>Plan</b><p class="muted">İcra planı və təqdimat.</p></div></div>
+            <div class="b"><span class="dot"></span><div><b>Delivery</b><p class="muted">Nəticə və yekun.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <a class="card" href="#division-sports" role="listitem" aria-label="Open Sports Division">
+    <!-- PARTNERS -->
+    <section class="view" id="view-partners" aria-label="Partners">
+      <div class="wrap head">
+        <h2 class="head__t">Partners</h2>
+        <p class="head__p muted">Loqoları sonra əlavə edəcəyik. İndi siyahı.</p>
+      </div>
+
+      <div class="wrap card">
+        <div class="card__top">
+          <h3 class="card__t">List</h3>
+          <span class="tag">9</span>
+        </div>
+        <div class="chips">
+          <span class="chip">davetiye__ressam.jn</span>
+          <span class="chip">artna_desinger</span>
+          <span class="chip">heyksans_official</span>
+          <span class="chip">dara__belle</span>
+          <span class="chip">arneva_weave</span>
+          <span class="chip">_inci_gifts</span>
+          <span class="chip">aurina.accessory</span>
+          <span class="chip">the.byraml</span>
+          <span class="chip">hollowpurple.art</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HBN -->
+    <section class="view" id="view-hbn" aria-label="HBN">
+      <div class="wrap head">
+        <h2 class="head__t">Heyksans Business Network</h2>
+        <p class="head__p muted">CHH altında marka.</p>
+      </div>
+
+      <div class="wrap grid2">
+        <div class="card">
           <div class="card__top">
-            <span class="badge">Sports</span>
-            <span class="chip">Discipline</span>
+            <h3 class="card__t">Owner / Founder</h3>
+            <span class="tag">Profile</span>
           </div>
-          <h3 class="card__title">Sports Division</h3>
-          <p class="card__text">Training culture, team discipline, performance readiness.</p>
-          <div class="card__cta">Open <span aria-hidden="true">→</span></div>
-        </a>
+          <div class="big">Nijat Umarli</div>
+        </div>
 
-        <a class="card" href="#division-business" role="listitem" aria-label="Open Business Division">
+        <div class="card">
           <div class="card__top">
-            <span class="badge">Business</span>
-            <span class="chip">Growth</span>
+            <h3 class="card__t">Direction</h3>
+            <span class="tag">Scope</span>
           </div>
-          <h3 class="card__title">Business Division</h3>
-          <p class="card__text">Partner relations, channels, and development direction.</p>
-          <div class="card__cta">Open <span aria-hidden="true">→</span></div>
-        </a>
-      </div>
-
-      <div class="container view__foot">
-        <a class="btn btn--ghost" href="#home">Back to Home</a>
-      </div>
-    </section>
-
-    <!-- Intellectual -->
-    <section class="view" id="division-intellectual" tabindex="-1" aria-label="Intellectual Division">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <a class="crumb__link" href="#divisions">Divisions</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Intellectual</span>
-        </div>
-        <h1 class="view__title">Intellectual Division</h1>
-        <p class="view__lead">Structured preparation and performance standards.</p>
-      </div>
-
-      <div class="container twoCol">
-        <div class="panel panel--glass">
-          <h2 class="panel__title">Focus</h2>
-          <div class="list">
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Preparation routine</strong>
-                <p class="muted">Plan, review, assessment and analysis.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Performance</strong>
-                <p class="muted">Time control and strategy alignment.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Representation</strong>
-                <p class="muted">Formal communication and presentation discipline.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel--solid">
-          <h2 class="panel__title">Team</h2>
-          <div class="people" aria-label="Team members">
-            <span class="pillName">Kenan Abdullayev</span>
-            <span class="pillName">Shabnam Zeynalova</span>
-          </div>
-
-          <div class="hr"></div>
-
-          <div class="actions">
-            <a class="btn btn--ghost" href="#divisions">Back to divisions</a>
-            <a class="btn btn--primary" href="#contact">Contact <span class="btn__arr" aria-hidden="true">→</span></a>
+          <div class="bullets">
+            <div class="b"><span class="dot"></span><div><b>hbnedu.az</b><p class="muted">Əsas satış platforması.</p></div></div>
+            <div class="b"><span class="dot"></span><div><b>Materials</b><p class="muted">Elmi və bədii məzmun, test materialları.</p></div></div>
+            <div class="b"><span class="dot"></span><div><b>TreeYBuz</b><p class="muted">Təhsil əsaslı süni intellekt xətti.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Startup -->
-    <section class="view" id="division-startup" tabindex="-1" aria-label="Startup Division">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <a class="crumb__link" href="#divisions">Divisions</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Startup</span>
-        </div>
-        <h1 class="view__title">Startup Division</h1>
-        <p class="view__lead">Planning, execution and iteration.</p>
+    <!-- CONTACT -->
+    <section class="view" id="view-contact" aria-label="Contact">
+      <div class="wrap head">
+        <h2 class="head__t">Contact</h2>
+        <p class="head__p muted">Rəsmi əlaqə məlumatları.</p>
       </div>
 
-      <div class="container twoCol">
-        <div class="panel panel--glass">
-          <h2 class="panel__title">Focus</h2>
-          <div class="list">
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Planning</strong>
-                <p class="muted">Targets, roadmaps and weekly execution.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Execution</strong>
-                <p class="muted">Ownership, timelines and delivery discipline.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Iteration</strong>
-                <p class="muted">Feedback cycles and improvements.</p>
-              </div>
-            </div>
+      <div class="wrap grid2">
+        <div class="card">
+          <div class="card__top">
+            <h3 class="card__t">Details</h3>
+            <span class="tag">Direct</span>
+          </div>
+
+          <div class="kv">
+            <div class="kv__r"><div class="kv__k">Phone</div><div class="kv__v">055-441-74-23</div></div>
+            <div class="kv__r"><div class="kv__k">Instagram</div><div class="kv__v">crystalhaze2025</div></div>
+            <div class="kv__r"><div class="kv__k">Email</div><div class="kv__v">crystalhaze25.26@gmail.com</div></div>
           </div>
         </div>
 
-        <div class="panel panel--solid">
-          <h2 class="panel__title">Team</h2>
-          <div class="people" aria-label="Team members">
-            <span class="pillName">Narzin Guliyeva</span>
+        <div class="card">
+          <div class="card__top">
+            <h3 class="card__t">Notes</h3>
+            <span class="tag">Later</span>
           </div>
-
-          <div class="hr"></div>
-
-          <div class="actions">
-            <a class="btn btn--ghost" href="#divisions">Back to divisions</a>
-            <a class="btn btn--primary" href="#contact">Contact <span class="btn__arr" aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sports -->
-    <section class="view" id="division-sports" tabindex="-1" aria-label="Sports Division">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <a class="crumb__link" href="#divisions">Divisions</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Sports</span>
-        </div>
-        <h1 class="view__title">Sports Division</h1>
-        <p class="view__lead">Discipline and performance readiness.</p>
-      </div>
-
-      <div class="container twoCol">
-        <div class="panel panel--glass">
-          <h2 class="panel__title">Focus</h2>
-          <div class="list">
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Training routine</strong>
-                <p class="muted">Consistency, progress and form.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Team discipline</strong>
-                <p class="muted">Rules, responsibility and unity.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Readiness</strong>
-                <p class="muted">Stable performance and preparation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel--solid">
-          <h2 class="panel__title">Team</h2>
-          <div class="people" aria-label="Team members">
-            <span class="pillName">Ilham Fatullayev</span>
-          </div>
-
-          <div class="hr"></div>
-
-          <div class="actions">
-            <a class="btn btn--ghost" href="#divisions">Back to divisions</a>
-            <a class="btn btn--primary" href="#contact">Contact <span class="btn__arr" aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business -->
-    <section class="view" id="division-business" tabindex="-1" aria-label="Business Division">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <a class="crumb__link" href="#divisions">Divisions</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Business</span>
-        </div>
-        <h1 class="view__title">Business Division</h1>
-        <p class="view__lead">Partner relations and development direction.</p>
-      </div>
-
-      <div class="container twoCol">
-        <div class="panel panel--glass">
-          <h2 class="panel__title">Focus</h2>
-          <div class="list">
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Partnership work</strong>
-                <p class="muted">Communication, proposals and alignment.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Channels</strong>
-                <p class="muted">Visibility, positioning and delivery.</p>
-              </div>
-            </div>
-            <div class="list__item">
-              <span class="list__dot" aria-hidden="true"></span>
-              <div class="list__body">
-                <strong>Sustainability</strong>
-                <p class="muted">Stable growth and measurable outcomes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel--solid">
-          <h2 class="panel__title">Team</h2>
-          <div class="people" aria-label="Team members">
-            <span class="pillName">Asmar Ibrahimzadeh</span>
-          </div>
-
-          <div class="hr"></div>
-
-          <div class="actions">
-            <a class="btn btn--ghost" href="#divisions">Back to divisions</a>
-            <a class="btn btn--primary" href="#contact">Contact <span class="btn__arr" aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Collaborations -->
-    <section class="view" id="collaborations" tabindex="-1" aria-label="Collaborations">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Collaborations</span>
-        </div>
-        <h1 class="view__title">Collaborations</h1>
-        <p class="view__lead">External relations and cooperation direction.</p>
-      </div>
-
-      <div class="container twoCol">
-        <div class="panel panel--glass">
-          <h2 class="panel__title">Active</h2>
-          <div class="chips" aria-label="Active collaborations">
-            <span class="chip2">ahadov_academy</span>
-            <span class="chip2">ceterisparibusteam</span>
-          </div>
-        </div>
-
-        <div class="panel panel--solid">
-          <h2 class="panel__title">Contact for collaboration</h2>
-          <div class="actions">
-            <a class="btn btn--primary" href="#contact">Contact <span class="btn__arr" aria-hidden="true">→</span></a>
-            <a class="btn btn--ghost" href="#home">Home</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Partners -->
-    <section class="view" id="partners" tabindex="-1" aria-label="Partners">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Partners</span>
-        </div>
-        <h1 class="view__title">Partners</h1>
-        <p class="view__lead">Partner presentation area.</p>
-      </div>
-
-      <div class="container partnerGrid" aria-label="Partner grid"></div>
-
-      <div class="container view__foot">
-        <a class="btn btn--ghost" href="#home">Back to Home</a>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="view" id="contact" tabindex="-1" aria-label="Contact">
-      <div class="container view__head">
-        <div class="crumb">
-          <a class="crumb__link" href="#home">Home</a>
-          <span class="crumb__sep" aria-hidden="true">/</span>
-          <span class="crumb__here">Contact</span>
-        </div>
-        <h1 class="view__title">Contact</h1>
-        <p class="view__lead">Official communication details.</p>
-      </div>
-
-      <div class="container twoCol">
-        <div class="panel panel--glass">
-          <h2 class="panel__title">Details</h2>
-          <div class="contactList" aria-label="Contact details">
-            <div class="contactRow">
-              <span class="cLabel">Phone</span>
-              <span class="cValue">055-441-74-23</span>
-            </div>
-            <div class="contactRow">
-              <span class="cLabel">Email</span>
-              <span class="cValue">crystalhaze25.26@gmail.com</span>
-            </div>
-            <div class="contactRow">
-              <span class="cLabel">Instagram</span>
-              <span class="cValue">crystalhaze2025</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel panel--solid">
-          <h2 class="panel__title">Navigation</h2>
-          <div class="navlist">
-            <a class="navlist__item" href="#divisions">Divisions</a>
-            <a class="navlist__item" href="#collaborations">Collaborations</a>
-            <a class="navlist__item" href="#partners">Partners</a>
-            <a class="navlist__item" href="#home">Home</a>
-          </div>
+          <p class="muted">
+            Form və əlavə loqoları sən göndərəndən sonra, bu sistemin içində professional şəkildə yerləşdiriləcək.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="footer__mark">
-          <img class="footer__img" src="assets/chh-logo.png" alt="Crystal Haze Holding logo" />
-        </span>
-        <div class="footer__meta">
-          <span class="footer__name">Crystal Haze Holding</span>
-          <span class="footer__tag muted">Official website</span>
-        </div>
+  <footer class="ftr">
+    <div class="wrap ftr__in">
+      <div class="ftr__l muted">© 2025 Crystal Haze Holding</div>
+      <div class="ftr__r">
+        <span class="pill">crystalhaze2025</span>
+        <span class="pill">crystalhaze25.26@gmail.com</span>
       </div>
-
-      <div class="footer__links" aria-label="Footer links">
-        <a href="#divisions">Divisions</a>
-        <a href="#collaborations">Collaborations</a>
-        <a href="#partners">Partners</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <div class="footer__copy muted">© 2025 Crystal Haze Holding</div>
     </div>
   </footer>
 
   <script>
-    (function () {
-      var navcheck = document.getElementById("navcheck");
+    const views = ["home","divisions","collaborations","partners","hbn","contact"];
 
-      function closeMenu() {
-        if (navcheck) navcheck.checked = false;
-      }
+    const $ = (s, r=document) => r.querySelector(s);
+    const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
 
-      function ensureHash() {
-        if (!location.hash) location.hash = "#home";
-      }
-
-      function focusView() {
-        var h = location.hash || "#home";
-        var el = document.querySelector(h);
-        if (el && el.classList && el.classList.contains("view")) el.focus();
-      }
-
-      window.addEventListener("load", function () {
-        ensureHash();
-        focusView();
+    function showView(key){
+      views.forEach(v=>{
+        const el = $("#view-"+v);
+        if(!el) return;
+        el.classList.toggle("is-show", v===key);
       });
 
-      window.addEventListener("hashchange", function () {
-        closeMenu();
-        focusView();
-      });
-    })();
+      $$(".nav__btn").forEach(b=>b.classList.toggle("is-active", b.dataset.view===key));
+      $$(".mnavlink").forEach(b=>b.classList.toggle("is-active", b.dataset.view===key));
+
+      // reset divisions subviews when leaving divisions
+      if(key !== "divisions"){
+        setDivision("intellectual");
+      }
+
+      // close mobile panel
+      $("#mnavPanel").classList.remove("is-open");
+      window.scrollTo({top:0, behavior:"instant"});
+    }
+
+    function setDivision(sub){
+      $$(".side__item").forEach(b=>b.classList.toggle("is-active", b.dataset.sub===sub));
+      $$(".subview").forEach(s=>s.classList.toggle("is-show", s.id==="sub-"+sub));
+    }
+
+    document.addEventListener("click", (e)=>{
+      const vbtn = e.target.closest("[data-view]");
+      if(vbtn){
+        const key = vbtn.dataset.view;
+        if(views.includes(key)) showView(key);
+      }
+
+      const sbtn = e.target.closest("[data-sub]");
+      if(sbtn && $("#view-divisions").classList.contains("is-show")){
+        setDivision(sbtn.dataset.sub);
+      }
+    });
+
+    $("#mnavBtn").addEventListener("click", ()=>{
+      $("#mnavPanel").classList.toggle("is-open");
+    });
+
+    // start
+    showView("home");
+    setDivision("intellectual");
   </script>
 </body>
 </html>
