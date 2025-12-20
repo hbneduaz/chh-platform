@@ -3,74 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crystal Haze Holding (CHH)</title>
-  <meta name="description" content="Crystal Haze Holding (CHH) — divisions-based holding ecosystem. Intellectual, Startup, Sports, Business. Collaborations, partners and contact." />
+  <title>Crystal Haze Holding</title>
+  <meta name="description" content="Crystal Haze Holding — professional holding website with divisions, collaborations, partners and contact." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <!-- Topbar -->
+<body id="top">
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="CHH Home">
-        <span class="brand__logo">
-          <img src="assets/chh-logo.png" alt="CHH Logo"
-               onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='grid';" />
-          <span id="logoFallback" class="logoFallback" style="display:none;">CHH</span>
+      <a class="brand" href="#top" aria-label="Crystal Haze Holding">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="assets/chh-logo.png" alt="" />
+          <span class="brand__fallback">CHH</span>
         </span>
         <span class="brand__text">
           <strong>Crystal Haze Holding</strong>
-          <em>Holding Ecosystem</em>
+          <em>Holding structure</em>
         </span>
       </a>
 
-      <nav class="nav">
+      <input class="navcheck" type="checkbox" id="navcheck" aria-label="Menu toggle" />
+      <label class="navtoggle" for="navcheck" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Main navigation">
         <a class="nav__link" href="#about">About</a>
         <a class="nav__link" href="#divisions">Divisions</a>
-        <a class="nav__link" href="#collab">Collaborations</a>
+        <a class="nav__link" href="#collaborations">Collaborations</a>
         <a class="nav__link" href="#partners">Partners</a>
+        <a class="nav__link" href="#join">Join</a>
         <a class="nav__link nav__cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
+  <main>
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__left">
           <div class="pill">
-            <span class="dot"></span>
+            <span class="pill__dot"></span>
             <span>Structure • Growth • Representation</span>
           </div>
 
           <h1 class="hero__title">
             Crystal Haze Holding
-            <span class="hero__sub">A unified ecosystem of divisions and partnerships.</span>
+            <span class="hero__sub">A professional division-based holding website.</span>
           </h1>
 
           <p class="hero__lead">
-            CHH is built to organize talent into focused divisions, develop discipline and teamwork,
-            and represent the brand professionally across events, collaborations and partner networks.
+            CHH unifies focused divisions under one brand: leadership, coordination, and professional presence across
+            projects, collaborations and partner relations.
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#divisions">Explore Divisions <span class="arrow">→</span></a>
-            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <a class="btn btn--primary" href="#divisions">Explore divisions <span class="btn__arrow">→</span></a>
+            <a class="btn btn--ghost" href="#join">Join CHH</a>
           </div>
 
           <div class="metrics">
             <div class="metric">
               <div class="metric__k">4</div>
-              <div class="metric__t">Core divisions</div>
+              <div class="metric__t">Divisions</div>
             </div>
             <div class="metric">
-              <div class="metric__k">1</div>
-              <div class="metric__t">Unified structure</div>
+              <div class="metric__k">CHH</div>
+              <div class="metric__t">Unified brand</div>
             </div>
             <div class="metric">
-              <div class="metric__k">∞</div>
-              <div class="metric__t">Growth mindset</div>
+              <div class="metric__k">Pro</div>
+              <div class="metric__t">Presentation-ready</div>
             </div>
           </div>
         </div>
@@ -78,50 +81,50 @@
         <aside class="hero__right">
           <div class="panel panel--glass">
             <div class="panel__head">
-              <h2>What makes CHH a holding?</h2>
-              <p>Clear framework, consistent output, and brand-level coordination.</p>
+              <h2>Core focus</h2>
+              <p>Clear structure and consistent execution.</p>
             </div>
 
             <div class="stack">
               <div class="stackItem">
                 <div class="stackItem__icon">◎</div>
                 <div class="stackItem__body">
-                  <strong>Team & Roles</strong>
-                  <span>Leadership, responsibilities and coordination.</span>
+                  <strong>Team & roles</strong>
+                  <span>Responsibilities and coordination.</span>
                 </div>
               </div>
+
               <div class="stackItem">
                 <div class="stackItem__icon">◇</div>
                 <div class="stackItem__body">
-                  <strong>Preparation Systems</strong>
-                  <span>Practice, routines, and performance discipline.</span>
+                  <strong>Preparation</strong>
+                  <span>Routine practice and stable improvement.</span>
                 </div>
               </div>
+
               <div class="stackItem">
                 <div class="stackItem__icon">▣</div>
                 <div class="stackItem__body">
-                  <strong>Professional Representation</strong>
-                  <span>Presence in events, partners and public platforms.</span>
+                  <strong>Brand presence</strong>
+                  <span>Clean style for trust and visibility.</span>
                 </div>
               </div>
             </div>
 
             <div class="panel__foot">
-              <a class="link" href="#partners">See partner ecosystem →</a>
+              <a class="link" href="#partners">View partners →</a>
             </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="section">
       <div class="container section__head">
-        <h2>About CHH</h2>
+        <h2>About</h2>
         <p>
-          Crystal Haze Holding is a division-based structure that brings multiple activity areas under one brand.
-          Each division has a focused mission and operational rhythm, while the holding layer provides direction,
-          standards and a unified identity.
+          Crystal Haze Holding is built around division clarity: each direction has a mission, working rhythm, and
+          responsibility. The holding layer keeps standards, alignment and a consistent brand identity.
         </p>
       </div>
 
@@ -129,22 +132,17 @@
         <div class="panel panel--solid">
           <h3>Standards</h3>
           <div class="list">
-            <div class="list__item"><span class="list__dot"></span><div><strong>Accountability</strong><p class="muted">Clear ownership for tasks and outcomes.</p></div></div>
-            <div class="list__item"><span class="list__dot"></span><div><strong>Consistency</strong><p class="muted">Regular preparation and stable improvement.</p></div></div>
-            <div class="list__item"><span class="list__dot"></span><div><strong>Brand quality</strong><p class="muted">Professional visuals, communication and presence.</p></div></div>
+            <div class="list__item"><span class="list__dot"></span><div><strong>Accountability</strong><p class="muted">Clear ownership for outcomes.</p></div></div>
+            <div class="list__item"><span class="list__dot"></span><div><strong>Consistency</strong><p class="muted">Regular preparation and progress.</p></div></div>
+            <div class="list__item"><span class="list__dot"></span><div><strong>Quality</strong><p class="muted">Professional communication and visuals.</p></div></div>
           </div>
         </div>
 
         <div class="panel panel--glass">
-          <h3>Vision</h3>
-          <p class="muted">
-            Build a strong internal culture that scales: more teams, more partnerships, and stronger public representation —
-            while keeping the CHH identity consistent and premium.
-          </p>
-          <div class="hr"></div>
+          <h3>Quick links</h3>
           <div class="quick">
             <a class="quick__item" href="#divisions">Divisions</a>
-            <a class="quick__item" href="#collab">Collaborations</a>
+            <a class="quick__item" href="#collaborations">Collaborations</a>
             <a class="quick__item" href="#partners">Partners</a>
             <a class="quick__item" href="#contact">Contact</a>
           </div>
@@ -152,58 +150,57 @@
       </div>
     </section>
 
-    <!-- Divisions -->
     <section id="divisions" class="section section--alt">
       <div class="container section__head">
         <h2>Divisions</h2>
-        <p>Four focused divisions — each responsible for its direction and results.</p>
+        <p>Four focused directions under one holding identity.</p>
       </div>
 
-      <div class="container grid">
-        <article class="card">
+      <div class="container grid grid--4">
+        <article class="card" id="div-intellectual">
           <div class="card__top">
             <span class="badge">Intellectual</span>
             <span class="chip">Strategy</span>
           </div>
           <h3>Intellectual Division</h3>
-          <p class="muted">Knowledge-based competitions, analytical thinking, structured preparation.</p>
+          <p>Knowledge performance, analytical thinking, structured preparation.</p>
           <div class="people">
             <span class="pillName">Kenan Abdullayev</span>
             <span class="pillName">Shabnam Zeynalova</span>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="div-startup">
           <div class="card__top">
             <span class="badge">Startup</span>
             <span class="chip">Ideas</span>
           </div>
           <h3>Startup Division</h3>
-          <p class="muted">Early-stage initiatives, planning habits, teamwork and innovation routines.</p>
+          <p>Early initiatives, planning systems, teamwork and iteration.</p>
           <div class="people">
             <span class="pillName">Narzin Guliyeva</span>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="div-sports">
           <div class="card__top">
             <span class="badge">Sports</span>
             <span class="chip">Discipline</span>
           </div>
           <h3>Sports Division</h3>
-          <p class="muted">Training culture, team spirit, physical development and competition readiness.</p>
+          <p>Training culture, team spirit, performance readiness.</p>
           <div class="people">
             <span class="pillName">Ilham Fatullayev</span>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="div-business">
           <div class="card__top">
             <span class="badge">Business</span>
             <span class="chip">Growth</span>
           </div>
           <h3>Business Division</h3>
-          <p class="muted">Partnership initiatives, online & physical channels, sustainable expansion.</p>
+          <p>Partner relations, channels and sustainable development.</p>
           <div class="people">
             <span class="pillName">Asmar Ibrahimzadeh</span>
           </div>
@@ -211,11 +208,10 @@
       </div>
     </section>
 
-    <!-- Collaborations -->
-    <section id="collab" class="section">
+    <section id="collaborations" class="section">
       <div class="container section__head">
         <h2>Collaborations</h2>
-        <p>Programs and teams we collaborate with. (You can expand this list anytime.)</p>
+        <p>Collaboration list will be expanded and visually organized after you send logos.</p>
       </div>
 
       <div class="container grid grid--2">
@@ -225,43 +221,61 @@
             <span class="chip2">ahadov_academy</span>
             <span class="chip2">ceterisparibusteam</span>
           </div>
-          <p class="muted" style="margin-top:10px;">
-            Later we can add collaboration logos into <b>assets/collabs/</b> and show them as a logo wall.
-          </p>
         </div>
 
         <div class="panel panel--solid">
-          <h3>Collaboration format</h3>
-          <p class="muted">
-            For partners: co-events, co-content, support packages, or joint initiatives — designed to fit both sides.
-          </p>
+          <h3>Format</h3>
+          <p class="muted">Co-events, co-content, and structured support packages.</p>
           <div class="hr"></div>
           <a class="btn btn--ghost" href="#contact">Request collaboration</a>
         </div>
       </div>
     </section>
 
-    <!-- Partners -->
     <section id="partners" class="section section--alt">
       <div class="container section__head">
         <h2>Partners</h2>
-        <p>
-          This section is ready for your partner logos. Add images to <b>assets/partners/</b> later and we can
-          replace the placeholders with a real “logo wall”.
-        </p>
+        <p>Partner logos will be placed here in a unified professional layout.</p>
       </div>
 
-      <div class="container logoGrid">
-        <div class="logoTile">Logo 1</div>
-        <div class="logoTile">Logo 2</div>
-        <div class="logoTile">Logo 3</div>
-        <div class="logoTile">Logo 4</div>
-        <div class="logoTile">Logo 5</div>
-        <div class="logoTile">Logo 6</div>
+      <div class="container logoGrid" aria-label="Partner logo wall">
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
+        <div class="logoTile" aria-hidden="true"></div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <section id="join" class="section">
+      <div class="container section__head">
+        <h2>Join</h2>
+        <p>Join form will be integrated after you send the final form fields.</p>
+      </div>
+
+      <div class="container grid grid--2">
+        <div class="panel panel--glass">
+          <h3>Application</h3>
+          <p class="muted">Submit your details and preferred division.</p>
+          <div class="hr"></div>
+          <div class="miniNote">Form will appear here.</div>
+        </div>
+
+        <div class="panel panel--solid">
+          <h3>Divisions</h3>
+          <div class="chips">
+            <span class="chip2">Intellectual</span>
+            <span class="chip2">Startup</span>
+            <span class="chip2">Sports</span>
+            <span class="chip2">Business</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section">
       <div class="container section__head">
         <h2>Contact</h2>
@@ -288,11 +302,8 @@
         </div>
 
         <div class="panel panel--solid">
-          <h3>Next upgrade (optional)</h3>
-          <p class="muted">
-            If you want a real “contact form” on GitHub Pages, we can connect Formspree/Netlify Forms later.
-            This site is currently built as a clean holding landing page.
-          </p>
+          <h3>Request</h3>
+          <p class="muted">Partnerships, collaborations, and division inquiries.</p>
           <div class="hr"></div>
           <a class="link" href="#top">Back to top →</a>
         </div>
@@ -302,8 +313,8 @@
     <section class="ctaBand">
       <div class="container ctaBand__inner">
         <div>
-          <h2>Ready to build with CHH?</h2>
-          <p class="muted">Partnerships, collaborations, and structured growth — let’s connect.</p>
+          <h2>Crystal Haze Holding</h2>
+          <p class="muted">Professional holding presence with clear division structure.</p>
         </div>
         <a class="btn btn--primary" href="#contact">Contact us →</a>
       </div>
@@ -313,14 +324,13 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="footerLogo">
-          <img src="assets/chh-logo.png" alt="CHH Logo"
-               onerror="this.style.display='none'; document.getElementById('footFallback').style.display='grid';" />
-          <span id="footFallback" class="logoFallback" style="display:none;">CHH</span>
+        <span class="footer__mark" aria-hidden="true">
+          <img class="footer__img" src="assets/chh-logo.png" alt="" />
+          <span class="footer__fallback">CHH</span>
         </span>
         <div>
           <strong>Crystal Haze Holding</strong>
-          <span class="muted">Holding Ecosystem</span>
+          <span class="muted">Official website</span>
         </div>
       </div>
 
