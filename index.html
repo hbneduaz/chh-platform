@@ -2,13 +2,20 @@
 <!doctype html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Crystal Haze Holding</title>
   <meta name="description" content="Crystal Haze Holding" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <span class="grid"></span>
+  </div>
+
   <header class="hdr">
     <div class="wrap hdr__in">
       <a class="brand" href="#" data-view="home" aria-label="Crystal Haze Holding">
@@ -18,7 +25,7 @@
         <span class="brand__name">Crystal Haze Holding</span>
       </a>
 
-      <nav class="nav" aria-label="Navigation">
+      <nav class="nav" aria-label="Sections">
         <button class="nav__btn is-active" type="button" data-view="home">Home</button>
         <button class="nav__btn" type="button" data-view="divisions">Divisions</button>
         <button class="nav__btn" type="button" data-view="collaborations">Collaborations</button>
@@ -27,12 +34,12 @@
         <button class="nav__btn nav__btn--cta" type="button" data-view="contact">Contact</button>
       </nav>
 
-      <button class="mnav" type="button" id="mnavBtn" aria-label="Menu">
+      <button class="mnav" type="button" id="mnavBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
 
-    <div class="mnavpanel" id="mnavPanel" aria-label="Mobile navigation">
+    <div class="mnavpanel" id="mnavPanel" aria-label="Mobile sections">
       <button class="mnavlink is-active" type="button" data-view="home">Home</button>
       <button class="mnavlink" type="button" data-view="divisions">Divisions</button>
       <button class="mnavlink" type="button" data-view="collaborations">Collaborations</button>
@@ -42,77 +49,165 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="app">
     <!-- HOME -->
     <section class="view is-show" id="view-home" aria-label="Home">
       <div class="wrap hero">
         <div class="hero__left">
-          <h1 class="hero__t">Crystal Haze Holding</h1>
-          <p class="hero__p">
-            Rəsmi, korporativ üslubda qurulmuş holding strukturu: bölmələr, əməkdaşlıqlar, partnyorlar və əlaqə.
-          </p>
-
-          <div class="hero__actions">
-            <button class="btn btn--pri" type="button" data-view="divisions">Divisions</button>
-            <button class="btn btn--ghost" type="button" data-view="contact">Contact</button>
+          <div class="badge reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            <span class="badge__t">Official Holding Platform</span>
           </div>
 
-          <div class="kpis" role="list" aria-label="Highlights">
+          <h1 class="hero__t reveal" style="--d: 60ms">Crystal Haze Holding</h1>
+
+          <p class="hero__p reveal" style="--d: 110ms">
+            Bölmələr, əməkdaşlıqlar və partnyor əlaqələri üçün rəsmi təqdimat platforması.
+          </p>
+
+          <div class="hero__actions reveal" style="--d: 160ms">
+            <button class="btn btn--pri" type="button" data-view="partners">
+              Partners <span class="arr" aria-hidden="true">→</span>
+            </button>
+            <button class="btn btn--ghost" type="button" data-view="collaborations">
+              Collaborations <span class="arr" aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="kpis reveal" style="--d: 210ms" role="list" aria-label="Highlights">
             <div class="kpi" role="listitem">
-              <div class="kpi__k">4</div>
+              <div class="kpi__k" data-count="4">0</div>
               <div class="kpi__t">Divisions</div>
             </div>
             <div class="kpi" role="listitem">
-              <div class="kpi__k">2</div>
+              <div class="kpi__k" data-count="2">0</div>
               <div class="kpi__t">Collaborations</div>
             </div>
             <div class="kpi" role="listitem">
-              <div class="kpi__k">9</div>
+              <div class="kpi__k" data-count="9">0</div>
               <div class="kpi__t">Partners</div>
             </div>
           </div>
         </div>
 
         <aside class="hero__right">
-          <div class="panel">
-            <div class="panel__h">Divisions</div>
-            <div class="panel__p muted">Intellectual • Startup • Sports • Business</div>
+          <div class="glass reveal" style="--d: 70ms">
+            <div class="glass__top">
+              <div class="glass__h">Featured Collaborations</div>
+              <span class="tag tag--glow">Active</span>
+            </div>
+
+            <div class="list">
+              <div class="li">
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <div class="li__t">ahadov_academy</div>
+                  <div class="li__m">Collaboration profile</div>
+                </div>
+              </div>
+              <div class="li">
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <div class="li__t">ceterisparibusteam</div>
+                  <div class="li__m">Collaboration profile</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass__cta">
+              <button class="mini" type="button" data-view="collaborations">Open</button>
+            </div>
           </div>
 
-          <div class="panel">
-            <div class="panel__h">Collaborations</div>
-            <div class="panel__p muted">ahadov_academy • ceterisparibusteam</div>
-          </div>
+          <div class="glass reveal" style="--d: 120ms">
+            <div class="glass__top">
+              <div class="glass__h">Partner Spotlight</div>
+              <span class="tag">List</span>
+            </div>
 
-          <div class="panel">
-            <div class="panel__h">Contact</div>
-            <div class="panel__p muted">055-441-74-23 • crystalhaze2025</div>
+            <div class="ticker" aria-label="Partner ticker">
+              <div class="ticker__track">
+                <span class="pill">davetiye__ressam.jn</span>
+                <span class="pill">artna_desinger</span>
+                <span class="pill">heyksans_official</span>
+                <span class="pill">dara__belle</span>
+                <span class="pill">arneva_weave</span>
+                <span class="pill">_inci_gifts</span>
+                <span class="pill">aurina.accessory</span>
+                <span class="pill">the.byraml</span>
+                <span class="pill">hollowpurple.art</span>
+
+                <span class="pill">davetiye__ressam.jn</span>
+                <span class="pill">artna_desinger</span>
+                <span class="pill">heyksans_official</span>
+                <span class="pill">dara__belle</span>
+                <span class="pill">arneva_weave</span>
+                <span class="pill">_inci_gifts</span>
+                <span class="pill">aurina.accessory</span>
+                <span class="pill">the.byraml</span>
+                <span class="pill">hollowpurple.art</span>
+              </div>
+            </div>
+
+            <div class="glass__cta">
+              <button class="mini" type="button" data-view="partners">Open</button>
+            </div>
           </div>
         </aside>
+      </div>
+
+      <div class="wrap bands">
+        <div class="band reveal" style="--d: 80ms">
+          <div class="band__h">Partners</div>
+          <div class="band__p">Loqolar sonra əlavə olunacaq.</div>
+          <button class="band__btn" type="button" data-view="partners">View</button>
+        </div>
+        <div class="band reveal" style="--d: 120ms">
+          <div class="band__h">Collaborations</div>
+          <div class="band__p">Əməkdaşlıq profilləri.</div>
+          <button class="band__btn" type="button" data-view="collaborations">View</button>
+        </div>
+        <div class="band reveal" style="--d: 160ms">
+          <div class="band__h">Divisions</div>
+          <div class="band__p">Bölmə seç → yalnız seçilən hissə açılır.</div>
+          <button class="band__btn" type="button" data-view="divisions">View</button>
+        </div>
       </div>
     </section>
 
     <!-- DIVISIONS -->
     <section class="view" id="view-divisions" aria-label="Divisions">
       <div class="wrap head">
-        <h2 class="head__t">Divisions</h2>
-        <p class="head__p muted">Bölməyə klik et — yalnız həmin bölmə açılacaq.</p>
+        <h2 class="head__t reveal">Divisions</h2>
+        <p class="head__p reveal" style="--d: 60ms">Bölməyə klik et — yalnız həmin bölmə açılacaq.</p>
       </div>
 
       <div class="wrap split">
-        <aside class="side" aria-label="Divisions list">
-          <button class="side__item is-active" type="button" data-sub="intellectual">Intellectual Division</button>
-          <button class="side__item" type="button" data-sub="startup">Startup Division</button>
-          <button class="side__item" type="button" data-sub="sports">Sports Division</button>
-          <button class="side__item" type="button" data-sub="business">Business Division</button>
+        <aside class="side reveal" style="--d: 80ms" aria-label="Division menu">
+          <button class="side__item is-active" type="button" data-sub="intellectual">
+            <span class="side__k">Intellectual</span>
+            <span class="side__m">Kenan Abdullayev • Shabnam Zeynalova</span>
+          </button>
+          <button class="side__item" type="button" data-sub="startup">
+            <span class="side__k">Startup</span>
+            <span class="side__m">Narzin Guliyeva</span>
+          </button>
+          <button class="side__item" type="button" data-sub="sports">
+            <span class="side__k">Sports</span>
+            <span class="side__m">Ilham Fatullayev</span>
+          </button>
+          <button class="side__item" type="button" data-sub="business">
+            <span class="side__k">Business</span>
+            <span class="side__m">Asmar Ibrahimzadeh</span>
+          </button>
         </aside>
 
         <section class="content" aria-label="Division details">
           <article class="subview is-show" id="sub-intellectual">
-            <div class="card">
+            <div class="card reveal">
               <div class="card__top">
                 <h3 class="card__t">Intellectual Division</h3>
-                <span class="tag">Team</span>
+                <span class="tag tag--glow">Team</span>
               </div>
               <div class="chips">
                 <span class="chip">Kenan Abdullayev</span>
@@ -120,87 +215,123 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal" style="--d: 80ms">
               <div class="card__top">
                 <h3 class="card__t">Direction</h3>
                 <span class="tag">Standards</span>
               </div>
               <div class="bullets">
-                <div class="b"><span class="dot"></span><div><b>Analytical thinking</b><p class="muted">Bilik, məntiq, nəticəyə fokus.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Preparation routine</b><p class="muted">Planlı hazırlıq və sabit icra.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Representation</b><p class="muted">Rəsmi ünsiyyət və təqdimat intizamı.</p></div></div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Analytical thinking</b><p>Bilik, məntiq, nəticəyə fokus.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Preparation routine</b><p>Planlı hazırlıq və sabit icra.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Representation</b><p>Rəsmi ünsiyyət və təqdimat intizamı.</p></div>
+                </div>
               </div>
             </div>
           </article>
 
           <article class="subview" id="sub-startup">
-            <div class="card">
+            <div class="card reveal">
               <div class="card__top">
                 <h3 class="card__t">Startup Division</h3>
-                <span class="tag">Team</span>
+                <span class="tag tag--glow">Team</span>
               </div>
               <div class="chips">
                 <span class="chip">Narzin Guliyeva</span>
               </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal" style="--d: 80ms">
               <div class="card__top">
                 <h3 class="card__t">Direction</h3>
                 <span class="tag">Execution</span>
               </div>
               <div class="bullets">
-                <div class="b"><span class="dot"></span><div><b>Planning</b><p class="muted">Hədəf, yol xəritəsi, tapşırıq bölgüsü.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Delivery</b><p class="muted">Vaxtında icra və nəticə standartı.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Iteration</b><p class="muted">Rəy → təkmilləşdirmə → stabil inkişaf.</p></div></div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Planning</b><p>Hədəf, yol xəritəsi, tapşırıq bölgüsü.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Delivery</b><p>Vaxtında icra və nəticə standartı.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Iteration</b><p>Rəy → təkmilləşdirmə → stabil inkişaf.</p></div>
+                </div>
               </div>
             </div>
           </article>
 
           <article class="subview" id="sub-sports">
-            <div class="card">
+            <div class="card reveal">
               <div class="card__top">
                 <h3 class="card__t">Sports Division</h3>
-                <span class="tag">Team</span>
+                <span class="tag tag--glow">Team</span>
               </div>
               <div class="chips">
                 <span class="chip">Ilham Fatullayev</span>
               </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal" style="--d: 80ms">
               <div class="card__top">
                 <h3 class="card__t">Direction</h3>
                 <span class="tag">Discipline</span>
               </div>
               <div class="bullets">
-                <div class="b"><span class="dot"></span><div><b>Training</b><p class="muted">Planlı məşq və davamlılıq.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Team discipline</b><p class="muted">Qayda, məsuliyyət, komanda ruhu.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Performance readiness</b><p class="muted">Stabil nəticə üçün hazırlıq.</p></div></div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Training</b><p>Planlı məşq və davamlılıq.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Team discipline</b><p>Qayda, məsuliyyət, komanda ruhu.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Performance readiness</b><p>Stabil nəticə üçün hazırlıq.</p></div>
+                </div>
               </div>
             </div>
           </article>
 
           <article class="subview" id="sub-business">
-            <div class="card">
+            <div class="card reveal">
               <div class="card__top">
                 <h3 class="card__t">Business Division</h3>
-                <span class="tag">Team</span>
+                <span class="tag tag--glow">Team</span>
               </div>
               <div class="chips">
                 <span class="chip">Asmar Ibrahimzadeh</span>
               </div>
             </div>
 
-            <div class="card">
+            <div class="card reveal" style="--d: 80ms">
               <div class="card__top">
                 <h3 class="card__t">Direction</h3>
                 <span class="tag">Growth</span>
               </div>
               <div class="bullets">
-                <div class="b"><span class="dot"></span><div><b>Partner relations</b><p class="muted">Əlaqə və iş modelinin qurulması.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Channels</b><p class="muted">Görünürlük və təqdimat xətti.</p></div></div>
-                <div class="b"><span class="dot"></span><div><b>Development</b><p class="muted">Planlı genişlənmə və ölçülən nəticə.</p></div></div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Partner relations</b><p>Əlaqə və iş modelinin qurulması.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Channels</b><p>Görünürlük və təqdimat xətti.</p></div>
+                </div>
+                <div class="b">
+                  <span class="dot" aria-hidden="true"></span>
+                  <div><b>Development</b><p>Planlı genişlənmə və ölçülən nəticə.</p></div>
+                </div>
               </div>
             </div>
           </article>
@@ -211,31 +342,48 @@
     <!-- COLLABORATIONS -->
     <section class="view" id="view-collaborations" aria-label="Collaborations">
       <div class="wrap head">
-        <h2 class="head__t">Collaborations</h2>
-        <p class="head__p muted">Aktiv əməkdaşlıq profilləri.</p>
+        <h2 class="head__t reveal">Collaborations</h2>
+        <p class="head__p reveal" style="--d: 60ms">Aktiv əməkdaşlıqlar.</p>
       </div>
 
       <div class="wrap grid2">
-        <div class="card">
+        <div class="card reveal">
           <div class="card__top">
-            <h3 class="card__t">Active</h3>
-            <span class="tag">List</span>
+            <h3 class="card__t">Active Collaborations</h3>
+            <span class="tag tag--glow">Live</span>
           </div>
-          <div class="chips">
-            <span class="chip">ahadov_academy</span>
-            <span class="chip">ceterisparibusteam</span>
+
+          <div class="spotlight">
+            <div class="spot reveal" style="--d: 80ms">
+              <div class="spot__name">ahadov_academy</div>
+              <div class="spot__meta">Collaboration</div>
+            </div>
+            <div class="spot reveal" style="--d: 120ms">
+              <div class="spot__name">ceterisparibusteam</div>
+              <div class="spot__meta">Collaboration</div>
+            </div>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal" style="--d: 80ms">
           <div class="card__top">
-            <h3 class="card__t">Communication</h3>
-            <span class="tag">Process</span>
+            <h3 class="card__t">Process</h3>
+            <span class="tag">Flow</span>
           </div>
-          <div class="bullets">
-            <div class="b"><span class="dot"></span><div><b>Request</b><p class="muted">Məqsəd və format.</p></div></div>
-            <div class="b"><span class="dot"></span><div><b>Plan</b><p class="muted">İcra planı və təqdimat.</p></div></div>
-            <div class="b"><span class="dot"></span><div><b>Delivery</b><p class="muted">Nəticə və yekun.</p></div></div>
+
+          <div class="steps">
+            <div class="step">
+              <span class="step__n">01</span>
+              <div><b>Request</b><p>Məqsəd və format.</p></div>
+            </div>
+            <div class="step">
+              <span class="step__n">02</span>
+              <div><b>Plan</b><p>İcra planı və təqdimat.</p></div>
+            </div>
+            <div class="step">
+              <span class="step__n">03</span>
+              <div><b>Delivery</b><p>Nəticə və yekun.</p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -244,54 +392,58 @@
     <!-- PARTNERS -->
     <section class="view" id="view-partners" aria-label="Partners">
       <div class="wrap head">
-        <h2 class="head__t">Partners</h2>
-        <p class="head__p muted">Loqoları sonra əlavə edəcəyik. İndi siyahı.</p>
+        <h2 class="head__t reveal">Partners</h2>
+        <p class="head__p reveal" style="--d: 60ms">Adlar ön planda. Loqoları sonra əlavə edəcəksən.</p>
       </div>
 
-      <div class="wrap card">
-        <div class="card__top">
-          <h3 class="card__t">List</h3>
-          <span class="tag">9</span>
-        </div>
-        <div class="chips">
-          <span class="chip">davetiye__ressam.jn</span>
-          <span class="chip">artna_desinger</span>
-          <span class="chip">heyksans_official</span>
-          <span class="chip">dara__belle</span>
-          <span class="chip">arneva_weave</span>
-          <span class="chip">_inci_gifts</span>
-          <span class="chip">aurina.accessory</span>
-          <span class="chip">the.byraml</span>
-          <span class="chip">hollowpurple.art</span>
-        </div>
+      <div class="wrap partnerGrid" aria-label="Partner list">
+        <button class="pItem reveal" type="button"><span class="pName">davetiye__ressam.jn</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 40ms" type="button"><span class="pName">artna_desinger</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 80ms" type="button"><span class="pName">heyksans_official</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 120ms" type="button"><span class="pName">dara__belle</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 160ms" type="button"><span class="pName">arneva_weave</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 200ms" type="button"><span class="pName">_inci_gifts</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 240ms" type="button"><span class="pName">aurina.accessory</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 280ms" type="button"><span class="pName">the.byraml</span><span class="pTag">Partner</span></button>
+        <button class="pItem reveal" style="--d: 320ms" type="button"><span class="pName">hollowpurple.art</span><span class="pTag">Partner</span></button>
       </div>
     </section>
 
     <!-- HBN -->
     <section class="view" id="view-hbn" aria-label="HBN">
       <div class="wrap head">
-        <h2 class="head__t">Heyksans Business Network</h2>
-        <p class="head__p muted">CHH altında marka.</p>
+        <h2 class="head__t reveal">Heyksans Business Network</h2>
+        <p class="head__p reveal" style="--d: 60ms">CHH altında marka.</p>
       </div>
 
       <div class="wrap grid2">
-        <div class="card">
+        <div class="card reveal">
           <div class="card__top">
             <h3 class="card__t">Owner / Founder</h3>
-            <span class="tag">Profile</span>
+            <span class="tag tag--glow">Profile</span>
           </div>
-          <div class="big">Nijat Umarli</div>
+          <div class="bigName">Nijat Umarli</div>
         </div>
 
-        <div class="card">
+        <div class="card reveal" style="--d: 80ms">
           <div class="card__top">
             <h3 class="card__t">Direction</h3>
             <span class="tag">Scope</span>
           </div>
-          <div class="bullets">
-            <div class="b"><span class="dot"></span><div><b>hbnedu.az</b><p class="muted">Əsas satış platforması.</p></div></div>
-            <div class="b"><span class="dot"></span><div><b>Materials</b><p class="muted">Elmi və bədii məzmun, test materialları.</p></div></div>
-            <div class="b"><span class="dot"></span><div><b>TreeYBuz</b><p class="muted">Təhsil əsaslı süni intellekt xətti.</p></div></div>
+
+          <div class="steps">
+            <div class="step">
+              <span class="step__n">01</span>
+              <div><b>hbnedu.az</b><p>Əsas satış platforması.</p></div>
+            </div>
+            <div class="step">
+              <span class="step__n">02</span>
+              <div><b>Materials</b><p>Elmi və bədii məzmun, test materialları.</p></div>
+            </div>
+            <div class="step">
+              <span class="step__n">03</span>
+              <div><b>TreeYBuz</b><p>Təhsil əsaslı süni intellekt xətti.</p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -300,15 +452,15 @@
     <!-- CONTACT -->
     <section class="view" id="view-contact" aria-label="Contact">
       <div class="wrap head">
-        <h2 class="head__t">Contact</h2>
-        <p class="head__p muted">Rəsmi əlaqə məlumatları.</p>
+        <h2 class="head__t reveal">Contact</h2>
+        <p class="head__p reveal" style="--d: 60ms">Rəsmi əlaqə məlumatları.</p>
       </div>
 
       <div class="wrap grid2">
-        <div class="card">
+        <div class="card reveal">
           <div class="card__top">
             <h3 class="card__t">Details</h3>
-            <span class="tag">Direct</span>
+            <span class="tag tag--glow">Direct</span>
           </div>
 
           <div class="kv">
@@ -318,14 +470,12 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal" style="--d: 80ms">
           <div class="card__top">
-            <h3 class="card__t">Notes</h3>
+            <h3 class="card__t">Form</h3>
             <span class="tag">Later</span>
           </div>
-          <p class="muted">
-            Form və əlavə loqoları sən göndərəndən sonra, bu sistemin içində professional şəkildə yerləşdiriləcək.
-          </p>
+          <p class="soft">Formu sən göndərəndə buraya əlavə edəcəyik.</p>
         </div>
       </div>
     </section>
@@ -333,65 +483,116 @@
 
   <footer class="ftr">
     <div class="wrap ftr__in">
-      <div class="ftr__l muted">© 2025 Crystal Haze Holding</div>
+      <div class="ftr__l">© 2025 Crystal Haze Holding</div>
       <div class="ftr__r">
-        <span class="pill">crystalhaze2025</span>
-        <span class="pill">crystalhaze25.26@gmail.com</span>
+        <span class="pill pill--static">crystalhaze2025</span>
+        <span class="pill pill--static">crystalhaze25.26@gmail.com</span>
       </div>
     </div>
   </footer>
 
   <script>
-    const views = ["home","divisions","collaborations","partners","hbn","contact"];
+    (function () {
+      const views = ["home","divisions","collaborations","partners","hbn","contact"];
 
-    const $ = (s, r=document) => r.querySelector(s);
-    const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+      const $ = (s, r=document) => r.querySelector(s);
+      const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
 
-    function showView(key){
-      views.forEach(v=>{
-        const el = $("#view-"+v);
-        if(!el) return;
-        el.classList.toggle("is-show", v===key);
+      const mnavBtn = $("#mnavBtn");
+      const mnavPanel = $("#mnavPanel");
+
+      function setActiveNav(key){
+        $$(".nav__btn").forEach(b => b.classList.toggle("is-active", b.dataset.view === key));
+        $$(".mnavlink").forEach(b => b.classList.toggle("is-active", b.dataset.view === key));
+      }
+
+      function showView(key){
+        views.forEach(v => {
+          const el = $("#view-" + v);
+          if (el) el.classList.toggle("is-show", v === key);
+        });
+
+        setActiveNav(key);
+
+        if (key !== "divisions") {
+          setDivision("intellectual");
+        }
+
+        if (mnavPanel) mnavPanel.classList.remove("is-open");
+
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
+        requestAnimationFrame(() => {
+          restartReveals($("#view-" + key));
+          if (key === "home") animateCounters();
+        });
+      }
+
+      function setDivision(sub){
+        const divView = $("#view-divisions");
+        if (!divView) return;
+
+        $$(".side__item", divView).forEach(b => b.classList.toggle("is-active", b.dataset.sub === sub));
+        $$(".subview", divView).forEach(s => s.classList.toggle("is-show", s.id === "sub-" + sub));
+
+        requestAnimationFrame(() => restartReveals(divView));
+      }
+
+      function restartReveals(scope){
+        const root = scope || document;
+        $$(".reveal", root).forEach(el => {
+          el.classList.remove("in");
+          void el.offsetWidth;
+          el.classList.add("in");
+        });
+      }
+
+      function animateCounters(){
+        const home = $("#view-home");
+        if (!home || !home.classList.contains("is-show")) return;
+
+        const els = $$("[data-count]", home);
+        els.forEach(el => {
+          const target = parseInt(el.getAttribute("data-count") || "0", 10);
+          const dur = 900;
+          const t0 = performance.now();
+
+          function tick(t){
+            const p = Math.min(1, (t - t0) / dur);
+            const eased = 1 - Math.pow(1 - p, 3);
+            const val = Math.round(target * eased);
+            el.textContent = String(val);
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        });
+      }
+
+      document.addEventListener("click", (e) => {
+        const vbtn = e.target.closest("[data-view]");
+        if (vbtn && vbtn.dataset.view && views.includes(vbtn.dataset.view)) {
+          showView(vbtn.dataset.view);
+          return;
+        }
+
+        const sbtn = e.target.closest("[data-sub]");
+        if (sbtn && sbtn.dataset.sub) {
+          const divView = $("#view-divisions");
+          if (divView && divView.classList.contains("is-show")) {
+            setDivision(sbtn.dataset.sub);
+          }
+        }
       });
 
-      $$(".nav__btn").forEach(b=>b.classList.toggle("is-active", b.dataset.view===key));
-      $$(".mnavlink").forEach(b=>b.classList.toggle("is-active", b.dataset.view===key));
-
-      // reset divisions subviews when leaving divisions
-      if(key !== "divisions"){
-        setDivision("intellectual");
+      if (mnavBtn && mnavPanel) {
+        mnavBtn.addEventListener("click", () => mnavPanel.classList.toggle("is-open"));
       }
 
-      // close mobile panel
-      $("#mnavPanel").classList.remove("is-open");
-      window.scrollTo({top:0, behavior:"instant"});
-    }
-
-    function setDivision(sub){
-      $$(".side__item").forEach(b=>b.classList.toggle("is-active", b.dataset.sub===sub));
-      $$(".subview").forEach(s=>s.classList.toggle("is-show", s.id==="sub-"+sub));
-    }
-
-    document.addEventListener("click", (e)=>{
-      const vbtn = e.target.closest("[data-view]");
-      if(vbtn){
-        const key = vbtn.dataset.view;
-        if(views.includes(key)) showView(key);
-      }
-
-      const sbtn = e.target.closest("[data-sub]");
-      if(sbtn && $("#view-divisions").classList.contains("is-show")){
-        setDivision(sbtn.dataset.sub);
-      }
-    });
-
-    $("#mnavBtn").addEventListener("click", ()=>{
-      $("#mnavPanel").classList.toggle("is-open");
-    });
-
-    // start
-    showView("home");
-    setDivision("intellectual");
+      showView("home");
+      setDivision("intellectual");
+      restartReveals($("#view-home"));
+      animateCounters();
+    })();
   </script>
 </body>
 </html>
