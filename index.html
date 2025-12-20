@@ -1,94 +1,493 @@
 <!doctype html>
 <html lang="az">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Crystal Haze Holding</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <div class="brand" aria-label="Crystal Haze Holding">
+        <span class="brand__text">Crystal Haze Holding</span>
+      </div>
 
-<header class="top">
-  <div class="top-inner">
-    <div class="brand">Crystal Haze Holding</div>
-    <nav class="menu">
-      <a href="#home">Home</a>
-      <a href="#divisions">Divisions</a>
-      <a href="#business">Business</a>
-      <a href="#partners">Partners</a>
-      <a href="#hbn">HBN</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+      <nav class="nav" aria-label="Main">
+        <button class="nav__btn" data-go="home" aria-current="page">Home</button>
+        <button class="nav__btn" data-go="divisions">Divisions</button>
+        <button class="nav__btn" data-go="partners">Partners</button>
+        <button class="nav__btn" data-go="collaborations">Collaborations</button>
+        <button class="nav__btn" data-go="hbn">HBN</button>
+        <button class="nav__btn" data-go="assistant">Assistant</button>
+        <button class="nav__btn" data-go="contact">Contact</button>
+      </nav>
+    </div>
+  </header>
 
-<main>
+  <main class="app" role="main">
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grid"></div>
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__glow bg__glow--c"></div>
+      <div class="bg__noise"></div>
+    </div>
 
-<section id="home" class="section hero">
-  <h1>Crystal Haze Holding</h1>
-  <p>Rəsmi holding platforması. Strukturlaşdırılmış bölmələr, tərəfdaşlıq və inkişaf modeli.</p>
-</section>
+    <!-- HOME -->
+    <section class="view view--home is-active" data-route="home">
+      <div class="wrap">
+        <div class="hero">
+          <div class="hero__left">
+            <div class="logo-slot" aria-label="CHH Logo Slot">
+              <img src="assets/CHH logo.png" alt="Crystal Haze Holding" class="logo-slot__img" />
+            </div>
 
-<section id="divisions" class="section">
-  <h2>Divisions</h2>
+            <div class="hero__titleblock">
+              <h1 class="h1">Crystal Haze Holding</h1>
+              <p class="lead">Official Platform</p>
+            </div>
+          </div>
 
-  <div class="division">
-    <h3>Intellectual Division</h3>
-    <p>İntellektual yarışlar, bilik əsaslı fəaliyyətlər və analitik hazırlıq işlərini həyata keçirir.</p>
-  </div>
+          <div class="hero__right">
+            <div class="hero__card">
+              <div class="hero__cardTop">
+                <div class="pill">Official</div>
+                <div class="pill">Holding</div>
+                <div class="pill">AZ · EN</div>
+              </div>
 
-  <div class="division">
-    <h3>Startup Division</h3>
-    <p>Yeni ideyaların layihəyə çevrilməsi, planlama və icra proseslərini idarə edir.</p>
-  </div>
+              <div class="hero__numbers" aria-label="Key counts">
+                <div class="stat">
+                  <div class="stat__k">Divisions</div>
+                  <div class="stat__v">4</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__k">Partners</div>
+                  <div class="stat__v">9</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__k">Collaborations</div>
+                  <div class="stat__v">2</div>
+                </div>
+              </div>
 
-  <div class="division">
-    <h3>Sports Division</h3>
-    <p>İdman tədbirləri, komanda fəaliyyəti və rəsmi idman təmsilçiliyini təşkil edir.</p>
-  </div>
+              <div class="hero__strip" aria-hidden="true">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+              </div>
 
-  <div class="division">
-    <h3>Business Division</h3>
-    <p>Tərəfdaşlıqların qurulması, rəsmi əməkdaşlıq və kommersiya əlaqələrini idarə edir.</p>
-  </div>
-</section>
+              <div class="hero__footerline">
+                <span class="muted">© 2025 Crystal Haze Holding</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<section id="business" class="section">
-  <h2>Business Structure</h2>
-  <p>Bu bölmə tərəfdaşlarla rəsmi əməkdaşlıq, təqdimat və inkişaf məqsədilə fəaliyyət göstərir.</p>
-</section>
+        <div class="home-grid">
+          <div class="home-panel">
+            <div class="home-panel__head">
+              <div class="tag">Holding Core</div>
+              <div class="dot"></div>
+            </div>
+            <div class="home-panel__body">
+              <div class="mini">
+                <div class="mini__k">Structure</div>
+                <div class="mini__v">Divisions</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Network</div>
+                <div class="mini__v">Partners</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Operations</div>
+                <div class="mini__v">Collaborations</div>
+              </div>
+            </div>
+          </div>
 
-<section id="partners" class="section">
-  <h2>Partners & Collaborations</h2>
-  <p>Partnyor və əməkdaşlar üçün tanınma və təqdimat sahəsi.</p>
-</section>
+          <div class="home-panel">
+            <div class="home-panel__head">
+              <div class="tag">Identity</div>
+              <div class="dot"></div>
+            </div>
+            <div class="home-panel__body">
+              <div class="mini">
+                <div class="mini__k">Name</div>
+                <div class="mini__v">Crystal Haze Holding</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Platform</div>
+                <div class="mini__v">Official</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Visual</div>
+                <div class="mini__v">CHH</div>
+              </div>
+            </div>
+          </div>
 
-<section id="hbn" class="section hbn">
-  <h2>Heyksans Business Network</h2>
-  <p>
-    HBN — Crystal Haze Holding nəzdində fəaliyyət göstərən, lakin ayrıca rəsmi platforma olan təhsil və nəşr strukturudur.
-  </p>
-  <p>
-    Təhsil yönümlü məzmun, platformalar və gələcək **TreeYBuz** sistemi bu xətt üzrə formalaşdırılır.
-  </p>
-  <a href="https://hbnedu.az" target="_blank" class="hbn-link">hbnedu.az</a>
-</section>
+          <div class="home-panel">
+            <div class="home-panel__head">
+              <div class="tag">Access</div>
+              <div class="dot"></div>
+            </div>
+            <div class="home-panel__body">
+              <div class="mini">
+                <div class="mini__k">Navigation</div>
+                <div class="mini__v">Top Menu</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">System</div>
+                <div class="mini__v">Full-Screen Pages</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Motion</div>
+                <div class="mini__v">Animated UI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>Əlaqə üçün rəsmi kanallar</p>
-  <ul>
-    <li>Telefon: 055 441 74 23</li>
-    <li>Instagram: crystalhaze2025</li>
-    <li>Email: crystalhaze25.26@gmail.com</li>
-  </ul>
-</section>
+    <!-- DIVISIONS -->
+    <section class="view view--divisions" data-route="divisions">
+      <div class="wrap">
+        <div class="pagehead">
+          <h2 class="h2">Divisions</h2>
+          <div class="pagehead__line"></div>
+        </div>
 
-</main>
+        <div class="div-grid">
+          <article class="div-card div-card--int">
+            <header class="div-card__head">
+              <div class="div-card__title">Intellectual Division</div>
+              <div class="chip">CHH</div>
+            </header>
+            <div class="div-card__body">
+              <p class="p">
+                Bilik əsaslı yarışlar, analitik hazırlıq və intellektual fəaliyyətlərin təşkili.
+              </p>
+              <div class="people">
+                <div class="person">
+                  <div class="person__name">Kenan Abdullayev</div>
+                  <div class="person__role">Core Member</div>
+                </div>
+                <div class="person">
+                  <div class="person__name">Shabnam Zeynalova</div>
+                  <div class="person__role">Core Member</div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-<footer class="footer">
-  © 2025 Crystal Haze Holding
-</footer>
+          <article class="div-card div-card--start">
+            <header class="div-card__head">
+              <div class="div-card__title">Startup Division</div>
+              <div class="chip">CHH</div>
+            </header>
+            <div class="div-card__body">
+              <p class="p">
+                Layihələndirmə, koordinasiya və innovasiya yönümlü komanda fəaliyyətlərinin qurulması.
+              </p>
+              <div class="people">
+                <div class="person">
+                  <div class="person__name">Narzin Guliyeva</div>
+                  <div class="person__role">Division Lead</div>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <article class="div-card div-card--sport">
+            <header class="div-card__head">
+              <div class="div-card__title">Sports Division</div>
+              <div class="chip">CHH</div>
+            </header>
+            <div class="div-card__body">
+              <p class="p">
+                Təmsilçilik, komanda koordinasiyası və idman fəaliyyəti üzrə rəsmi təşkilatlanma.
+              </p>
+              <div class="people">
+                <div class="person">
+                  <div class="person__name">Ilham Fatullayev</div>
+                  <div class="person__role">Division Lead</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="div-card div-card--biz">
+            <header class="div-card__head">
+              <div class="div-card__title">Business Division</div>
+              <div class="chip">CHH</div>
+            </header>
+            <div class="div-card__body">
+              <p class="p">
+                Rəsmi əməkdaşlıq, təqdimat, tərəfdaşlıq əlaqələri və iş əlaqələrinin idarəsi.
+              </p>
+              <div class="people">
+                <div class="person">
+                  <div class="person__name">Asmar Ibrahimzadeh</div>
+                  <div class="person__role">Division Lead</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="bottomline">
+          <span class="muted">© 2025 Crystal Haze Holding</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="view view--partners" data-route="partners">
+      <div class="wrap">
+        <div class="pagehead">
+          <h2 class="h2">Partners</h2>
+          <div class="pagehead__line"></div>
+        </div>
+
+        <div class="list-grid">
+          <div class="list-tile">davetiye__ressam.jn</div>
+          <div class="list-tile">artna_desinger</div>
+          <div class="list-tile">heyksans_official</div>
+          <div class="list-tile">dara__belle</div>
+          <div class="list-tile">arneva_weave</div>
+          <div class="list-tile">_inci_gifts</div>
+          <div class="list-tile">aurina.accessory</div>
+          <div class="list-tile">the.byraml</div>
+          <div class="list-tile">hollowpurple.art</div>
+        </div>
+
+        <div class="logo-wall" aria-label="Partner logo area"></div>
+
+        <div class="bottomline">
+          <span class="muted">© 2025 Crystal Haze Holding</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLABORATIONS -->
+    <section class="view view--collabs" data-route="collaborations">
+      <div class="wrap">
+        <div class="pagehead">
+          <h2 class="h2">Collaborations</h2>
+          <div class="pagehead__line"></div>
+        </div>
+
+        <div class="collab-grid">
+          <div class="collab-card">
+            <div class="collab-card__top">
+              <div class="badge">Collaboration</div>
+              <div class="spark" aria-hidden="true"></div>
+            </div>
+            <div class="collab-card__name">ahadov_academy</div>
+          </div>
+
+          <div class="collab-card">
+            <div class="collab-card__top">
+              <div class="badge">Collaboration</div>
+              <div class="spark" aria-hidden="true"></div>
+            </div>
+            <div class="collab-card__name">ceterisparibusteam</div>
+          </div>
+        </div>
+
+        <div class="bottomline">
+          <span class="muted">© 2025 Crystal Haze Holding</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HBN (FULL DIFFERENT SYSTEM) -->
+    <section class="view view--hbn" data-route="hbn">
+      <div class="hbn-shell">
+        <div class="hbn-top">
+          <div class="hbn-mark">
+            <div class="hbn-mark__k">HBN</div>
+            <div class="hbn-mark__s">Heyksans Business Network</div>
+          </div>
+          <div class="hbn-founder">
+            <div class="hbn-founder__k">Brand owner / founder</div>
+            <div class="hbn-founder__v">Nijat Umarli</div>
+          </div>
+        </div>
+
+        <div class="hbn-core">
+          <div class="hbn-block hbn-block--primary">
+            <div class="hbn-block__title">Official Platform</div>
+            <div class="hbn-block__line"></div>
+            <div class="hbn-block__text">
+              hbnedu.az
+            </div>
+            <a class="hbn-link" href="https://hbnedu.az" target="_blank" rel="noreferrer">hbnedu.az</a>
+          </div>
+
+          <div class="hbn-block hbn-block--wide">
+            <div class="hbn-block__title">Direction</div>
+            <div class="hbn-block__line"></div>
+            <div class="hbn-flow">
+              <div class="hbn-node">
+                <div class="hbn-node__k">Publishing</div>
+                <div class="hbn-node__v">Scientific · Fantasy · Literary</div>
+              </div>
+              <div class="hbn-node">
+                <div class="hbn-node__k">Education</div>
+                <div class="hbn-node__v">Test-based materials</div>
+              </div>
+              <div class="hbn-node">
+                <div class="hbn-node__k">AI</div>
+                <div class="hbn-node__v">TreeYBuz</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hbn-block">
+            <div class="hbn-block__title">Sales</div>
+            <div class="hbn-block__line"></div>
+            <div class="hbn-block__text">
+              Online sales through hbnedu.az with expansion to physical channels over time.
+            </div>
+          </div>
+
+          <div class="hbn-block">
+            <div class="hbn-block__title">Access</div>
+            <div class="hbn-block__line"></div>
+            <div class="hbn-block__text">
+              Separate official platform under CHH.
+            </div>
+          </div>
+        </div>
+
+        <div class="hbn-foot">
+          <span>© 2025 Crystal Haze Holding</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASSISTANT (NO MODEL NAMES) -->
+    <section class="view view--assistant" data-route="assistant">
+      <div class="wrap">
+        <div class="pagehead">
+          <h2 class="h2">Assistant</h2>
+          <div class="pagehead__line"></div>
+        </div>
+
+        <div class="assistant">
+          <div class="assistant__screen" id="assistantScreen" aria-label="Assistant messages"></div>
+
+          <form class="assistant__bar" id="assistantForm" autocomplete="off">
+            <input class="assistant__input" id="assistantInput" type="text" placeholder="Write..." aria-label="Write message" />
+            <button class="assistant__send" type="submit" aria-label="Send">Send</button>
+          </form>
+        </div>
+
+        <div class="bottomline">
+          <span class="muted">© 2025 Crystal Haze Holding</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (FULL DIFFERENT SYSTEM) -->
+    <section class="view view--contact" data-route="contact">
+      <div class="contact-shell">
+        <div class="contact-left">
+          <div class="contact-title">Contact</div>
+          <div class="contact-sub">Crystal Haze Holding</div>
+
+          <div class="contact-lines">
+            <div class="contact-line">
+              <div class="contact-k">Phone</div>
+              <div class="contact-v">055-441-74-23</div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-k">Instagram</div>
+              <div class="contact-v">crystalhaze2025</div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-k">Email</div>
+              <div class="contact-v">crystalhaze25.26@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-slot" aria-label="Participation form area"></div>
+        </div>
+
+        <div class="contact-right" aria-hidden="true">
+          <div class="contact-orb"></div>
+          <div class="contact-grid"></div>
+        </div>
+
+        <div class="contact-foot">© 2025 Crystal Haze Holding</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const views = Array.from(document.querySelectorAll(".view"));
+      const navBtns = Array.from(document.querySelectorAll(".nav__btn"));
+      const app = document.querySelector(".app");
+
+      function setActive(route) {
+        views.forEach(v => v.classList.remove("is-active"));
+        const target = views.find(v => v.dataset.route === route) || views[0];
+        target.classList.add("is-active");
+
+        navBtns.forEach(b => {
+          const is = b.dataset.go === route;
+          b.classList.toggle("is-active", is);
+          b.setAttribute("aria-current", is ? "page" : "false");
+        });
+
+        const url = new URL(window.location.href);
+        url.hash = "#" + route;
+        history.replaceState(null, "", url);
+        app.scrollTop = 0;
+      }
+
+      function currentRouteFromHash() {
+        const h = (location.hash || "#home").replace("#", "").trim();
+        return h || "home";
+      }
+
+      navBtns.forEach(btn => {
+        btn.addEventListener("click", () => setActive(btn.dataset.go));
+      });
+
+      window.addEventListener("hashchange", () => setActive(currentRouteFromHash()));
+
+      setActive(currentRouteFromHash());
+
+      // Assistant: local message flow (no names, no extra lines)
+      const form = document.getElementById("assistantForm");
+      const input = document.getElementById("assistantInput");
+      const screen = document.getElementById("assistantScreen");
+
+      function addMsg(text, mine) {
+        const m = document.createElement("div");
+        m.className = "msg " + (mine ? "msg--me" : "msg--sys");
+        m.textContent = text;
+        screen.appendChild(m);
+        screen.scrollTop = screen.scrollHeight;
+      }
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const t = (input.value || "").trim();
+          if (!t) return;
+          addMsg(t, true);
+          input.value = "";
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
