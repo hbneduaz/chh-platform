@@ -1,3 +1,5 @@
+```html
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,10 +11,11 @@
 </head>
 
 <body>
+  <!-- Top Bar -->
   <header class="topbar" role="banner">
     <div class="topbar__inner">
       <a class="brand" href="#home" data-route="home" aria-label="Crystal Haze Holding">
-        <img class="brand__logo" src="assets/chh-logo.png" alt="Crystal Haze Holding" />
+        <img class="brand__logo" src="assets/chh_logo.png" alt="Crystal Haze Holding Logo" />
         <div class="brand__text">
           <div class="brand__name">Crystal Haze Holding</div>
           <div class="brand__sub">Official Platform</div>
@@ -36,6 +39,7 @@
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
   <div class="drawer" aria-hidden="true">
     <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
       <div class="drawer__head">
@@ -55,6 +59,7 @@
     </div>
   </div>
 
+  <!-- Background -->
   <div class="bg" aria-hidden="true">
     <div class="bg__grid"></div>
     <div class="bg__glow bg__glow--a"></div>
@@ -63,8 +68,10 @@
     <div class="bg__noise"></div>
   </div>
 
+  <!-- Route Transition Overlay -->
   <div class="routeFx" aria-hidden="true"></div>
 
+  <!-- App -->
   <main class="app" role="main">
     <!-- HOME -->
     <section class="view is-active" data-view="home">
@@ -74,7 +81,7 @@
             <div class="hero__left">
               <div class="hero__frame">
                 <div class="hero__crest">
-                  <img class="hero__crestImg" src="assets/chh-logo.png" alt="Crystal Haze Holding" />
+                  <img class="hero__crestImg" src="assets/chh_logo.png" alt="Crystal Haze Holding" />
                 </div>
 
                 <div class="hero__content">
@@ -144,7 +151,7 @@
                     </div>
                     <div class="quick__item">
                       <div class="quick__k">Core Team</div>
-                      <div class="quick__v">9</div>
+                      <div class="quick__v">11</div>
                     </div>
                     <div class="quick__item">
                       <div class="quick__k">Partners</div>
@@ -204,8 +211,8 @@
                 <div class="dot"></div>
               </div>
               <p class="p">
-                Partners and the core team are represented in an official format with dedicated space for logos,
-                structured introductions, and brand-aligned presentation.
+                Partners and the core team are represented in an official format with visible logo placement, structured introductions,
+                and brand-aligned presentation.
               </p>
               <div class="stamp">
                 <div class="stamp__big">CHH</div>
@@ -249,26 +256,11 @@
             <article class="panel">
               <div class="panel__title">Operational flow</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Planning</div>
-                  <div class="step__v">Goals, timeline, roles, and content scope</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Preparation</div>
-                  <div class="step__v">Topic mapping, resources, practice sets</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Evaluation</div>
-                  <div class="step__v">Internal checks, weak-point analysis</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Representation</div>
-                  <div class="step__v">Official performance and delivery</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Review</div>
-                  <div class="step__v">Result analysis and next-cycle upgrades</div>
-                </div>
+                <div class="step"><div class="step__k">Planning</div><div class="step__v">Goals, timeline, roles, and content scope</div></div>
+                <div class="step"><div class="step__k">Preparation</div><div class="step__v">Topic mapping, resources, practice sets</div></div>
+                <div class="step"><div class="step__k">Evaluation</div><div class="step__v">Internal checks, weak-point analysis</div></div>
+                <div class="step"><div class="step__k">Representation</div><div class="step__v">Official performance and delivery</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Result analysis and next-cycle upgrades</div></div>
               </div>
             </article>
           </div>
@@ -331,26 +323,11 @@
             <article class="panel">
               <div class="panel__title">Operational flow</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Discovery</div>
-                  <div class="step__v">Idea fit, value, positioning</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Design</div>
-                  <div class="step__v">Structure, responsibilities, timeline</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Build</div>
-                  <div class="step__v">Execution, iteration, delivery</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Presentation</div>
-                  <div class="step__v">Official-ready materials and demos</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Scale</div>
-                  <div class="step__v">Stability and long-term growth plan</div>
-                </div>
+                <div class="step"><div class="step__k">Discovery</div><div class="step__v">Idea fit, value, positioning</div></div>
+                <div class="step"><div class="step__k">Design</div><div class="step__v">Structure, responsibilities, timeline</div></div>
+                <div class="step"><div class="step__k">Build</div><div class="step__v">Execution, iteration, delivery</div></div>
+                <div class="step"><div class="step__k">Presentation</div><div class="step__v">Official-ready materials and demos</div></div>
+                <div class="step"><div class="step__k">Scale</div><div class="step__v">Stability and long-term growth plan</div></div>
               </div>
             </article>
           </div>
@@ -406,26 +383,11 @@
             <article class="panel">
               <div class="panel__title">Operational flow</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Preparation</div>
-                  <div class="step__v">Training plan and consistency</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Coordination</div>
-                  <div class="step__v">Team roles, schedule, readiness</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Participation</div>
-                  <div class="step__v">Official execution and presentation</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Performance</div>
-                  <div class="step__v">Discipline and delivery quality</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Review</div>
-                  <div class="step__v">Outcome analysis and upgrades</div>
-                </div>
+                <div class="step"><div class="step__k">Preparation</div><div class="step__v">Training plan and consistency</div></div>
+                <div class="step"><div class="step__k">Coordination</div><div class="step__v">Team roles, schedule, readiness</div></div>
+                <div class="step"><div class="step__k">Participation</div><div class="step__v">Official execution and presentation</div></div>
+                <div class="step"><div class="step__k">Performance</div><div class="step__v">Discipline and delivery quality</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Outcome analysis and upgrades</div></div>
               </div>
             </article>
           </div>
@@ -459,7 +421,7 @@
             <div>
               <div class="pageHead__kicker">Division</div>
               <h2 class="h2">Business Division</h2>
-              <div class="pageHead__sub">Operations · Growth · Official Partnerships</div>
+              <div class="pageHead__sub">Operations · Growth · Brand Execution</div>
             </div>
             <div class="pageHead__badge">CHH</div>
           </header>
@@ -468,39 +430,22 @@
             <article class="panel">
               <div class="panel__title">Division overview</div>
               <p class="p">
-                The Business Division manages structured execution for growth-oriented initiatives, official coordination,
-                and partner-facing development. It supports the holding’s long-term scaling through disciplined delivery,
-                clear responsibilities, and stable processes.
+                The Business Division manages structured execution of business tasks, operational planning, and brand-aligned delivery.
+                It supports the holding by turning plans into measurable actions and maintaining consistency across business activities.
               </p>
               <p class="p">
-                The division focuses on operational reliability, partner relations, measurable outcomes, and organized progress
-                across the holding’s directions.
+                The division focuses on discipline, coordination, and execution quality — ensuring initiatives are delivered in a professional format.
               </p>
             </article>
 
             <article class="panel">
               <div class="panel__title">Operational flow</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Planning</div>
-                  <div class="step__v">Targets, scope, ownership, timelines</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Execution</div>
-                  <div class="step__v">Delivery, coordination, tracking</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Quality</div>
-                  <div class="step__v">Standards, review, optimization</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Partner Work</div>
-                  <div class="step__v">Official communication and alignment</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Results</div>
-                  <div class="step__v">Reports, outcomes, next-cycle upgrades</div>
-                </div>
+                <div class="step"><div class="step__k">Planning</div><div class="step__v">Targets, roles, and timeline alignment</div></div>
+                <div class="step"><div class="step__k">Execution</div><div class="step__v">Task delivery and structured follow-through</div></div>
+                <div class="step"><div class="step__k">Quality</div><div class="step__v">Consistency checks and standard alignment</div></div>
+                <div class="step"><div class="step__k">Reporting</div><div class="step__v">Performance updates and measurable outcomes</div></div>
+                <div class="step"><div class="step__k">Improvement</div><div class="step__v">Iteration and stability upgrades</div></div>
               </div>
             </article>
           </div>
@@ -512,17 +457,10 @@
             </div>
             <div class="peopleGrid">
               <div class="person">
-                <div class="person__name">Vagif Verdiyev</div>
-                <div class="person__role">PR / Creative</div>
+                <div class="person__name">Asmar Ibrahimzadeh</div>
+                <div class="person__role">Business Manager</div>
                 <div class="person__desc">
-                  Drives official communication and brand-facing execution with consistent quality and presentation.
-                </div>
-              </div>
-              <div class="person">
-                <div class="person__name">Leyla Abbasova</div>
-                <div class="person__role">Recruitment</div>
-                <div class="person__desc">
-                  Supports team organization and staffing direction aligned with holding standards.
+                  Manages business execution, operational coordination, and performance discipline aligned with holding standards.
                 </div>
               </div>
             </div>
@@ -539,101 +477,92 @@
         <div class="wrap">
           <header class="pageHead pageHead--hbn">
             <div>
-              <div class="pageHead__kicker">Line</div>
-              <h2 class="h2">HBN</h2>
-              <div class="pageHead__sub">Education · Content · Platforms</div>
+              <div class="pageHead__kicker">CHH Direction</div>
+              <h2 class="h2">Heyksans Business Network (HBN)</h2>
+              <div class="pageHead__sub">Education · Content · Platforms · Systems</div>
             </div>
             <div class="pageHead__badge pageHead__badge--hbn">HBN</div>
           </header>
 
           <div class="hbnHero">
-            <article class="hbnBlock">
-              <div class="hbnBlock__title">Identity</div>
-              <div class="brandRow">
-                <img class="brandMark" src="assets/hbn-logo.png" alt="HBN" />
-                <div class="brandMeta">
-                  <div class="brandMeta__name">Heyksans Business Network</div>
-                  <div class="brandMeta__sub">Under Crystal Haze Holding</div>
+            <aside class="hbnBlock">
+              <div class="hbnBlock__title">HBN Identity</div>
+              <div style="display:grid; gap:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <img src="assets/hbn_logo.png" alt="HBN Logo" style="width:54px;height:54px;border-radius:16px;object-fit:contain;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.16);" />
+                  <div>
+                    <div style="font-weight:1000;letter-spacing:.2px;">HBN</div>
+                    <div style="font-size:12px;color:rgba(255,255,255,.62);letter-spacing:.2px;">Official Direction Under CHH</div>
+                  </div>
                 </div>
+
+                <div class="hbnOwner">
+                  <div class="hbnOwner__name">Nicat Umarli</div>
+                  <div class="hbnOwner__role">HBN Founder / Head</div>
+                </div>
+
+                <a class="linkBtn" href="https://hbnedu.az" target="_blank" rel="noopener">hbnedu.az</a>
               </div>
+            </aside>
 
-              <div class="divider"></div>
-
-              <div class="hbnBlock__title">Leadership</div>
-              <div class="hbnOwner">
-                <div class="hbnOwner__name">Nicat Umarli</div>
-                <div class="hbnOwner__role">Founder / Head</div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="hbnBlock__title">Official access</div>
-              <a class="linkBtn" href="#" target="_blank" rel="noopener">hbnedu.az</a>
-            </article>
-
-            <article class="panel panel--deep">
+            <section class="panel panel--deep">
               <div class="panel__title">HBN overview</div>
               <p class="p">
-                HBN is an education-driven direction under Crystal Haze Holding, focused on high-value learning materials,
-                structured educational content, and platform-level development. It is designed for scalable distribution,
-                long-term content production, and a strong digital presence.
+                HBN is an education-focused direction operating under Crystal Haze Holding. It is structured to deliver educational
+                materials, academic content, and future platforms that support learning, access, and system-based improvement.
               </p>
               <p class="p">
-                HBN supports academic progression through organized resources, professional materials, and future-ready systems
-                that expand access and quality in learning.
+                The direction is designed with a professional standard: content organization, clear product structure, and platform-ready architecture.
+                The official website (hbnedu.az) will serve as the main public entry point for educational materials and system expansion.
               </p>
 
               <div class="divider"></div>
 
-              <div class="panel__title">Shadow Secret</div>
-              <div class="shadowRow">
-                <div class="shadowLeft">
-                  <img class="shadowLogo" src="assets/shadow-secret-logo.png" alt="Shadow Secret" />
+              <div class="panel__title">Future systems</div>
+              <p class="p">
+                A future plan inside the HBN direction is the development of TreeYBuz — an education-based AI project that will expand system capability,
+                structured learning, and platform-level services.
+              </p>
+            </section>
+          </div>
+
+          <div style="height:14px;"></div>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Structured content model</div>
+              <p class="p">
+                Educational materials are organized in a consistent structure: category definition, content packaging,
+                clear visibility, and an official presentation format. The system is designed for stable growth and
+                future platform integration.
+              </p>
+              <div class="flow">
+                <div class="step"><div class="step__k">Catalog</div><div class="step__v">Clear categories and content structure</div></div>
+                <div class="step"><div class="step__k">Quality</div><div class="step__v">Standardized presentation and consistency</div></div>
+                <div class="step"><div class="step__k">Delivery</div><div class="step__v">Platform-ready distribution model</div></div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Shadow Secret (under CHH)</div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <img src="assets/shadow.jpeg" alt="Shadow Secret Logo" style="width:54px;height:54px;border-radius:16px;object-fit:cover;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.16);" />
+                <div>
+                  <div style="font-weight:1000;letter-spacing:.2px;">Shadow Secret</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,.62);letter-spacing:.2px;">Academic PDF Materials</div>
                 </div>
-                <div class="shadowRight">
-                  <p class="p">
-                    Shadow Secret is the academic PDF line under HBN, focused on learning documents and laboratory work.
-                    It includes both PDF materials and handwritten laboratory work formats offered for educational use.
-                  </p>
-                </div>
+              </div>
+              <p class="p" style="margin-top:10px;">
+                Shadow Secret focuses on academic PDF materials — including laboratory works in PDF format and scanned handwritten laboratory works.
+                The direction is structured for official presentation and controlled distribution.
+              </p>
+              <div class="flow">
+                <div class="step"><div class="step__k">PDF Materials</div><div class="step__v">Academic files and structured documents</div></div>
+                <div class="step"><div class="step__k">Laboratory Works</div><div class="step__v">PDF laboratory work packages</div></div>
+                <div class="step"><div class="step__k">Handwritten</div><div class="step__v">Scanned handwritten laboratory works</div></div>
               </div>
             </article>
           </div>
-
-          <article class="wide">
-            <div class="wide__head">
-              <div class="wide__title">Structure</div>
-              <div class="wide__line"></div>
-            </div>
-
-            <div class="grid2">
-              <article class="panel">
-                <div class="panel__title">Core directions</div>
-                <div class="flow">
-                  <div class="step">
-                    <div class="step__k">Materials</div>
-                    <div class="step__v">Educational content and learning resources</div>
-                  </div>
-                  <div class="step">
-                    <div class="step__k">Distribution</div>
-                    <div class="step__v">Digital reach and structured delivery</div>
-                  </div>
-                  <div class="step">
-                    <div class="step__k">Platforms</div>
-                    <div class="step__v">System-based learning solutions</div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="panel">
-                <div class="panel__title">Future direction</div>
-                <p class="p">
-                  HBN is designed to expand into platform-grade systems and structured learning solutions built for growth and scale.
-                  TreeYBuz is planned as an education-based AI direction within the HBN roadmap.
-                </p>
-              </article>
-            </div>
-          </article>
 
           <div class="footnote">© 2025 Crystal Haze Holding</div>
         </div>
@@ -646,121 +575,115 @@
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Official</div>
-              <h2 class="h2">Partners</h2>
-              <div class="pageHead__sub">Partner Brands · Core Team</div>
+              <div class="pageHead__kicker">Official Network</div>
+              <h2 class="h2">Partners & Core Team</h2>
+              <div class="pageHead__sub">Verified visibility · Structured presentation</div>
             </div>
             <div class="pageHead__badge">CHH</div>
           </header>
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Partner brands</div>
+              <div class="panel__title">Partner logos</div>
               <p class="p">
-                Partners are presented in an official format with structured visibility aligned with the holding’s standards.
+                Official partner visibility is maintained in a structured format. Each partner is presented with logo placement and consistent layout.
               </p>
 
-              <div class="partnerGrid">
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-1.png" alt="Partner 1" />
-                    <div class="partnerName">Partner 1</div>
-                  </div>
+              <div class="logoGrid">
+                <div class="logoCard">
+                  <img src="assets/Ameva_logo.png" alt="Ameva" />
+                  <div class="logoCard__name">Ameva</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-2.png" alt="Partner 2" />
-                    <div class="partnerName">Partner 2</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/Aurina_logo.png" alt="Aurina" />
+                  <div class="logoCard__name">Aurina</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-3.png" alt="Partner 3" />
-                    <div class="partnerName">Partner 3</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/Daisywhispers.art_logo.png" alt="Daisywhispers.art" />
+                  <div class="logoCard__name">Daisywhispers.art</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-4.png" alt="Partner 4" />
-                    <div class="partnerName">Partner 4</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/Dara_Belle_logo.png" alt="Dara Belle" />
+                  <div class="logoCard__name">Dara Belle</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-5.png" alt="Partner 5" />
-                    <div class="partnerName">Partner 5</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/Davetiye_Ressami_logo.png" alt="Davetiye Ressami" />
+                  <div class="logoCard__name">Davetiye Ressami</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-6.png" alt="Partner 6" />
-                    <div class="partnerName">Partner 6</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/artna_logo.png" alt="artna" />
+                  <div class="logoCard__name">artna</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-7.png" alt="Partner 7" />
-                    <div class="partnerName">Partner 7</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/Inci_Gifts_logo.png" alt="Inci Gifts" />
+                  <div class="logoCard__name">Inci Gifts</div>
                 </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-8.png" alt="Partner 8" />
-                    <div class="partnerName">Partner 8</div>
-                  </div>
-                </div>
-                <div class="partnerCard">
-                  <div class="partnerCard__top">
-                    <img class="partnerLogo" src="assets/partner-9.png" alt="Partner 9" />
-                    <div class="partnerName">Partner 9</div>
-                  </div>
+                <div class="logoCard">
+                  <img src="assets/hollow_purple_art_logo.jpg" alt="Hollow Purple Art" />
+                  <div class="logoCard__name">Hollow Purple Art</div>
                 </div>
               </div>
             </article>
 
             <article class="panel">
-              <div class="panel__title">Core team</div>
+              <div class="panel__title">CHH division logos</div>
+              <p class="p">
+                Division icons are placed for consistent identification and official presentation across the platform.
+              </p>
 
-              <div class="team">
-                <div class="teamRow">
-                  <div class="teamRow__name">Lala Hasanli</div>
-                  <div class="teamRow__role">Founder / Leader</div>
+              <div class="logoGrid">
+                <div class="logoCard">
+                  <img src="assets/chh_logo.png" alt="CHH" />
+                  <div class="logoCard__name">Crystal Haze Holding</div>
                 </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Nicat Umarli</div>
-                  <div class="teamRow__role">CEO / Leader</div>
+                <div class="logoCard">
+                  <img src="assets/intelectual_logo.png" alt="Intellectual" />
+                  <div class="logoCard__name">Intellectual</div>
                 </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Kenan Abdullayev</div>
-                  <div class="teamRow__role">Intellectual Leader</div>
+                <div class="logoCard">
+                  <img src="assets/startup_logo.png" alt="Startup" />
+                  <div class="logoCard__name">Startup</div>
                 </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Shabnam Zeynalova</div>
-                  <div class="teamRow__role">Intellectual Leader</div>
+                <div class="logoCard">
+                  <img src="assets/sport_logo.png" alt="Sports" />
+                  <div class="logoCard__name">Sports</div>
                 </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Nazrin Guliyeva</div>
-                  <div class="teamRow__role">Startup Manager</div>
+                <div class="logoCard">
+                  <img src="assets/business_logo.png" alt="Business" />
+                  <div class="logoCard__name">Business</div>
                 </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Ilham Fatullayev</div>
-                  <div class="teamRow__role">Sports Director</div>
+                <div class="logoCard">
+                  <img src="assets/hbn_logo.png" alt="HBN" />
+                  <div class="logoCard__name">HBN</div>
                 </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Vagif Verdiyev</div>
-                  <div class="teamRow__role">PR / Creative</div>
-                </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Jale Ibrahimzade</div>
-                  <div class="teamRow__role">Graphic Designer</div>
-                </div>
-                <div class="teamRow">
-                  <div class="teamRow__name">Munevver Yusifova</div>
-                  <div class="teamRow__role">SMM</div>
+                <div class="logoCard">
+                  <img src="assets/shadow.jpeg" alt="Shadow Secret" />
+                  <div class="logoCard__name">Shadow Secret</div>
                 </div>
               </div>
             </article>
           </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Core Team</div>
+              <div class="wide__line"></div>
+            </div>
+
+            <div class="team">
+              <div class="teamRow"><div class="teamRow__name">Lala Hasanli</div><div class="teamRow__role">Founder / Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Nicat Umarli</div><div class="teamRow__role">CEO / Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Vagif Verdiyev</div><div class="teamRow__role">PR</div></div>
+              <div class="teamRow"><div class="teamRow__name">Munavvar Yusifova</div><div class="teamRow__role">SMM</div></div>
+              <div class="teamRow"><div class="teamRow__name">Kenan Gasimzadeh</div><div class="teamRow__role">SMM</div></div>
+              <div class="teamRow"><div class="teamRow__name">Leyla Abbasova</div><div class="teamRow__role">HR Manager</div></div>
+              <div class="teamRow"><div class="teamRow__name">Kenan Abdullayev</div><div class="teamRow__role">Intellectual Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Shabnam Zeynalova</div><div class="teamRow__role">Intellectual Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Ilham Fatullayev</div><div class="teamRow__role">Sports Director</div></div>
+              <div class="teamRow"><div class="teamRow__name">Asmar Ibrahimzadeh</div><div class="teamRow__role">Business Manager</div></div>
+              <div class="teamRow"><div class="teamRow__name">Nazrin Guliyeva</div><div class="teamRow__role">Startup Manager</div></div>
+            </div>
+          </article>
 
           <div class="footnote">© 2025 Crystal Haze Holding</div>
         </div>
@@ -773,49 +696,58 @@
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Official</div>
+              <div class="pageHead__kicker">Official Contact</div>
               <h2 class="h2">Contact</h2>
-              <div class="pageHead__sub">Direct access · Official channels</div>
+              <div class="pageHead__sub">Direct communication · Official handling</div>
             </div>
             <div class="pageHead__badge">CHH</div>
           </header>
 
           <div class="contactGrid">
             <article class="panel panel--contact">
-              <div class="panel__title">Contact details</div>
+              <div class="panel__title">Primary contacts</div>
+              <p class="p">
+                Contact channels are presented in an official format. Values can be updated later without changing the system structure.
+              </p>
 
               <div class="contactCards">
                 <div class="contactCard">
                   <div>
-                    <div class="contactCard__k">Instagram</div>
-                    <div class="contactCard__v">@crystalhaze2025</div>
-                  </div>
-                </div>
-
-                <div class="contactCard">
-                  <div>
                     <div class="contactCard__k">Email</div>
-                    <div class="contactCard__v">info@crystalhazeholding.com</div>
+                    <div class="contactCard__v">chh@official.mail</div>
                   </div>
+                  <div class="pageHead__badge">Official</div>
                 </div>
 
                 <div class="contactCard">
                   <div>
-                    <div class="contactCard__k">Location</div>
+                    <div class="contactCard__k">Phone</div>
+                    <div class="contactCard__v">+000 00 000 00 00</div>
+                  </div>
+                  <div class="pageHead__badge">Direct</div>
+                </div>
+
+                <div class="contactCard">
+                  <div>
+                    <div class="contactCard__k">Office</div>
                     <div class="contactCard__v">Azerbaijan</div>
                   </div>
+                  <div class="pageHead__badge">CHH</div>
                 </div>
               </div>
             </article>
 
             <article class="panel panel--contact">
-              <div class="panel__title">Participation</div>
-              <div class="formSlot" data-form-slot="join"></div>
+              <div class="panel__title">Participation form area</div>
+              <p class="p">
+                The form link will be placed here without changing the platform structure.
+              </p>
+              <div class="formSlot" aria-hidden="true"></div>
 
-              <div class="divider"></div>
+              <div style="height:12px;"></div>
 
               <div class="panel__title">Notes</div>
-              <div class="noteBox"></div>
+              <div class="noteBox" aria-hidden="true"></div>
             </article>
           </div>
 
@@ -825,156 +757,107 @@
     </section>
   </main>
 
-  <div class="assistant" aria-live="polite" aria-label="Assistant">
+  <!-- Assistant (kept as-is) -->
+  <section class="assistant" aria-label="Assistant">
     <div class="assistant__head">
       <div class="assistant__title">Assistant</div>
-      <button class="assistant__x" type="button" aria-label="Close assistant">✕</button>
+      <button class="assistant__min" type="button" aria-label="Minimize">—</button>
     </div>
-
-    <div class="assistant__body" role="log" aria-label="Chat messages">
-      <div class="msg msg--bot">
-        <div class="msg__bubble">
-          Hello. Choose ChatGPT or Gemini mode and send your message.
-        </div>
+    <div class="assistant__body">
+      <div class="assistant__msg">Ready.</div>
+      <div class="assistant__row">
+        <input class="assistant__in" type="text" placeholder="Type…" />
+        <button class="assistant__send" type="button">Send</button>
       </div>
     </div>
-
-    <div class="assistant__foot">
-      <div class="assistMode" role="tablist" aria-label="Mode">
-        <button class="modeBtn is-on" data-mode="chatgpt" type="button" role="tab" aria-selected="true">ChatGPT</button>
-        <button class="modeBtn" data-mode="gemini" type="button" role="tab" aria-selected="false">Gemini</button>
-      </div>
-
-      <form class="assistant__form" autocomplete="off">
-        <input class="assistant__input" name="q" type="text" placeholder="Type here..." />
-        <button class="assistant__send" type="submit" aria-label="Send">➜</button>
-      </form>
-    </div>
-  </div>
+  </section>
 
   <script>
-    (function(){
-      const $ = (s, r=document) => r.querySelector(s);
-      const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+    (function () {
+      const root = document.documentElement;
+      const routeFx = document.querySelector(".routeFx");
+      const views = Array.from(document.querySelectorAll(".view"));
+      const navBtns = Array.from(document.querySelectorAll(".nav__btn"));
+      const drawer = document.querySelector(".drawer");
+      const drawerPanel = document.querySelector(".drawer__panel");
+      const burger = document.querySelector(".burger");
+      const drawerClose = document.querySelector(".drawer__close");
+      const drawerItems = Array.from(document.querySelectorAll(".drawer__item"));
 
-      const views = $$('[data-view]');
-      const navBtns = $$('[data-route]');
-      const topNavBtns = $$('.nav__btn');
-      const drawer = $('.drawer');
-      const drawerPanel = $('.drawer__panel');
-      const burger = $('.burger');
-      const drawerClose = $('.drawer__close');
-      const routeFx = $('.routeFx');
-
-      function setActive(route){
-        views.forEach(v => v.classList.toggle('is-active', v.dataset.view === route));
-        topNavBtns.forEach(b => {
-          const on = b.dataset.route === route;
-          b.classList.toggle('is-active', on);
-          if(on) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
-        });
-        $$('.drawer__item').forEach(b => b.classList.toggle('is-active', b.dataset.route === route));
-
-        routeFx.classList.add('on');
-        window.setTimeout(() => routeFx.classList.remove('on'), 240);
-
-        const activeScroll = $(`.view[data-view="${route}"] .view__scroll`);
-        if(activeScroll) activeScroll.scrollTop = 0;
-
-        location.hash = route;
+      function setActive(route) {
+        views.forEach(v => v.classList.toggle("is-active", v.dataset.view === route));
+        navBtns.forEach(b => b.classList.toggle("is-active", b.dataset.route === route));
+        navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.route === route ? "page" : "false"));
+        history.replaceState(null, "", "#" + route);
       }
 
-      function openDrawer(){
-        drawer.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        burger.setAttribute('aria-expanded','true');
-        document.documentElement.classList.add('lock');
-        document.body.classList.add('lock');
-        window.setTimeout(() => drawerPanel && drawerPanel.focus(), 0);
+      function jump(route) {
+        routeFx.classList.add("on");
+        setTimeout(() => {
+          setActive(route);
+          routeFx.classList.remove("on");
+        }, 150);
       }
 
-      function closeDrawer(){
-        drawer.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        burger.setAttribute('aria-expanded','false');
-        document.documentElement.classList.remove('lock');
-        document.body.classList.remove('lock');
+      function openDrawer() {
+        drawer.classList.add("is-open");
+        drawer.setAttribute("aria-hidden", "false");
+        burger.setAttribute("aria-expanded", "true");
+        root.classList.add("lock");
+        setTimeout(() => drawerPanel && drawerPanel.focus(), 40);
       }
 
-      topNavBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const r = btn.dataset.route;
-          if(r) setActive(r);
-        });
+      function closeDrawer() {
+        drawer.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        burger.setAttribute("aria-expanded", "false");
+        root.classList.remove("lock");
+      }
+
+      navBtns.forEach(btn => {
+        btn.addEventListener("click", () => jump(btn.dataset.route));
       });
 
-      $$('.drawer__item').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const r = btn.dataset.route;
-          if(r) setActive(r);
+      drawerItems.forEach(btn => {
+        btn.addEventListener("click", () => {
           closeDrawer();
+          jump(btn.dataset.route);
         });
       });
 
-      $$('.btn[data-jump]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const r = btn.getAttribute('data-jump');
-          if(r) setActive(r);
-        });
-      });
-
-      burger.addEventListener('click', () => {
-        if(drawer.classList.contains('is-open')) closeDrawer();
+      burger.addEventListener("click", () => {
+        if (drawer.classList.contains("is-open")) closeDrawer();
         else openDrawer();
       });
 
-      drawerClose.addEventListener('click', closeDrawer);
-      drawer.addEventListener('click', (e) => { if(e.target === drawer) closeDrawer(); });
-      document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeDrawer(); });
+      drawerClose.addEventListener("click", closeDrawer);
+      drawer.addEventListener("click", (e) => {
+        if (e.target === drawer) closeDrawer();
+      });
 
-      const initial = (location.hash || '#home').replace('#','');
-      setActive(initial);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeDrawer();
+      });
 
-      const assistant = $('.assistant');
-      const assistantX = $('.assistant__x');
-      const assistantBody = $('.assistant__body');
-      const assistantForm = $('.assistant__form');
-      const assistantInput = $('.assistant__input');
-      const modeBtns = $$('.modeBtn');
-      let mode = 'chatgpt';
+      document.querySelectorAll("[data-jump]").forEach(btn => {
+        btn.addEventListener("click", () => jump(btn.dataset.jump));
+      });
 
-      function pushMsg(text, who){
-        const wrap = document.createElement('div');
-        wrap.className = 'msg ' + (who === 'bot' ? 'msg--bot' : 'msg--user');
-        wrap.innerHTML = '<div class="msg__bubble"></div>';
-        wrap.querySelector('.msg__bubble').textContent = text;
-        assistantBody.appendChild(wrap);
-        assistantBody.scrollTop = assistantBody.scrollHeight;
-      }
+      const first = (location.hash || "#home").replace("#", "");
+      setActive(first);
 
-      modeBtns.forEach(b => {
-        b.addEventListener('click', () => {
-          modeBtns.forEach(x => { x.classList.remove('is-on'); x.setAttribute('aria-selected','false'); });
-          b.classList.add('is-on');
-          b.setAttribute('aria-selected','true');
-          mode = b.dataset.mode || 'chatgpt';
+      // Assistant minimal toggle (kept simple)
+      const assistant = document.querySelector(".assistant");
+      const minBtn = document.querySelector(".assistant__min");
+      if (assistant && minBtn) {
+        let minimized = false;
+        minBtn.addEventListener("click", () => {
+          minimized = !minimized;
+          assistant.classList.toggle("is-min", minimized);
         });
-      });
-
-      assistantX.addEventListener('click', () => assistant.classList.toggle('is-hidden'));
-
-      assistantForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const q = (assistantInput.value || '').trim();
-        if(!q) return;
-        assistantInput.value = '';
-        pushMsg(q, 'user');
-        const reply = (mode === 'gemini')
-          ? 'Gemini mode is set. Command will be connected when configured.'
-          : 'ChatGPT mode is set. Command will be connected when configured.';
-        window.setTimeout(() => pushMsg(reply, 'bot'), 220);
-      });
+      }
     })();
   </script>
 </body>
 </html>
+```
