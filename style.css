@@ -1,958 +1,863 @@
-:root{
-  --bg:#3A3D4A;
-  --text:#ffffff;
-  --muted:rgba(255,255,255,.78);
-  --muted2:rgba(255,255,255,.62);
+```html
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crystal Haze Holding</title>
+  <meta name="description" content="Crystal Haze Holding — Official platform." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  --panel:rgba(255,255,255,.06);
-  --panel2:rgba(0,0,0,.22);
-  --line:rgba(255,255,255,.10);
+<body>
+  <!-- Top Bar -->
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <a class="brand" href="#home" data-route="home" aria-label="Crystal Haze Holding">
+        <img class="brand__logo" src="assets/chh_logo.png" alt="Crystal Haze Holding Logo" />
+        <div class="brand__text">
+          <div class="brand__name">Crystal Haze Holding</div>
+          <div class="brand__sub">Official Platform</div>
+        </div>
+      </a>
 
-  --shadow:0 18px 60px rgba(0,0,0,.42);
-  --shadow2:0 10px 30px rgba(0,0,0,.36);
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__btn is-active" data-route="home" aria-current="page">Home</button>
+        <button class="nav__btn" data-route="intellectual">Intellectual</button>
+        <button class="nav__btn" data-route="startup">Startup</button>
+        <button class="nav__btn" data-route="sports">Sports</button>
+        <button class="nav__btn" data-route="business">Business</button>
+        <button class="nav__btn" data-route="hbn">HBN</button>
+        <button class="nav__btn" data-route="partners">Partners</button>
+        <button class="nav__btn" data-route="contact">Contact</button>
+      </nav>
 
-  --r:22px;
-  --r2:18px;
-  --r3:28px;
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-  --focus:rgba(255,255,255,.18);
-}
+  <!-- Mobile Drawer -->
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
+      <div class="drawer__head">
+        <div class="drawer__title">Crystal Haze Holding</div>
+        <button class="drawer__close" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="drawer__list" role="list">
+        <button class="drawer__item" data-route="home">Home</button>
+        <button class="drawer__item" data-route="intellectual">Intellectual</button>
+        <button class="drawer__item" data-route="startup">Startup</button>
+        <button class="drawer__item" data-route="sports">Sports</button>
+        <button class="drawer__item" data-route="business">Business</button>
+        <button class="drawer__item" data-route="hbn">HBN</button>
+        <button class="drawer__item" data-route="partners">Partners</button>
+        <button class="drawer__item" data-route="contact">Contact</button>
+      </div>
+    </div>
+  </div>
 
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  overflow:hidden;
-}
-html.lock, body.lock{ overflow:hidden; }
+  <!-- Background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__glow bg__glow--c"></div>
+    <div class="bg__noise"></div>
+  </div>
 
-a{ color:inherit; text-decoration:none; }
-button{ font-family:inherit; }
+  <!-- Route Transition Overlay -->
+  <div class="routeFx" aria-hidden="true"></div>
 
-.topbar{
-  position:fixed;
-  inset:0 0 auto 0;
-  height:76px;
-  z-index:80;
-  background: rgba(0,0,0,.18);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  backdrop-filter: blur(14px);
-}
-.topbar__inner{
-  height:100%;
-  max-width:1240px;
-  margin:0 auto;
-  padding:0 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-}
+  <!-- App -->
+  <main class="app" role="main">
+    <!-- HOME -->
+    <section class="view is-active" data-view="home">
+      <div class="view__scroll">
+        <div class="wrap">
+          <div class="hero">
+            <div class="hero__left">
+              <div class="hero__frame">
+                <div class="hero__crest">
+                  <img class="hero__crestImg" src="assets/chh_logo.png" alt="Crystal Haze Holding" />
+                </div>
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-width: 260px;
-}
-.brand__logo{
-  width:42px; height:42px;
-  object-fit:contain;
-  border-radius: 14px;
-  background: rgba(0,0,0,.16);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-}
-.brand__text{ line-height:1.05; }
-.brand__name{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:15px;
-  opacity:.96;
-}
-.brand__sub{
-  margin-top:4px;
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-}
+                <div class="hero__content">
+                  <div class="hero__kicker">Official Holding Platform</div>
+                  <h1 class="h1">Crystal Haze Holding</h1>
+                  <p class="lead">
+                    Crystal Haze Holding operates as a structured holding model built on leadership, accountability,
+                    and professional execution standards. The holding is organized into specialized divisions with
+                    clear responsibilities, defined operational flow, and measurable outcomes — designed for long-term
+                    growth and international presence.
+                  </p>
 
-.nav{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-.nav__btn{
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.05);
-  color: var(--text);
-  padding:10px 12px;
-  border-radius: 999px;
-  font-size:13px;
-  cursor:pointer;
-  opacity:.92;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease, opacity .18s ease;
-}
-.nav__btn:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.08);
-  border-color: rgba(255,255,255,.18);
-  opacity:1;
-}
-.nav__btn.is-active{
-  background: rgba(255,255,255,.12);
-  border-color: rgba(255,255,255,.22);
-  opacity:1;
-}
+                  <div class="hero__actions">
+                    <button class="btn btn--primary" data-jump="intellectual">Explore Divisions</button>
+                    <button class="btn btn--ghost" data-jump="hbn">HBN</button>
+                    <button class="btn btn--ghost" data-jump="partners">Partners</button>
+                  </div>
 
-.burger{
-  display:none;
-  width:46px;
-  height:46px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.05);
-  cursor:pointer;
-  align-items:center;
-  justify-content:center;
-  gap:4px;
-}
-.burger span{
-  display:block;
-  width:18px;
-  height:2px;
-  border-radius:2px;
-  background: rgba(255,255,255,.86);
-}
+                  <div class="hero__line" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-.drawer{
-  position:fixed;
-  inset:0;
-  z-index:120;
-  display:none;
-  background: rgba(0,0,0,.46);
-  backdrop-filter: blur(10px);
-}
-.drawer.is-open{ display:block; animation: fadeIn .18s ease both; }
-@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+            <div class="hero__right">
+              <div class="glass">
+                <div class="glass__top">
+                  <div class="chip">Structured</div>
+                  <div class="chip">Official</div>
+                  <div class="chip">Global-ready</div>
+                </div>
 
-.drawer__panel{
-  position:absolute;
-  right:14px;
-  top:14px;
-  width:min(380px, calc(100% - 28px));
-  border-radius: 24px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.26);
-  box-shadow: var(--shadow);
-  padding:14px;
-  outline:none;
-  transform: translateY(-8px);
-  animation: panelIn .22s ease both;
-}
-@keyframes panelIn{ to{ transform: translateY(0); } }
+                <div class="glass__body">
+                  <div class="sectionTitle">Leadership</div>
 
-.drawer__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  padding:6px 6px 10px;
-}
-.drawer__title{ font-weight:1000; letter-spacing:.2px; }
-.drawer__close{
-  width:40px;
-  height:40px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.06);
-  color: var(--text);
-  cursor:pointer;
-}
-.drawer__list{
-  display:grid;
-  gap:10px;
-  padding:6px;
-}
-.drawer__item{
-  text-align:left;
-  padding:14px 14px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.06);
-  color: var(--text);
-  cursor:pointer;
-  font-weight:950;
-  letter-spacing:.2px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.drawer__item:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.10);
-  border-color: rgba(255,255,255,.18);
-}
+                  <div class="people2">
+                    <div class="personCard">
+                      <div class="personCard__name">Lala Hasanli</div>
+                      <div class="personCard__role">Founder / Leader</div>
+                      <div class="personCard__desc">
+                        Founder-level leadership, brand direction, and official representation of the holding.
+                      </div>
+                    </div>
 
-.bg{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:0;
-}
-.bg__grid{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px) 0 0/56px 56px,
-    linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px) 0 0/56px 56px;
-  opacity:.13;
-  mask-image: radial-gradient(60% 60% at 50% 40%, #000 55%, transparent 100%);
-}
-.bg__glow{
-  position:absolute;
-  width:620px; height:620px;
-  border-radius:999px;
-  filter: blur(52px);
-  opacity:.34;
-  mix-blend-mode: screen;
-  animation: drift 14s ease-in-out infinite;
-}
-.bg__glow--a{
-  left:-180px; top:120px;
-  background: radial-gradient(circle at 30% 30%, rgba(173,120,255,.75), transparent 55%);
-}
-.bg__glow--b{
-  right:-220px; top:40px;
-  background: radial-gradient(circle at 40% 35%, rgba(90,205,255,.75), transparent 55%);
-  animation-duration: 17s;
-}
-.bg__glow--c{
-  left:26%; bottom:-240px;
-  background: radial-gradient(circle at 50% 45%, rgba(255,255,255,.30), transparent 60%);
-  animation-duration: 19s;
-  opacity:.26;
-}
-@keyframes drift{
-  0%{ transform: translate3d(0,0,0) scale(1); }
-  50%{ transform: translate3d(40px,-18px,0) scale(1.05); }
-  100%{ transform: translate3d(0,0,0) scale(1); }
-}
-.bg__noise{
-  position:absolute;
-  inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
-  opacity:.10;
-  mix-blend-mode: overlay;
-}
+                    <div class="personCard">
+                      <div class="personCard__name">Nicat Umarli</div>
+                      <div class="personCard__role">CEO / Leader</div>
+                      <div class="personCard__desc">
+                        Executive leadership, operations coordination, and performance-driven management across divisions.
+                      </div>
+                    </div>
+                  </div>
 
-.routeFx{
-  position:fixed;
-  inset:76px 0 0 0;
-  pointer-events:none;
-  z-index:5;
-  background: radial-gradient(60% 60% at 50% 40%, rgba(0,0,0,.34), rgba(0,0,0,0));
-  opacity:0;
-  transition: opacity .22s ease;
-}
-.routeFx.on{ opacity:1; }
+                  <div class="divider"></div>
 
-.app{
-  position:relative;
-  height:100%;
-  padding-top:76px;
-  z-index:2;
-}
-.view{
-  position:absolute;
-  inset:76px 0 0 0;
-  display:none;
-  overflow:hidden;
-}
-.view.is-active{
-  display:block;
-  animation: viewIn .26s ease both;
-}
-@keyframes viewIn{
-  from{ opacity:0; transform: translateY(10px); }
-  to{ opacity:1; transform: translateY(0); }
-}
-.view__scroll{
-  height:100%;
-  overflow:auto;
-  padding-bottom: 46px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,.25) transparent;
-}
-.view__scroll::-webkit-scrollbar{ width:10px; }
-.view__scroll::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.18); border-radius:999px; }
-.view__scroll::-webkit-scrollbar-track{ background: transparent; }
+                  <div class="sectionTitle">Operational Standard</div>
+                  <p class="p">
+                    The platform is designed as a corporate-style system: each division is represented as a dedicated
+                    page with a clear purpose, workflow, leadership, and responsibility scope.
+                  </p>
 
-.wrap{
-  max-width:1240px;
-  margin:0 auto;
-  padding:26px 16px 22px;
-}
+                  <div class="quick">
+                    <div class="quick__item">
+                      <div class="quick__k">Divisions</div>
+                      <div class="quick__v">4</div>
+                    </div>
+                    <div class="quick__item">
+                      <div class="quick__k">Core Team</div>
+                      <div class="quick__v">11</div>
+                    </div>
+                    <div class="quick__item">
+                      <div class="quick__k">Partners</div>
+                      <div class="quick__v">9</div>
+                    </div>
+                  </div>
+                </div>
 
-.h1{ margin:0; font-size:46px; letter-spacing:.2px; line-height:1.05; }
-.h2{ margin:0; font-size:30px; letter-spacing:.2px; }
-.lead{ margin:14px 0 0; color: var(--muted); font-size:15px; line-height:1.75; }
-.p{ margin:0; color: var(--muted); font-size:14px; line-height:1.75; }
-.footnote{ margin-top:22px; text-align:center; font-size:12px; color: var(--muted2); }
+                <div class="glass__foot">© 2025 Crystal Haze Holding</div>
+              </div>
+            </div>
+          </div>
 
-.hero{
-  display:grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap:16px;
-  align-items:stretch;
-}
-.hero__frame{
-  border-radius: var(--r3);
-  border:1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(0,0,0,.18));
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  padding:18px;
-  display:grid;
-  grid-template-columns: 190px 1fr;
-  gap:16px;
-  align-items:center;
-}
-.hero__crest{
-  width:190px;
-  height:190px;
-  border-radius: 26px;
-  background: rgba(0,0,0,.18);
-  border:1px solid rgba(255,255,255,.10);
-  display:grid;
-  place-items:center;
-  box-shadow: var(--shadow2);
-}
-.hero__crestImg{
-  width:150px;
-  height:150px;
-  object-fit:contain;
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,.35));
-  animation: floaty 4.6s ease-in-out infinite;
-}
-@keyframes floaty{
-  0%,100%{ transform: translateY(0); }
-  50%{ transform: translateY(-6px); }
-}
-.hero__kicker{
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-  font-weight:900;
-}
-.hero__actions{
-  margin-top:16px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-.btn{
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.10);
-  color: var(--text);
-  padding:12px 14px;
-  border-radius: 16px;
-  cursor:pointer;
-  font-weight:950;
-  letter-spacing:.2px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.btn:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.12);
-  border-color: rgba(255,255,255,.18);
-}
-.btn--ghost{
-  background: rgba(0,0,0,.16);
-  border-color: rgba(255,255,255,.10);
-}
-.btn--primary{
-  background: rgba(255,255,255,.14);
-  border-color: rgba(255,255,255,.20);
-}
-.hero__line{
-  margin-top:18px;
-  display:flex;
-  gap:10px;
-}
-.hero__line span{
-  height:10px;
-  flex:1;
-  border-radius:999px;
-  background: linear-gradient(90deg, rgba(173,120,255,.55), rgba(90,205,255,.55));
-  opacity:.16;
-  animation: pulse 2.8s ease-in-out infinite;
-}
-.hero__line span:nth-child(2){ opacity:.13; animation-delay:.12s; }
-.hero__line span:nth-child(3){ opacity:.10; animation-delay:.22s; }
-.hero__line span:nth-child(4){ opacity:.08; animation-delay:.34s; }
-@keyframes pulse{
-  0%{ transform: scaleX(.88); opacity:.12; }
-  50%{ transform: scaleX(1); opacity:.20; }
-  100%{ transform: scaleX(.88); opacity:.12; }
-}
+          <div class="homeGrid">
+            <article class="card">
+              <div class="card__head">
+                <div class="card__title">What the holding delivers</div>
+                <div class="dot"></div>
+              </div>
+              <p class="p">
+                A single official identity that unifies multiple directions — leadership, teams, divisions, and partner
+                visibility — under a structured framework and a consistent presentation standard.
+              </p>
+              <div class="miniRow">
+                <div class="mini">
+                  <div class="mini__k">Focus</div>
+                  <div class="mini__v">Execution</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Style</div>
+                  <div class="mini__v">Corporate</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Model</div>
+                  <div class="mini__v">Scalable</div>
+                </div>
+              </div>
+            </article>
 
-.glass{
-  border-radius: var(--r3);
-  border:1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.20));
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  min-height: 100%;
-}
-.glass__top{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  padding:16px;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.chip{
-  padding:10px 12px;
-  border-radius:999px;
-  background: rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-  font-size:12px;
-  color: rgba(255,255,255,.86);
-  letter-spacing:.18px;
-}
-.glass__body{ padding:16px; display:grid; gap:12px; }
-.glass__foot{
-  margin-top:auto;
-  padding:12px 16px;
-  border-top: 1px solid rgba(255,255,255,.08);
-  text-align:right;
-  font-size:12px;
-  color: var(--muted2);
-}
-.sectionTitle{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:13px;
-}
-.people2{ display:grid; gap:10px; }
-.personCard{
-  border-radius: 18px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.personCard:hover{ transform: translateY(-2px); background: rgba(255,255,255,.06); }
-.personCard__name{ font-weight:1000; letter-spacing:.2px; }
-.personCard__role{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-.personCard__desc{ margin-top:10px; font-size:13px; color: var(--muted); line-height:1.7; }
-.divider{ height:1px; background: rgba(255,255,255,.08); margin:6px 0; }
+            <article class="card">
+              <div class="card__head">
+                <div class="card__title">How divisions operate</div>
+                <div class="dot"></div>
+              </div>
+              <p class="p">
+                Each division is built around leadership, an operational workflow, and responsibility scope. The system
+                emphasizes structured planning, execution discipline, and performance review — aligned with the holding’s standard.
+              </p>
+              <div class="bars" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+            </article>
 
-.quick{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:10px;
-}
-.quick__item{
-  border-radius: 18px;
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.08);
-  padding:12px;
-}
-.quick__k{ font-size:12px; color: var(--muted2); letter-spacing:.18px; }
-.quick__v{ margin-top:6px; font-weight:1000; font-size:18px; letter-spacing:.2px; }
+            <article class="card">
+              <div class="card__head">
+                <div class="card__title">Partner visibility</div>
+                <div class="dot"></div>
+              </div>
+              <p class="p">
+                Partners and the core team are represented in an official format with visible logo placement, structured introductions,
+                and brand-aligned presentation.
+              </p>
+              <div class="stamp">
+                <div class="stamp__big">CHH</div>
+                <div class="stamp__small">Official Platform</div>
+              </div>
+            </article>
+          </div>
 
-.homeGrid{
-  margin-top:16px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:14px;
-}
-.card{
-  border-radius: var(--r);
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.card:hover{ transform: translateY(-2px); background: rgba(255,255,255,.06); }
-.card__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  margin-bottom:10px;
-}
-.card__title{ font-weight:1000; letter-spacing:.2px; font-size:13px; }
-.dot{
-  width:8px; height:8px;
-  border-radius:999px;
-  background: rgba(255,255,255,.45);
-  box-shadow: 0 0 0 8px rgba(255,255,255,.06);
-}
-.miniRow{
-  margin-top:12px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:10px;
-}
-.mini{
-  border-radius: 18px;
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.08);
-  padding:12px;
-}
-.mini__k{ font-size:12px; color: var(--muted2); letter-spacing:.18px; }
-.mini__v{ margin-top:6px; font-weight:1000; letter-spacing:.2px; }
-.bars{ margin-top:12px; display:flex; gap:10px; }
-.bars span{
-  height:10px; flex:1;
-  border-radius:999px;
-  background: linear-gradient(90deg, rgba(173,120,255,.55), rgba(90,205,255,.55));
-  opacity:.14;
-}
-.stamp{
-  margin-top:14px;
-  border-radius: 20px;
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.08);
-  padding:14px;
-  display:grid;
-  place-items:center;
-}
-.stamp__big{ font-weight:1000; font-size:26px; letter-spacing:.3px; }
-.stamp__small{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
 
-.pageHead{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:14px;
-  margin-bottom:14px;
-}
-.pageHead__kicker{
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-  font-weight:900;
-}
-.pageHead__sub{
-  margin-top:8px;
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-}
-.pageHead__badge{
-  padding:10px 12px;
-  border-radius:999px;
-  background: rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-  font-size:12px;
-  color: rgba(255,255,255,.86);
-  letter-spacing:.2px;
-}
-.pageHead--hbn .pageHead__badge{ background: rgba(0,0,0,.20); }
-.pageHead__badge--hbn{ border-color: rgba(255,255,255,.10); }
+    <!-- INTELLECTUAL -->
+    <section class="view" data-view="intellectual">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Intellectual Division</h2>
+              <div class="pageHead__sub">Analytics · Knowledge · Competitive Preparation</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
 
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-  align-items:stretch;
-}
-.panel{
-  border-radius: var(--r3);
-  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(0,0,0,.16));
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow);
-  padding:16px;
-  display:grid;
-  gap:12px;
-  position:relative;
-  overflow:hidden;
-}
-.panel::after{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background:
-    radial-gradient(520px 280px at 20% 20%, rgba(173,120,255,.16), transparent 60%),
-    radial-gradient(520px 280px at 80% 40%, rgba(90,205,255,.14), transparent 60%);
-  opacity:.85;
-  pointer-events:none;
-}
-.panel > *{ position:relative; z-index:1; }
-.panel__title{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:14px;
-}
-.panel--deep{
-  background: rgba(0,0,0,.18);
-  border-color: rgba(255,255,255,.10);
-}
-.flow{ display:grid; gap:10px; }
-.step{
-  border-radius:18px;
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.08);
-  padding:12px;
-  transition: transform .18s ease, background .18s ease;
-}
-.step:hover{ transform: translateY(-2px); background: rgba(0,0,0,.20); }
-.step__k{ font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-.step__v{ margin-top:6px; font-weight:950; letter-spacing:.18px; }
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Intellectual Division represents the knowledge and analytical direction of Crystal Haze Holding.
+                It is responsible for structured intellectual preparation, professional representation in academic
+                and competitive environments, and consistent improvement through measurable outcomes.
+              </p>
+              <p class="p">
+                The division focuses on strategy, preparation cycles, internal evaluation, and professional presentation.
+                Participation is managed as a complete system: planning, practice, performance, review, and iteration.
+              </p>
+            </article>
 
-.wide{
-  margin-top:14px;
-  border-radius: var(--r3);
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-  padding:16px;
-}
-.wide__head{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:12px;
-}
-.wide__title{ font-weight:1000; letter-spacing:.2px; }
-.wide__line{
-  height:1px; flex:1;
-  background: linear-gradient(90deg, rgba(255,255,255,.10), rgba(255,255,255,0));
-}
-.peopleGrid{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:12px;
-}
-.person{
-  border-radius: 22px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.person:hover{ transform: translateY(-2px); background: rgba(255,255,255,.06); }
-.person__name{ font-weight:1000; letter-spacing:.2px; }
-.person__role{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-.person__desc{ margin-top:10px; font-size:13px; color: var(--muted); line-height:1.7; }
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Planning</div><div class="step__v">Goals, timeline, roles, and content scope</div></div>
+                <div class="step"><div class="step__k">Preparation</div><div class="step__v">Topic mapping, resources, practice sets</div></div>
+                <div class="step"><div class="step__k">Evaluation</div><div class="step__v">Internal checks, weak-point analysis</div></div>
+                <div class="step"><div class="step__k">Representation</div><div class="step__v">Official performance and delivery</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Result analysis and next-cycle upgrades</div></div>
+              </div>
+            </article>
+          </div>
 
-.hbnHero{
-  display:grid;
-  grid-template-columns: 420px 1fr;
-  gap:14px;
-  align-items:stretch;
-}
-.hbnBlock{
-  border-radius: var(--r3);
-  background: rgba(0,0,0,.18);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-  padding:16px;
-}
-.hbnBlock__title{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:13px;
-  margin-bottom:10px;
-}
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Kenan Abdullayev</div>
+                <div class="person__role">Intellectual Leader</div>
+                <div class="person__desc">
+                  Leads structured preparation cycles, analytical focus, and performance discipline for official representation.
+                </div>
+              </div>
+              <div class="person">
+                <div class="person__name">Shabnam Zeynalova</div>
+                <div class="person__role">Intellectual Leader</div>
+                <div class="person__desc">
+                  Builds knowledge structure, supports preparation standards, and maintains consistent quality across cycles.
+                </div>
+              </div>
+            </div>
+          </article>
 
-.brandRow{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-.brandMark{
-  width:56px;
-  height:56px;
-  object-fit:contain;
-  border-radius:16px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-}
-.brandMeta__name{ font-weight:1000; letter-spacing:.2px; }
-.brandMeta__sub{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
 
-.hbnOwner{
-  border-radius: 18px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  padding:14px;
-}
-.hbnOwner__name{ font-weight:1000; letter-spacing:.2px; }
-.hbnOwner__role{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
+    <!-- STARTUP -->
+    <section class="view" data-view="startup">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Startup Division</h2>
+              <div class="pageHead__sub">Ideation · Structure · Execution · Growth</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
 
-.linkBtn{
-  display:inline-block;
-  padding:12px 14px;
-  border-radius: 16px;
-  border:1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.10);
-  color: var(--text);
-  text-decoration:none;
-  font-weight:1000;
-  letter-spacing:.2px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.linkBtn:hover{ transform: translateY(-2px); background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.18); }
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Startup Division transforms ideas into structured initiatives. It manages concept validation,
+                planning, responsibility allocation, and execution coordination — ensuring initiatives become real,
+                scalable systems aligned with the holding’s standard.
+              </p>
+              <p class="p">
+                The division operates through milestone-based development and disciplined execution. It focuses on
+                building stable structures rather than short-term experimentation.
+              </p>
+            </article>
 
-.shadowRow{
-  display:grid;
-  grid-template-columns: 120px 1fr;
-  gap:12px;
-  align-items:center;
-}
-.shadowLogo{
-  width:120px;
-  height:120px;
-  object-fit:contain;
-  border-radius: 22px;
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-}
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Discovery</div><div class="step__v">Idea fit, value, positioning</div></div>
+                <div class="step"><div class="step__k">Design</div><div class="step__v">Structure, responsibilities, timeline</div></div>
+                <div class="step"><div class="step__k">Build</div><div class="step__v">Execution, iteration, delivery</div></div>
+                <div class="step"><div class="step__k">Presentation</div><div class="step__v">Official-ready materials and demos</div></div>
+                <div class="step"><div class="step__k">Scale</div><div class="step__v">Stability and long-term growth plan</div></div>
+              </div>
+            </article>
+          </div>
 
-.team{
-  margin-top:12px;
-  display:grid;
-  gap:10px;
-}
-.teamRow{
-  border-radius: 18px;
-  background: rgba(0,0,0,.16);
-  border:1px solid rgba(255,255,255,.08);
-  padding:12px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  transition: transform .18s ease, background .18s ease;
-}
-.teamRow:hover{ transform: translateY(-2px); background: rgba(0,0,0,.20); }
-.teamRow__name{ font-weight:1000; letter-spacing:.2px; }
-.teamRow__role{ font-size:12px; color: var(--muted2); letter-spacing:.22px; font-weight:900; }
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Nazrin Guliyeva</div>
+                <div class="person__role">Startup Manager</div>
+                <div class="person__desc">
+                  Oversees startup planning, coordination, and milestone delivery within the holding structure.
+                </div>
+              </div>
+            </div>
+          </article>
 
-.partnerGrid{
-  margin-top:12px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:12px;
-}
-.partnerCard{
-  border-radius: 22px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.partnerCard:hover{ transform: translateY(-2px); background: rgba(255,255,255,.06); }
-.partnerCard__top{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-.partnerLogo{
-  width:54px;
-  height:54px;
-  object-fit:contain;
-  border-radius:16px;
-  background: rgba(0,0,0,.14);
-  border:1px solid rgba(255,255,255,.10);
-}
-.partnerName{
-  font-weight:1000;
-  letter-spacing:.2px;
-}
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
 
-.contactGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-  align-items:stretch;
-}
-.panel--contact{
-  background: rgba(0,0,0,.18);
-}
-.contactCards{ display:grid; gap:10px; margin-top:12px; }
-.contactCard{
-  border-radius: 22px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow: var(--shadow2);
-  padding:14px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  transition: transform .18s ease, background .18s ease;
-}
-.contactCard:hover{ transform: translateY(-2px); background: rgba(255,255,255,.06); }
-.contactCard__k{ font-size:12px; color: var(--muted2); letter-spacing:.22px; font-weight:900; }
-.contactCard__v{ font-weight:1000; letter-spacing:.2px; }
+    <!-- SPORTS -->
+    <section class="view" data-view="sports">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Sports Division</h2>
+              <div class="pageHead__sub">Discipline · Representation · Team Performance</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
 
-.formSlot{
-  margin-top:12px;
-  height: 170px;
-  border-radius: var(--r3);
-  background: rgba(0,0,0,.14);
-  border:1px dashed rgba(255,255,255,.16);
-}
-.noteBox{
-  height: 220px;
-  border-radius: var(--r3);
-  background: rgba(0,0,0,.14);
-  border:1px dashed rgba(255,255,255,.16);
-}
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Sports Division manages official sports representation, team coordination, and performance-focused
+                participation. It emphasizes discipline, preparation structure, and execution quality aligned with the
+                holding’s reputation and presentation standard.
+              </p>
+              <p class="p">
+                The division operates through clear planning, team roles, preparation cycles, and post-performance review
+                to maintain consistency and long-term progress.
+              </p>
+            </article>
 
-/* Assistant */
-.assistant{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width: 320px;
-  border-radius: 22px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.22);
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  z-index:90;
-}
-.assistant.is-hidden{ display:none; }
-.assistant__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 12px;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.assistant__title{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:13px;
-}
-.assistant__x{
-  width:34px;
-  height:34px;
-  border-radius: 12px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.06);
-  color: var(--text);
-  cursor:pointer;
-}
-.assistant__body{
-  height: 240px;
-  overflow:auto;
-  padding:12px;
-  display:grid;
-  gap:10px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,.22) transparent;
-}
-.assistant__body::-webkit-scrollbar{ width:10px; }
-.assistant__body::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.16); border-radius:999px; }
-.assistant__body::-webkit-scrollbar-track{ background: transparent; }
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Preparation</div><div class="step__v">Training plan and consistency</div></div>
+                <div class="step"><div class="step__k">Coordination</div><div class="step__v">Team roles, schedule, readiness</div></div>
+                <div class="step"><div class="step__k">Participation</div><div class="step__v">Official execution and presentation</div></div>
+                <div class="step"><div class="step__k">Performance</div><div class="step__v">Discipline and delivery quality</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Outcome analysis and upgrades</div></div>
+              </div>
+            </article>
+          </div>
 
-.msg{ display:flex; }
-.msg--bot{ justify-content:flex-start; }
-.msg--user{ justify-content:flex-end; }
-.msg__bubble{
-  max-width: 86%;
-  padding:10px 12px;
-  border-radius: 16px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.06);
-  color: rgba(255,255,255,.92);
-  font-size:13px;
-  line-height:1.55;
-  box-shadow: var(--shadow2);
-}
-.msg--user .msg__bubble{
-  background: rgba(0,0,0,.20);
-  border-color: rgba(255,255,255,.10);
-}
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Ilham Fatullayev</div>
+                <div class="person__role">Sports Director</div>
+                <div class="person__desc">
+                  Leads official sports representation, preparation discipline, and team coordination within the holding framework.
+                </div>
+              </div>
+            </div>
+          </article>
 
-.assistant__foot{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding:10px;
-  display:grid;
-  gap:10px;
-}
-.assistMode{
-  display:flex;
-  gap:8px;
-}
-.modeBtn{
-  flex:1;
-  border-radius: 999px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.05);
-  color: rgba(255,255,255,.88);
-  padding:10px 10px;
-  cursor:pointer;
-  font-weight:950;
-  letter-spacing:.18px;
-  font-size:12px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.modeBtn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); }
-.modeBtn.is-on{ background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.20); }
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
 
-.assistant__form{
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
-.assistant__input{
-  flex:1;
-  height:42px;
-  border-radius: 16px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.18);
-  color: rgba(255,255,255,.92);
-  padding:0 12px;
-  outline:none;
-}
-.assistant__input:focus{ box-shadow: 0 0 0 4px rgba(255,255,255,.08); }
-.assistant__send{
-  width:44px;
-  height:42px;
-  border-radius: 16px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.10);
-  color: rgba(255,255,255,.92);
-  cursor:pointer;
-  font-weight:1000;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.assistant__send:hover{ transform: translateY(-1px); background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.18); }
+    <!-- BUSINESS -->
+    <section class="view" data-view="business">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Business Division</h2>
+              <div class="pageHead__sub">Operations · Growth · Brand Execution</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
 
-@media (max-width: 1100px){
-  .nav{ display:none; }
-  .burger{ display:flex; }
-  .hero{ grid-template-columns: 1fr; }
-  .hero__frame{ grid-template-columns: 150px 1fr; }
-  .hero__crest{ width:150px; height:150px; border-radius:22px; }
-  .hero__crestImg{ width:120px; height:120px; }
-  .homeGrid{ grid-template-columns: 1fr; }
-  .grid2{ grid-template-columns: 1fr; }
-  .peopleGrid{ grid-template-columns: 1fr; }
-  .contactGrid{ grid-template-columns: 1fr; }
-  .hbnHero{ grid-template-columns: 1fr; }
-  .partnerGrid{ grid-template-columns: 1fr; }
-  .assistant{ right:12px; left:12px; width:auto; }
-}
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Business Division manages structured execution of business tasks, operational planning, and brand-aligned delivery.
+                It supports the holding by turning plans into measurable actions and maintaining consistency across business activities.
+              </p>
+              <p class="p">
+                The division focuses on discipline, coordination, and execution quality — ensuring initiatives are delivered in a professional format.
+              </p>
+            </article>
 
-@media (prefers-reduced-motion: reduce){
-  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-}
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Planning</div><div class="step__v">Targets, roles, and timeline alignment</div></div>
+                <div class="step"><div class="step__k">Execution</div><div class="step__v">Task delivery and structured follow-through</div></div>
+                <div class="step"><div class="step__k">Quality</div><div class="step__v">Consistency checks and standard alignment</div></div>
+                <div class="step"><div class="step__k">Reporting</div><div class="step__v">Performance updates and measurable outcomes</div></div>
+                <div class="step"><div class="step__k">Improvement</div><div class="step__v">Iteration and stability upgrades</div></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Asmar Ibrahimzadeh</div>
+                <div class="person__role">Business Manager</div>
+                <div class="person__desc">
+                  Manages business execution, operational coordination, and performance discipline aligned with holding standards.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HBN -->
+    <section class="view" data-view="hbn">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead pageHead--hbn">
+            <div>
+              <div class="pageHead__kicker">CHH Direction</div>
+              <h2 class="h2">Heyksans Business Network (HBN)</h2>
+              <div class="pageHead__sub">Education · Content · Platforms · Systems</div>
+            </div>
+            <div class="pageHead__badge pageHead__badge--hbn">HBN</div>
+          </header>
+
+          <div class="hbnHero">
+            <aside class="hbnBlock">
+              <div class="hbnBlock__title">HBN Identity</div>
+              <div style="display:grid; gap:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <img src="assets/hbn_logo.png" alt="HBN Logo" style="width:54px;height:54px;border-radius:16px;object-fit:contain;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.16);" />
+                  <div>
+                    <div style="font-weight:1000;letter-spacing:.2px;">HBN</div>
+                    <div style="font-size:12px;color:rgba(255,255,255,.62);letter-spacing:.2px;">Official Direction Under CHH</div>
+                  </div>
+                </div>
+
+                <div class="hbnOwner">
+                  <div class="hbnOwner__name">Nicat Umarli</div>
+                  <div class="hbnOwner__role">HBN Founder / Head</div>
+                </div>
+
+                <a class="linkBtn" href="https://hbnedu.az" target="_blank" rel="noopener">hbnedu.az</a>
+              </div>
+            </aside>
+
+            <section class="panel panel--deep">
+              <div class="panel__title">HBN overview</div>
+              <p class="p">
+                HBN is an education-focused direction operating under Crystal Haze Holding. It is structured to deliver educational
+                materials, academic content, and future platforms that support learning, access, and system-based improvement.
+              </p>
+              <p class="p">
+                The direction is designed with a professional standard: content organization, clear product structure, and platform-ready architecture.
+                The official website (hbnedu.az) will serve as the main public entry point for educational materials and system expansion.
+              </p>
+
+              <div class="divider"></div>
+
+              <div class="panel__title">Future systems</div>
+              <p class="p">
+                A future plan inside the HBN direction is the development of TreeYBuz — an education-based AI project that will expand system capability,
+                structured learning, and platform-level services.
+              </p>
+            </section>
+          </div>
+
+          <div style="height:14px;"></div>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Structured content model</div>
+              <p class="p">
+                Educational materials are organized in a consistent structure: category definition, content packaging,
+                clear visibility, and an official presentation format. The system is designed for stable growth and
+                future platform integration.
+              </p>
+              <div class="flow">
+                <div class="step"><div class="step__k">Catalog</div><div class="step__v">Clear categories and content structure</div></div>
+                <div class="step"><div class="step__k">Quality</div><div class="step__v">Standardized presentation and consistency</div></div>
+                <div class="step"><div class="step__k">Delivery</div><div class="step__v">Platform-ready distribution model</div></div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Shadow Secret (under CHH)</div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <img src="assets/shadow.jpeg" alt="Shadow Secret Logo" style="width:54px;height:54px;border-radius:16px;object-fit:cover;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.16);" />
+                <div>
+                  <div style="font-weight:1000;letter-spacing:.2px;">Shadow Secret</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,.62);letter-spacing:.2px;">Academic PDF Materials</div>
+                </div>
+              </div>
+              <p class="p" style="margin-top:10px;">
+                Shadow Secret focuses on academic PDF materials — including laboratory works in PDF format and scanned handwritten laboratory works.
+                The direction is structured for official presentation and controlled distribution.
+              </p>
+              <div class="flow">
+                <div class="step"><div class="step__k">PDF Materials</div><div class="step__v">Academic files and structured documents</div></div>
+                <div class="step"><div class="step__k">Laboratory Works</div><div class="step__v">PDF laboratory work packages</div></div>
+                <div class="step"><div class="step__k">Handwritten</div><div class="step__v">Scanned handwritten laboratory works</div></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="view" data-view="partners">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Official Network</div>
+              <h2 class="h2">Partners & Core Team</h2>
+              <div class="pageHead__sub">Verified visibility · Structured presentation</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Partner logos</div>
+              <p class="p">
+                Official partner visibility is maintained in a structured format. Each partner is presented with logo placement and consistent layout.
+              </p>
+
+              <div class="logoGrid">
+                <div class="logoCard">
+                  <img src="assets/Ameva_logo.png" alt="Ameva" />
+                  <div class="logoCard__name">Ameva</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/Aurina_logo.png" alt="Aurina" />
+                  <div class="logoCard__name">Aurina</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/Daisywhispers.art_logo.png" alt="Daisywhispers.art" />
+                  <div class="logoCard__name">Daisywhispers.art</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/Dara_Belle_logo.png" alt="Dara Belle" />
+                  <div class="logoCard__name">Dara Belle</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/Davetiye_Ressami_logo.png" alt="Davetiye Ressami" />
+                  <div class="logoCard__name">Davetiye Ressami</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/artna_logo.png" alt="artna" />
+                  <div class="logoCard__name">artna</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/Inci_Gifts_logo.png" alt="Inci Gifts" />
+                  <div class="logoCard__name">Inci Gifts</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/hollow_purple_art_logo.jpg" alt="Hollow Purple Art" />
+                  <div class="logoCard__name">Hollow Purple Art</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">CHH division logos</div>
+              <p class="p">
+                Division icons are placed for consistent identification and official presentation across the platform.
+              </p>
+
+              <div class="logoGrid">
+                <div class="logoCard">
+                  <img src="assets/chh_logo.png" alt="CHH" />
+                  <div class="logoCard__name">Crystal Haze Holding</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/intelectual_logo.png" alt="Intellectual" />
+                  <div class="logoCard__name">Intellectual</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/startup_logo.png" alt="Startup" />
+                  <div class="logoCard__name">Startup</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/sport_logo.png" alt="Sports" />
+                  <div class="logoCard__name">Sports</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/business_logo.png" alt="Business" />
+                  <div class="logoCard__name">Business</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/hbn_logo.png" alt="HBN" />
+                  <div class="logoCard__name">HBN</div>
+                </div>
+                <div class="logoCard">
+                  <img src="assets/shadow.jpeg" alt="Shadow Secret" />
+                  <div class="logoCard__name">Shadow Secret</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Core Team</div>
+              <div class="wide__line"></div>
+            </div>
+
+            <div class="team">
+              <div class="teamRow"><div class="teamRow__name">Lala Hasanli</div><div class="teamRow__role">Founder / Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Nicat Umarli</div><div class="teamRow__role">CEO / Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Vagif Verdiyev</div><div class="teamRow__role">PR</div></div>
+              <div class="teamRow"><div class="teamRow__name">Munavvar Yusifova</div><div class="teamRow__role">SMM</div></div>
+              <div class="teamRow"><div class="teamRow__name">Kenan Gasimzadeh</div><div class="teamRow__role">SMM</div></div>
+              <div class="teamRow"><div class="teamRow__name">Leyla Abbasova</div><div class="teamRow__role">HR Manager</div></div>
+              <div class="teamRow"><div class="teamRow__name">Kenan Abdullayev</div><div class="teamRow__role">Intellectual Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Shabnam Zeynalova</div><div class="teamRow__role">Intellectual Leader</div></div>
+              <div class="teamRow"><div class="teamRow__name">Ilham Fatullayev</div><div class="teamRow__role">Sports Director</div></div>
+              <div class="teamRow"><div class="teamRow__name">Asmar Ibrahimzadeh</div><div class="teamRow__role">Business Manager</div></div>
+              <div class="teamRow"><div class="teamRow__name">Nazrin Guliyeva</div><div class="teamRow__role">Startup Manager</div></div>
+            </div>
+          </article>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="view" data-view="contact">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Official Contact</div>
+              <h2 class="h2">Contact</h2>
+              <div class="pageHead__sub">Direct communication · Official handling</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="contactGrid">
+            <article class="panel panel--contact">
+              <div class="panel__title">Primary contacts</div>
+              <p class="p">
+                Contact channels are presented in an official format. Values can be updated later without changing the system structure.
+              </p>
+
+              <div class="contactCards">
+                <div class="contactCard">
+                  <div>
+                    <div class="contactCard__k">Email</div>
+                    <div class="contactCard__v">chh@official.mail</div>
+                  </div>
+                  <div class="pageHead__badge">Official</div>
+                </div>
+
+                <div class="contactCard">
+                  <div>
+                    <div class="contactCard__k">Phone</div>
+                    <div class="contactCard__v">+000 00 000 00 00</div>
+                  </div>
+                  <div class="pageHead__badge">Direct</div>
+                </div>
+
+                <div class="contactCard">
+                  <div>
+                    <div class="contactCard__k">Office</div>
+                    <div class="contactCard__v">Azerbaijan</div>
+                  </div>
+                  <div class="pageHead__badge">CHH</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel panel--contact">
+              <div class="panel__title">Participation form area</div>
+              <p class="p">
+                The form link will be placed here without changing the platform structure.
+              </p>
+              <div class="formSlot" aria-hidden="true"></div>
+
+              <div style="height:12px;"></div>
+
+              <div class="panel__title">Notes</div>
+              <div class="noteBox" aria-hidden="true"></div>
+            </article>
+          </div>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Assistant (kept as-is) -->
+  <section class="assistant" aria-label="Assistant">
+    <div class="assistant__head">
+      <div class="assistant__title">Assistant</div>
+      <button class="assistant__min" type="button" aria-label="Minimize">—</button>
+    </div>
+    <div class="assistant__body">
+      <div class="assistant__msg">Ready.</div>
+      <div class="assistant__row">
+        <input class="assistant__in" type="text" placeholder="Type…" />
+        <button class="assistant__send" type="button">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const routeFx = document.querySelector(".routeFx");
+      const views = Array.from(document.querySelectorAll(".view"));
+      const navBtns = Array.from(document.querySelectorAll(".nav__btn"));
+      const drawer = document.querySelector(".drawer");
+      const drawerPanel = document.querySelector(".drawer__panel");
+      const burger = document.querySelector(".burger");
+      const drawerClose = document.querySelector(".drawer__close");
+      const drawerItems = Array.from(document.querySelectorAll(".drawer__item"));
+
+      function setActive(route) {
+        views.forEach(v => v.classList.toggle("is-active", v.dataset.view === route));
+        navBtns.forEach(b => b.classList.toggle("is-active", b.dataset.route === route));
+        navBtns.forEach(b => b.setAttribute("aria-current", b.dataset.route === route ? "page" : "false"));
+        history.replaceState(null, "", "#" + route);
+      }
+
+      function jump(route) {
+        routeFx.classList.add("on");
+        setTimeout(() => {
+          setActive(route);
+          routeFx.classList.remove("on");
+        }, 150);
+      }
+
+      function openDrawer() {
+        drawer.classList.add("is-open");
+        drawer.setAttribute("aria-hidden", "false");
+        burger.setAttribute("aria-expanded", "true");
+        root.classList.add("lock");
+        setTimeout(() => drawerPanel && drawerPanel.focus(), 40);
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        burger.setAttribute("aria-expanded", "false");
+        root.classList.remove("lock");
+      }
+
+      navBtns.forEach(btn => {
+        btn.addEventListener("click", () => jump(btn.dataset.route));
+      });
+
+      drawerItems.forEach(btn => {
+        btn.addEventListener("click", () => {
+          closeDrawer();
+          jump(btn.dataset.route);
+        });
+      });
+
+      burger.addEventListener("click", () => {
+        if (drawer.classList.contains("is-open")) closeDrawer();
+        else openDrawer();
+      });
+
+      drawerClose.addEventListener("click", closeDrawer);
+      drawer.addEventListener("click", (e) => {
+        if (e.target === drawer) closeDrawer();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeDrawer();
+      });
+
+      document.querySelectorAll("[data-jump]").forEach(btn => {
+        btn.addEventListener("click", () => jump(btn.dataset.jump));
+      });
+
+      const first = (location.hash || "#home").replace("#", "");
+      setActive(first);
+
+      // Assistant minimal toggle (kept simple)
+      const assistant = document.querySelector(".assistant");
+      const minBtn = document.querySelector(".assistant__min");
+      if (assistant && minBtn) {
+        let minimized = false;
+        minBtn.addEventListener("click", () => {
+          minimized = !minimized;
+          assistant.classList.toggle("is-min", minimized);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```
