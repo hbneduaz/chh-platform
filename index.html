@@ -1,471 +1,789 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Crystal Haze Holding</title>
+  <meta name="description" content="Crystal Haze Holding — Official platform." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- Top Bar -->
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <a class="brand" href="#home" data-route="home" aria-label="Crystal Haze Holding">
+        <img class="brand__logo" src="assets/chh-logo.png" alt="Crystal Haze Holding Logo" />
+        <div class="brand__text">
+          <div class="brand__name">Crystal Haze Holding</div>
+          <div class="brand__sub">Official Platform</div>
+        </div>
+      </a>
 
-<header class="header">
-  <div class="header-inner">
-    <div class="brand">
-      <img src="assets/chh_logo.png" alt="CHH Logo" />
-      <div class="brand-text">
-        <div class="brand-name">Crystal Haze Holding</div>
-        <div class="brand-sub">Official Holding Platform</div>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__btn is-active" data-route="home" aria-current="page">Home</button>
+        <button class="nav__btn" data-route="intellectual">Intellectual</button>
+        <button class="nav__btn" data-route="startup">Startup</button>
+        <button class="nav__btn" data-route="sports">Sports</button>
+        <button class="nav__btn" data-route="business">Business</button>
+        <button class="nav__btn" data-route="hbn">HBN</button>
+        <button class="nav__btn" data-route="partners">Partners</button>
+        <button class="nav__btn" data-route="contact">Contact</button>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
+      <div class="drawer__head">
+        <div class="drawer__title">Crystal Haze Holding</div>
+        <button class="drawer__close" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="drawer__list" role="list">
+        <button class="drawer__item" data-route="home">Home</button>
+        <button class="drawer__item" data-route="intellectual">Intellectual</button>
+        <button class="drawer__item" data-route="startup">Startup</button>
+        <button class="drawer__item" data-route="sports">Sports</button>
+        <button class="drawer__item" data-route="business">Business</button>
+        <button class="drawer__item" data-route="hbn">HBN</button>
+        <button class="drawer__item" data-route="partners">Partners</button>
+        <button class="drawer__item" data-route="contact">Contact</button>
       </div>
     </div>
-
-    <nav class="nav">
-      <button class="nav-btn active" data-page="home">Home</button>
-      <button class="nav-btn" data-page="intellectual">Intellectual</button>
-      <button class="nav-btn" data-page="startup">Startup</button>
-      <button class="nav-btn" data-page="sports">Sports</button>
-      <button class="nav-btn" data-page="business">Business</button>
-      <button class="nav-btn" data-page="hbn">HBN</button>
-      <button class="nav-btn" data-page="partners">Partners & Staff</button>
-      <button class="nav-btn" data-page="contact">Contact</button>
-    </nav>
   </div>
-</header>
 
-<main class="pages">
+  <!-- Background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__glow bg__glow--c"></div>
+    <div class="bg__noise"></div>
+  </div>
 
-  <!-- HOME -->
-  <section id="home" class="page active">
-    <div class="container">
-      <div class="hero">
-        <div class="hero-left">
-          <h1>Crystal Haze Holding</h1>
-          <p class="lead">
-            Crystal Haze Holding is a structured holding system with specialized divisions and official
-            platforms operating under one corporate identity. Our goal is to build a clear, reliable,
-            and professional presence that represents real operations and long-term growth.
-          </p>
+  <!-- Route Transition Overlay -->
+  <div class="routeFx" aria-hidden="true"></div>
 
-          <div class="leaders">
-            <div class="leader-card">
-              <h3>Lala Hasanli</h3>
-              <span>Founder / Leader</span>
-              <p>
-                Strategic direction, brand identity, and official leadership for the holding structure.
+  <!-- App -->
+  <main class="app" role="main">
+    <!-- HOME -->
+    <section class="view is-active" data-view="home">
+      <div class="view__scroll">
+        <div class="wrap">
+          <div class="hero">
+            <div class="hero__left">
+              <div class="hero__frame">
+                <div class="hero__crest">
+                  <img class="hero__crestImg" src="assets/chh-logo.png" alt="Crystal Haze Holding" />
+                </div>
+
+                <div class="hero__content">
+                  <div class="hero__kicker">Official Holding Platform</div>
+                  <h1 class="h1">Crystal Haze Holding</h1>
+                  <p class="lead">
+                    Crystal Haze Holding operates as a structured holding model built on leadership, accountability,
+                    and professional execution standards. The holding is organized into specialized divisions with
+                    clear responsibilities, defined operational flow, and measurable outcomes — designed for long-term
+                    growth and international presence.
+                  </p>
+
+                  <div class="hero__actions">
+                    <button class="btn btn--primary" data-jump="intellectual">Explore Divisions</button>
+                    <button class="btn btn--ghost" data-jump="hbn">HBN</button>
+                    <button class="btn btn--ghost" data-jump="partners">Partners</button>
+                  </div>
+
+                  <div class="hero__line" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__right">
+              <div class="glass">
+                <div class="glass__top">
+                  <div class="chip">Structured</div>
+                  <div class="chip">Official</div>
+                  <div class="chip">Global-ready</div>
+                </div>
+
+                <div class="glass__body">
+                  <div class="sectionTitle">Leadership</div>
+
+                  <div class="people2">
+                    <div class="personCard">
+                      <div class="personCard__name">Lala Hasanli</div>
+                      <div class="personCard__role">Founder / Leader</div>
+                      <div class="personCard__desc">
+                        Founder-level leadership, brand direction, and official representation of the holding.
+                      </div>
+                    </div>
+
+                    <div class="personCard">
+                      <div class="personCard__name">Nicat Umarli</div>
+                      <div class="personCard__role">CEO / Leader</div>
+                      <div class="personCard__desc">
+                        Executive leadership, operations coordination, and performance-driven management across divisions.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="divider"></div>
+
+                  <div class="sectionTitle">Operational Standard</div>
+                  <p class="p">
+                    The platform is designed as a corporate-style system: each division is represented as a dedicated
+                    page with a clear purpose, workflow, leadership, and responsibility scope.
+                  </p>
+
+                  <div class="quick">
+                    <div class="quick__item">
+                      <div class="quick__k">Divisions</div>
+                      <div class="quick__v">4</div>
+                    </div>
+                    <div class="quick__item">
+                      <div class="quick__k">Core Team</div>
+                      <div class="quick__v">9</div>
+                    </div>
+                    <div class="quick__item">
+                      <div class="quick__k">Partners</div>
+                      <div class="quick__v">9</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="glass__foot">© 2025 Crystal Haze Holding</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="homeGrid">
+            <article class="card">
+              <div class="card__head">
+                <div class="card__title">What the holding delivers</div>
+                <div class="dot"></div>
+              </div>
+              <p class="p">
+                A single official identity that unifies multiple directions — leadership, teams, divisions, and partner
+                visibility — under a structured framework and a consistent presentation standard.
               </p>
-            </div>
-            <div class="leader-card">
-              <h3>Nicat Umarli</h3>
-              <span>CEO / Leader • HBN Founder / Leader</span>
-              <p>
-                Executive management, operational leadership, and development of HBN and future systems.
+              <div class="miniRow">
+                <div class="mini">
+                  <div class="mini__k">Focus</div>
+                  <div class="mini__v">Execution</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Style</div>
+                  <div class="mini__v">Corporate</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Model</div>
+                  <div class="mini__v">Scalable</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__head">
+                <div class="card__title">How divisions operate</div>
+                <div class="dot"></div>
+              </div>
+              <p class="p">
+                Each division is built around leadership, an operational workflow, and responsibility scope. The system
+                emphasizes structured planning, execution discipline, and performance review — aligned with the holding’s standard.
               </p>
+              <div class="bars" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__head">
+                <div class="card__title">Partner visibility</div>
+                <div class="dot"></div>
+              </div>
+              <p class="p">
+                Partners and the core team are represented in an official format with dedicated space for logos,
+                structured introductions, and brand-aligned presentation.
+              </p>
+              <div class="stamp">
+                <div class="stamp__big">CHH</div>
+                <div class="stamp__small">Official Platform</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTELLECTUAL -->
+    <section class="view" data-view="intellectual">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Intellectual Division</h2>
+              <div class="pageHead__sub">Analytics · Knowledge · Competitive Preparation</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Intellectual Division represents the knowledge and analytical direction of Crystal Haze Holding.
+                It is responsible for structured intellectual preparation, professional representation in academic
+                and competitive environments, and consistent improvement through measurable outcomes.
+              </p>
+              <p class="p">
+                The division focuses on strategy, preparation cycles, internal evaluation, and professional presentation.
+                Participation is managed as a complete system: planning, practice, performance, review, and iteration.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Planning</div><div class="step__v">Goals, timeline, roles, and content scope</div></div>
+                <div class="step"><div class="step__k">Preparation</div><div class="step__v">Topic mapping, resources, practice sets</div></div>
+                <div class="step"><div class="step__k">Evaluation</div><div class="step__v">Internal checks, weak-point analysis</div></div>
+                <div class="step"><div class="step__k">Representation</div><div class="step__v">Official performance and delivery</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Result analysis and next-cycle upgrades</div></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Kenan Abdullayev</div>
+                <div class="person__role">Intellectual Leader</div>
+                <div class="person__desc">
+                  Leads structured preparation cycles, analytical focus, and performance discipline for official representation.
+                </div>
+              </div>
+              <div class="person">
+                <div class="person__name">Shabnam Zeynalova</div>
+                <div class="person__role">Intellectual Leader</div>
+                <div class="person__desc">
+                  Builds knowledge structure, supports preparation standards, and maintains consistent quality across cycles.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STARTUP -->
+    <section class="view" data-view="startup">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Startup Division</h2>
+              <div class="pageHead__sub">Ideation · Structure · Execution · Growth</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Startup Division transforms ideas into structured initiatives. It manages concept validation,
+                planning, responsibility allocation, and execution coordination — ensuring initiatives become real,
+                scalable systems aligned with the holding’s standard.
+              </p>
+              <p class="p">
+                The division operates through milestone-based development and disciplined execution. It focuses on
+                building stable structures rather than short-term experimentation.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Discovery</div><div class="step__v">Idea fit, value, positioning</div></div>
+                <div class="step"><div class="step__k">Design</div><div class="step__v">Structure, responsibilities, timeline</div></div>
+                <div class="step"><div class="step__k">Build</div><div class="step__v">Execution, iteration, delivery</div></div>
+                <div class="step"><div class="step__k">Presentation</div><div class="step__v">Official-ready materials and demos</div></div>
+                <div class="step"><div class="step__k">Scale</div><div class="step__v">Stability and long-term growth plan</div></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Nazrin Guliyeva</div>
+                <div class="person__role">Startup Manager</div>
+                <div class="person__desc">
+                  Oversees startup planning, coordination, and milestone delivery within the holding structure.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPORTS -->
+    <section class="view" data-view="sports">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Sports Division</h2>
+              <div class="pageHead__sub">Discipline · Representation · Team Performance</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Sports Division manages official sports representation, team coordination, and performance-focused
+                participation. It emphasizes discipline, preparation structure, and execution quality aligned with the
+                holding’s reputation and presentation standard.
+              </p>
+              <p class="p">
+                The division operates through clear planning, team roles, preparation cycles, and post-performance review
+                to maintain consistency and long-term progress.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Preparation</div><div class="step__v">Training plan and consistency</div></div>
+                <div class="step"><div class="step__k">Coordination</div><div class="step__v">Team roles, schedule, readiness</div></div>
+                <div class="step"><div class="step__k">Participation</div><div class="step__v">Official execution and presentation</div></div>
+                <div class="step"><div class="step__k">Performance</div><div class="step__v">Discipline and delivery quality</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Outcome analysis and upgrades</div></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Ilham Fatullayev</div>
+                <div class="person__role">Sports Director</div>
+                <div class="person__desc">
+                  Leads official sports representation, preparation discipline, and team coordination within the holding framework.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS -->
+    <section class="view" data-view="business">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Division</div>
+              <h2 class="h2">Business Division</h2>
+              <div class="pageHead__sub">Operations · Growth · Official Partnerships</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Division overview</div>
+              <p class="p">
+                The Business Division supports holding-level execution through structured planning, growth alignment,
+                and operational readiness. It focuses on consistent standards, performance tracking, and official delivery.
+              </p>
+              <p class="p">
+                The division maintains clarity in responsibilities, supports stable development, and strengthens the holding’s
+                professional positioning through disciplined execution.
+              </p>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Operational flow</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Planning</div><div class="step__v">Targets, structure, responsibilities</div></div>
+                <div class="step"><div class="step__k">Execution</div><div class="step__v">Standard-based delivery and discipline</div></div>
+                <div class="step"><div class="step__k">Tracking</div><div class="step__v">Measurable outcomes and progress checks</div></div>
+                <div class="step"><div class="step__k">Review</div><div class="step__v">Performance analysis and upgrades</div></div>
+                <div class="step"><div class="step__k">Growth</div><div class="step__v">Long-term expansion readiness</div></div>
+              </div>
+            </article>
+          </div>
+
+          <article class="wide">
+            <div class="wide__head">
+              <div class="wide__title">Leadership</div>
+              <div class="wide__line"></div>
+            </div>
+            <div class="peopleGrid">
+              <div class="person">
+                <div class="person__name">Asmar Ibrahimzada</div>
+                <div class="person__role">Business Manager</div>
+                <div class="person__desc">
+                  Coordinates execution standards and supports growth alignment across holding activities.
+                </div>
+              </div>
+              <div class="person">
+                <div class="person__name">—</div>
+                <div class="person__role">Reserved</div>
+                <div class="person__desc">
+                  Reserved for future business leadership updates.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HBN -->
+    <section class="view" data-view="hbn">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead pageHead--hbn">
+            <div>
+              <div class="pageHead__kicker">Official Platform Line</div>
+              <h2 class="h2">Heyksans Business Network (HBN)</h2>
+              <div class="pageHead__sub">Education · Publishing · Systems</div>
+            </div>
+            <div class="pageHead__badge pageHead__badge--hbn">HBN</div>
+          </header>
+
+          <div class="hbnHero">
+            <article class="hbnBlock">
+              <div class="hbnBlock__title">Ownership & Direction</div>
+              <div class="hbnOwner">
+                <div class="hbnOwner__name">Nicat Umarli</div>
+                <div class="hbnOwner__role">HBN Founder / Leader</div>
+              </div>
+
+              <div class="logoRow">
+                <div class="logoBox">
+                  <img class="logoBox__img" src="assets/hbn-logo.png" alt="HBN Logo" />
+                  <div class="logoBox__name">HBN</div>
+                </div>
+                <div class="logoBox">
+                  <img class="logoBox__img" src="assets/shadow-secret-logo.png" alt="Shadow Secret Logo" />
+                  <div class="logoBox__name">Shadow Secret</div>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <a class="linkBtn" href="https://hbnedu.az" target="_blank" rel="noreferrer">Open hbnedu.az</a>
+            </article>
+
+            <article class="panel panel--deep">
+              <div class="panel__title">HBN overview</div>
+              <p class="p">
+                HBN is an official education and publishing line operating under Crystal Haze Holding. It is designed to
+                organize learning resources, structured materials, and future platform systems with consistent quality standards.
+              </p>
+              <p class="p">
+                HBN builds a professional direction for educational content distribution, publishing initiatives, and systemized
+                learning support — positioned to expand into larger digital systems as the platform grows.
+              </p>
+
+              <div class="divider"></div>
+
+              <div class="panel__title">Shadow Secret (under HBN)</div>
+              <p class="p">
+                Shadow Secret is the academic documentation direction under HBN. It provides structured educational PDFs and
+                handwritten-format academic materials, with a focus on university-style laboratory works.
+              </p>
+              <p class="p">
+                Content includes PDF laboratory works and handwritten laboratory work formats prepared for academic use, with
+                organized delivery and professional presentation standards.
+              </p>
+
+              <div class="tags">
+                <span>Academic PDFs</span>
+                <span>Handwritten Lab Works</span>
+                <span>Laboratory Work Sales</span>
+                <span>Documentation</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="grid2" style="margin-top:14px">
+            <article class="panel">
+              <div class="panel__title">Materials & value</div>
+              <p class="p">
+                Structured content is organized for clarity, academic usability, and consistent delivery. Each material direction
+                is built to be recognizable, reliable, and aligned with official presentation quality.
+              </p>
+            </article>
+            <article class="panel">
+              <div class="panel__title">Future growth</div>
+              <p class="p">
+                HBN will expand into larger educational systems and platform development as the roadmap progresses, with an official
+                platform experience designed for long-term growth.
+              </p>
+            </article>
+          </div>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="view" data-view="partners">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Partners</div>
+              <h2 class="h2">Partners</h2>
+              <div class="pageHead__sub">Official visibility with logos and names</div>
+            </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="partnersGrid">
+            <div class="partner">
+              <img src="assets/arneva.png" alt="Arneva" />
+              <div class="partner__name">Arneva</div>
+            </div>
+            <div class="partner">
+              <img src="assets/aurina.png" alt="Aurina" />
+              <div class="partner__name">Aurina</div>
+            </div>
+            <div class="partner">
+              <img src="assets/daisywhispers.png" alt="Daisywhispers.art" />
+              <div class="partner__name">Daisywhispers.art</div>
+            </div>
+            <div class="partner">
+              <img src="assets/dara-belle.png" alt="Dara Belle" />
+              <div class="partner__name">Dara Belle</div>
+            </div>
+            <div class="partner">
+              <img src="assets/davetiye-ressami.png" alt="Davetiye Ressami" />
+              <div class="partner__name">Davetiye Ressami</div>
+            </div>
+            <div class="partner">
+              <img src="assets/artna.png" alt="artna" />
+              <div class="partner__name">artna</div>
+            </div>
+            <div class="partner">
+              <img src="assets/hollow-purple-art.png" alt="Hollow Purple Art" />
+              <div class="partner__name">Hollow Purple Art</div>
+            </div>
+            <div class="partner">
+              <img src="assets/inci-gifts.png" alt="Inci Gifts" />
+              <div class="partner__name">Inci Gifts</div>
+            </div>
+            <div class="partner">
+              <img src="assets/selin.png" alt="Selin" />
+              <div class="partner__name">Selin</div>
             </div>
           </div>
 
-          <div class="quick">
-            <a class="chip" href="https://hbnedu.az" target="_blank" rel="noreferrer">hbnedu.az</a>
-            <a class="chip" href="https://chat.openai.com/" target="_blank" rel="noreferrer">ChatGPT</a>
-            <a class="chip" href="https://gemini.google.com/" target="_blank" rel="noreferrer">Gemini</a>
-          </div>
-
-          <div class="note">
-            Participation form area is prepared — link will be added later.
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-panel">
-            <div class="hero-panel-title">Holding Overview</div>
-            <ul class="hero-list">
-              <li><strong>Divisions:</strong> Intellectual, Startup, Sports, Business</li>
-              <li><strong>Platform Line:</strong> HBN (official educational & publishing direction)</li>
-              <li><strong>Academic PDF Line:</strong> Shadow Secret (under HBN)</li>
-              <li><strong>Partners:</strong> Verified partner visibility with logos and names</li>
-            </ul>
-          </div>
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- INTELLECTUAL -->
-  <section id="intellectual" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2><img class="section-logo" src="assets/intellectual_logo.png" alt="Intellectual logo" /> Intellectual Division</h2>
-        <p class="muted">
-          The Intellectual Division represents the academic and analytical power of the holding.
-          It is built to strengthen knowledge-based performance, structured preparation,
-          and official representation in intellectual environments.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="box">
-          <h3>Purpose</h3>
-          <p>
-            Build strong intellectual identity and maintain high-level academic performance through structured
-            preparation and disciplined approach.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Core Focus</h3>
-          <p>
-            Academic activities, research-oriented organization, competition preparation,
-            and intellectual reputation building.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Workflow</h3>
-          <p>
-            Planning → content structure → review standards → presentation & performance → continuous improvement.
-          </p>
-        </div>
-      </div>
-
-      <div class="staff-area">
-        <h3>Leaders</h3>
-        <div class="staff-grid">
-          <div class="staff-card">
-            <div class="staff-name">Kenan Abdullayev</div>
-            <div class="staff-role">Intellectual Leader</div>
-          </div>
-          <div class="staff-card">
-            <div class="staff-name">Shabnam Zeynalova</div>
-            <div class="staff-role">Intellectual Leader</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STARTUP -->
-  <section id="startup" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2><img class="section-logo" src="assets/startup_logo.png" alt="Startup logo" /> Startup Division</h2>
-        <p class="muted">
-          The Startup Division transforms ideas into structured projects and supports early-stage planning,
-          coordination, and launch readiness.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="box">
-          <h3>Purpose</h3>
-          <p>
-            Convert concepts into systemized initiatives with clear planning, roles, and execution steps.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Core Focus</h3>
-          <p>
-            Project structure building, roadmap creation, system coordination, and delivery readiness.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Workflow</h3>
-          <p>
-            Idea validation → structure setup → coordination → iteration cycles → delivery & improvements.
-          </p>
-        </div>
-      </div>
-
-      <div class="staff-area">
-        <h3>Leader</h3>
-        <div class="staff-grid">
-          <div class="staff-card">
-            <div class="staff-name">Nazrin Guliyeva</div>
-            <div class="staff-role">Startup Manager</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPORTS -->
-  <section id="sports" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2><img class="section-logo" src="assets/sport_logo.png" alt="Sports logo" /> Sports Division</h2>
-        <p class="muted">
-          The Sports Division manages performance-based representation and structured team participation.
-          It builds discipline, coordination, and official sports presence.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="box">
-          <h3>Purpose</h3>
-          <p>
-            Strengthen sports representation and build consistent performance through discipline and planning.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Core Focus</h3>
-          <p>
-            Team coordination, training structure, performance cycles, and official participation.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Workflow</h3>
-          <p>
-            Planning → training discipline → performance tracking → participation → improvement cycles.
-          </p>
-        </div>
-      </div>
-
-      <div class="staff-area">
-        <h3>Leader</h3>
-        <div class="staff-grid">
-          <div class="staff-card">
-            <div class="staff-name">Ilham Fatullayev</div>
-            <div class="staff-role">Sports Director</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BUSINESS -->
-  <section id="business" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2><img class="section-logo" src="assets/business_logo.png" alt="Business logo" /> Business Division</h2>
-        <p class="muted">
-          The Business Division is responsible for business-facing coordination and structured commercial direction,
-          supporting the holding’s professional growth and partner alignment.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="box">
-          <h3>Purpose</h3>
-          <p>
-            Develop business direction, align operations with professional standards, and support growth initiatives.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Core Focus</h3>
-          <p>
-            Commercial coordination, partner alignment support, structured planning and execution.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Workflow</h3>
-          <p>
-            Planning → execution standards → growth actions → outcomes review → refinement.
-          </p>
-        </div>
-      </div>
-
-      <div class="staff-area">
-        <h3>Leader</h3>
-        <div class="staff-grid">
-          <div class="staff-card">
-            <div class="staff-name">Asmar Ibrahimzadeh</div>
-            <div class="staff-role">Business Manager</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HBN -->
-  <section id="hbn" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2><img class="section-logo" src="assets/hbn_logo.png" alt="HBN logo" /> Heyksans Business Network (HBN)</h2>
-        <p class="muted">
-          HBN is an official educational and publishing line operating under Crystal Haze Holding.
-          It is designed for structured learning resources, publishing direction, and future platform systems.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="box">
-          <h3>What HBN Represents</h3>
-          <p>
-            HBN focuses on educational materials, academic support content, and publishing initiatives.
-            It is built to become a recognized platform for students and learners through structured resources.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Materials & Direction</h3>
-          <p>
-            Study materials, test resources, educational content organization, and a long-term publishing plan
-            aligned with professional standards and scalability.
-          </p>
-        </div>
-        <div class="box">
-          <h3>Official Platform</h3>
-          <p>
-            The public platform direction is connected to <strong>hbnedu.az</strong>, with future expansions.
-          </p>
-          <a class="link-btn" href="https://hbnedu.az" target="_blank" rel="noreferrer">Open hbnedu.az</a>
-        </div>
-      </div>
-
-      <div class="shadow-area">
-        <h3>Shadow Secret</h3>
-        <div class="shadow-card">
-          <div class="shadow-left">
-            <img src="assets/shadow.jpeg" alt="Shadow Secret logo" />
-          </div>
-          <div class="shadow-right">
-            <p>
-              Shadow Secret is an academic PDF direction under HBN. It focuses on structured educational PDFs,
-              especially university-style documents such as <strong>laboratory works</strong>, practical reports,
-              and academic documentation prepared for learners.
-            </p>
-            <div class="shadow-tags">
-              <span>Academic PDFs</span>
-              <span>Laboratory Works</span>
-              <span>Practical Reports</span>
-              <span>Study Documents</span>
+    <!-- CONTACT -->
+    <section class="view" data-view="contact">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Contact</div>
+              <h2 class="h2">Contact</h2>
+              <div class="pageHead__sub">Official contact points</div>
             </div>
+            <div class="pageHead__badge">CHH</div>
+          </header>
+
+          <div class="contactGrid">
+            <article class="panel panel--contact">
+              <div class="panel__title">Contact details</div>
+              <div class="contactCards">
+                <div class="contactCard">
+                  <div>
+                    <div class="contactCard__k">Email</div>
+                    <div class="contactCard__v">crystalhaze25.26@gmail.com</div>
+                  </div>
+                </div>
+                <div class="contactCard">
+                  <div>
+                    <div class="contactCard__k">Instagram</div>
+                    <div class="contactCard__v">crystalhaze2025</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel panel--contact">
+              <div class="panel__title">Participation form</div>
+              <div class="formSlot"></div>
+              <p class="p" style="margin-top:10px">
+                The form link will be connected here after it is provided.
+              </p>
+            </article>
           </div>
+
+          <div class="footnote">© 2025 Crystal Haze Holding</div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="note">
-        Future plan (under HBN): TreeYBuz will be presented as an educational system direction later.
+  <!-- Assistant (kept as-is, commands will be added later) -->
+  <section class="assistant" aria-label="Assistant">
+    <div class="assistant__head">
+      <div class="assistant__title">Assistant</div>
+      <button class="assistant__toggle" type="button" aria-label="Minimize" aria-expanded="true">–</button>
+    </div>
+
+    <div class="assistant__body">
+      <div class="assistant__row">
+        <div class="assistant__label">Message</div>
+        <textarea class="assistant__input" rows="3" placeholder="Write here..."></textarea>
       </div>
+
+      <div class="assistant__actions">
+        <button class="assistant__btn" type="button" data-assist="a">Open</button>
+        <button class="assistant__btn assistant__btn--ghost" type="button" data-assist="b">Open</button>
+      </div>
+
+      <div class="assistant__hint">External assistant connection is active. Commands will be configured later.</div>
     </div>
   </section>
 
-  <!-- PARTNERS & STAFF -->
-  <section id="partners" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2>Partners & Staff</h2>
-        <p class="muted">
-          This area presents verified partner visibility and the holding team structure in one official section.
-        </p>
-      </div>
+  <script>
+    const routeFx = document.querySelector(".routeFx");
+    const views = Array.from(document.querySelectorAll(".view"));
+    const navBtns = Array.from(document.querySelectorAll(".nav__btn"));
+    const drawer = document.querySelector(".drawer");
+    const drawerPanel = document.querySelector(".drawer__panel");
+    const drawerClose = document.querySelector(".drawer__close");
+    const burger = document.querySelector(".burger");
+    const drawerItems = Array.from(document.querySelectorAll(".drawer__item"));
 
-      <h3 class="sub-title">Partners</h3>
-      <div class="partners-grid">
-        <div class="partner-card">
-          <img src="assets/Arneva_logo.png" alt="Arneva logo" />
-          <div class="partner-name">Arneva</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/Aurina_logo.png" alt="Aurina logo" />
-          <div class="partner-name">Aurina</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/Daisywhispers.art_logo.png" alt="Daisywhispers.art logo" />
-          <div class="partner-name">Daisywhispers.art</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/Dara_Belle_logo.png" alt="Dara Belle logo" />
-          <div class="partner-name">Dara Belle</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/Davetiye_Ressami_logo.png" alt="Davetiye Ressami logo" />
-          <div class="partner-name">Davetiye Ressami</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/artna_logo.png" alt="artna logo" />
-          <div class="partner-name">artna</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/hollow_purple_art_logo.jpg" alt="Hollow Purple Art logo" />
-          <div class="partner-name">Hollow Purple Art</div>
-        </div>
-        <div class="partner-card">
-          <img src="assets/Inci_Gifts_logo.png" alt="Inci Gifts logo" />
-          <div class="partner-name">Inci Gifts</div>
-        </div>
-      </div>
+    function setActiveRoute(route) {
+      routeFx.classList.add("on");
+      setTimeout(() => routeFx.classList.remove("on"), 220);
 
-      <h3 class="sub-title">Staff</h3>
+      views.forEach(v => v.classList.toggle("is-active", v.dataset.view === route));
+      navBtns.forEach(b => b.classList.toggle("is-active", b.dataset.route === route));
 
-      <div class="staff-area">
-        <h3>Executive</h3>
-        <div class="staff-grid">
-          <div class="staff-card">
-            <div class="staff-name">Lala Hasanli</div>
-            <div class="staff-role">Founder / Leader</div>
-          </div>
-          <div class="staff-card">
-            <div class="staff-name">Nicat Umarli</div>
-            <div class="staff-role">CEO / Leader • HBN Founder / Leader</div>
-          </div>
-        </div>
-      </div>
+      navBtns.forEach(b => {
+        if (b.dataset.route === route) b.setAttribute("aria-current", "page");
+        else b.removeAttribute("aria-current");
+      });
 
-      <div class="staff-area">
-        <h3>Core Team</h3>
-        <div class="staff-grid">
-          <div class="staff-card"><div class="staff-name">Vagif Verdiyev</div><div class="staff-role">PR</div></div>
-          <div class="staff-card"><div class="staff-name">Jale Ibrahimzada</div><div class="staff-role">Graphic Designer</div></div>
-          <div class="staff-card"><div class="staff-name">Munavvar Yusifova</div><div class="staff-role">SMM</div></div>
-          <div class="staff-card"><div class="staff-name">Kenan Gasimzadeh</div><div class="staff-role">SMM</div></div>
-          <div class="staff-card"><div class="staff-name">Leyla Abbasova</div><div class="staff-role">HR Manager</div></div>
-        </div>
-      </div>
+      const activeView = document.querySelector(`.view[data-view="${route}"] .view__scroll`);
+      if (activeView) activeView.scrollTo(0, 0);
 
-      <div class="note">
-        A new staff member will be added later as Director for both HBN and Shadow Secret (you will provide the name).
-      </div>
-    </div>
-  </section>
+      history.replaceState(null, "", `#${route}`);
+    }
 
-  <!-- CONTACT -->
-  <section id="contact" class="page">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">
-          Official contact channels. Participation form will be connected after you send the form link.
-        </p>
-      </div>
+    function openDrawer() {
+      drawer.classList.add("is-open");
+      drawer.setAttribute("aria-hidden", "false");
+      burger.setAttribute("aria-expanded", "true");
+      document.documentElement.classList.add("lock");
+      document.body.classList.add("lock");
+      setTimeout(() => drawerPanel && drawerPanel.focus(), 20);
+    }
 
-      <div class="grid">
-        <div class="box">
-          <h3>Email</h3>
-          <p>crystalhaze25.26@gmail.com</p>
-        </div>
-        <div class="box">
-          <h3>Instagram</h3>
-          <p>crystalhaze2025</p>
-        </div>
-        <div class="box">
-          <h3>Participation Form</h3>
-          <p>Prepared — link will be added.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    function closeDrawer() {
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden", "true");
+      burger.setAttribute("aria-expanded", "false");
+      document.documentElement.classList.remove("lock");
+      document.body.classList.remove("lock");
+    }
 
-</main>
+    navBtns.forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
+    drawerItems.forEach(btn => btn.addEventListener("click", () => { setActiveRoute(btn.dataset.route); closeDrawer(); }));
 
-<footer class="footer">
-  © 2025 Crystal Haze Holding
-</footer>
+    burger.addEventListener("click", () => {
+      if (drawer.classList.contains("is-open")) closeDrawer();
+      else openDrawer();
+    });
 
-<script>
-  const pages = document.querySelectorAll(".page");
-  const navBtns = document.querySelectorAll(".nav-btn");
+    drawerClose.addEventListener("click", closeDrawer);
+    drawer.addEventListener("click", (e) => { if (e.target === drawer) closeDrawer(); });
+    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
 
-  function openPage(id){
-    pages.forEach(p => p.classList.remove("active"));
-    const el = document.getElementById(id);
-    if(el) el.classList.add("active");
+    document.querySelectorAll("[data-jump]").forEach(btn => {
+      btn.addEventListener("click", () => setActiveRoute(btn.dataset.jump));
+    });
 
-    navBtns.forEach(b => b.classList.remove("active"));
-    const btn = document.querySelector(`.nav-btn[data-page="${id}"]`);
-    if(btn) btn.classList.add("active");
+    window.addEventListener("load", () => {
+      const hash = (location.hash || "#home").replace("#", "");
+      const exists = views.some(v => v.dataset.view === hash);
+      setActiveRoute(exists ? hash : "home");
+    });
 
-    window.scrollTo(0,0);
-  }
+    const assistant = document.querySelector(".assistant");
+    const assistantToggle = document.querySelector(".assistant__toggle");
+    const assistantBody = document.querySelector(".assistant__body");
+    if (assistantToggle && assistantBody) {
+      assistantToggle.addEventListener("click", () => {
+        const expanded = assistantToggle.getAttribute("aria-expanded") === "true";
+        assistantToggle.setAttribute("aria-expanded", String(!expanded));
+        assistant.classList.toggle("is-min", expanded);
+      });
+    }
 
-  navBtns.forEach(btn=>{
-    btn.addEventListener("click", ()=> openPage(btn.dataset.page));
-  });
-</script>
-
+    const input = document.querySelector(".assistant__input");
+    document.querySelectorAll("[data-assist]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const txt = (input && input.value ? input.value : "").trim();
+        const urlA = "https://chat.openai.com/";
+        const urlB = "https://gemini.google.com/";
+        const target = btn.dataset.assist === "a" ? urlA : urlB;
+        window.open(target, "_blank", "noopener");
+        if (txt && input) input.value = "";
+      });
+    });
+  </script>
 </body>
 </html>
