@@ -1,33 +1,37 @@
-<!-- index.html — CHH HOLDING STRUCTURE (Home / Academy / Volunteer / Sales & Market / Contact + Crysia bot)
-     CSS uyğun: style.css (sənin göndərdiyin son css)
-     Only CHH logo: assets/chh_logo.png -->
+<!-- index.html — Crystal Haze Holding (Rəsmi Holding Sistemi)
+     Qovluqlar:
+     - style.css
+     - js/app.js
+     - assets/chh_logo.png
+-->
 <!doctype html>
 <html lang="az">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Crystal Haze Holding</title>
-  <meta name="description" content="Crystal Haze Holding — Academy · Volunteer · Sales & Market. Rəsmi platforma." />
+  <meta name="description" content="Crystal Haze Holding — Rəsmi holding sistemi: Academy · Volunteer · Sales & Market." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- TOPBAR -->
+  <!-- Top Bar -->
   <header class="topbar" role="banner">
     <div class="topbar__inner">
       <a class="brand" href="#home" data-route="home" aria-label="Crystal Haze Holding">
-        <img class="brand__logo" src="assets/chh_logo.png" alt="Crystal Haze Holding Loqosu" />
+        <img class="brand__logo" src="assets/chh_logo.png" alt="Crystal Haze Holding loqosu" />
         <div class="brand__text">
           <div class="brand__name">Crystal Haze Holding</div>
-          <div class="brand__sub">Gələcək buradan başlayır</div>
+          <div class="brand__sub">Rəsmi Platforma</div>
         </div>
       </a>
 
       <nav class="nav" aria-label="Əsas menyu">
-        <button class="nav__btn is-active" type="button" data-route="home" aria-current="page">Ana səhifə</button>
+        <button class="nav__btn is-active" type="button" data-route="home" aria-current="page">Əsas</button>
         <button class="nav__btn" type="button" data-route="academy">Academy</button>
         <button class="nav__btn" type="button" data-route="volunteer">Volunteer</button>
         <button class="nav__btn" type="button" data-route="sales">Sales & Market</button>
+        <button class="nav__btn" type="button" data-route="staff">Staff</button>
         <button class="nav__btn" type="button" data-route="contact">Əlaqə</button>
       </nav>
 
@@ -37,7 +41,7 @@
     </div>
   </header>
 
-  <!-- MOBILE DRAWER -->
+  <!-- Mobile Drawer -->
   <div class="drawer" aria-hidden="true">
     <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menyu" tabindex="-1">
       <div class="drawer__head">
@@ -45,16 +49,17 @@
         <button class="drawer__close" type="button" aria-label="Bağla">✕</button>
       </div>
       <div class="drawer__list" role="list">
-        <button class="drawer__item" type="button" data-route="home">Ana səhifə</button>
+        <button class="drawer__item" type="button" data-route="home">Əsas</button>
         <button class="drawer__item" type="button" data-route="academy">Academy</button>
         <button class="drawer__item" type="button" data-route="volunteer">Volunteer</button>
         <button class="drawer__item" type="button" data-route="sales">Sales & Market</button>
+        <button class="drawer__item" type="button" data-route="staff">Staff</button>
         <button class="drawer__item" type="button" data-route="contact">Əlaqə</button>
       </div>
     </div>
   </div>
 
-  <!-- BACKGROUND -->
+  <!-- Background -->
   <div class="bg" aria-hidden="true">
     <div class="bg__grid"></div>
     <div class="bg__glow bg__glow--a"></div>
@@ -63,43 +68,42 @@
     <div class="bg__noise"></div>
   </div>
 
-  <!-- ROUTE FX -->
+  <!-- Route Transition Overlay -->
   <div class="routeFx" aria-hidden="true"></div>
 
-  <!-- APP -->
+  <!-- App -->
   <main class="app" role="main">
-
     <!-- HOME -->
     <section class="view is-active" data-view="home">
       <div class="view__scroll">
         <div class="wrap">
-
           <div class="hero">
             <div class="hero__left">
               <div class="hero__frame">
                 <div class="hero__crest">
-                  <img class="hero__crestImg" src="assets/chh_logo.png" alt="Crystal Haze Holding" />
+                  <img class="hero__crestImg" src="assets/chh_logo.png" alt="CHH loqosu" />
                 </div>
 
                 <div class="hero__content">
                   <div class="hero__kicker">Rəsmi holding platforması</div>
                   <h1 class="h1">Crystal Haze Holding</h1>
-
                   <p class="lead">
-                    Crystal Haze Holding (CHH) gənclərin inkişaf, liderlik və yaradıcılıq imkanlarını bir araya gətirən
-                    holding strukturudur. Burada məqsəd: struktur qurmaq, komanda mühitində inkişaf etmək və real nəticə qazanmaqdır.
+                    Crystal Haze Holding strukturlaşdırılmış holding modelidir: bölmələr üzrə idarəetmə,
+                    məsuliyyət bölgüsü, icra standartı və nəticə nəzarəti ilə işləyən rəsmi sistem.
                   </p>
 
                   <div class="hero__actions">
                     <button class="btn btn--cta" type="button" data-jump="academy">Academy</button>
                     <button class="btn btn--ghost" type="button" data-jump="volunteer">Volunteer</button>
                     <button class="btn btn--ghost" type="button" data-jump="sales">Sales & Market</button>
+                    <button class="btn btn--primary" type="button" data-jump="staff">Staff</button>
                   </div>
 
-                  <div class="tagRow" aria-label="heşteqlər">
-                    <div class="tag">#CHH</div>
-                    <div class="tag">#GələcəkBuradanBaşlayır</div>
-                    <div class="tag">#KomandaRuhu</div>
+                  <div class="tagRow" aria-label="Açar etiketlər">
+                    <div class="tag">Rəsmi</div>
+                    <div class="tag">Holding</div>
+                    <div class="tag">İcra Sistemi</div>
+                    <div class="tag">Bölmələr</div>
                   </div>
 
                   <div class="hero__line" aria-hidden="true">
@@ -112,41 +116,39 @@
             <div class="hero__right">
               <div class="glass">
                 <div class="glass__top">
-                  <div class="chip">Holding strukturu</div>
-                  <div class="chip">Liderlik</div>
-                  <div class="chip">İcra</div>
+                  <div class="chip">İdarəetmə</div>
+                  <div class="chip">Məsuliyyət</div>
+                  <div class="chip">Standart</div>
                   <div class="chip">Nəticə</div>
                 </div>
 
                 <div class="glass__body">
-                  <div class="panel__title">Ümumi liderlik</div>
-
+                  <div class="panel__title">Liderlik</div>
                   <div class="people2">
                     <div class="personCard">
                       <div class="personCard__name">Lalə Həsənli</div>
-                      <div class="personCard__role">Təsisçi · Lider</div>
+                      <div class="personCard__role">Founder</div>
                       <div class="personCard__desc">
-                        Holdinqin rəsmi təmsilçiliyi, standartların qurulması və ümumi liderlik xətti.
+                        Holding üzrə rəsmi liderlik və istiqamət nəzarəti.
                       </div>
                     </div>
-
                     <div class="personCard">
                       <div class="personCard__name">Nicat Umarlı</div>
-                      <div class="personCard__role">CEO · Lider</div>
+                      <div class="personCard__role">CEO</div>
                       <div class="personCard__desc">
-                        Bölmələr üzrə icra koordinasiyası, sistemin işləməsi və nəticə yönümlü idarəetmə.
+                        İcra koordinasiyası, bölmələr arası idarəetmə və nəticə nəzarəti.
                       </div>
                     </div>
                   </div>
 
                   <div class="divider"></div>
 
-                  <div class="panel__title">Holding iş modeli</div>
+                  <div class="panel__title">İş axını</div>
                   <div class="flow">
-                    <div class="step"><div class="step__k">1) Struktur</div><div class="step__v">Bölmələr, liderlər, qaydalar</div></div>
-                    <div class="step"><div class="step__k">2) Plan</div><div class="step__v">Hədəf, proqram, vaxt</div></div>
-                    <div class="step"><div class="step__k">3) İcra</div><div class="step__v">Komanda işi və real fəaliyyət</div></div>
-                    <div class="step"><div class="step__k">4) Nəticə</div><div class="step__v">Ölçü, analiz və inkişaf</div></div>
+                    <div class="step"><div class="step__k">Plan</div><div class="step__v">Hədəf, proses, məsul şəxs</div></div>
+                    <div class="step"><div class="step__k">İcra</div><div class="step__v">Tapşırıq, təqvim, nəzarət</div></div>
+                    <div class="step"><div class="step__k">Yoxlama</div><div class="step__v">Keyfiyyət və standart uyğunluğu</div></div>
+                    <div class="step"><div class="step__k">Nəticə</div><div class="step__v">Hesabat və təkmilləşdirmə</div></div>
                   </div>
                 </div>
 
@@ -155,68 +157,59 @@
             </div>
           </div>
 
-          <!-- DIVISIONS -->
-          <div class="paths" aria-label="CHH bölmələri">
-            <article class="pathCard pathCard--academy">
+          <div class="paths" aria-label="Holding bölmələri">
+            <article class="pathCard">
               <div class="pathCard__head">
                 <div class="pathCard__title">Academy</div>
-                <div class="pathCard__badge">Təlim</div>
+                <div class="pathCard__badge">Təlim / Nəşr</div>
               </div>
-
               <p class="p">
-                Təlimlər, masterclass-lar, kurslar və nəşriyyat məhsulları. Bilik planlı sistemlə hazırlanır və təqdim olunur.
+                Təlimlər, masterclass-lar, kurslar və nəşriyyat məhsulları üzrə struktur.
               </p>
-
               <div class="bullets">
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Kurs və masterclass proqramları</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Tapşırıq, praktika, nəticə</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Material və nəşr məhsulları</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Proqram planı və tədris axını</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Materiallar və nəşr formatı</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Nəticə ölçümü və hesabat</div></div>
               </div>
-
               <div style="margin-top:12px;">
-                <button class="btn btn--primary" type="button" data-jump="academy">Academy səhifəsinə keç</button>
+                <button class="btn btn--primary" type="button" data-jump="academy">Bölməyə keç</button>
               </div>
             </article>
 
-            <article class="pathCard pathCard--volunteer">
+            <article class="pathCard">
               <div class="pathCard__head">
                 <div class="pathCard__title">Volunteer</div>
                 <div class="pathCard__badge">Komanda</div>
               </div>
-
               <p class="p">
-                Komanda işi, klub fəaliyyəti və sosial layihələr. İcra intizamı və koordinasiya əsasdır.
+                Komanda işi, klub fəaliyyəti və sosial fəaliyyətlər üzrə struktur.
               </p>
-
               <div class="bullets">
                 <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Rol bölgüsü və koordinasiya</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Tədbir və sosial fəaliyyətlər</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Davamlı iştirak və inkişaf</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Tədbir planı və icra</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Davamlılıq və nəticə nəzarəti</div></div>
               </div>
-
               <div style="margin-top:12px;">
-                <button class="btn btn--primary" type="button" data-jump="volunteer">Volunteer səhifəsinə keç</button>
+                <button class="btn btn--primary" type="button" data-jump="volunteer">Bölməyə keç</button>
               </div>
             </article>
 
-            <article class="pathCard pathCard--sales">
+            <article class="pathCard">
               <div class="pathCard__head">
                 <div class="pathCard__title">Sales & Market</div>
                 <div class="pathCard__badge">Satış</div>
               </div>
-
               <p class="p">
-                Holding strukturunda satış və bazar xətti: satış bacarıqları, məhsul xətti və rəsmi əməkdaşlıq sistemi.
+                Satış və marketinq istiqaməti: nəşr məhsulları, CHH markalı məhsullar, ortaqların məhsulları
+                və satış prosesinin idarə edilməsi.
               </p>
-
               <div class="bullets">
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Satış bacarıqlarının inkişafı və real satış</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Nəşr məhsulları və CHH markalı məhsullar</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Ortaqların məhsulları və kampaniyalar</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Məhsul xətti: nəşr / CHH / ortaqlar</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Təqdimat və marketinq axını</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Satış planı, ölçü və hesabat</div></div>
               </div>
-
               <div style="margin-top:12px;">
-                <button class="btn btn--primary" type="button" data-jump="sales">Sales & Market səhifəsinə keç</button>
+                <button class="btn btn--primary" type="button" data-jump="sales">Bölməyə keç</button>
               </div>
             </article>
           </div>
@@ -232,9 +225,9 @@
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Bölmə</div>
+              <div class="pageHead__kicker">Holding bölməsi</div>
               <h2 class="h2">Academy</h2>
-              <div class="pageHead__sub">Təlim · Masterclass · Kurs · Nəşriyyat</div>
+              <div class="pageHead__sub">Təlimlər · Masterclass · Kurslar · Nəşriyyat</div>
             </div>
             <div class="pageHead__badge">
               <img src="assets/chh_logo.png" alt="CHH" />
@@ -244,36 +237,34 @@
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Holdingdə rolu</div>
+              <div class="panel__title">İdarəetmə modeli</div>
               <p class="p">
-                Academy bölməsi CHH-in təlim və bilik istiqamətidir. Məqsəd: planlı proqramla öyrənmək,
-                praktika etmək və nəticə çıxarmaq.
+                Academy bölməsi tədris və nəşr proseslərini rəsmi axınla idarə edir: proqram, icra, keyfiyyət,
+                nəticə ölçümü və hesabat.
               </p>
-
               <div class="divider"></div>
-
-              <div class="panel__title">Xidmət xətti</div>
+              <div class="panel__title">Proses</div>
               <div class="flow">
-                <div class="step"><div class="step__k">Təlim</div><div class="step__v">Proqram üzrə öyrənmə</div></div>
-                <div class="step"><div class="step__k">Masterclass</div><div class="step__v">Qısa intensiv sessiyalar</div></div>
-                <div class="step"><div class="step__k">Kurs</div><div class="step__v">Davamlı öyrənmə modeli</div></div>
-                <div class="step"><div class="step__k">Nəşriyyat</div><div class="step__v">Materiallar və nəşr məhsulları</div></div>
+                <div class="step"><div class="step__k">Proqram</div><div class="step__v">Mövzu xəritəsi və plan</div></div>
+                <div class="step"><div class="step__k">Tədris</div><div class="step__v">Masterclass / kurs icrası</div></div>
+                <div class="step"><div class="step__k">Nəşr</div><div class="step__v">Materialların hazırlanması</div></div>
+                <div class="step"><div class="step__k">Hesabat</div><div class="step__v">Nəticə və təkmilləşdirmə</div></div>
               </div>
             </article>
 
             <article class="panel">
-              <div class="panel__title">İş modeli</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Plan</div><div class="step__v">Mövzu, proqram, tarix</div></div>
-                <div class="step"><div class="step__k">İcra</div><div class="step__v">Dərs / masterclass / kurs</div></div>
-                <div class="step"><div class="step__k">Praktika</div><div class="step__v">Tapşırıqlar və tətbiq</div></div>
-                <div class="step"><div class="step__k">Nəticə</div><div class="step__v">Yekun və inkişaf planı</div></div>
-              </div>
-
+              <div class="panel__title">Liderlik</div>
+              <p class="p">
+                <strong>Shabnam Abdullazadeh</strong> — Academy Leader
+              </p>
               <div class="divider"></div>
-
-              <div class="panel__title">Bölmə liderliyi</div>
-              <p class="p"><strong>Shabnam Abdullazadeh</strong> — Academy lideri</p>
+              <div class="panel__title">Əsas istiqamətlər</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Təlimlər</div><div class="step__v">Planlı proqramlar</div></div>
+                <div class="step"><div class="step__k">Masterclass</div><div class="step__v">İntensiv sessiyalar</div></div>
+                <div class="step"><div class="step__k">Kurslar</div><div class="step__v">Davamlı model</div></div>
+                <div class="step"><div class="step__k">Nəşriyyat</div><div class="step__v">Rəsmi material və məhsullar</div></div>
+              </div>
             </article>
           </div>
 
@@ -288,9 +279,9 @@
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Bölmə</div>
+              <div class="pageHead__kicker">Holding bölməsi</div>
               <h2 class="h2">Volunteer</h2>
-              <div class="pageHead__sub">Komanda işi · Klub · Sosial fəaliyyət</div>
+              <div class="pageHead__sub">Komanda işi · Klub · Sosial fəaliyyətlər</div>
             </div>
             <div class="pageHead__badge">
               <img src="assets/chh_logo.png" alt="CHH" />
@@ -300,34 +291,33 @@
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Holdingdə rolu</div>
+              <div class="panel__title">İdarəetmə modeli</div>
               <p class="p">
-                Volunteer bölməsi CHH-in komanda və fəaliyyət xəttidir. Məqsəd: rol bölgüsü, koordinasiya və planlı icra.
+                Volunteer bölməsi komanda strukturunu idarə edir: rol bölgüsü, tədbir icrası, koordinasiya,
+                davamlılıq və yekun hesabat.
               </p>
-
               <div class="divider"></div>
-
-              <div class="panel__title">Fəaliyyət xətti</div>
+              <div class="panel__title">Proses</div>
               <div class="flow">
-                <div class="step"><div class="step__k">Komanda işi</div><div class="step__v">Rol və məsuliyyət</div></div>
-                <div class="step"><div class="step__k">Klub</div><div class="step__v">Davamlı fəaliyyət mühiti</div></div>
-                <div class="step"><div class="step__k">Sosial layihə</div><div class="step__v">İctimai yönümlü fəaliyyətlər</div></div>
+                <div class="step"><div class="step__k">Qəbul</div><div class="step__v">Komandaya daxilolma</div></div>
+                <div class="step"><div class="step__k">Rol</div><div class="step__v">Vəzifə bölgüsü</div></div>
+                <div class="step"><div class="step__k">İcra</div><div class="step__v">Tədbir və fəaliyyət</div></div>
+                <div class="step"><div class="step__k">Hesabat</div><div class="step__v">Nəticə və düzəliş</div></div>
               </div>
             </article>
 
             <article class="panel">
-              <div class="panel__title">İş modeli</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Qoşul</div><div class="step__v">Komandaya daxil ol</div></div>
-                <div class="step"><div class="step__k">Rol al</div><div class="step__v">Tapşırıq və məsuliyyət</div></div>
-                <div class="step"><div class="step__k">İcra</div><div class="step__v">Tədbir / klub / sosial fəaliyyət</div></div>
-                <div class="step"><div class="step__k">Nəticə</div><div class="step__v">Yekun və inkişaf planı</div></div>
-              </div>
-
+              <div class="panel__title">Liderlik</div>
+              <p class="p">
+                <strong>Nazrin Guliyeva</strong> — Volunteer Leader
+              </p>
               <div class="divider"></div>
-
-              <div class="panel__title">Bölmə liderliyi</div>
-              <p class="p"><strong>Nazrin Guliyeva</strong> — Volunteer lideri</p>
+              <div class="panel__title">İcra sahələri</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Komanda işi</div><div class="step__v">Koordinasiya və nəzarət</div></div>
+                <div class="step"><div class="step__k">Klub</div><div class="step__v">Davamlı fəaliyyət</div></div>
+                <div class="step"><div class="step__k">Sosial layihələr</div><div class="step__v">Təşkilat və icra</div></div>
+              </div>
             </article>
           </div>
 
@@ -336,15 +326,15 @@
       </div>
     </section>
 
-    <!-- SALES -->
+    <!-- SALES & MARKET -->
     <section class="view" data-view="sales">
       <div class="view__scroll">
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Bölmə</div>
+              <div class="pageHead__kicker">Holding bölməsi</div>
               <h2 class="h2">Sales & Market</h2>
-              <div class="pageHead__sub">Satış · Məhsul xətti · Əməkdaşlıq · Marketinq</div>
+              <div class="pageHead__sub">Satış · Marketinq · Məhsul xətti · Hesabat</div>
             </div>
             <div class="pageHead__badge">
               <img src="assets/chh_logo.png" alt="CHH" />
@@ -354,38 +344,98 @@
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Holdingdə rolu</div>
+              <div class="panel__title">İdarəetmə modeli</div>
               <p class="p">
-                Sales & Market bölməsi CHH-in satış və bazar xəttidir: satış bacarıqlarının inkişafı, məhsul xəttinin idarə edilməsi,
-                CHH markalı məhsulların satışı və ortaqların məhsullarının rəsmi satış dəstəyi.
+                Sales & Market bölməsi satış sistemini idarə edir: məhsul xətti, marketinq təqdimatı,
+                satış icrası və nəticə hesabatı.
               </p>
-
               <div class="divider"></div>
-
-              <div class="panel__title">Xidmət və məhsul xətti</div>
+              <div class="panel__title">Məhsul xətti</div>
               <div class="flow">
-                <div class="step"><div class="step__k">Satış</div><div class="step__v">Praktika və nəticə yönümlü satış</div></div>
-                <div class="step"><div class="step__k">Nəşr məhsulları</div><div class="step__v">Academy materiallarının satışı</div></div>
-                <div class="step"><div class="step__k">CHH markalı məhsullar</div><div class="step__v">Brend xətti və təqdimat</div></div>
-                <div class="step"><div class="step__k">Ortaqların məhsulları</div><div class="step__v">Ortaq məhsullarına satış dəstəyi</div></div>
-                <div class="step"><div class="step__k">Əməkdaşlıq</div><div class="step__v">Partnyor şəbəkəsi və kampaniyalar</div></div>
+                <div class="step"><div class="step__k">Nəşr məhsulları</div><div class="step__v">Material və nəşr məhsulları</div></div>
+                <div class="step"><div class="step__k">CHH markalı məhsullar</div><div class="step__v">CHH brendi üzrə məhsullar</div></div>
+                <div class="step"><div class="step__k">Ortaqların məhsulları</div><div class="step__v">Ortaq məhsul satış xətti</div></div>
               </div>
             </article>
 
             <article class="panel">
-              <div class="panel__title">İş modeli</div>
+              <div class="panel__title">Liderlik</div>
+              <p class="p">
+                <strong>Alovsat Alakbarzadeh</strong> — Marketing Director
+              </p>
+              <p class="p">
+                <strong>Alsu Ganbarova</strong> — Marketing Assistant
+              </p>
+
+              <div class="divider"></div>
+              <div class="panel__title">Proses</div>
               <div class="flow">
-                <div class="step"><div class="step__k">Plan</div><div class="step__v">Məhsul xətti və hədəflər</div></div>
-                <div class="step"><div class="step__k">Təqdimat</div><div class="step__v">Material və təqdimat standartı</div></div>
-                <div class="step"><div class="step__k">İcra</div><div class="step__v">Satış prosesi və koordinasiya</div></div>
-                <div class="step"><div class="step__k">Analiz</div><div class="step__v">Ölçüm və inkişaf</div></div>
+                <div class="step"><div class="step__k">Plan</div><div class="step__v">Hədəf və satış planı</div></div>
+                <div class="step"><div class="step__k">Təqdimat</div><div class="step__v">Marketinq və təqdimat axını</div></div>
+                <div class="step"><div class="step__k">Satış</div><div class="step__v">İcra və ölçülən nəticə</div></div>
+                <div class="step"><div class="step__k">Hesabat</div><div class="step__v">Analiz və inkişaf</div></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="footnote">© 2026 Crystal Haze Holding</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAFF (cədvəl formatı, özündən vəzifə yazılmayıb) -->
+    <section class="view" data-view="staff">
+      <div class="view__scroll">
+        <div class="wrap">
+          <header class="pageHead">
+            <div>
+              <div class="pageHead__kicker">Komanda</div>
+              <h2 class="h2">Staff</h2>
+              <div class="pageHead__sub">Rəsmi staff cədvəli</div>
+            </div>
+            <div class="pageHead__badge">
+              <img src="assets/chh_logo.png" alt="CHH" />
+              CHH
+            </div>
+          </header>
+
+          <div class="grid2">
+            <article class="panel">
+              <div class="panel__title">Ümumi rəhbərlik</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Lalə Həsənli</div><div class="step__v">Founder</div></div>
+                <div class="step"><div class="step__k">Nicat Umarlı</div><div class="step__v">CEO</div></div>
               </div>
 
               <div class="divider"></div>
 
-              <div class="panel__title">Bölmə liderliyi</div>
-              <p class="p"><strong>Alovsat Alakbarzadeh</strong> — Sales & Market lideri</p>
-              <p class="p"><strong>Alsu Ganbarova</strong> — Sales & Market köməkçi lider</p>
+              <div class="panel__title">Bölmə liderləri</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Shabnam Abdullazadeh</div><div class="step__v">Academy Leader</div></div>
+                <div class="step"><div class="step__k">Nazrin Guliyeva</div><div class="step__v">Volunteer Leader</div></div>
+                <div class="step"><div class="step__k">Alovsat Alakbarzadeh</div><div class="step__v">Marketing Director</div></div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel__title">Staff cədvəli</div>
+              <div class="flow">
+                <div class="step"><div class="step__k">Lalə Həsənli</div><div class="step__v">Founder</div></div>
+                <div class="step"><div class="step__k">Nicat Umarlı</div><div class="step__v">CEO</div></div>
+                <div class="step"><div class="step__k">Nazrin Guliyeva</div><div class="step__v">Volunteer Leader</div></div>
+                <div class="step"><div class="step__k">Shabnam Abdullazadeh</div><div class="step__v">Academy Leader</div></div>
+                <div class="step"><div class="step__k">Alovsat Alakbarzadeh</div><div class="step__v">Marketing Director</div></div>
+                <div class="step"><div class="step__k">Alsu Ganbarova</div><div class="step__v">Marketing Assistant</div></div>
+                <div class="step"><div class="step__k">Fatali Mirzayev</div><div class="step__v">Finance Manager</div></div>
+                <div class="step"><div class="step__k">Vagif Verdiyev</div><div class="step__v">Project Manager</div></div>
+                <div class="step"><div class="step__k">Mürsəl Sadiqli</div><div class="step__v">Programist</div></div>
+                <div class="step"><div class="step__k">Leyla Abbasova</div><div class="step__v">HR Manager</div></div>
+                <div class="step"><div class="step__k">Shahniyar Mustafayev</div><div class="step__v">HR Manager</div></div>
+                <div class="step"><div class="step__k">Ali Baxshizadeh</div><div class="step__v">Venue Coordinator</div></div>
+                <div class="step"><div class="step__k">Munavvar Yusifova</div><div class="step__v">Head of SMM</div></div>
+                <div class="step"><div class="step__k">Simara Aliyeva</div><div class="step__v">SMM</div></div>
+                <div class="step"><div class="step__k">Kenan Qasimzadeh</div><div class="step__v">SMM</div></div>
+              </div>
             </article>
           </div>
 
@@ -401,7 +451,7 @@
           <header class="pageHead">
             <div>
               <div class="pageHead__kicker">Əlaqə</div>
-              <h2 class="h2">Rəsmi əlaqə</h2>
+              <h2 class="h2">Rəsmi Əlaqə</h2>
               <div class="pageHead__sub">Crystal Haze Holding əlaqə xətləri</div>
             </div>
             <div class="pageHead__badge">
@@ -442,7 +492,8 @@
 
               <div class="divider"></div>
 
-              <a class="linkBtn" href="https://forms.gle/8GNBTU7imF7QQLfF8" target="_blank" rel="noopener">Google Form aç</a>
+              <div class="panel__title">Form</div>
+              <a class="linkBtn" href="https://forms.gle/8GNBTU7imF7QQLfF8" target="_blank" rel="noopener">Google Formu aç</a>
             </article>
 
             <article class="panel panel--contact">
@@ -451,8 +502,15 @@
                 <button class="btn btn--primary" type="button" data-jump="academy">Academy</button>
                 <button class="btn btn--ghost" type="button" data-jump="volunteer">Volunteer</button>
                 <button class="btn btn--ghost" type="button" data-jump="sales">Sales & Market</button>
-                <button class="btn btn--ghost" type="button" data-jump="home">Ana səhifə</button>
+                <button class="btn btn--ghost" type="button" data-jump="staff">Staff</button>
               </div>
+
+              <div class="divider"></div>
+
+              <div class="panel__title">Rəsmi sənədlər</div>
+              <p class="p">
+                Bu platforma CHH strukturu üzrə bölmə idarəetməsi, komanda siyahısı və rəsmi əlaqə xətlərini göstərir.
+              </p>
             </article>
           </div>
 
@@ -460,163 +518,25 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- CRYSIA BOT -->
-  <aside class="assistant" aria-label="Crysia botu">
+  <!-- AI Assistant -->
+  <aside class="assistant" aria-label="Crysia AI">
     <div class="assistant__head">
       <div class="assistant__title">Crysia</div>
       <button class="assistant__min" type="button" aria-label="Kiçilt">—</button>
     </div>
+
     <div class="assistant__body">
-      <div class="assistant__chat" aria-live="polite" role="log"></div>
+      <div class="assistant__chat" aria-live="polite"></div>
 
       <form class="assistant__form" autocomplete="off">
-        <input class="assistant__input" type="text" placeholder="Sualını yaz…" aria-label="Mesaj" />
+        <input class="assistant__input" type="text" placeholder="Sualını yaz…" />
         <button class="assistant__send" type="submit">Göndər</button>
       </form>
     </div>
   </aside>
 
-  <script>
-    (function () {
-      const qs = (s, r=document) => r.querySelector(s);
-      const qsa = (s, r=document) => Array.from(r.querySelectorAll(s));
-
-      const routeFx = qs(".routeFx");
-      const views = qsa(".view");
-      const navBtns = qsa(".nav__btn");
-
-      const drawer = qs(".drawer");
-      const drawerPanel = qs(".drawer__panel");
-      const burger = qs(".burger");
-      const closeBtn = qs(".drawer__close");
-
-      const ROUTES = new Set(["home","academy","volunteer","sales","contact"]);
-
-      function setActiveRoute(route) {
-        if (!ROUTES.has(route)) route = "home";
-
-        routeFx.classList.add("on");
-        window.setTimeout(() => routeFx.classList.remove("on"), 220);
-
-        views.forEach(v => v.classList.toggle("is-active", v.dataset.view === route));
-        navBtns.forEach(b => {
-          const on = b.dataset.route === route;
-          b.classList.toggle("is-active", on);
-          if (on) b.setAttribute("aria-current", "page");
-          else b.removeAttribute("aria-current");
-        });
-
-        qsa(".drawer__item").forEach(b => b.classList.toggle("is-active", b.dataset.route === route));
-
-        closeDrawer();
-        if (location.hash !== "#" + route) location.hash = route;
-      }
-
-      function openDrawer() {
-        drawer.classList.add("is-open");
-        drawer.setAttribute("aria-hidden", "false");
-        burger.setAttribute("aria-expanded", "true");
-        document.documentElement.classList.add("lock");
-        document.body.classList.add("lock");
-        window.setTimeout(() => drawerPanel && drawerPanel.focus(), 0);
-      }
-
-      function closeDrawer() {
-        drawer.classList.remove("is-open");
-        drawer.setAttribute("aria-hidden", "true");
-        burger.setAttribute("aria-expanded", "false");
-        document.documentElement.classList.remove("lock");
-        document.body.classList.remove("lock");
-      }
-
-      navBtns.forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
-      qsa(".drawer__item").forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
-      qsa("[data-jump]").forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.jump)));
-
-      burger.addEventListener("click", () => {
-        if (drawer.classList.contains("is-open")) closeDrawer();
-        else openDrawer();
-      });
-
-      closeBtn.addEventListener("click", closeDrawer);
-      drawer.addEventListener("click", (e) => { if (e.target === drawer) closeDrawer(); });
-      window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
-
-      const initial = (location.hash || "#home").replace("#", "");
-      setActiveRoute(initial);
-
-      window.addEventListener("hashchange", () => {
-        const r = (location.hash || "#home").replace("#", "");
-        setActiveRoute(r);
-      });
-
-      // CRYSIA BOT
-      const assistant = qs(".assistant");
-      const minBtn = qs(".assistant__min");
-      const form = qs(".assistant__form");
-      const input = qs(".assistant__input");
-      const chat = qs(".assistant__chat");
-
-      minBtn.addEventListener("click", () => assistant.classList.toggle("is-min"));
-
-      function addMsg(text, who) {
-        const div = document.createElement("div");
-        div.className = "msg " + (who === "user" ? "msg--user" : "msg--bot");
-        div.textContent = text;
-        chat.appendChild(div);
-        chat.scrollTop = chat.scrollHeight;
-      }
-
-      const KB = {
-        about:
-          "Crystal Haze Holding (CHH) gənclərin inkişaf, liderlik və yaradıcılıq imkanlarını bir araya gətirən holding strukturudur. Ümumi liderlik: Lalə Həsənli (təsisçi, lider) və Nicat Umarlı (CEO, lider).",
-        leaders:
-          "Ümumi liderlik: Lalə Həsənli — təsisçi, lider. Nicat Umarlı — CEO, lider. Bölmə liderləri: Academy — Shabnam Abdullazadeh. Volunteer — Nazrin Guliyeva. Sales & Market — Alovsat Alakbarzadeh və Alsu Ganbarova.",
-        academy:
-          "Academy: təlimlər, masterclass-lar, kurslar və nəşriyyat məhsulları. Bölmə lideri: Shabnam Abdullazadeh.",
-        volunteer:
-          "Volunteer: komanda işi, klub və sosial fəaliyyətlər. Bölmə lideri: Nazrin Guliyeva.",
-        sales:
-          "Sales & Market: satış bacarıqlarının inkişafı, nəşr məhsulları, CHH markalı məhsullar, ortaqların məhsulları və əməkdaşlıq sistemi. Bölmə liderləri: Alovsat Alakbarzadeh və Alsu Ganbarova.",
-        contact:
-          "Əlaqə: Gmail — crystalhaze25.26@gmail.com | Telefon — 055-441-74-23 | Instagram — crystalhaze.holding"
-      };
-
-      function nrm(s){
-        return (s||"").toLowerCase()
-          .replace(/ə/g,"e").replace(/ı/g,"i").replace(/ö/g,"o")
-          .replace(/ü/g,"u").replace(/ç/g,"c").replace(/ş/g,"s").replace(/ğ/g,"g");
-      }
-
-      function cavab(s){
-        const t = nrm(s);
-        if (!t.trim()) return "CHH haqqında sual ver: liderlər, Academy, Volunteer, Sales & Market, Əlaqə.";
-
-        if (t.includes("lider") || t.includes("ceo") || t.includes("tesisci")) return KB.leaders;
-        if (t.includes("elaqe") || t.includes("gmail") || t.includes("telefon") || t.includes("instagram") || t.includes("form")) return KB.contact;
-        if (t.includes("academy") || t.includes("telim") || t.includes("kurs") || t.includes("master") || t.includes("nesr")) return KB.academy;
-        if (t.includes("volunteer") || t.includes("komanda") || t.includes("klub") || t.includes("sosial")) return KB.volunteer;
-        if (t.includes("sales") || t.includes("market") || t.includes("satis") || t.includes("mehsul") || t.includes("ortaq")) return KB.sales;
-        if (t.includes("chh") || t.includes("crystal") || t.includes("holding") || t.includes("nedir") || t.includes("haqda")) return KB.about;
-
-        return "Sualını dəqiqləşdir: liderlər, Academy, Volunteer, Sales & Market, Əlaqə.";
-      }
-
-      addMsg("Salam! Mən Crysia. CHH haqqında sual ver.", "bot");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const v = (input.value || "").trim();
-        if (!v) return;
-        addMsg(v, "user");
-        input.value = "";
-        addMsg(cavab(v), "bot");
-      });
-    })();
-  </script>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
