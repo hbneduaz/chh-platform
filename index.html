@@ -1,12 +1,13 @@
-```html
-<!-- index.html -->
+<!-- index.html (NEW CHH SYSTEM: Academy / Volunteer / Sales & Market + Staff)
+     NOTE: Only CHH logo is used: assets/chh_logo.png
+-->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Crystal Haze Holding</title>
-  <meta name="description" content="Crystal Haze Holding — Official platform." />
+  <meta name="description" content="Crystal Haze Holding — Academy · Volunteer · Sales & Market. Official platform." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,20 +19,17 @@
         <img class="brand__logo" src="assets/chh_logo.png" alt="Crystal Haze Holding Logo" />
         <div class="brand__text">
           <div class="brand__name">Crystal Haze Holding</div>
-          <div class="brand__sub">Official Platform</div>
+          <div class="brand__sub">Gələcək buradan başlayır</div>
         </div>
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <button class="nav__btn is-active" data-route="home" aria-current="page">Home</button>
-        <button class="nav__btn" data-route="intellectual">Intellectual</button>
-        <button class="nav__btn" data-route="startup">Startup</button>
-        <button class="nav__btn" data-route="sports">Sports</button>
-        <button class="nav__btn" data-route="business">Business</button>
-        <button class="nav__btn" data-route="hbn">HBN</button>
-        <button class="nav__btn" data-route="partners">Partners</button>
-        <button class="nav__btn" data-route="staff">Staff</button>
-        <button class="nav__btn" data-route="contact">Contact</button>
+        <button class="nav__btn is-active" type="button" data-route="home" aria-current="page">Home</button>
+        <button class="nav__btn" type="button" data-route="academy">Academy</button>
+        <button class="nav__btn" type="button" data-route="volunteer">Volunteer</button>
+        <button class="nav__btn" type="button" data-route="sales">Sales & Market</button>
+        <button class="nav__btn" type="button" data-route="staff">Staff</button>
+        <button class="nav__btn" type="button" data-route="contact">Contact</button>
       </nav>
 
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
@@ -48,15 +46,12 @@
         <button class="drawer__close" type="button" aria-label="Close">✕</button>
       </div>
       <div class="drawer__list" role="list">
-        <button class="drawer__item" data-route="home">Home</button>
-        <button class="drawer__item" data-route="intellectual">Intellectual</button>
-        <button class="drawer__item" data-route="startup">Startup</button>
-        <button class="drawer__item" data-route="sports">Sports</button>
-        <button class="drawer__item" data-route="business">Business</button>
-        <button class="drawer__item" data-route="hbn">HBN</button>
-        <button class="drawer__item" data-route="partners">Partners</button>
-        <button class="drawer__item" data-route="staff">Staff</button>
-        <button class="drawer__item" data-route="contact">Contact</button>
+        <button class="drawer__item" type="button" data-route="home">Home</button>
+        <button class="drawer__item" type="button" data-route="academy">Academy</button>
+        <button class="drawer__item" type="button" data-route="volunteer">Volunteer</button>
+        <button class="drawer__item" type="button" data-route="sales">Sales & Market</button>
+        <button class="drawer__item" type="button" data-route="staff">Staff</button>
+        <button class="drawer__item" type="button" data-route="contact">Contact</button>
       </div>
     </div>
   </div>
@@ -75,10 +70,12 @@
 
   <!-- App -->
   <main class="app" role="main">
+
     <!-- HOME -->
     <section class="view is-active" data-view="home">
       <div class="view__scroll">
         <div class="wrap">
+
           <div class="hero">
             <div class="hero__left">
               <div class="hero__frame">
@@ -87,19 +84,25 @@
                 </div>
 
                 <div class="hero__content">
-                  <div class="hero__kicker">Official Holding Platform</div>
+                  <div class="hero__kicker">Official Youth Holding Platform</div>
                   <h1 class="h1">Crystal Haze Holding</h1>
                   <p class="lead">
-                    Crystal Haze Holding operates as a structured holding model built on leadership, accountability,
-                    and professional execution standards. The holding is organized into specialized divisions with
-                    clear responsibilities, defined operational flow, and measurable outcomes — designed for long-term
-                    growth and international presence.
+                    Crystal Haze Holding sadəcə bir ad deyil — bu, gənclərin inkişaf, liderlik və yaradıcılıq
+                    imkanlarını bir araya gətirən holding strukturudur.
+                    Öz üzərində işləmək, komanda mühitində yer almaq, təlimlərdə iştirak edərək real layihələrdə
+                    təcrübə qazanmaq istəyənlər üçün qurulub.
                   </p>
 
                   <div class="hero__actions">
-                    <button class="btn btn--primary" data-jump="intellectual">Explore Divisions</button>
-                    <button class="btn btn--ghost" data-jump="hbn">HBN</button>
-                    <button class="btn btn--ghost" data-jump="partners">Partners</button>
+                    <button class="btn btn--cta" type="button" data-jump="academy">Start with Academy</button>
+                    <button class="btn btn--ghost" type="button" data-jump="volunteer">Join Volunteer</button>
+                    <button class="btn btn--ghost" type="button" data-jump="sales">Sales & Market</button>
+                  </div>
+
+                  <div class="tagRow" aria-label="hashtags">
+                    <div class="tag">#CHH</div>
+                    <div class="tag">#GələcəkBuradanBaşlayır</div>
+                    <div class="tag">#KomandaRuhu</div>
                   </div>
 
                   <div class="hero__line" aria-hidden="true">
@@ -112,53 +115,27 @@
             <div class="hero__right">
               <div class="glass">
                 <div class="glass__top">
-                  <div class="chip">Structured</div>
-                  <div class="chip">Official</div>
-                  <div class="chip">Global-ready</div>
+                  <div class="chip">Development</div>
+                  <div class="chip">Leadership</div>
+                  <div class="chip">Creativity</div>
+                  <div class="chip">Team Spirit</div>
                 </div>
 
                 <div class="glass__body">
-                  <div class="sectionTitle">Leadership</div>
-
-                  <div class="people2">
-                    <div class="personCard">
-                      <div class="personCard__name">Lala Hasanli</div>
-                      <div class="personCard__role">Founder / Leader</div>
-                      <div class="personCard__desc">
-                        Founder-level leadership, brand direction, and official representation of the holding.
-                      </div>
-                    </div>
-
-                    <div class="personCard">
-                      <div class="personCard__name">Nicat Umarli</div>
-                      <div class="personCard__role">CEO / Leader</div>
-                      <div class="personCard__desc">
-                        Executive leadership, operations coordination, and performance-driven management across divisions.
-                      </div>
-                    </div>
-                  </div>
+                  <div class="panel__title">3 əsas istiqamət</div>
+                  <p class="p">
+                    CHH üç sütun üzərində qurulur: təlim və bilik (Academy), komanda və sosial mühit (Volunteer),
+                    əməkdaşlıqlar və satış bacarıqları (Sales & Market).
+                  </p>
 
                   <div class="divider"></div>
 
-                  <div class="sectionTitle">Operational Standard</div>
-                  <p class="p">
-                    The platform is designed as a corporate-style system: each division is represented as a dedicated
-                    page with a clear purpose, workflow, leadership, and responsibility scope.
-                  </p>
-
-                  <div class="quick">
-                    <div class="quick__item">
-                      <div class="quick__k">Divisions</div>
-                      <div class="quick__v">4</div>
-                    </div>
-                    <div class="quick__item">
-                      <div class="quick__k">Projects</div>
-                      <div class="quick__v">HBN + Shadow Secret</div>
-                    </div>
-                    <div class="quick__item">
-                      <div class="quick__k">Partners</div>
-                      <div class="quick__v">8+</div>
-                    </div>
+                  <div class="panel__title">Quick steps</div>
+                  <div class="flow">
+                    <div class="step"><div class="step__k">1) Join</div><div class="step__v">Komandaya qoşul</div></div>
+                    <div class="step"><div class="step__k">2) Learn</div><div class="step__v">Təlimlərdə iştirak et</div></div>
+                    <div class="step"><div class="step__k">3) Practice</div><div class="step__v">Real layihələrdə təcrübə qazan</div></div>
+                    <div class="step"><div class="step__k">4) Grow</div><div class="step__v">Bacarıqlarını inkişaf etdir</div></div>
                   </div>
                 </div>
 
@@ -167,58 +144,53 @@
             </div>
           </div>
 
-          <div class="homeGrid">
-            <article class="card">
-              <div class="card__head">
-                <div class="card__title">What the holding delivers</div>
-                <div class="dot"></div>
+          <!-- NEW: Path cards -->
+          <div class="paths" aria-label="CHH directions">
+            <article class="pathCard pathCard--academy">
+              <div class="pathCard__head">
+                <div class="pathCard__title">Academy</div>
+                <div class="pathCard__badge">Learn</div>
               </div>
-              <p class="p">
-                A single official identity that unifies multiple directions — leadership, teams, divisions, and partner
-                visibility — under a structured framework and a consistent presentation standard.
-              </p>
-              <div class="miniRow">
-                <div class="mini">
-                  <div class="mini__k">Focus</div>
-                  <div class="mini__v">Execution</div>
-                </div>
-                <div class="mini">
-                  <div class="mini__k">Style</div>
-                  <div class="mini__v">Corporate</div>
-                </div>
-                <div class="mini">
-                  <div class="mini__k">Model</div>
-                  <div class="mini__v">Scalable</div>
-                </div>
+              <p class="p">Təlimlər, masterclass-lar, kurslar və nəşriyyat məhsulları.</p>
+              <div class="bullets">
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Strukturlaşdırılmış dərs planı</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Praktiki tapşırıqlar və nəticə</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Məhsul / material istehsalı</div></div>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn--primary" type="button" data-jump="academy">Open Academy</button>
               </div>
             </article>
 
-            <article class="card">
-              <div class="card__head">
-                <div class="card__title">How divisions operate</div>
-                <div class="dot"></div>
+            <article class="pathCard pathCard--volunteer">
+              <div class="pathCard__head">
+                <div class="pathCard__title">Volunteer</div>
+                <div class="pathCard__badge">Team</div>
               </div>
-              <p class="p">
-                Each division is built around leadership, an operational workflow, and responsibility scope. The system
-                emphasizes structured planning, execution discipline, and performance review — aligned with the holding’s standard.
-              </p>
-              <div class="bars" aria-hidden="true">
-                <span></span><span></span><span></span>
+              <p class="p">Komanda işi, klub və sosial fəaliyyətlər.</p>
+              <div class="bullets">
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Komanda mədəniyyəti və rol bölgüsü</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Tədbirlər və ictimai fəaliyyətlər</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Davamlı iştirak və inkişaf</div></div>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn--primary" type="button" data-jump="volunteer">Open Volunteer</button>
               </div>
             </article>
 
-            <article class="card">
-              <div class="card__head">
-                <div class="card__title">Projects under the holding</div>
-                <div class="dot"></div>
+            <article class="pathCard pathCard--sales">
+              <div class="pathCard__head">
+                <div class="pathCard__title">Sales & Market</div>
+                <div class="pathCard__badge">Build</div>
               </div>
-              <p class="p">
-                HBN and Shadow Secret operate under the holding as official projects with clear structure, delivery standards,
-                and long-term scaling direction.
-              </p>
-              <div class="stamp">
-                <div class="stamp__big">CHH</div>
-                <div class="stamp__small">Official Platform</div>
+              <p class="p">Əməkdaşlıqlar və satış bacarıqlarının inkişafı.</p>
+              <div class="bullets">
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Marketinq planı və təqdimat</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Satış praktikası və nəticə</div></div>
+                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Əməkdaşlıq şəbəkəsi</div></div>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn--primary" type="button" data-jump="sales">Open Sales</button>
               </div>
             </article>
           </div>
@@ -228,56 +200,39 @@
       </div>
     </section>
 
-    <!-- INTELLECTUAL -->
-    <section class="view" data-view="intellectual">
+    <!-- ACADEMY -->
+    <section class="view" data-view="academy">
       <div class="view__scroll">
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Division</div>
-              <h2 class="h2">Intellectual Division</h2>
-              <div class="pageHead__sub">Analytics · Knowledge · Competitive Preparation</div>
+              <div class="pageHead__kicker">Direction</div>
+              <h2 class="h2">Academy</h2>
+              <div class="pageHead__sub">Təlimlər · Masterclass · Kurslar · Nəşriyyat məhsulları</div>
             </div>
-            <div class="pageHead__badge">CHH</div>
+            <div class="pageHead__badge">
+              <img src="assets/chh_logo.png" alt="CHH" />
+              CHH
+            </div>
           </header>
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Division overview</div>
+              <div class="panel__title">Nədir?</div>
               <p class="p">
-                The Intellectual Division represents the knowledge and analytical direction of Crystal Haze Holding.
-                It is responsible for structured intellectual preparation, professional representation in academic
-                and competitive environments, and consistent improvement through measurable outcomes.
-              </p>
-              <p class="p">
-                The division focuses on strategy, preparation cycles, internal evaluation, and professional presentation.
-                Participation is managed as a complete system: planning, practice, performance, review, and iteration.
+                Academy CHH-in təlim və bilik xəttidir. Məqsəd: gənclərə real bacarıq qazandırmaq və bunu
+                praktik tapşırıqlar, layihələr və hazırlanmış materiallarla möhkəmləndirmək.
               </p>
             </article>
 
             <article class="panel">
-              <div class="panel__title">Operational flow</div>
+              <div class="panel__title">Necə işləyir?</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Planning</div>
-                  <div class="step__v">Goals, timeline, roles, and content scope</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Preparation</div>
-                  <div class="step__v">Topic mapping, resources, practice sets</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Evaluation</div>
-                  <div class="step__v">Internal checks, weak-point analysis</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Representation</div>
-                  <div class="step__v">Official performance and delivery</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Review</div>
-                  <div class="step__v">Result analysis and next-cycle upgrades</div>
-                </div>
+                <div class="step"><div class="step__k">Plan</div><div class="step__v">Mövzu + proqram + timeline</div></div>
+                <div class="step"><div class="step__k">Teach</div><div class="step__v">Təlim / masterclass / kurs</div></div>
+                <div class="step"><div class="step__k">Practice</div><div class="step__v">Tapşırıqlar və mini layihələr</div></div>
+                <div class="step"><div class="step__k">Publish</div><div class="step__v">Material və nəşriyyat məhsulu</div></div>
+                <div class="step"><div class="step__k">Improve</div><div class="step__v">Feedback və upgrade</div></div>
               </div>
             </article>
           </div>
@@ -289,18 +244,9 @@
             </div>
             <div class="peopleGrid">
               <div class="person">
-                <div class="person__name">Kenan Abdullayev</div>
-                <div class="person__role">Intellectual Leader</div>
-                <div class="person__desc">
-                  Leads structured preparation cycles, analytical focus, and performance discipline for official representation.
-                </div>
-              </div>
-              <div class="person">
-                <div class="person__name">Shabnam Zeynalova</div>
-                <div class="person__role">Intellectual Leader</div>
-                <div class="person__desc">
-                  Builds knowledge structure, supports preparation standards, and maintains consistent quality across cycles.
-                </div>
+                <div class="person__name">Shabnam Abdullazadeh</div>
+                <div class="person__role">Academy Leader</div>
+                <div class="person__desc">Təlim istiqamətinin idarə olunması və proqramın qurulması.</div>
               </div>
             </div>
           </article>
@@ -310,56 +256,39 @@
       </div>
     </section>
 
-    <!-- STARTUP -->
-    <section class="view" data-view="startup">
+    <!-- VOLUNTEER -->
+    <section class="view" data-view="volunteer">
       <div class="view__scroll">
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Division</div>
-              <h2 class="h2">Startup Division</h2>
-              <div class="pageHead__sub">Ideation · Structure · Execution · Growth</div>
+              <div class="pageHead__kicker">Direction</div>
+              <h2 class="h2">Volunteer</h2>
+              <div class="pageHead__sub">Komanda işi · Klub · Sosial fəaliyyətlər</div>
             </div>
-            <div class="pageHead__badge">CHH</div>
+            <div class="pageHead__badge">
+              <img src="assets/chh_logo.png" alt="CHH" />
+              CHH
+            </div>
           </header>
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Division overview</div>
+              <div class="panel__title">Nədir?</div>
               <p class="p">
-                The Startup Division transforms ideas into structured initiatives. It manages concept validation,
-                planning, responsibility allocation, and execution coordination — ensuring initiatives become real,
-                scalable systems aligned with the holding’s standard.
-              </p>
-              <p class="p">
-                The division operates through milestone-based development and disciplined execution. It focuses on
-                building stable structures rather than short-term experimentation.
+                Volunteer istiqaməti CHH-də komanda ruhu, koordinasiya və sosial fəaliyyətlərin mərkəzidir.
+                Burada üzvlər real iş mühitinə yaxın şəkildə rol bölgüsü ilə işləyirlər.
               </p>
             </article>
 
             <article class="panel">
-              <div class="panel__title">Operational flow</div>
+              <div class="panel__title">Necə işləyir?</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Discovery</div>
-                  <div class="step__v">Idea fit, value, positioning</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Design</div>
-                  <div class="step__v">Structure, responsibilities, timeline</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Build</div>
-                  <div class="step__v">Execution, iteration, delivery</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Presentation</div>
-                  <div class="step__v">Official-ready materials and demos</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Scale</div>
-                  <div class="step__v">Stability and long-term growth plan</div>
-                </div>
+                <div class="step"><div class="step__k">Join</div><div class="step__v">Komandaya daxil ol</div></div>
+                <div class="step"><div class="step__k">Roles</div><div class="step__v">Rol bölgüsü və məsuliyyət</div></div>
+                <div class="step"><div class="step__k">Activity</div><div class="step__v">Klub / tədbir / sosial iş</div></div>
+                <div class="step"><div class="step__k">Delivery</div><div class="step__v">Nəticə və report</div></div>
+                <div class="step"><div class="step__k">Grow</div><div class="step__v">Bacarıq inkişafı</div></div>
               </div>
             </article>
           </div>
@@ -372,10 +301,8 @@
             <div class="peopleGrid">
               <div class="person">
                 <div class="person__name">Nazrin Guliyeva</div>
-                <div class="person__role">Startup Manager</div>
-                <div class="person__desc">
-                  Oversees startup planning, coordination, and milestone delivery within the holding structure.
-                </div>
+                <div class="person__role">Volunteer Leader</div>
+                <div class="person__desc">Komanda koordinasiyası və fəaliyyət planlanması.</div>
               </div>
             </div>
           </article>
@@ -385,56 +312,39 @@
       </div>
     </section>
 
-    <!-- SPORTS -->
-    <section class="view" data-view="sports">
+    <!-- SALES & MARKET -->
+    <section class="view" data-view="sales">
       <div class="view__scroll">
         <div class="wrap">
           <header class="pageHead">
             <div>
-              <div class="pageHead__kicker">Division</div>
-              <h2 class="h2">Sports Division</h2>
-              <div class="pageHead__sub">Discipline · Representation · Team Performance</div>
+              <div class="pageHead__kicker">Direction</div>
+              <h2 class="h2">Sales & Market</h2>
+              <div class="pageHead__sub">Əməkdaşlıqlar · Marketinq · Satış bacarıqları</div>
             </div>
-            <div class="pageHead__badge">CHH</div>
+            <div class="pageHead__badge">
+              <img src="assets/chh_logo.png" alt="CHH" />
+              CHH
+            </div>
           </header>
 
           <div class="grid2">
             <article class="panel">
-              <div class="panel__title">Division overview</div>
+              <div class="panel__title">Nədir?</div>
               <p class="p">
-                The Sports Division manages official sports representation, team coordination, and performance-focused
-                participation. It emphasizes discipline, preparation structure, and execution quality aligned with the
-                holding’s reputation and presentation standard.
-              </p>
-              <p class="p">
-                The division operates through clear planning, team roles, preparation cycles, and post-performance review
-                to maintain consistency and long-term progress.
+                Sales & Market istiqaməti marketinq düşüncəsi, təqdimat və satış bacarıqlarının inkişafına fokuslanır.
+                Burada əməkdaşlıqlar qurulur və komanda real iş prosesində təcrübə qazanır.
               </p>
             </article>
 
             <article class="panel">
-              <div class="panel__title">Operational flow</div>
+              <div class="panel__title">Necə işləyir?</div>
               <div class="flow">
-                <div class="step">
-                  <div class="step__k">Preparation</div>
-                  <div class="step__v">Training plan and consistency</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Coordination</div>
-                  <div class="step__v">Team roles, schedule, readiness</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Participation</div>
-                  <div class="step__v">Official execution and presentation</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Performance</div>
-                  <div class="step__v">Discipline and delivery quality</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Review</div>
-                  <div class="step__v">Outcome analysis and upgrades</div>
-                </div>
+                <div class="step"><div class="step__k">Plan</div><div class="step__v">Hədəf və strategiya</div></div>
+                <div class="step"><div class="step__k">Market</div><div class="step__v">Təqdimat və kontent</div></div>
+                <div class="step"><div class="step__k">Sell</div><div class="step__v">Satış praktiki</div></div>
+                <div class="step"><div class="step__k">Partner</div><div class="step__v">Əməkdaşlıq və koordinasiya</div></div>
+                <div class="step"><div class="step__k">Improve</div><div class="step__v">Analiz və inkişaf</div></div>
               </div>
             </article>
           </div>
@@ -446,84 +356,14 @@
             </div>
             <div class="peopleGrid">
               <div class="person">
-                <div class="person__name">Ilham Fatullayev</div>
-                <div class="person__role">Sports Director</div>
-                <div class="person__desc">
-                  Leads official sports representation, preparation discipline, and team coordination within the holding framework.
-                </div>
+                <div class="person__name">Alovsat Alakbarzadeh</div>
+                <div class="person__role">Marketing Director</div>
+                <div class="person__desc">Marketinq xəttinin idarəsi və strategiya.</div>
               </div>
-            </div>
-          </article>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BUSINESS (✅ Vagif removed) -->
-    <section class="view" data-view="business">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Division</div>
-              <h2 class="h2">Business Division</h2>
-              <div class="pageHead__sub">Operations · Growth · Official Partnerships</div>
-            </div>
-            <div class="pageHead__badge">CHH</div>
-          </header>
-
-          <div class="grid2">
-            <article class="panel">
-              <div class="panel__title">Division overview</div>
-              <p class="p">
-                The Business Division manages operational structure, growth planning, and official business direction within Crystal Haze Holding.
-                It focuses on sustainable execution, partner coordination, and maintaining professional standards across business activities.
-              </p>
-              <p class="p">
-                The division runs with clear responsibility, internal control, and stable workflows — designed for long-term expansion.
-              </p>
-            </article>
-
-            <article class="panel">
-              <div class="panel__title">Operational flow</div>
-              <div class="flow">
-                <div class="step">
-                  <div class="step__k">Planning</div>
-                  <div class="step__v">Business goals, scope, roadmap</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Execution</div>
-                  <div class="step__v">Daily operations and delivery</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Partnership</div>
-                  <div class="step__v">Coordination and official agreements</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Quality</div>
-                  <div class="step__v">Control and improvement cycle</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Growth</div>
-                  <div class="step__v">Scaling plan and stability</div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <article class="wide">
-            <div class="wide__head">
-              <div class="wide__title">Leadership</div>
-              <div class="wide__line"></div>
-            </div>
-            <div class="peopleGrid">
               <div class="person">
-                <div class="person__name">Asmar Ibrahimzade</div>
-                <div class="person__role">Business Manager</div>
-                <div class="person__desc">
-                  Official business leadership and operations coordination for the Business Division.
-                </div>
+                <div class="person__name">Alsu Ganbarova</div>
+                <div class="person__role">Marketing Assistant</div>
+                <div class="person__desc">İcra dəstəyi və gündəlik marketinq işləri.</div>
               </div>
             </div>
           </article>
@@ -533,189 +373,7 @@
       </div>
     </section>
 
-    <!-- HBN + SHADOW SECRET (✅ wider + full info) -->
-    <section class="view" data-view="hbn">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead pageHead--hbn">
-            <div>
-              <div class="pageHead__kicker">Projects</div>
-              <h2 class="h2">HBN & Shadow Secret</h2>
-              <div class="pageHead__sub">Official works under Crystal Haze Holding</div>
-            </div>
-            <div class="pageHead__badge pageHead__badge--hbn">CHH</div>
-          </header>
-
-          <div class="grid2">
-            <article class="panel panel--deep">
-              <div class="panel__title">Official logos</div>
-
-              <div class="logoRow">
-                <div class="logoRow__item">
-                  <img class="logoRow__img" src="assets/hbn_logo.png" alt="HBN Logo" />
-                  <div class="logoRow__meta">
-                    <div class="logoRow__name">HBN</div>
-                    <div class="logoRow__sub">Heyksans Business Network</div>
-                  </div>
-                </div>
-
-                <div class="logoRow__item">
-                  <img class="logoRow__img" src="assets/shadow.jpeg" alt="Shadow Secret Logo" />
-                  <div class="logoRow__meta">
-                    <div class="logoRow__name">Shadow Secret</div>
-                    <div class="logoRow__sub">Academic PDF & Lab Work</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Leadership</div>
-              <p class="p">
-                Lala Hasanli — Founder / Leader<br />
-                Nicat Umarli — CEO / Leader (HBN Founder / Head)
-              </p>
-
-              <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-                <a class="linkBtn" href="#contact" data-route="contact">Contact</a>
-                <a class="linkBtn" href="#partners" data-route="partners">Partners</a>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__title">HBN (Heyksans Business Network)</div>
-              <p class="p">
-                HBN is an education and web-systems direction under Crystal Haze Holding. It is built as a long-term platform model
-                that focuses on structured development, stable delivery, and clear execution standards.
-              </p>
-              <p class="p">
-                The purpose is to create organized digital products and educational systems — where planning, building, and quality control
-                are managed as a single workflow (not random projects). Each work is prepared in an official format and improved through iteration.
-              </p>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Operational standard</div>
-              <div class="flow">
-                <div class="step">
-                  <div class="step__k">Planning</div>
-                  <div class="step__v">Goals, structure, scope, timeline</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Build</div>
-                  <div class="step__v">Web systems, content, platform modules</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Delivery</div>
-                  <div class="step__v">Release, user-ready format, official presentation</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Control</div>
-                  <div class="step__v">Quality checks, fixes, stability</div>
-                </div>
-                <div class="step">
-                  <div class="step__k">Upgrade</div>
-                  <div class="step__v">Iteration cycle and scaling plan</div>
-                </div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Shadow Secret</div>
-              <p class="p">
-                Shadow Secret is the academic-material direction under Crystal Haze Holding. It focuses on preparing and selling:
-                (1) structured academic PDFs and (2) handwritten-style university laboratory work formats.
-              </p>
-              <p class="p">
-                The content is prepared with clear structure, clean formatting, and topic-based delivery — designed for fast use by students
-                and consistent quality over time.
-              </p>
-            </article>
-          </div>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARTNERS (✅ full names shown; logos used only if available files) -->
-    <section class="view" data-view="partners">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Network</div>
-              <h2 class="h2">Partners</h2>
-              <div class="pageHead__sub">Official partner list (names can be updated later)</div>
-            </div>
-            <div class="pageHead__badge">CHH</div>
-          </header>
-
-          <article class="wide">
-            <div class="wide__head">
-              <div class="wide__title">Partner list</div>
-              <div class="wide__line"></div>
-            </div>
-
-            <div class="partnersGrid">
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/artna_logo.png" alt="artna_designer logo" />
-                <div class="partnerCard__name">artna_designer</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/Davetiye_Ressami_logo.png" alt="davetiye__ressam.jn logo" />
-                <div class="partnerCard__name">davetiye__ressam.jn</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/Dara_Belle_logo.png" alt="dara__belle logo" />
-                <div class="partnerCard__name">dara__belle</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/Arneva_logo.png" alt="arneva_weave logo" />
-                <div class="partnerCard__name">arneva_weave</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/inci_gifts_logo.png" alt="inci_gifts logo" />
-                <div class="partnerCard__name">inci_gifts</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/Aurina_logo.png" alt="aurina.accessory logo" />
-                <div class="partnerCard__name">aurina.accessory</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/Daisywhispers.art_logo.png" alt="daisywhispers.art logo" />
-                <div class="partnerCard__name">daisywhispers.art</div>
-              </div>
-
-              <div class="partnerCard">
-                <img class="partnerCard__logo" src="assets/hollow_purple_art_logo.jpg" alt="hollowpurple.art logo" />
-                <div class="partnerCard__name">hollowpurple.art</div>
-              </div>
-
-              <div class="partnerCard partnerCard--textOnly">
-                <div class="partnerCard__name">heyk sans official</div>
-                <div class="partnerCard__note">Logo will be added later.</div>
-              </div>
-
-              <div class="partnerCard partnerCard--textOnly">
-                <div class="partnerCard__name">the.byram!</div>
-                <div class="partnerCard__note">Logo will be added later.</div>
-              </div>
-            </div>
-          </article>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STAFF (✅ full list, Jale removed forever) -->
+    <!-- STAFF -->
     <section class="view" data-view="staff">
       <div class="view__scroll">
         <div class="wrap">
@@ -725,34 +383,41 @@
               <h2 class="h2">Staff</h2>
               <div class="pageHead__sub">Official staff list</div>
             </div>
-            <div class="pageHead__badge">CHH</div>
+            <div class="pageHead__badge">
+              <img src="assets/chh_logo.png" alt="CHH" />
+              CHH
+            </div>
           </header>
 
           <article class="wide">
             <div class="wide__head">
-              <div class="wide__title">Core staff</div>
+              <div class="wide__title">Crystal Haze Holding Staff</div>
               <div class="wide__line"></div>
             </div>
 
-            <div class="team">
-              <div class="teamRow"><div class="teamRow__name">Lala Hasanli</div><div class="teamRow__role">Founder / Leader</div></div>
-              <div class="teamRow"><div class="teamRow__name">Nicat Umarli</div><div class="teamRow__role">CEO / Leader</div></div>
+            <div class="team" role="list">
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Lala Hasanli</div><div class="teamRow__role">Founder</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Nicat Umarli</div><div class="teamRow__role">CEO</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Vagif Verdiyev</div><div class="teamRow__role">PR</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Nazrin Guliyeva</div><div class="teamRow__role">Volunteer Leader</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Shabnam Abdullazadeh</div><div class="teamRow__role">Academy Leader</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Munavar Yusifova</div><div class="teamRow__role">SMM</div></div>
-              <div class="teamRow"><div class="teamRow__name">Kenan Gasimzadeh</div><div class="teamRow__role">SMM</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Alovsat Alakbarzadeh</div><div class="teamRow__role">Marketing Director</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Alsu Ganbarova</div><div class="teamRow__role">Marketing Assistant</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Leyla Abbasova</div><div class="teamRow__role">HR Manager</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Fatali Mirzayev</div><div class="teamRow__role">Finance Manager</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Vagif Verdiyev</div><div class="teamRow__role">Project Manager</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Kenan Abdullayev</div><div class="teamRow__role">Intellectual Leader</div></div>
-              <div class="teamRow"><div class="teamRow__name">Shabnam Zeynalova</div><div class="teamRow__role">Intellectual Leader</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Mürsəl Sadiqli</div><div class="teamRow__role">Programist</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Ilham Fatullayev</div><div class="teamRow__role">Sports Director</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Leyla Abbasova</div><div class="teamRow__role">HR Manager</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Shahniyar Mustafayev</div><div class="teamRow__role">HR Manager</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Asmar Ibrahimzade</div><div class="teamRow__role">Business Manager</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Ali Baxshizadeh</div><div class="teamRow__role">Venue Coordinator</div></div>
 
-              <div class="teamRow"><div class="teamRow__name">Nazrin Guliyeva</div><div class="teamRow__role">Startup Manager</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Munavvar Yusifova</div><div class="teamRow__role">Head of SMM</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Simara Aliyeva</div><div class="teamRow__role">SMM</div></div>
+              <div class="teamRow" role="listitem"><div class="teamRow__name">Kenan Qasimzadeh</div><div class="teamRow__role">SMM</div></div>
             </div>
           </article>
 
@@ -771,7 +436,10 @@
               <h2 class="h2">Official Contact</h2>
               <div class="pageHead__sub">Crystal Haze Holding communication lines</div>
             </div>
-            <div class="pageHead__badge">CHH</div>
+            <div class="pageHead__badge">
+              <img src="assets/chh_logo.png" alt="CHH" />
+              CHH
+            </div>
           </header>
 
           <div class="contactGrid">
@@ -808,7 +476,7 @@
 
               <div class="panel__title">Notes</div>
               <p class="p">
-                Official contact channels are listed above. Additional form and link integrations can be added later without changing the design system.
+                Official contact channels are listed above. Form and link integrations can be added later without changing the design system.
               </p>
             </article>
 
@@ -820,9 +488,9 @@
 
               <div class="panel__title">Quick access</div>
               <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="btn btn--primary" data-jump="hbn">HBN</button>
-                <button class="btn btn--ghost" data-jump="partners">Partners</button>
-                <button class="btn btn--ghost" data-jump="staff">Staff</button>
+                <button class="btn btn--primary" type="button" data-jump="academy">Academy</button>
+                <button class="btn btn--ghost" type="button" data-jump="volunteer">Volunteer</button>
+                <button class="btn btn--ghost" type="button" data-jump="sales">Sales & Market</button>
               </div>
             </article>
           </div>
@@ -831,29 +499,8 @@
         </div>
       </div>
     </section>
+
   </main>
-
-  <!-- Assistant (kept as a system block; you will give commands later) -->
-  <aside class="assistant" aria-label="Assistant">
-    <div class="assistant__head">
-      <div class="assistant__title">AI Assistant</div>
-      <button class="assistant__min" type="button" aria-label="Minimize">—</button>
-    </div>
-    <div class="assistant__body">
-      <div class="assistant__log" aria-live="polite">
-        <div class="msg msg--bot">
-          <div class="msg__bubble">
-            Ready. You can send commands later.
-          </div>
-        </div>
-      </div>
-
-      <form class="assistant__form" autocomplete="off">
-        <input class="assistant__input" type="text" placeholder="Type a command…" />
-        <button class="assistant__send" type="submit">Send</button>
-      </form>
-    </div>
-  </aside>
 
   <script>
     (function () {
@@ -868,7 +515,11 @@
       const burger = qs(".burger");
       const closeBtn = qs(".drawer__close");
 
+      const ROUTES = new Set(["home","academy","volunteer","sales","staff","contact"]);
+
       function setActiveRoute(route) {
+        if (!ROUTES.has(route)) route = "home";
+
         routeFx.classList.add("on");
         window.setTimeout(() => routeFx.classList.remove("on"), 220);
 
@@ -905,7 +556,6 @@
 
       navBtns.forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
       qsa(".drawer__item").forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
-
       qsa("[data-jump]").forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.jump)));
 
       burger.addEventListener("click", () => {
@@ -920,911 +570,11 @@
       const initial = (location.hash || "#home").replace("#", "");
       setActiveRoute(initial);
 
-      // Assistant (kept minimal)
-      const assistant = qs(".assistant");
-      const minBtn = qs(".assistant__min");
-      const form = qs(".assistant__form");
-      const input = qs(".assistant__input");
-      const log = qs(".assistant__log");
-
-      minBtn.addEventListener("click", () => assistant.classList.toggle("is-min"));
-
-      function addMsg(text, who) {
-        const wrap = document.createElement("div");
-        wrap.className = "msg " + (who === "user" ? "msg--user" : "msg--bot");
-        wrap.innerHTML = '<div class="msg__bubble"></div>';
-        wrap.querySelector(".msg__bubble").textContent = text;
-        log.appendChild(wrap);
-        log.scrollTop = log.scrollHeight;
-      }
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const v = (input.value || "").trim();
-        if (!v) return;
-        addMsg(v, "user");
-        input.value = "";
-
-        // Open ChatGPT with the message and copy it for easy paste
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(v).catch(() => {});
-        }
-        window.open("https://chatgpt.com/?q=" + encodeURIComponent(v), "_blank", "noopener");
-
-        addMsg("Opening ChatGPT… (Your message was copied for paste if needed.)", "bot");
+      window.addEventListener("hashchange", () => {
+        const r = (location.hash || "#home").replace("#", "");
+        setActiveRoute(r);
       });
     })();
   </script>
 </body>
 </html>
-```
-
-```css
-/* style.css */
-:root{
-  --bg:#f6f7fb;
-  --text:#0b1220;
-  --muted:rgba(11,18,32,.78);
-  --muted2:rgba(11,18,32,.62);
-
-  --panel:rgba(255,255,255,.72);
-  --panel2:rgba(255,255,255,.90);
-  --line:rgba(11,18,32,.10);
-
-  --shadow:0 18px 60px rgba(16,24,40,.14);
-  --shadow2:0 10px 30px rgba(16,24,40,.12);
-
-  --r:22px;
-  --r2:18px;
-  --r3:28px;
-
-  --focus:rgba(11,18,32,.10);
-}
-
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  overflow:hidden;
-}
-html.lock, body.lock{ overflow:hidden; }
-
-a{ color:inherit; text-decoration:none; }
-button{ font-family:inherit; }
-
-.topbar{
-  position:fixed;
-  inset:0 0 auto 0;
-  height:76px;
-  z-index:80;
-  background: rgba(255,255,255,.70);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(14px);
-}
-.topbar__inner{
-  height:100%;
-  max-width:1240px;
-  margin:0 auto;
-  padding:0 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-width: 260px;
-}
-.brand__logo{
-  width:42px; height:42px;
-  object-fit:contain;
-  border-radius: 14px;
-  background: rgba(255,255,255,.9);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow2);
-}
-.brand__text{ line-height:1.05; }
-.brand__name{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:15px;
-  opacity:.96;
-}
-.brand__sub{
-  margin-top:4px;
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-}
-
-.nav{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-.nav__btn{
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.70);
-  color: var(--text);
-  padding:10px 12px;
-  border-radius: 999px;
-  font-size:13px;
-  cursor:pointer;
-  opacity:.92;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease, opacity .18s ease;
-}
-.nav__btn:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.92);
-  border-color: rgba(11,18,32,.16);
-  opacity:1;
-}
-.nav__btn.is-active{
-  background: rgba(11,18,32,.08);
-  border-color: rgba(11,18,32,.18);
-  opacity:1;
-}
-
-.burger{
-  display:none;
-  width:46px;
-  height:46px;
-  border-radius:16px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.70);
-  cursor:pointer;
-  align-items:center;
-  justify-content:center;
-  gap:4px;
-}
-.burger span{
-  display:block;
-  width:18px;
-  height:2px;
-  border-radius:2px;
-  background: rgba(11,18,32,.78);
-}
-
-/* Drawer */
-.drawer{
-  position:fixed;
-  inset:0;
-  z-index:120;
-  display:none;
-  background: rgba(0,0,0,.26);
-  backdrop-filter: blur(10px);
-}
-.drawer.is-open{ display:block; animation: fadeIn .18s ease both; }
-@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
-
-.drawer__panel{
-  position:absolute;
-  right:14px;
-  top:14px;
-  width:min(380px, calc(100% - 28px));
-  border-radius: 24px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.90);
-  box-shadow: var(--shadow);
-  padding:14px;
-  outline:none;
-  transform: translateY(-8px);
-  animation: panelIn .22s ease both;
-}
-@keyframes panelIn{ to{ transform: translateY(0); } }
-
-.drawer__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  padding:6px 6px 10px;
-}
-.drawer__title{ font-weight:1000; letter-spacing:.2px; }
-.drawer__close{
-  width:40px;
-  height:40px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.85);
-  color: var(--text);
-  cursor:pointer;
-}
-.drawer__list{
-  display:grid;
-  gap:10px;
-  padding:6px;
-}
-.drawer__item{
-  text-align:left;
-  padding:14px 14px;
-  border-radius:18px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.86);
-  color: var(--text);
-  cursor:pointer;
-  font-weight:950;
-  letter-spacing:.2px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.drawer__item:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.96);
-  border-color: rgba(11,18,32,.16);
-}
-
-/* Background */
-.bg{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:0;
-}
-.bg__grid{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(to right, rgba(11,18,32,.08) 1px, transparent 1px) 0 0/56px 56px,
-    linear-gradient(to bottom, rgba(11,18,32,.08) 1px, transparent 1px) 0 0/56px 56px;
-  opacity:.12;
-  mask-image: radial-gradient(60% 60% at 50% 40%, #000 55%, transparent 100%);
-}
-.bg__glow{
-  position:absolute;
-  width:620px; height:620px;
-  border-radius:999px;
-  filter: blur(52px);
-  opacity:.26;
-  mix-blend-mode: multiply;
-  animation: drift 14s ease-in-out infinite;
-}
-.bg__glow--a{
-  left:-180px; top:120px;
-  background: radial-gradient(circle at 30% 30%, rgba(173,120,255,.55), transparent 55%);
-}
-.bg__glow--b{
-  right:-220px; top:40px;
-  background: radial-gradient(circle at 40% 35%, rgba(90,205,255,.55), transparent 55%);
-  animation-duration: 17s;
-}
-.bg__glow--c{
-  left:26%; bottom:-240px;
-  background: radial-gradient(circle at 50% 45%, rgba(11,18,32,.10), transparent 60%);
-  animation-duration: 19s;
-  opacity:.20;
-}
-@keyframes drift{
-  0%{ transform: translate3d(0,0,0) scale(1); }
-  50%{ transform: translate3d(40px,-18px,0) scale(1.05); }
-  100%{ transform: translate3d(0,0,0) scale(1); }
-}
-.bg__noise{
-  position:absolute;
-  inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
-  opacity:.18;
-  mix-blend-mode: multiply;
-}
-
-/* Route overlay */
-.routeFx{
-  position:fixed;
-  inset:76px 0 0 0;
-  pointer-events:none;
-  z-index:5;
-  background: radial-gradient(60% 60% at 50% 40%, rgba(11,18,32,.08), rgba(11,18,32,0));
-  opacity:0;
-  transition: opacity .22s ease;
-}
-.routeFx.on{ opacity:1; }
-
-/* App and views */
-.app{
-  position:relative;
-  height:100%;
-  padding-top:76px;
-  z-index:2;
-}
-.view{
-  position:absolute;
-  inset:76px 0 0 0;
-  display:none;
-  overflow:hidden;
-}
-.view.is-active{
-  display:block;
-  animation: viewIn .26s ease both;
-}
-@keyframes viewIn{
-  from{ opacity:0; transform: translateY(10px); }
-  to{ opacity:1; transform: translateY(0); }
-}
-.view__scroll{
-  height:100%;
-  overflow:auto;
-  padding-bottom: 46px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(11,18,32,.25) transparent;
-}
-.view__scroll::-webkit-scrollbar{ width:10px; }
-.view__scroll::-webkit-scrollbar-thumb{ background: rgba(11,18,32,.18); border-radius:999px; }
-.view__scroll::-webkit-scrollbar-track{ background: transparent; }
-
-.wrap{
-  max-width:1240px;
-  margin:0 auto;
-  padding:26px 16px 22px;
-}
-
-.h1{ margin:0; font-size:46px; letter-spacing:.2px; line-height:1.05; }
-.h2{ margin:0; font-size:30px; letter-spacing:.2px; }
-.lead{ margin:14px 0 0; color: var(--muted); font-size:15px; line-height:1.75; }
-.p{ margin:0; color: var(--muted); font-size:14px; line-height:1.75; }
-.footnote{ margin-top:22px; text-align:center; font-size:12px; color: var(--muted2); }
-
-/* Hero */
-.hero{
-  display:grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap:16px;
-  align-items:stretch;
-}
-.hero__frame{
-  border-radius: var(--r3);
-  border:1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.70));
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  padding:18px;
-  display:grid;
-  grid-template-columns: 190px 1fr;
-  gap:16px;
-  align-items:center;
-}
-.hero__crest{
-  width:190px;
-  height:190px;
-  border-radius: 26px;
-  background: rgba(255,255,255,.90);
-  border:1px solid var(--line);
-  display:grid;
-  place-items:center;
-  box-shadow: var(--shadow2);
-}
-.hero__crestImg{
-  width:150px;
-  height:150px;
-  object-fit:contain;
-  filter: drop-shadow(0 10px 24px rgba(16,24,40,.18));
-  animation: floaty 4.6s ease-in-out infinite;
-}
-@keyframes floaty{
-  0%,100%{ transform: translateY(0); }
-  50%{ transform: translateY(-6px); }
-}
-.hero__kicker{
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-  font-weight:900;
-}
-.hero__actions{
-  margin-top:16px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-.btn{
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.86);
-  color: var(--text);
-  padding:12px 14px;
-  border-radius: 16px;
-  cursor:pointer;
-  font-weight:950;
-  letter-spacing:.2px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.btn:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.98);
-  border-color: rgba(11,18,32,.16);
-}
-.btn--ghost{
-  background: rgba(11,18,32,.04);
-}
-.btn--primary{
-  background: rgba(11,18,32,.08);
-  border-color: rgba(11,18,32,.18);
-}
-.hero__line{
-  margin-top:18px;
-  display:flex;
-  gap:10px;
-}
-.hero__line span{
-  height:10px;
-  flex:1;
-  border-radius:999px;
-  background: linear-gradient(90deg, rgba(173,120,255,.55), rgba(90,205,255,.55));
-  opacity:.22;
-  animation: pulse 2.8s ease-in-out infinite;
-}
-.hero__line span:nth-child(2){ opacity:.18; animation-delay:.12s; }
-.hero__line span:nth-child(3){ opacity:.14; animation-delay:.22s; }
-.hero__line span:nth-child(4){ opacity:.10; animation-delay:.34s; }
-@keyframes pulse{
-  0%{ transform: scaleX(.88); opacity:.16; }
-  50%{ transform: scaleX(1); opacity:.26; }
-  100%{ transform: scaleX(.88); opacity:.16; }
-}
-
-/* Right glass */
-.glass{
-  border-radius: var(--r3);
-  border:1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.72));
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  min-height: 100%;
-}
-.glass__top{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  padding:16px;
-  border-bottom: 1px solid var(--line);
-}
-.chip{
-  padding:10px 12px;
-  border-radius:999px;
-  background: rgba(11,18,32,.06);
-  border:1px solid rgba(11,18,32,.10);
-  font-size:12px;
-  color: rgba(11,18,32,.86);
-  letter-spacing:.18px;
-}
-.glass__body{ padding:16px; display:grid; gap:12px; }
-.glass__foot{
-  margin-top:auto;
-  padding:12px 16px;
-  border-top: 1px solid var(--line);
-  text-align:right;
-  font-size:12px;
-  color: var(--muted2);
-}
-.sectionTitle{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:13px;
-}
-.people2{ display:grid; gap:10px; }
-.personCard{
-  border-radius: 18px;
-  background: rgba(255,255,255,.80);
-  border:1px solid var(--line);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.personCard:hover{ transform: translateY(-2px); background: rgba(255,255,255,.92); }
-.personCard__name{ font-weight:1000; letter-spacing:.2px; }
-.personCard__role{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-.personCard__desc{ margin-top:10px; font-size:13px; color: var(--muted); line-height:1.7; }
-.divider{ height:1px; background: var(--line); margin:6px 0; }
-
-.quick{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:10px;
-}
-.quick__item{
-  border-radius: 18px;
-  background: rgba(11,18,32,.04);
-  border:1px solid var(--line);
-  padding:12px;
-}
-.quick__k{ font-size:12px; color: var(--muted2); letter-spacing:.18px; }
-.quick__v{ margin-top:6px; font-weight:1000; font-size:14px; letter-spacing:.2px; }
-
-/* Home grid */
-.homeGrid{
-  margin-top:16px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:14px;
-}
-.card{
-  border-radius: var(--r);
-  background: rgba(255,255,255,.82);
-  border:1px solid var(--line);
-  box-shadow: var(--shadow2);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.card:hover{ transform: translateY(-2px); background: rgba(255,255,255,.94); }
-.card__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  margin-bottom:10px;
-}
-.card__title{ font-weight:1000; letter-spacing:.2px; font-size:13px; }
-.dot{
-  width:8px; height:8px;
-  border-radius:999px;
-  background: rgba(11,18,32,.45);
-  box-shadow: 0 0 0 8px rgba(11,18,32,.06);
-}
-.miniRow{
-  margin-top:12px;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:10px;
-}
-.mini{
-  border-radius: 18px;
-  background: rgba(11,18,32,.04);
-  border:1px solid var(--line);
-  padding:12px;
-}
-.mini__k{ font-size:12px; color: var(--muted2); letter-spacing:.18px; }
-.mini__v{ margin-top:6px; font-weight:1000; letter-spacing:.2px; }
-.bars{ margin-top:12px; display:flex; gap:10px; }
-.bars span{
-  height:10px; flex:1;
-  border-radius:999px;
-  background: linear-gradient(90deg, rgba(173,120,255,.55), rgba(90,205,255,.55));
-  opacity:.20;
-}
-.stamp{
-  margin-top:14px;
-  border-radius: 20px;
-  background: rgba(11,18,32,.04);
-  border:1px solid var(--line);
-  padding:14px;
-  display:grid;
-  place-items:center;
-}
-.stamp__big{ font-weight:1000; font-size:26px; letter-spacing:.3px; }
-.stamp__small{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-
-/* Page Head */
-.pageHead{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:14px;
-  margin-bottom:14px;
-}
-.pageHead__kicker{
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-  font-weight:900;
-}
-.pageHead__sub{
-  margin-top:8px;
-  font-size:12px;
-  color: var(--muted2);
-  letter-spacing:.22px;
-}
-.pageHead__badge{
-  padding:10px 12px;
-  border-radius:999px;
-  background: rgba(11,18,32,.06);
-  border:1px solid rgba(11,18,32,.10);
-  font-size:12px;
-  color: rgba(11,18,32,.86);
-  letter-spacing:.2px;
-}
-.pageHead__badge--hbn{}
-
-/* Panels and layout */
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-  align-items:stretch;
-}
-.panel{
-  border-radius: var(--r3);
-  background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.72));
-  border:1px solid var(--line);
-  box-shadow: var(--shadow);
-  padding:16px;
-  display:grid;
-  gap:12px;
-  position:relative;
-  overflow:hidden;
-}
-.panel::after{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background:
-    radial-gradient(520px 280px at 20% 20%, rgba(173,120,255,.12), transparent 60%),
-    radial-gradient(520px 280px at 80% 40%, rgba(90,205,255,.10), transparent 60%);
-  opacity:.85;
-  pointer-events:none;
-}
-.panel > *{ position:relative; z-index:1; }
-.panel__title{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:14px;
-}
-.panel--deep{
-  background: rgba(255,255,255,.78);
-}
-.flow{ display:grid; gap:10px; }
-.step{
-  border-radius:18px;
-  background: rgba(11,18,32,.04);
-  border:1px solid var(--line);
-  padding:12px;
-  transition: transform .18s ease, background .18s ease;
-}
-.step:hover{ transform: translateY(-2px); background: rgba(11,18,32,.06); }
-.step__k{ font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-.step__v{ margin-top:6px; font-weight:950; letter-spacing:.18px; }
-
-.wide{
-  margin-top:14px;
-  border-radius: var(--r3);
-  background: rgba(255,255,255,.82);
-  border:1px solid var(--line);
-  box-shadow: var(--shadow2);
-  padding:16px;
-}
-.wide__head{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:12px;
-}
-.wide__title{ font-weight:1000; letter-spacing:.2px; }
-.wide__line{
-  height:1px; flex:1;
-  background: linear-gradient(90deg, var(--line), rgba(11,18,32,0));
-}
-.peopleGrid{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:12px;
-}
-.person{
-  border-radius: 22px;
-  background: rgba(255,255,255,.86);
-  border:1px solid var(--line);
-  padding:14px;
-  transition: transform .18s ease, background .18s ease;
-}
-.person:hover{ transform: translateY(-2px); background: rgba(255,255,255,.96); }
-.person__name{ font-weight:1000; letter-spacing:.2px; }
-.person__role{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-.person__desc{ margin-top:10px; font-size:13px; color: var(--muted); line-height:1.7; }
-
-.linkBtn{
-  display:inline-block;
-  padding:12px 14px;
-  border-radius: 16px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.86);
-  color: var(--text);
-  text-decoration:none;
-  font-weight:1000;
-  letter-spacing:.2px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.linkBtn:hover{ transform: translateY(-2px); background: rgba(255,255,255,.98); border-color: rgba(11,18,32,.16); }
-
-/* HBN logos row */
-.logoRow{ display:grid; gap:10px; }
-.logoRow__item{
-  display:flex; align-items:center; gap:12px;
-  border-radius:18px;
-  background: rgba(11,18,32,.04);
-  border:1px solid var(--line);
-  padding:12px;
-}
-.logoRow__img{
-  width:56px; height:56px;
-  object-fit:cover;
-  border-radius:16px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.90);
-}
-.logoRow__name{ font-weight:1000; letter-spacing:.2px; }
-.logoRow__sub{ margin-top:6px; font-size:12px; color: var(--muted2); letter-spacing:.2px; }
-
-/* Partners */
-.partnersGrid{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:12px;
-}
-.partnerCard{
-  border-radius: 22px;
-  background: rgba(255,255,255,.86);
-  border:1px solid var(--line);
-  box-shadow: var(--shadow2);
-  padding:14px;
-  display:grid;
-  place-items:center;
-  gap:10px;
-  text-align:center;
-  transition: transform .18s ease, background .18s ease;
-}
-.partnerCard:hover{ transform: translateY(-2px); background: rgba(255,255,255,.96); }
-.partnerCard__logo{
-  width:84px; height:84px;
-  object-fit:contain;
-  border-radius: 999px;
-  background: rgba(255,255,255,.92);
-  border:1px solid var(--line);
-}
-.partnerCard__name{ font-weight:1000; letter-spacing:.2px; font-size:13px; }
-.partnerCard__note{ font-size:12px; color: var(--muted2); }
-.partnerCard--textOnly .partnerCard__logo{ display:none; }
-
-/* Staff list */
-.team{
-  margin-top:12px;
-  display:grid;
-  gap:10px;
-}
-.teamRow{
-  border-radius: 18px;
-  background: rgba(11,18,32,.04);
-  border:1px solid var(--line);
-  padding:12px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  transition: transform .18s ease, background .18s ease;
-}
-.teamRow:hover{ transform: translateY(-2px); background: rgba(11,18,32,.06); }
-.teamRow__name{ font-weight:1000; letter-spacing:.2px; }
-.teamRow__role{ font-size:12px; color: var(--muted2); letter-spacing:.22px; font-weight:900; }
-
-/* Contact */
-.contactGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-  align-items:stretch;
-}
-.panel--contact{ background: rgba(255,255,255,.78); }
-.contactCards{ display:grid; gap:10px; margin-top:12px; }
-.contactCard{
-  border-radius: 22px;
-  background: rgba(255,255,255,.86);
-  border:1px solid var(--line);
-  box-shadow: var(--shadow2);
-  padding:14px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  transition: transform .18s ease, background .18s ease;
-}
-.contactCard:hover{ transform: translateY(-2px); background: rgba(255,255,255,.96); }
-.contactCard__k{ font-size:12px; color: var(--muted2); letter-spacing:.22px; font-weight:900; }
-.contactCard__v{ font-weight:1000; letter-spacing:.2px; }
-.contactPill{
-  padding:10px 12px;
-  border-radius:999px;
-  background: rgba(11,18,32,.06);
-  border:1px solid rgba(11,18,32,.10);
-  font-size:12px;
-  font-weight:900;
-}
-
-/* Assistant */
-.assistant{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width: 320px;
-  border-radius: 22px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.88);
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  z-index:90;
-}
-.assistant.is-min .assistant__body{ display:none; }
-.assistant__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 12px;
-  border-bottom:1px solid var(--line);
-}
-.assistant__title{
-  font-weight:1000;
-  letter-spacing:.2px;
-  font-size:13px;
-}
-.assistant__min{
-  width:40px; height:34px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.90);
-  cursor:pointer;
-}
-.assistant__body{ display:grid; gap:10px; padding:12px; }
-.assistant__log{
-  height: 180px;
-  overflow:auto;
-  border-radius: 16px;
-  border:1px solid var(--line);
-  background: rgba(11,18,32,.03);
-  padding:10px;
-}
-.msg{ display:flex; margin:8px 0; }
-.msg--bot{ justify-content:flex-start; }
-.msg--user{ justify-content:flex-end; }
-.msg__bubble{
-  max-width: 86%;
-  padding:10px 12px;
-  border-radius: 14px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.92);
-  font-size:13px;
-  line-height:1.55;
-}
-.msg--user .msg__bubble{
-  background: rgba(11,18,32,.08);
-}
-.assistant__form{
-  display:flex;
-  gap:10px;
-}
-.assistant__input{
-  flex:1;
-  height:42px;
-  border-radius: 14px;
-  border:1px solid var(--line);
-  padding:0 12px;
-  background: rgba(255,255,255,.96);
-  outline:none;
-}
-.assistant__input:focus{ box-shadow: 0 0 0 4px rgba(90,205,255,.18); }
-.assistant__send{
-  height:42px;
-  padding:0 12px;
-  border-radius: 14px;
-  border:1px solid var(--line);
-  background: rgba(11,18,32,.08);
-  cursor:pointer;
-  font-weight:1000;
-}
-
-/* Responsive */
-@media (max-width: 1080px){
-  .hero{ grid-template-columns: 1fr; }
-  .homeGrid{ grid-template-columns: 1fr; }
-  .grid2{ grid-template-columns: 1fr; }
-  .peopleGrid{ grid-template-columns: 1fr; }
-  .partnersGrid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 860px){
-  .nav{ display:none; }
-  .burger{ display:flex; }
-  .contactGrid{ grid-template-columns: 1fr; }
-  .partnersGrid{ grid-template-columns: 1fr; }
-}
-```
