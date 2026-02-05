@@ -1,16 +1,15 @@
-<!-- index.html — Crystal Haze Holding | İdarəetmə Platforması (Dinamik Sistem, 2026) -->
 <!doctype html>
 <html lang="az">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Crystal Haze Holding — İdarəetmə Platforması</title>
-  <meta name="description" content="Crystal Haze Holding — bölmələr, tapşırıqlar, satış, ortaqlar, sənədlər və idarəetmə paneli." />
+  <meta name="description" content="Crystal Haze Holding idarəetmə platforması: bölmələr, tapşırıqlar, satış, ortaqlar, sənədlər." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ÜST PANEL -->
+  <!-- Üst Panel -->
   <header class="top" role="banner">
     <div class="top__inner">
       <a class="brand" href="#panel" data-route="panel" aria-label="Crystal Haze Holding">
@@ -21,10 +20,10 @@
         </div>
       </a>
 
-      <div class="top__mid" aria-label="Axtarış">
+      <div class="top__search">
         <div class="search">
           <span class="search__ico" aria-hidden="true">⌕</span>
-          <input id="globalSearch" class="search__in" type="search" placeholder="Axtar: tapşırıq, məhsul, ortaq, sənəd…" autocomplete="off" />
+          <input id="globalSearch" class="search__in" type="search" placeholder="Axtar: tapşırıq, məhsul, ortaq…" autocomplete="off" />
         </div>
       </div>
 
@@ -39,208 +38,130 @@
       </nav>
 
       <div class="top__right">
-        <button class="iconBtn2" type="button" data-action="tema" aria-label="Tema dəyiş">🌓</button>
-        <button class="top__burger" type="button" aria-label="Menyu" aria-expanded="false">☰</button>
+        <button class="iconBtn" type="button" data-action="tema" aria-label="Tema">🌓</button>
+        <button class="burger" type="button" aria-label="Menyu" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- MOBİL MENYU -->
-  <div class="mOverlay" aria-hidden="true">
-    <div class="mOverlay__panel" role="dialog" aria-modal="true" aria-label="Menyu" tabindex="-1">
-      <div class="mOverlay__head">
-        <div class="mOverlay__title">Crystal Haze Holding</div>
-        <button class="mOverlay__close" type="button" aria-label="Bağla">✕</button>
+  <!-- Mobil menyu -->
+  <div class="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menyu" tabindex="-1">
+      <div class="drawer__head">
+        <div class="drawer__title">Crystal Haze Holding</div>
+        <button class="drawer__close" type="button" aria-label="Bağla">✕</button>
       </div>
 
-      <div class="mOverlay__search" aria-label="Axtarış">
+      <div class="drawer__search">
         <div class="search search--mobile">
           <span class="search__ico" aria-hidden="true">⌕</span>
           <input id="mobileSearch" class="search__in" type="search" placeholder="Axtar…" autocomplete="off" />
         </div>
       </div>
 
-      <div class="mOverlay__list" role="list">
-        <button class="mOverlay__item" type="button" data-route="panel">Panel</button>
-        <button class="mOverlay__item" type="button" data-route="bolmeler">Bölmələr</button>
-        <button class="mOverlay__item" type="button" data-route="tapsiriqlar">Tapşırıqlar</button>
-        <button class="mOverlay__item" type="button" data-route="sales">Sales &amp; Market</button>
-        <button class="mOverlay__item" type="button" data-route="ortaqlar">Ortaqlar</button>
-        <button class="mOverlay__item" type="button" data-route="senedler">Sənədlər</button>
-        <button class="mOverlay__item" type="button" data-route="ayarlar">Ayarlar</button>
+      <div class="drawer__list" role="list">
+        <button class="drawer__item" type="button" data-route="panel">Panel</button>
+        <button class="drawer__item" type="button" data-route="bolmeler">Bölmələr</button>
+        <button class="drawer__item" type="button" data-route="tapsiriqlar">Tapşırıqlar</button>
+        <button class="drawer__item" type="button" data-route="sales">Sales &amp; Market</button>
+        <button class="drawer__item" type="button" data-route="ortaqlar">Ortaqlar</button>
+        <button class="drawer__item" type="button" data-route="senedler">Sənədlər</button>
+        <button class="drawer__item" type="button" data-route="ayarlar">Ayarlar</button>
       </div>
 
-      <div class="mOverlay__foot">
-        <button class="btn btn--primary w100" type="button" data-action="tema">Tema dəyiş</button>
+      <div class="drawer__foot">
         <div class="miniFoot">© <span class="year">2026</span> Crystal Haze Holding</div>
       </div>
     </div>
   </div>
 
-  <!-- PLATFORM -->
-  <main class="app" role="main" data-theme="dark">
-    <!-- SƏHİFƏ BAŞLIĞI -->
-    <section class="crumb" aria-label="Səhifə başlığı">
-      <div class="crumb__inner">
-        <div class="crumb__left">
-          <div class="crumb__k">Səhifə</div>
-          <div class="crumb__v" id="pageTitle">Panel</div>
-        </div>
-        <div class="crumb__right">
-          <div class="pill">
-            <img class="pill__logo" src="assets/chh_logo.png" alt="CHH" />
-            <span>CHH</span>
-          </div>
-          <div class="pill pill--soft">
-            <span>İl:</span>&nbsp;<strong class="year">2026</strong>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Arxa fon -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__noise"></div>
+  </div>
 
+  <!-- Başlıq (səhifə adı) -->
+  <section class="crumb" aria-label="Səhifə">
+    <div class="crumb__inner">
+      <div class="crumb__left">
+        <div class="crumb__k">Səhifə</div>
+        <div class="crumb__v" id="pageTitle">Panel</div>
+      </div>
+      <div class="crumb__right">
+        <div class="pill">
+          <img class="pill__logo" src="assets/chh_logo.png" alt="CHH" />
+          <span>CHH</span>
+        </div>
+        <div class="pill pill--soft">İl: <strong class="year">2026</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="app" role="main">
     <!-- PANEL -->
     <section class="view is-active" data-view="panel">
       <div class="view__scroll">
         <div class="wrap">
-          <div class="gridA">
-            <article class="panel">
-              <div class="panel__head">
+          <div class="layout">
+            <section class="card card--big">
+              <div class="card__head">
                 <div>
                   <div class="kicker">İdarəetmə</div>
-                  <div class="h1">Panel</div>
-                  <div class="sub">Holding əməliyyatları, status və sürətli idarəetmə.</div>
+                  <h1 class="h1">Panel</h1>
+                  <p class="sub">Status, liderlik, bölmələr və sistem əməliyyatları.</p>
                 </div>
-                <div class="badge">
+                <div class="seal">
                   <img src="assets/chh_logo.png" alt="CHH" />
-                  <span>Rəsmi</span>
+                  <div>
+                    <div class="seal__t">Rəsmi sistem</div>
+                    <div class="seal__s">2026</div>
+                  </div>
                 </div>
               </div>
 
-              <div class="divider"></div>
-
-              <div class="stats" aria-label="Tapşırıq statistikası">
-                <div class="stat">
-                  <div class="stat__k">Hamısı</div>
-                  <div class="stat__v" id="statAll">0</div>
-                </div>
-                <div class="stat">
-                  <div class="stat__k">Gözləyir</div>
-                  <div class="stat__v" id="statTodo">0</div>
-                </div>
-                <div class="stat">
-                  <div class="stat__k">İcrada</div>
-                  <div class="stat__v" id="statDoing">0</div>
-                </div>
-                <div class="stat">
-                  <div class="stat__k">Bitdi</div>
-                  <div class="stat__v" id="statDone">0</div>
-                </div>
+              <div class="stats">
+                <div class="stat"><div class="stat__k">Tapşırıq</div><div class="stat__v" id="statAll">0</div></div>
+                <div class="stat"><div class="stat__k">Gözləyir</div><div class="stat__v" id="statTodo">0</div></div>
+                <div class="stat"><div class="stat__k">İcrada</div><div class="stat__v" id="statDoing">0</div></div>
+                <div class="stat"><div class="stat__k">Bitdi</div><div class="stat__v" id="statDone">0</div></div>
               </div>
 
               <div class="btnRow">
-                <button class="btn btn--primary" type="button" data-route="tapsiriqlar">Tapşırıqları aç</button>
+                <button class="btn btn--primary" type="button" data-route="tapsiriqlar">Tapşırıqlar</button>
                 <button class="btn" type="button" data-route="bolmeler">Bölmələr</button>
                 <button class="btn" type="button" data-route="sales">Sales &amp; Market</button>
                 <button class="btn" type="button" data-route="ortaqlar">Ortaqlar</button>
               </div>
 
-              <div class="divider divider--big"></div>
-
-              <div class="panel__head">
+              <div class="split2">
                 <div>
-                  <div class="kicker">Struktur</div>
-                  <div class="h2">Bölmələr</div>
-                  <div class="sub">Bölmələr sistemdə dinamik idarə olunur.</div>
+                  <div class="sectionT">Liderlər</div>
+                  <div class="list" id="leadersList"></div>
                 </div>
-                <button class="btn btn--sm btn--primary" type="button" data-route="bolmeler">Aç</button>
-              </div>
-
-              <div class="cards cards--mini" id="panelDivisionCards" aria-label="Bölmələr kartları"></div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__head">
                 <div>
-                  <div class="kicker">Liderlik</div>
-                  <div class="h2">Liderlər</div>
-                  <div class="sub">Holding və bölmə liderləri.</div>
+                  <div class="sectionT">Son log</div>
+                  <div class="list" id="logList"></div>
                 </div>
-                <button class="btn btn--sm btn--primary" type="button" data-action="lider-idare">Lider təyini</button>
               </div>
+            </section>
+
+            <aside class="card">
+              <div class="sectionT">Bölmələr (sürətli baxış)</div>
+              <div class="cardsMini" id="panelDivisionCards"></div>
 
               <div class="divider"></div>
 
-              <div class="list" id="leadersList" aria-label="Lider siyahısı"></div>
-
-              <div class="divider"></div>
-
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Son əməliyyatlar</div>
-                  <div class="h2">Log</div>
-                  <div class="sub">Sistemdəki son dəyişikliklər.</div>
-                </div>
-                <button class="btn btn--sm" type="button" data-route="senedler">Hamısı</button>
+              <div class="sectionT">Daxili qeyd</div>
+              <textarea id="quickNote" class="textarea" rows="6" placeholder="Qeyd…"></textarea>
+              <div class="btnRow btnRow--right">
+                <button class="btn btn--primary" type="button" data-action="note-save">Yadda saxla</button>
               </div>
 
-              <div class="divider"></div>
-              <div class="list" id="logList" aria-label="Log siyahısı"></div>
-
-              <div class="foot">
-                <div class="miniFoot">© <span class="year">2026</span> Crystal Haze Holding</div>
-              </div>
-            </article>
-          </div>
-
-          <div class="gridB">
-            <article class="panel">
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Qeyd</div>
-                  <div class="h2">Daxili qeyd</div>
-                  <div class="sub">Qısa qeyd saxla və sistemdə istifadə et.</div>
-                </div>
-                <button class="btn btn--sm btn--primary" type="button" data-action="note-save">Yadda saxla</button>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="field">
-                <label class="field__k" for="quickNote">Qeyd</label>
-                <textarea id="quickNote" class="textarea" rows="6" placeholder="Daxili qeyd…"></textarea>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Sürətli idarə</div>
-                  <div class="h2">Əməliyyatlar</div>
-                  <div class="sub">Əsas idarəetmə düymələri.</div>
-                </div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="quickGrid" aria-label="Sürətli düymələr">
-                <button class="qbtn" type="button" data-route="tapsiriqlar">
-                  <div class="qbtn__k">Tapşırıq</div>
-                  <div class="qbtn__v">Əlavə et / idarə et</div>
-                </button>
-                <button class="qbtn" type="button" data-route="sales">
-                  <div class="qbtn__k">Məhsul</div>
-                  <div class="qbtn__v">Portfeli idarə et</div>
-                </button>
-                <button class="qbtn" type="button" data-route="ortaqlar">
-                  <div class="qbtn__k">Ortaq</div>
-                  <div class="qbtn__v">Siyahı və qeydlər</div>
-                </button>
-                <button class="qbtn" type="button" data-route="senedler">
-                  <div class="qbtn__k">Sənəd</div>
-                  <div class="qbtn__v">Log və sənədlər</div>
-                </button>
-              </div>
-            </article>
+              <div class="footMini">© <span class="year">2026</span> Crystal Haze Holding</div>
+            </aside>
           </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
@@ -255,16 +176,25 @@
           <div class="pageHead">
             <div>
               <div class="kicker">Struktur</div>
-              <div class="h1">Bölmələr</div>
-              <div class="sub">Bölmələr üzrə idarə: lider, iş axını, daxili tapşırıqlar.</div>
+              <h2 class="h1">Bölmələr</h2>
+              <p class="sub">Bölməyə kliklə — içini aç, lideri gör, bölmə tapşırıqlarını idarə et.</p>
             </div>
             <div class="pageHead__actions">
               <button class="btn btn--primary" type="button" data-action="division-add">+ Bölmə</button>
-              <button class="btn" type="button" data-action="lider-idare">Lider təyini</button>
+              <button class="btn" type="button" data-action="leaders-manage">Lider idarəetməsi</button>
             </div>
           </div>
 
-          <div class="cards" id="divisionsGrid" aria-label="Bölmələr kartları"></div>
+          <div class="twoCol">
+            <div class="cards" id="divisionsGrid"></div>
+
+            <div class="card" id="divisionDetail">
+              <div class="empty">
+                <div class="empty__t">Bölmə seç</div>
+                <div class="empty__s">Sol tərəfdən bir bölməyə klik et.</div>
+              </div>
+            </div>
+          </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
         </div>
@@ -278,131 +208,73 @@
           <div class="pageHead">
             <div>
               <div class="kicker">İcra</div>
-              <div class="h1">Tapşırıqlar</div>
-              <div class="sub">Status, prioritet, deadline, məsul və bölmə üzrə idarə.</div>
+              <h2 class="h1">Tapşırıqlar</h2>
+              <p class="sub">Bölmə, status, prioritet üzrə səliqəli idarə.</p>
             </div>
-
             <div class="pageHead__actions">
-              <div class="fieldInline">
-                <label class="fieldInline__k" for="taskDivisionFilter">Bölmə</label>
-                <select id="taskDivisionFilter" class="select select--inline"></select>
-              </div>
-
+              <select id="taskDivisionFilter" class="select"></select>
+              <select id="taskStatusFilter" class="select">
+                <option value="all">Bütün statuslar</option>
+                <option value="todo">Gözləyir</option>
+                <option value="doing">İcrada</option>
+                <option value="done">Bitdi</option>
+              </select>
               <button class="btn btn--primary" type="button" data-action="task-add">+ Tapşırıq</button>
-
-              <div class="split">
-                <button class="btn" type="button" data-action="export">Export</button>
-                <label class="btn" for="importFile" style="cursor:pointer;">Import</label>
-                <input id="importFile" type="file" accept="application/json" hidden />
-              </div>
             </div>
           </div>
 
-          <section class="kanban" aria-label="Kanban">
+          <div class="kanban">
             <div class="kcol">
-              <div class="kcol__head">
-                <div class="kcol__t">Gözləyir</div>
-                <div class="kcol__c" id="countTodo">0</div>
-              </div>
+              <div class="kcol__head"><span>Gözləyir</span><span id="countTodo">0</span></div>
               <div class="kcol__body" id="colTodo"></div>
             </div>
-
             <div class="kcol">
-              <div class="kcol__head">
-                <div class="kcol__t">İcrada</div>
-                <div class="kcol__c" id="countDoing">0</div>
-              </div>
+              <div class="kcol__head"><span>İcrada</span><span id="countDoing">0</span></div>
               <div class="kcol__body" id="colDoing"></div>
             </div>
-
             <div class="kcol">
-              <div class="kcol__head">
-                <div class="kcol__t">Bitdi</div>
-                <div class="kcol__c" id="countDone">0</div>
-              </div>
+              <div class="kcol__head"><span>Bitdi</span><span id="countDone">0</span></div>
               <div class="kcol__body" id="colDone"></div>
             </div>
-          </section>
+          </div>
 
-          <div class="divider divider--big"></div>
+          <div class="divider"></div>
 
-          <section class="tableWrap" aria-label="Tapşırıq cədvəli">
-            <div class="table">
-              <div class="table__head table__head--tasks" id="tasksHead">
-                <div>Tapşırıq</div>
-                <div>Bölmə</div>
-                <div>Məsul</div>
-                <div>Deadline</div>
-                <div>Prioritet</div>
-                <div>Status</div>
-                <div>Əməliyyat</div>
-              </div>
-              <div class="table__body" id="tasksBody"></div>
+          <div class="table">
+            <div class="table__head table__head--tasks">
+              <div>Tapşırıq</div><div>Bölmə</div><div>Məsul</div><div>Deadline</div><div>Prioritet</div><div>Status</div><div>Əməliyyat</div>
             </div>
-          </section>
+            <div class="table__body" id="tasksBody"></div>
+          </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
         </div>
       </div>
     </section>
 
-    <!-- SALES & MARKET -->
+    <!-- SALES -->
     <section class="view" data-view="sales">
       <div class="view__scroll">
         <div class="wrap">
           <div class="pageHead">
             <div>
               <div class="kicker">Satış sistemi</div>
-              <div class="h1">Sales &amp; Market</div>
-              <div class="sub">Nəşr məhsulları, CHH markalı məhsullar, ortaqların məhsulları və əlavə satış istiqamətləri.</div>
+              <h2 class="h1">Sales &amp; Market</h2>
+              <p class="sub">Nəşr məhsulları · CHH markalı · Ortaqların məhsulları · əlavə satış istiqamətləri.</p>
             </div>
             <div class="pageHead__actions">
               <button class="btn btn--primary" type="button" data-action="product-add">+ Məhsul</button>
             </div>
           </div>
 
-          <div class="gridC">
-            <article class="panel">
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Portfel</div>
-                  <div class="h2">Məhsul portfeli</div>
-                  <div class="sub">Məhsul tipləri və idarəetmə qeydləri.</div>
-                </div>
-                <div class="badge">
-                  <img src="assets/chh_logo.png" alt="CHH" />
-                  <span>CHH</span>
-                </div>
+          <div class="card">
+            <div class="sectionT">Məhsullar</div>
+            <div class="table">
+              <div class="table__head table__head--products">
+                <div>Məhsul</div><div>Tip</div><div>Status</div><div>Qeyd</div><div>Əməliyyat</div>
               </div>
-
-              <div class="divider"></div>
-
-              <div class="flow" id="salesTypes"></div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Siyahı</div>
-                  <div class="h2">Məhsullar</div>
-                  <div class="sub">Məhsul əlavə et, tip seç, qeyd yaz, statusu idarə et.</div>
-                </div>
-                <button class="btn btn--sm btn--primary" type="button" data-action="product-add">+ Məhsul</button>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="table">
-                <div class="table__head table__head--products" id="productHead">
-                  <div>Məhsul</div>
-                  <div>Tip</div>
-                  <div>Status</div>
-                  <div>Qeyd</div>
-                  <div>Əməliyyat</div>
-                </div>
-                <div class="table__body" id="productList"></div>
-              </div>
-            </article>
+              <div class="table__body" id="productList"></div>
+            </div>
           </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
@@ -417,40 +289,23 @@
           <div class="pageHead">
             <div>
               <div class="kicker">Şəbəkə</div>
-              <div class="h1">Ortaqlar</div>
-              <div class="sub">Ortaq siyahısı, status, əlaqə və daxili qeydlər.</div>
+              <h2 class="h1">Ortaqlar</h2>
+              <p class="sub">Ortaq siyahısı · status · əlaqə · qeydlər.</p>
             </div>
             <div class="pageHead__actions">
               <button class="btn btn--primary" type="button" data-action="partner-add">+ Ortaq</button>
             </div>
           </div>
 
-          <article class="panel">
-            <div class="panel__head">
-              <div>
-                <div class="kicker">Siyahı</div>
-                <div class="h2">Ortaqlar</div>
-                <div class="sub">Ortaqları sistemdə idarə et.</div>
-              </div>
-              <div class="badge">
-                <img src="assets/chh_logo.png" alt="CHH" />
-                <span>CHH</span>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
+          <div class="card">
+            <div class="sectionT">Ortaqlar</div>
             <div class="table">
-              <div class="table__head table__head--partners" id="partnerHead">
-                <div>Ad</div>
-                <div>Status</div>
-                <div>Əlaqə</div>
-                <div>Qeyd</div>
-                <div>Əməliyyat</div>
+              <div class="table__head table__head--partners">
+                <div>Ad</div><div>Status</div><div>Əlaqə</div><div>Qeyd</div><div>Əməliyyat</div>
               </div>
               <div class="table__body" id="partnerList"></div>
             </div>
-          </article>
+          </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
         </div>
@@ -464,28 +319,21 @@
           <div class="pageHead">
             <div>
               <div class="kicker">Sistem</div>
-              <div class="h1">Sənədlər</div>
-              <div class="sub">Loglar, daxili qeydlər və ixrac faylları.</div>
+              <h2 class="h1">Sənədlər</h2>
+              <p class="sub">Log və daxili qeydlər.</p>
             </div>
             <div class="pageHead__actions">
-              <button class="btn" type="button" data-action="export">Export</button>
               <button class="btn btn--primary" type="button" data-action="log-add">+ Qeyd</button>
+              <button class="btn" type="button" data-action="export">Export</button>
+              <label class="btn" for="importFile">Import</label>
+              <input id="importFile" type="file" accept="application/json" hidden />
             </div>
           </div>
 
-          <article class="panel">
-            <div class="panel__head">
-              <div>
-                <div class="kicker">Log</div>
-                <div class="h2">Qeydlər</div>
-                <div class="sub">Sistemdəki əməliyyatlar və qeydlər.</div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="list" id="docsList" aria-label="Qeydlər"></div>
-          </article>
+          <div class="card">
+            <div class="sectionT">Qeydlər</div>
+            <div class="list" id="docsList"></div>
+          </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
         </div>
@@ -499,65 +347,20 @@
           <div class="pageHead">
             <div>
               <div class="kicker">Sistem</div>
-              <div class="h1">Ayarlar</div>
-              <div class="sub">Lider təyini, export/import və sıfırlama.</div>
+              <h2 class="h1">Ayarlar</h2>
+              <p class="sub">Lider idarəetməsi, import/export, sıfırlama.</p>
             </div>
             <div class="pageHead__actions">
-              <button class="btn btn--primary" type="button" data-action="lider-idare">Lider təyini</button>
+              <button class="btn btn--primary" type="button" data-action="leaders-manage">Lider idarəetməsi</button>
               <button class="btn" type="button" data-action="reset">Sıfırla</button>
             </div>
           </div>
 
-          <div class="gridC">
-            <article class="panel">
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Məlumat</div>
-                  <div class="h2">Holding</div>
-                  <div class="sub">Platforma parametrləri.</div>
-                </div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="kv">
-                <div class="kv__k">İl</div>
-                <div class="kv__v"><span class="year">2026</span></div>
-              </div>
-              <div class="kv">
-                <div class="kv__k">Loqo</div>
-                <div class="kv__v">assets/chh_logo.png</div>
-              </div>
-              <div class="kv">
-                <div class="kv__k">Yaddaş</div>
-                <div class="kv__v">Brauzer yaddaşı</div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="btnCol">
-                <button class="btn" type="button" data-action="export">Export</button>
-                <label class="btn" for="importFile2" style="cursor:pointer;">Import</label>
-                <input id="importFile2" type="file" accept="application/json" hidden />
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__head">
-                <div>
-                  <div class="kicker">Tema</div>
-                  <div class="h2">Görünüş</div>
-                  <div class="sub">Tema və interfeys ayarları.</div>
-                </div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="btnCol">
-                <button class="btn btn--primary" type="button" data-action="tema">Tema dəyiş</button>
-                <button class="btn" type="button" data-action="compact">Kompakt görünüş</button>
-              </div>
-            </article>
+          <div class="card">
+            <div class="sectionT">Məlumat</div>
+            <div class="kv"><div class="kv__k">İl</div><div class="kv__v"><span class="year">2026</span></div></div>
+            <div class="kv"><div class="kv__k">Loqo</div><div class="kv__v">assets/chh_logo.png</div></div>
+            <div class="kv"><div class="kv__k">Yaddaş</div><div class="kv__v">Brauzer yaddaşı</div></div>
           </div>
 
           <footer class="pageFoot">© <span class="year">2026</span> Crystal Haze Holding</footer>
@@ -566,27 +369,25 @@
     </section>
   </main>
 
-  <!-- MODAL -->
+  <!-- Modal -->
   <div class="modal" aria-hidden="true">
     <div class="modal__box" role="dialog" aria-modal="true" aria-label="Pəncərə" tabindex="-1">
       <div class="modal__head">
         <div class="modal__title" id="modalTitle">—</div>
         <button class="modal__close" type="button" aria-label="Bağla">✕</button>
       </div>
-      <div class="modalContent" id="modalContent"></div>
+      <div class="modal__body" id="modalBody"></div>
     </div>
   </div>
 
-  <!-- AI ASSISTANT: CRYSIA -->
+  <!-- AI Assistant -->
   <aside class="assistant" aria-label="Crysia">
     <div class="assistant__head">
       <div class="assistant__title">Crysia</div>
       <button class="assistant__min" type="button" aria-label="Kiçilt">—</button>
     </div>
-
     <div class="assistant__body">
       <div class="assistant__log" id="aiLog" aria-live="polite"></div>
-
       <form class="assistant__form" id="aiForm" autocomplete="off">
         <input class="assistant__input" id="aiInput" type="text" placeholder="Mesaj yaz…" />
         <button class="assistant__send" type="submit">Göndər</button>
