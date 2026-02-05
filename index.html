@@ -1,573 +1,257 @@
-<!-- index.html — CHH NEW SYSTEM ONLY (Academy / Volunteer / Sales & Market + Staff + Contact)
-     Only CHH logo: assets/chh_logo.png
--->
 <!doctype html>
 <html lang="az">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crystal Haze Holding</title>
-  <meta name="description" content="Crystal Haze Holding — Academy · Volunteer · Sales & Market. Official platform." />
+  <meta name="description" content="Crystal Haze Holding — Academy · Volunteer · Sales & Market" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Top Bar -->
-  <header class="topbar" role="banner">
-    <div class="topbar__inner">
-      <a class="brand" href="#home" data-route="home" aria-label="Crystal Haze Holding">
-        <img class="brand__logo" src="assets/chh_logo.png" alt="Crystal Haze Holding Logo" />
-        <div class="brand__text">
-          <div class="brand__name">Crystal Haze Holding</div>
-          <div class="brand__sub">Gələcək buradan başlayır</div>
-        </div>
-      </a>
 
-      <nav class="nav" aria-label="Primary">
-        <button class="nav__btn is-active" type="button" data-route="home" aria-current="page">Home</button>
-        <button class="nav__btn" type="button" data-route="academy">Academy</button>
-        <button class="nav__btn" type="button" data-route="volunteer">Volunteer</button>
-        <button class="nav__btn" type="button" data-route="sales">Sales & Market</button>
-        <button class="nav__btn" type="button" data-route="staff">Staff</button>
-        <button class="nav__btn" type="button" data-route="contact">Contact</button>
-      </nav>
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="#home" data-route="home">
+      <img src="assets/chh_logo.png" class="brand__logo" alt="CHH" />
+      <div class="brand__text">
+        <div class="brand__name">Crystal Haze Holding</div>
+        <div class="brand__sub">Gələcək buradan başlayır</div>
+      </div>
+    </a>
 
-      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <nav class="nav">
+      <button class="nav__btn is-active" data-route="home" type="button">Home</button>
+      <button class="nav__btn" data-route="academy" type="button">Academy</button>
+      <button class="nav__btn" data-route="volunteer" type="button">Volunteer</button>
+      <button class="nav__btn" data-route="sales" type="button">Sales & Market</button>
+      <button class="nav__btn" data-route="staff" type="button">Staff</button>
+      <button class="nav__btn" data-route="contact" type="button">Contact</button>
+    </nav>
+
+    <button class="burger" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- DRAWER -->
+<div class="drawer">
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <div class="drawer__title">Crystal Haze Holding</div>
+      <button class="drawer__close" type="button">✕</button>
     </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="drawer" aria-hidden="true">
-    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
-      <div class="drawer__head">
-        <div class="drawer__title">Crystal Haze Holding</div>
-        <button class="drawer__close" type="button" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer__list" role="list">
-        <button class="drawer__item" type="button" data-route="home">Home</button>
-        <button class="drawer__item" type="button" data-route="academy">Academy</button>
-        <button class="drawer__item" type="button" data-route="volunteer">Volunteer</button>
-        <button class="drawer__item" type="button" data-route="sales">Sales & Market</button>
-        <button class="drawer__item" type="button" data-route="staff">Staff</button>
-        <button class="drawer__item" type="button" data-route="contact">Contact</button>
-      </div>
+    <div class="drawer__list">
+      <button class="drawer__item" data-route="home" type="button">Home</button>
+      <button class="drawer__item" data-route="academy" type="button">Academy</button>
+      <button class="drawer__item" data-route="volunteer" type="button">Volunteer</button>
+      <button class="drawer__item" data-route="sales" type="button">Sales & Market</button>
+      <button class="drawer__item" data-route="staff" type="button">Staff</button>
+      <button class="drawer__item" data-route="contact" type="button">Contact</button>
     </div>
   </div>
+</div>
 
-  <!-- Background -->
-  <div class="bg" aria-hidden="true">
-    <div class="bg__grid"></div>
-    <div class="bg__glow bg__glow--a"></div>
-    <div class="bg__glow bg__glow--b"></div>
-    <div class="bg__glow bg__glow--c"></div>
-    <div class="bg__noise"></div>
+<!-- BACKGROUND -->
+<div class="bg">
+  <div class="bg__grid"></div>
+  <div class="bg__glow bg__glow--a"></div>
+  <div class="bg__glow bg__glow--b"></div>
+  <div class="bg__noise"></div>
+</div>
+
+<div class="routeFx"></div>
+
+<main class="app">
+
+<!-- HOME -->
+<section class="view is-active" data-view="home">
+  <div class="view__scroll">
+    <div class="wrap">
+      <div class="hero">
+        <div class="hero__frame">
+          <div class="hero__crest">
+            <img src="assets/chh_logo.png" class="hero__crestImg" alt="CHH" />
+          </div>
+          <div>
+            <div class="hero__kicker">Youth Holding Platform</div>
+            <h1 class="h1">Crystal Haze Holding</h1>
+            <p class="lead">
+              Crystal Haze Holding gənclərin inkişaf, liderlik və yaradıcılıq imkanlarını
+              bir araya gətirən holding strukturudur.
+            </p>
+            <div class="hero__actions">
+              <button class="btn btn--primary" data-jump="academy" type="button">Academy</button>
+              <button class="btn btn--ghost" data-jump="volunteer" type="button">Volunteer</button>
+              <button class="btn btn--ghost" data-jump="sales" type="button">Sales & Market</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footnote">© 2026 Crystal Haze Holding</div>
+    </div>
   </div>
+</section>
 
-  <!-- Route Transition Overlay -->
-  <div class="routeFx" aria-hidden="true"></div>
-
-  <!-- App -->
-  <main class="app" role="main">
-
-    <!-- HOME -->
-    <section class="view is-active" data-view="home">
-      <div class="view__scroll">
-        <div class="wrap">
-
-          <div class="hero">
-            <div class="hero__left">
-              <div class="hero__frame">
-                <div class="hero__crest">
-                  <img class="hero__crestImg" src="assets/chh_logo.png" alt="Crystal Haze Holding" />
-                </div>
-
-                <div class="hero__content">
-                  <div class="hero__kicker">Official Youth Holding Platform</div>
-                  <h1 class="h1">Crystal Haze Holding</h1>
-                  <p class="lead">
-                    Crystal Haze Holding sadəcə bir ad deyil — bu, gənclərin inkişaf, liderlik və yaradıcılıq
-                    imkanlarını bir araya gətirən holding strukturudur. 💎
-                    Əgər öz üzərində işləmək, komanda mühitində yer almaq, təlimlərdə iştirak edərək real
-                    layihələrdə təcrübə qazanmaq istəyirsənsə, CHH sənin üçün yaradılıb.
-                  </p>
-
-                  <div class="hero__actions">
-                    <button class="btn btn--cta" type="button" data-jump="academy">Academy-ə başla</button>
-                    <button class="btn btn--ghost" type="button" data-jump="volunteer">Volunteer-ə qoşul</button>
-                    <button class="btn btn--ghost" type="button" data-jump="sales">Sales & Market</button>
-                  </div>
-
-                  <div class="tagRow" aria-label="hashtags">
-                    <div class="tag">#CHH</div>
-                    <div class="tag">#GələcəkBuradanBaşlayır</div>
-                    <div class="tag">#KomandaRuhu</div>
-                  </div>
-
-                  <div class="hero__line" aria-hidden="true">
-                    <span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero__right">
-              <div class="glass">
-                <div class="glass__top">
-                  <div class="chip">İnkişaf</div>
-                  <div class="chip">Liderlik</div>
-                  <div class="chip">Yaradıcılıq</div>
-                  <div class="chip">Komanda</div>
-                </div>
-
-                <div class="glass__body">
-                  <div class="panel__title">CHH necə işləyir?</div>
-                  <p class="p">
-                    Sistem sadədir: qoşulursan, öyrənirsən, təcrübə qazanırsan və inkişaf edirsən.
-                    Aşağıdakı 3 istiqamət bunun üçün qurulub.
-                  </p>
-
-                  <div class="divider"></div>
-
-                  <div class="panel__title">4 addım</div>
-                  <div class="flow">
-                    <div class="step"><div class="step__k">1) Join</div><div class="step__v">Komandaya daxil ol</div></div>
-                    <div class="step"><div class="step__k">2) Learn</div><div class="step__v">Təlimlərdə iştirak et</div></div>
-                    <div class="step"><div class="step__k">3) Practice</div><div class="step__v">Real işlərdə təcrübə qazan</div></div>
-                    <div class="step"><div class="step__k">4) Grow</div><div class="step__v">Bacarıqlarını artır</div></div>
-                  </div>
-                </div>
-
-                <div class="glass__foot">© 2025 Crystal Haze Holding</div>
-              </div>
-            </div>
+<!-- ACADEMY -->
+<section class="view" data-view="academy">
+  <div class="view__scroll">
+    <div class="wrap">
+      <h2 class="h2">Academy</h2>
+      <p class="p">Təlimlər, masterclass-lar, kurslar və nəşr məhsulları.</p>
+      <div class="grid2">
+        <div class="panel">
+          <div class="panel__title">İstiqamətlər</div>
+          <div class="flow">
+            <div class="step"><div class="step__v">Masterclass</div></div>
+            <div class="step"><div class="step__v">Kurslar</div></div>
+            <div class="step"><div class="step__v">Nəşr məhsulları</div></div>
           </div>
-
-          <!-- Main Directions -->
-          <div class="paths" aria-label="CHH directions">
-            <article class="pathCard pathCard--academy">
-              <div class="pathCard__head">
-                <div class="pathCard__title">Academy</div>
-                <div class="pathCard__badge">Təlim</div>
-              </div>
-              <p class="p">
-                Təlimlər və müxtəlif sahələr üzrə masterclass-lar, kurslar və nəşriyyat məhsulları.
-              </p>
-              <div class="bullets">
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Masterclass / kurs proqramları</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Praktiki tapşırıqlar və nəticə</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Materiallar və nəşr formatı</div></div>
-              </div>
-              <div style="margin-top:12px;">
-                <button class="btn btn--primary" type="button" data-jump="academy">Academy səhifəsi</button>
-              </div>
-            </article>
-
-            <article class="pathCard pathCard--volunteer">
-              <div class="pathCard__head">
-                <div class="pathCard__title">Volunteer</div>
-                <div class="pathCard__badge">Komanda</div>
-              </div>
-              <p class="p">
-                Komanda işi, klub və sosial fəaliyyətlər. Burada “komanda ruhu” real işlə qurulur.
-              </p>
-              <div class="bullets">
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Rol bölgüsü və koordinasiya</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Tədbir və sosial fəaliyyətlər</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Davamlı iştirak və inkişaf</div></div>
-              </div>
-              <div style="margin-top:12px;">
-                <button class="btn btn--primary" type="button" data-jump="volunteer">Volunteer səhifəsi</button>
-              </div>
-            </article>
-
-            <article class="pathCard pathCard--sales">
-              <div class="pathCard__head">
-                <div class="pathCard__title">Sales & Market</div>
-                <div class="pathCard__badge">Bacarıq</div>
-              </div>
-              <p class="p">
-                Əməkdaşlıqlar və satış bacarıqlarının inkişafı. Təqdimat, marketinq və praktiki satış təcrübəsi.
-              </p>
-              <div class="bullets">
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Marketinq və təqdimat bacarığı</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Satış praktikası və nəticə</div></div>
-                <div class="bullet"><div class="bullet__dot"></div><div class="bullet__text">Əməkdaşlıq şəbəkəsi</div></div>
-              </div>
-              <div style="margin-top:12px;">
-                <button class="btn btn--primary" type="button" data-jump="sales">Sales & Market səhifəsi</button>
-              </div>
-            </article>
-          </div>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+        <div class="panel">
+          <div class="panel__title">Rəhbərlik</div>
+          <p class="p"><strong>Shabnam Abdullazadeh</strong> — Academy Leader</p>
         </div>
       </div>
-    </section>
+      <div class="footnote">© 2026 Crystal Haze Holding</div>
+    </div>
+  </div>
+</section>
 
-    <!-- ACADEMY -->
-    <section class="view" data-view="academy">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Bölmə</div>
-              <h2 class="h2">Academy</h2>
-              <div class="pageHead__sub">Masterclass · Kurs · Təlim · Nəşriyyat</div>
-            </div>
-            <div class="pageHead__badge">
-              <img src="assets/chh_logo.png" alt="CHH" />
-              CHH
-            </div>
-          </header>
-
-          <div class="grid2">
-            <article class="panel">
-              <div class="panel__title">Məqsəd</div>
-              <p class="p">
-                Academy CHH-in təlim və bilik istiqamətidir. Burada gənclər planlı şəkildə öyrənir,
-                tapşırıqlar edir və nəticə çıxarır.
-              </p>
-              <div class="divider"></div>
-              <div class="panel__title">Nələr var?</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Təlimlər</div><div class="step__v">Müxtəlif sahələr üzrə proqramlar</div></div>
-                <div class="step"><div class="step__k">Masterclass</div><div class="step__v">Qısa intensiv sessiyalar</div></div>
-                <div class="step"><div class="step__k">Kurslar</div><div class="step__v">Davamlı öyrənmə modeli</div></div>
-                <div class="step"><div class="step__k">Nəşriyyat</div><div class="step__v">Materiallar və məhsullar</div></div>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__title">İş modeli</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Plan</div><div class="step__v">Mövzu + proqram + tarix</div></div>
-                <div class="step"><div class="step__k">Tədris</div><div class="step__v">Dərs / masterclass / kurs</div></div>
-                <div class="step"><div class="step__k">Praktika</div><div class="step__v">Tapşırıqlar və tətbiq</div></div>
-                <div class="step"><div class="step__k">Nəticə</div><div class="step__v">Dəyərləndirmə və inkişaf</div></div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Rəhbərlik</div>
-              <p class="p"><strong>Shabnam Abdullazadeh</strong> — Academy Leader</p>
-            </article>
+<!-- VOLUNTEER -->
+<section class="view" data-view="volunteer">
+  <div class="view__scroll">
+    <div class="wrap">
+      <h2 class="h2">Volunteer</h2>
+      <p class="p">Komanda işi, klub fəaliyyəti və sosial layihələr.</p>
+      <div class="grid2">
+        <div class="panel">
+          <div class="panel__title">Fəaliyyətlər</div>
+          <div class="flow">
+            <div class="step"><div class="step__v">Komanda işi</div></div>
+            <div class="step"><div class="step__v">Tədbirlər</div></div>
+            <div class="step"><div class="step__v">Sosial fəaliyyət</div></div>
           </div>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+        <div class="panel">
+          <div class="panel__title">Rəhbərlik</div>
+          <p class="p"><strong>Nazrin Guliyeva</strong> — Volunteer Leader</p>
         </div>
       </div>
-    </section>
+      <div class="footnote">© 2026 Crystal Haze Holding</div>
+    </div>
+  </div>
+</section>
 
-    <!-- VOLUNTEER -->
-    <section class="view" data-view="volunteer">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Bölmə</div>
-              <h2 class="h2">Volunteer</h2>
-              <div class="pageHead__sub">Komanda işi · Klub · Sosial fəaliyyətlər</div>
-            </div>
-            <div class="pageHead__badge">
-              <img src="assets/chh_logo.png" alt="CHH" />
-              CHH
-            </div>
-          </header>
-
-          <div class="grid2">
-            <article class="panel">
-              <div class="panel__title">Məqsəd</div>
-              <p class="p">
-                Volunteer istiqaməti komanda mühitini qurur: tədbirlər, klub işi, sosial fəaliyyət və real koordinasiya.
-              </p>
-              <div class="divider"></div>
-              <div class="panel__title">Nələr var?</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Komanda işi</div><div class="step__v">Rol bölgüsü və planlı icra</div></div>
-                <div class="step"><div class="step__k">Klub</div><div class="step__v">Davamlı fəaliyyət mühiti</div></div>
-                <div class="step"><div class="step__k">Sosial iş</div><div class="step__v">İctimai yönümlü layihələr</div></div>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__title">İş modeli</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Qoşul</div><div class="step__v">Komandaya daxil ol</div></div>
-                <div class="step"><div class="step__k">Rol al</div><div class="step__v">Məsuliyyət və tapşırıq</div></div>
-                <div class="step"><div class="step__k">İcra et</div><div class="step__v">Tədbir / fəaliyyət / klub işi</div></div>
-                <div class="step"><div class="step__k">Yekun</div><div class="step__v">Nəticə və inkişaf</div></div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Rəhbərlik</div>
-              <p class="p"><strong>Nazrin Guliyeva</strong> — Volunteer Leader</p>
-            </article>
+<!-- SALES -->
+<section class="view" data-view="sales">
+  <div class="view__scroll">
+    <div class="wrap">
+      <h2 class="h2">Sales & Market</h2>
+      <p class="p">Satış, CHH markalı məhsullar, nəşr məhsulları və ortaqların məhsulları.</p>
+      <div class="grid2">
+        <div class="panel">
+          <div class="panel__title">Satış istiqamətləri</div>
+          <div class="flow">
+            <div class="step"><div class="step__v">CHH məhsulları</div></div>
+            <div class="step"><div class="step__v">Nəşr məhsulları</div></div>
+            <div class="step"><div class="step__v">Ortaq məhsullar</div></div>
           </div>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
+        </div>
+        <div class="panel">
+          <div class="panel__title">Komanda</div>
+          <p class="p"><strong>Alovsat Alakbarzadeh</strong> — Marketing Director</p>
+          <p class="p"><strong>Alsu Ganbarova</strong> — Marketing Assistant</p>
         </div>
       </div>
-    </section>
+      <div class="footnote">© 2026 Crystal Haze Holding</div>
+    </div>
+  </div>
+</section>
 
-    <!-- SALES & MARKET -->
-    <section class="view" data-view="sales">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Bölmə</div>
-              <h2 class="h2">Sales & Market</h2>
-              <div class="pageHead__sub">Əməkdaşlıqlar · Marketinq · Satış bacarıqları</div>
-            </div>
-            <div class="pageHead__badge">
-              <img src="assets/chh_logo.png" alt="CHH" />
-              CHH
-            </div>
-          </header>
-
-          <div class="grid2">
-            <article class="panel">
-              <div class="panel__title">Məqsəd</div>
-              <p class="p">
-                Bu istiqamət əməkdaşlıq qurmaq, təqdimat bacarığı və satış praktikası qazanmaq üçün yaradılıb.
-                Marketinq düşüncəsi və real tətbiq əsasdır.
-              </p>
-              <div class="divider"></div>
-              <div class="panel__title">Nələr var?</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Marketinq</div><div class="step__v">Plan, kontent, təqdimat</div></div>
-                <div class="step"><div class="step__k">Satış</div><div class="step__v">Praktika, ölçülən nəticə</div></div>
-                <div class="step"><div class="step__k">Əməkdaşlıq</div><div class="step__v">Partner əlaqələri və koordinasiya</div></div>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel__title">İş modeli</div>
-              <div class="flow">
-                <div class="step"><div class="step__k">Plan</div><div class="step__v">Hədəf və strategiya</div></div>
-                <div class="step"><div class="step__k">Təqdimat</div><div class="step__v">Pitch və material</div></div>
-                <div class="step"><div class="step__k">Satış</div><div class="step__v">Praktiki icra</div></div>
-                <div class="step"><div class="step__k">Analiz</div><div class="step__v">Nəticə və inkişaf</div></div>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Rəhbərlik</div>
-              <p class="p"><strong>Alovsat Alakbarzadeh</strong> — Marketing Director</p>
-              <p class="p"><strong>Alsu Ganbarova</strong> — Marketing Assistant</p>
-            </article>
-          </div>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
-        </div>
+<!-- STAFF -->
+<section class="view" data-view="staff">
+  <div class="view__scroll">
+    <div class="wrap">
+      <h2 class="h2">Staff</h2>
+      <div class="team">
+        <div class="teamRow"><div class="teamRow__name">Lala Hasanli</div><div class="teamRow__role">Founder</div></div>
+        <div class="teamRow"><div class="teamRow__name">Nicat Umarli</div><div class="teamRow__role">CEO</div></div>
+        <div class="teamRow"><div class="teamRow__name">Shabnam Abdullazadeh</div><div class="teamRow__role">Academy Leader</div></div>
+        <div class="teamRow"><div class="teamRow__name">Nazrin Guliyeva</div><div class="teamRow__role">Volunteer Leader</div></div>
+        <div class="teamRow"><div class="teamRow__name">Alovsat Alakbarzadeh</div><div class="teamRow__role">Marketing Director</div></div>
+        <div class="teamRow"><div class="teamRow__name">Alsu Ganbarova</div><div class="teamRow__role">Marketing Assistant</div></div>
+        <div class="teamRow"><div class="teamRow__name">Leyla Abbasova</div><div class="teamRow__role">HR Manager</div></div>
       </div>
-    </section>
+      <div class="footnote">© 2026 Crystal Haze Holding</div>
+    </div>
+  </div>
+</section>
 
-    <!-- STAFF -->
-    <section class="view" data-view="staff">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Team</div>
-              <h2 class="h2">Staff</h2>
-              <div class="pageHead__sub">Crystal Haze Holding Staff</div>
-            </div>
-            <div class="pageHead__badge">
-              <img src="assets/chh_logo.png" alt="CHH" />
-              CHH
-            </div>
-          </header>
-
-          <article class="wide">
-            <div class="wide__head">
-              <div class="wide__title">Official staff list</div>
-              <div class="wide__line"></div>
-            </div>
-
-            <div class="team" role="list">
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Lala Hasanli</div><div class="teamRow__role">Founder</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Nicat Umarli</div><div class="teamRow__role">CEO</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Nazrin Guliyeva</div><div class="teamRow__role">Volunteer Leader</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Shabnam Abdullazadeh</div><div class="teamRow__role">Academy Leader</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Alovsat Alakbarzadeh</div><div class="teamRow__role">Marketing Director</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Alsu Ganbarova</div><div class="teamRow__role">Marketing Assistant</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Fatali Mirzayev</div><div class="teamRow__role">Finance Manager</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Vagif Verdiyev</div><div class="teamRow__role">Project Manager</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Mürsəl Sadiqli</div><div class="teamRow__role">Programist</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Leyla Abbasova</div><div class="teamRow__role">HR Manager</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Shahniyar Mustafayev</div><div class="teamRow__role">HR Manager</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Ali Baxshizadeh</div><div class="teamRow__role">Venue Coordinator</div></div>
-
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Munavvar Yusifova</div><div class="teamRow__role">Head of SMM</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Simara Aliyeva</div><div class="teamRow__role">SMM</div></div>
-              <div class="teamRow" role="listitem"><div class="teamRow__name">Kenan Qasimzadeh</div><div class="teamRow__role">SMM</div></div>
-            </div>
-          </article>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
-        </div>
+<!-- CONTACT -->
+<section class="view" data-view="contact">
+  <div class="view__scroll">
+    <div class="wrap">
+      <h2 class="h2">Contact</h2>
+      <div class="panel">
+        <p class="p">Email: crystalhaze25.26@gmail.com</p>
+        <p class="p">Phone: 055 441 74 23</p>
+        <p class="p">Instagram: crystalhaze.holding</p>
       </div>
-    </section>
+      <div class="footnote">© 2026 Crystal Haze Holding</div>
+    </div>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section class="view" data-view="contact">
-      <div class="view__scroll">
-        <div class="wrap">
-          <header class="pageHead">
-            <div>
-              <div class="pageHead__kicker">Contact</div>
-              <h2 class="h2">Official Contact</h2>
-              <div class="pageHead__sub">Crystal Haze Holding communication lines</div>
-            </div>
-            <div class="pageHead__badge">
-              <img src="assets/chh_logo.png" alt="CHH" />
-              CHH
-            </div>
-          </header>
+</main>
 
-          <div class="contactGrid">
-            <article class="panel panel--contact">
-              <div class="panel__title">Direct contacts</div>
+<!-- AI ASSISTANT -->
+<aside class="assistant">
+  <div class="assistant__head">
+    <div class="assistant__title">AI Assistant</div>
+    <button class="assistant__min" type="button">—</button>
+  </div>
+  <div class="assistant__body">
+    <div class="assistant__log">
+      <div class="msg msg--bot">Hazıram.</div>
+    </div>
+    <form class="assistant__form">
+      <input class="assistant__input" type="text" placeholder="Mesaj yaz…" />
+      <button class="assistant__send" type="submit">Send</button>
+    </form>
+  </div>
+</aside>
 
-              <div class="contactCards">
-                <div class="contactCard">
-                  <div>
-                    <div class="contactCard__k">Gmail</div>
-                    <div class="contactCard__v">crystalhaze25.26@gmail.com</div>
-                  </div>
-                  <div class="contactPill">Email</div>
-                </div>
+<script>
+(function(){
+  const qs=(s,r=document)=>r.querySelector(s);
+  const qsa=(s,r=document)=>Array.from(r.querySelectorAll(s));
+  const views=qsa(".view");
+  const nav=qsa(".nav__btn");
+  const drawer=qs(".drawer");
+  const burger=qs(".burger");
+  const close=qs(".drawer__close");
+  const ROUTES=["home","academy","volunteer","sales","staff","contact"];
 
-                <div class="contactCard">
-                  <div>
-                    <div class="contactCard__k">Phone</div>
-                    <div class="contactCard__v">055-441-74-23</div>
-                  </div>
-                  <div class="contactPill">Call</div>
-                </div>
+  function go(r){
+    if(!ROUTES.includes(r)) r="home";
+    views.forEach(v=>v.classList.toggle("is-active",v.dataset.view===r));
+    nav.forEach(b=>b.classList.toggle("is-active",b.dataset.route===r));
+    location.hash=r;
+    drawer.classList.remove("is-open");
+  }
 
-                <div class="contactCard">
-                  <div>
-                    <div class="contactCard__k">Instagram</div>
-                    <div class="contactCard__v">crystalhaze.holding</div>
-                  </div>
-                  <div class="contactPill">Social</div>
-                </div>
-              </div>
+  nav.forEach(b=>b.onclick=()=>go(b.dataset.route));
+  qsa(".drawer__item").forEach(b=>b.onclick=()=>go(b.dataset.route));
+  qsa("[data-jump]").forEach(b=>b.onclick=()=>go(b.dataset.jump));
+  burger.onclick=()=>drawer.classList.add("is-open");
+  close.onclick=()=>drawer.classList.remove("is-open");
+  go((location.hash||"#home").replace("#",""));
+  qs(".assistant__min").onclick=()=>qs(".assistant").classList.toggle("is-min");
+})();
+</script>
 
-              <div class="divider"></div>
-
-              <div class="panel__title">Qeyd</div>
-              <p class="p">
-                Rəsmi əlaqə xətləri yuxarıda göstərilib. Əlavə form və link inteqrasiyaları sonra əlavə oluna bilər.
-              </p>
-            </article>
-
-            <article class="panel panel--contact">
-              <div class="panel__title">Form</div>
-              <a class="linkBtn" href="https://forms.gle/8GNBTU7imF7QQLfF8" target="_blank" rel="noopener">Google Form aç</a>
-
-              <div class="divider"></div>
-
-              <div class="panel__title">Quick access</div>
-              <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="btn btn--primary" type="button" data-jump="academy">Academy</button>
-                <button class="btn btn--ghost" type="button" data-jump="volunteer">Volunteer</button>
-                <button class="btn btn--ghost" type="button" data-jump="sales">Sales & Market</button>
-              </div>
-            </article>
-          </div>
-
-          <div class="footnote">© 2025 Crystal Haze Holding</div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <script>
-    (function () {
-      const qs = (s, r=document) => r.querySelector(s);
-      const qsa = (s, r=document) => Array.from(r.querySelectorAll(s));
-
-      const routeFx = qs(".routeFx");
-      const views = qsa(".view");
-      const navBtns = qsa(".nav__btn");
-      const drawer = qs(".drawer");
-      const drawerPanel = qs(".drawer__panel");
-      const burger = qs(".burger");
-      const closeBtn = qs(".drawer__close");
-
-      const ROUTES = new Set(["home","academy","volunteer","sales","staff","contact"]);
-
-      function setActiveRoute(route) {
-        if (!ROUTES.has(route)) route = "home";
-
-        routeFx.classList.add("on");
-        window.setTimeout(() => routeFx.classList.remove("on"), 220);
-
-        views.forEach(v => v.classList.toggle("is-active", v.dataset.view === route));
-        navBtns.forEach(b => {
-          const on = b.dataset.route === route;
-          b.classList.toggle("is-active", on);
-          if (on) b.setAttribute("aria-current", "page");
-          else b.removeAttribute("aria-current");
-        });
-
-        qsa(".drawer__item").forEach(b => b.classList.toggle("is-active", b.dataset.route === route));
-
-        closeDrawer();
-        if (location.hash !== "#" + route) location.hash = route;
-      }
-
-      function openDrawer() {
-        drawer.classList.add("is-open");
-        drawer.setAttribute("aria-hidden", "false");
-        burger.setAttribute("aria-expanded", "true");
-        document.documentElement.classList.add("lock");
-        document.body.classList.add("lock");
-        window.setTimeout(() => drawerPanel && drawerPanel.focus(), 0);
-      }
-
-      function closeDrawer() {
-        drawer.classList.remove("is-open");
-        drawer.setAttribute("aria-hidden", "true");
-        burger.setAttribute("aria-expanded", "false");
-        document.documentElement.classList.remove("lock");
-        document.body.classList.remove("lock");
-      }
-
-      navBtns.forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
-      qsa(".drawer__item").forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.route)));
-      qsa("[data-jump]").forEach(btn => btn.addEventListener("click", () => setActiveRoute(btn.dataset.jump)));
-
-      burger.addEventListener("click", () => {
-        if (drawer.classList.contains("is-open")) closeDrawer();
-        else openDrawer();
-      });
-
-      closeBtn.addEventListener("click", closeDrawer);
-      drawer.addEventListener("click", (e) => { if (e.target === drawer) closeDrawer(); });
-      window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
-
-      const initial = (location.hash || "#home").replace("#", "");
-      setActiveRoute(initial);
-
-      window.addEventListener("hashchange", () => {
-        const r = (location.hash || "#home").replace("#", "");
-        setActiveRoute(r);
-      });
-    })();
-  </script>
 </body>
 </html>
