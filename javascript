@@ -1,78 +1,86 @@
-/* app.js — Crystal Haze Holding
-   Funksional idarəetmə sistemi (SPA + localStorage)
-   PC + Mobile uyğun
+/* app.js — Crystal Haze Holding | İdarəetmə Platforması (2026)
+   Dinamik SPA məntiqi: routing, data store, tapşırıqlar, bölmələr,
+   Sales & Market, ortaqlar və AI Assistant (Crysia)
 */
 
-(function () {
-  /* ================= UTIL ================= */
+(() => {
+  /* ===================== CORE ===================== */
   const qs = (s, r = document) => r.querySelector(s);
   const qsa = (s, r = document) => Array.from(r.querySelectorAll(s));
-  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2);
 
-  const store = {
-    get(key, def) {
-      try {
-        return JSON.parse(localStorage.getItem(key)) ?? def;
-      } catch {
-        return def;
+  const STORAGE_KEY = "chh_platform_2026";
+
+  const DEFAULT_DATA = {
+    year: 2026,
+    leaders: {
+      holding: [
+        { name: "Lalə Həsənli", role: "Təsisçi, Lider" },
+        { name: "Nicat Umarlı", role: "CEO, Lider" }
+      ],
+      divisions: {
+        Academy: [],
+        Volunteer: [],
+        "Sales & Market": []
       }
     },
-    set(key, val) {
-      localStorage.setItem(key, JSON.stringify(val));
+    divisions: [
+      { id: "academy", name: "Academy" },
+      { id: "volunteer", name: "Volunteer" },
+      { id: "sales", name: "Sales & Market" }
+    ],
+    tasks: [],
+    products: [],
+    partners: [],
+    logs: []
+  };
+
+  let state = loadState();
+
+  function loadState() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_DATA));
+      return structuredClone(DEFAULT_DATA);
     }
-  };
-
-  /* ================= STATE ================= */
-  const state = {
-    route: "panel",
-    tasks: store.get("chh_tasks", []),
-    products: store.get("chh_products", []),
-    partners: store.get("chh_partners", []),
-    leaders: store.get("chh_leaders", [
-      { id: uid(), ad: "Lalə Həsənli", rol: "Təsisçi, Lider", bolme: "Ümumi" },
-      { id: uid(), ad: "Nicat Umarlı", rol: "CEO, Lider", bolme: "Ümumi" },
-      { id: uid(), ad: "Shabnam Abdullazadeh", rol: "Lider", bolme: "Academy" },
-      { id: uid(), ad: "Nazrin Guliyeva", rol: "Lider", bolme: "Volunteer" }
-    ]),
-    logs: store.get("chh_logs", [])
-  };
-
-  function saveAll() {
-    store.set("chh_tasks", state.tasks);
-    store.set("chh_products", state.products);
-    store.set("chh_partners", state.partners);
-    store.set("chh_leaders", state.leaders);
-    store.set("chh_logs", state.logs);
+    try {
+      return JSON.parse(raw);
+    } catch {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_DATA));
+      return structuredClone(DEFAULT_DATA);
+    }
   }
 
-  function log(text) {
+  function saveState() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function log(action) {
     state.logs.unshift({
-      id: uid(),
-      text,
+      text: action,
       time: new Date().toLocaleString("az-AZ")
     });
-    state.logs = state.logs.slice(0, 50);
-    saveAll();
+    saveState();
     renderLogs();
   }
 
-  /* ================= ROUTER ================= */
+  /* ===================== ROUTING ===================== */
   const views = qsa(".view");
   const navBtns = qsa("[data-route]");
   const pageTitle = qs("#pageTitle");
 
-  function setRoute(r) {
-    state.route = r;
-    views.forEach(v => v.classList.toggle("is-active", v.dataset.view === r));
-    navBtns.forEach(b =>
-      b.classList.toggle("is-active", b.dataset.route === r)
+  function setRoute(route) {
+    views.forEach(v =>
+      v.classList.toggle("is-active", v.dataset.view === route)
     );
-    if (pageTitle) pageTitle.textContent = bTitle(r);
-    location.hash = r;
+    navBtns.forEach(b =>
+      b.classList.toggle("is-active", b.dataset.route === route)
+    );
+    if (pageTitle) pageTitle.textContent = routeTitle(route);
+    location.hash = route;
   }
 
-  function bTitle(r) {
-    return {
+  function routeTitle(r) {
+    const map = {
       panel: "Panel",
       bolmeler: "Bölmələr",
       tapsiriqlar: "Tapşırıqlar",
@@ -80,29 +88,76 @@
       ortaqlar: "Ortaqlar",
       senedler: "Sənədlər",
       ayarlar: "Ayarlar"
-    }[r] || "Panel";
+    };
+    return map[r] || "Panel";
   }
 
-  navBtns.forEach(b =>
-    b.addEventListener("click", () => setRoute(b.dataset.route))
-  );
+  navBtns.forEach(btn => {
+    btn.addEventListener("click", () => setRoute(btn.dataset.route));
+  });
+
+  window.addEventListener("hashchange", () => {
+    const r = location.hash.replace("#", "") || "panel";
+    setRoute(r);
+  });
 
   setRoute(location.hash.replace("#", "") || "panel");
 
-  /* ================= LEADERS ================= */
+  /* ===================== PANEL ===================== */
+  function renderStats() {
+    qs("#statAll").textContent = state.tasks.length;
+    qs("#statTodo").textContent = state.tasks.filter(t => t.status === "todo").length;
+    qs("#statDoing").textContent = state.tasks.filter(t => t.status === "doing").length;
+    qs("#statDone").textContent = state.tasks.filter(t => t.status === "done").length;
+  }
+
   function renderLeaders() {
     const box = qs("#leadersList");
     if (!box) return;
     box.innerHTML = "";
-    state.leaders.forEach(l => {
-      const d = document.createElement("div");
-      d.className = "kv";
-      d.innerHTML = `<div class="kv__k">${l.bolme}</div><div class="kv__v">${l.ad} — ${l.rol}</div>`;
-      box.appendChild(d);
+
+    state.leaders.holding.forEach(l => {
+      const div = document.createElement("div");
+      div.className = "listItem";
+      div.innerHTML = `<strong>${l.name}</strong><span>${l.role}</span>`;
+      box.appendChild(div);
     });
   }
 
-  /* ================= TASKS ================= */
+  function renderLogs() {
+    const box = qs("#logList");
+    const box2 = qs("#docsList");
+    [box, box2].forEach(b => {
+      if (!b) return;
+      b.innerHTML = "";
+      state.logs.forEach(l => {
+        const div = document.createElement("div");
+        div.className = "listItem";
+        div.innerHTML = `<span>${l.text}</span><small>${l.time}</small>`;
+        b.appendChild(div);
+      });
+    });
+  }
+
+  /* ===================== DIVISIONS ===================== */
+  function renderDivisions() {
+    const grid = qs("#divisionsGrid");
+    const mini = qs("#panelDivisionCards");
+    if (grid) grid.innerHTML = "";
+    if (mini) mini.innerHTML = "";
+
+    state.divisions.forEach(d => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `<strong>${d.name}</strong><p>Daxili idarəetmə</p>`;
+      card.addEventListener("click", () => setRoute("tapsiriqlar"));
+
+      if (grid) grid.appendChild(card);
+      if (mini) mini.appendChild(card.cloneNode(true));
+    });
+  }
+
+  /* ===================== TASKS ===================== */
   function renderTasks() {
     const cols = {
       todo: qs("#colTodo"),
@@ -111,138 +166,166 @@
     };
     Object.values(cols).forEach(c => c && (c.innerHTML = ""));
 
+    const body = qs("#tasksBody");
+    if (body) body.innerHTML = "";
+
     state.tasks.forEach(t => {
-      const el = document.createElement("div");
-      el.className = "cardMini";
-      el.innerHTML = `
-        <strong>${t.title}</strong>
-        <div class="sub">${t.bolme} · ${t.mesul}</div>
-      `;
-      cols[t.status]?.appendChild(el);
+      const item = document.createElement("div");
+      item.className = "card";
+      item.textContent = t.title;
+      cols[t.status]?.appendChild(item);
+
+      if (body) {
+        const row = document.createElement("div");
+        row.innerHTML = `
+          <div>${t.title}</div>
+          <div>${t.division}</div>
+          <div>${t.owner}</div>
+          <div>${t.deadline}</div>
+          <div>${t.priority}</div>
+          <div>${t.status}</div>
+          <div><button data-id="${t.id}">✓</button></div>
+        `;
+        body.appendChild(row);
+      }
     });
 
-    qsa("[data-count]").forEach(c => {
-      const st = c.dataset.count;
-      c.textContent = state.tasks.filter(t => t.status === st).length;
-    });
-
-    qsa("[data-stat]").forEach(s => {
-      const k = s.dataset.stat;
-      s.textContent =
-        k === "all"
-          ? state.tasks.length
-          : state.tasks.filter(t => t.status === k).length;
-    });
+    renderStats();
   }
 
-  qs("[data-action='add-task']")?.addEventListener("click", () => {
-    const title = prompt("Tapşırıq adı");
-    if (!title) return;
-    state.tasks.push({
-      id: uid(),
-      title,
-      bolme: "Ümumi",
-      mesul: "—",
-      status: "todo"
-    });
-    log(`Yeni tapşırıq: ${title}`);
-    saveAll();
-    renderTasks();
+  document.addEventListener("click", e => {
+    if (e.target.matches("[data-action='task-add']")) {
+      const title = prompt("Tapşırıq adı:");
+      if (!title) return;
+      state.tasks.push({
+        id: Date.now(),
+        title,
+        division: "Academy",
+        owner: "—",
+        deadline: "—",
+        priority: "Normal",
+        status: "todo"
+      });
+      log(`Yeni tapşırıq: ${title}`);
+      saveState();
+      renderTasks();
+    }
   });
 
-  /* ================= SALES ================= */
+  /* ===================== SALES ===================== */
   function renderProducts() {
-    const list = qs("#productList");
-    if (!list) return;
-    list.innerHTML = "";
-    state.products.forEach(p => {
-      const r = document.createElement("div");
-      r.innerHTML = `<div>${p.ad}</div><div>${p.tip}</div><div>${p.qeyd}</div><div>—</div>`;
-      list.appendChild(r);
-    });
-  }
-
-  qs("[data-action='add-product']")?.addEventListener("click", () => {
-    const ad = prompt("Məhsul adı");
-    if (!ad) return;
-    const tip = prompt("Tip (Nəşr / CHH / Ortaq)");
-    state.products.push({ id: uid(), ad, tip, qeyd: "" });
-    log(`Məhsul əlavə edildi: ${ad}`);
-    saveAll();
-    renderProducts();
-  });
-
-  /* ================= PARTNERS ================= */
-  function renderPartners() {
-    const list = qs("#partnerList");
-    if (!list) return;
-    list.innerHTML = "";
-    state.partners.forEach(p => {
-      const r = document.createElement("div");
-      r.innerHTML = `<div>${p.ad}</div><div>${p.qeyd}</div><div>—</div>`;
-      list.appendChild(r);
-    });
-  }
-
-  qs("[data-action='add-partner']")?.addEventListener("click", () => {
-    const ad = prompt("Ortaq adı");
-    if (!ad) return;
-    state.partners.push({ id: uid(), ad, qeyd: "" });
-    log(`Ortaq əlavə edildi: ${ad}`);
-    saveAll();
-    renderPartners();
-  });
-
-  /* ================= LOGS ================= */
-  function renderLogs() {
-    const box = qs("#logList") || qs("#docsList");
+    const box = qs("#productList");
     if (!box) return;
     box.innerHTML = "";
-    state.logs.forEach(l => {
-      const d = document.createElement("div");
-      d.className = "kv";
-      d.innerHTML = `<div class="kv__k">${l.time}</div><div class="kv__v">${l.text}</div>`;
-      box.appendChild(d);
+    state.products.forEach(p => {
+      const row = document.createElement("div");
+      row.innerHTML = `
+        <div>${p.name}</div>
+        <div>${p.type}</div>
+        <div>${p.status}</div>
+        <div>${p.note}</div>
+        <div>—</div>
+      `;
+      box.appendChild(row);
     });
   }
 
-  /* ================= AI ASSISTANT ================= */
+  document.addEventListener("click", e => {
+    if (e.target.matches("[data-action='product-add']")) {
+      const name = prompt("Məhsul adı:");
+      if (!name) return;
+      state.products.push({
+        name,
+        type: "CHH markalı",
+        status: "Aktiv",
+        note: ""
+      });
+      log(`Yeni məhsul: ${name}`);
+      saveState();
+      renderProducts();
+    }
+  });
+
+  /* ===================== PARTNERS ===================== */
+  function renderPartners() {
+    const box = qs("#partnerList");
+    if (!box) return;
+    box.innerHTML = "";
+    state.partners.forEach(p => {
+      const row = document.createElement("div");
+      row.innerHTML = `
+        <div>${p.name}</div>
+        <div>${p.status}</div>
+        <div>${p.contact}</div>
+        <div>${p.note}</div>
+        <div>—</div>
+      `;
+      box.appendChild(row);
+    });
+  }
+
+  document.addEventListener("click", e => {
+    if (e.target.matches("[data-action='partner-add']")) {
+      const name = prompt("Ortaq adı:");
+      if (!name) return;
+      state.partners.push({
+        name,
+        status: "Aktiv",
+        contact: "",
+        note: ""
+      });
+      log(`Yeni ortağ: ${name}`);
+      saveState();
+      renderPartners();
+    }
+  });
+
+  /* ===================== AI ASSISTANT ===================== */
   const aiLog = qs("#aiLog");
   const aiForm = qs("#aiForm");
   const aiInput = qs("#aiInput");
-  qs(".assistant__min")?.addEventListener("click", () => {
-    qs(".assistant").classList.toggle("is-min");
-  });
 
-  function aiSay(text, who = "bot") {
-    const m = document.createElement("div");
-    m.className = "msg msg--" + who;
-    m.innerHTML = `<div class="msg__bubble">${text}</div>`;
-    aiLog.appendChild(m);
+  function aiReply(text) {
+    let reply = "Bu məlumat sistemdə tapılmadı.";
+
+    if (/tapşırıq/i.test(text)) {
+      reply = `Sistemdə ${state.tasks.length} tapşırıq var.`;
+    } else if (/məhsul/i.test(text)) {
+      reply = `Sales & Market bölməsində ${state.products.length} məhsul mövcuddur.`;
+    } else if (/lider/i.test(text)) {
+      reply = state.leaders.holding.map(l => l.name).join(", ");
+    } else if (/ortağ/i.test(text)) {
+      reply = `Hazırda ${state.partners.length} ortağ var.`;
+    }
+
+    addAiMsg("bot", reply);
+  }
+
+  function addAiMsg(type, text) {
+    const div = document.createElement("div");
+    div.className = "msg msg--" + type;
+    div.textContent = text;
+    aiLog.appendChild(div);
     aiLog.scrollTop = aiLog.scrollHeight;
   }
 
-  function aiReply(q) {
-    const t = q.toLowerCase();
-    if (t.includes("tapşırıq")) return "Tapşırıqlar bölməsindən yeni tapşırıq əlavə və status idarəsi edə bilərsən.";
-    if (t.includes("sales")) return "Sales & Market bölməsi məhsul və satış portfelinin idarəsi üçündür.";
-    if (t.includes("lider")) return "Liderlər Panel səhifəsində göstərilir və bölmələr üzrə təyin olunur.";
-    return "CHH sistemi üzrə soruş: tapşırıq, sales, liderlər, bölmələr.";
+  if (aiForm) {
+    aiForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const val = aiInput.value.trim();
+      if (!val) return;
+      addAiMsg("user", val);
+      aiInput.value = "";
+      setTimeout(() => aiReply(val), 400);
+    });
   }
 
-  aiForm?.addEventListener("submit", e => {
-    e.preventDefault();
-    const v = aiInput.value.trim();
-    if (!v) return;
-    aiSay(v, "user");
-    aiInput.value = "";
-    setTimeout(() => aiSay(aiReply(v), "bot"), 300);
-  });
-
-  /* ================= INIT ================= */
+  /* ===================== INIT ===================== */
+  renderStats();
   renderLeaders();
+  renderLogs();
+  renderDivisions();
   renderTasks();
   renderProducts();
   renderPartners();
-  renderLogs();
 })();
